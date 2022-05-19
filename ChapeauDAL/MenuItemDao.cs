@@ -25,6 +25,15 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        private bool CheckMenuType(Object value)
+        {
+            if (value.ToString() == "food") return true;
+            else
+            {
+                return false;
+            }
+        }
+
         private List<MenuItem> ReadTables(DataTable dataTable)
         {
             List<MenuItem> menuItems = new List<MenuItem>();
@@ -36,7 +45,7 @@ namespace ChapeauDAL
                     MenuItemID = (int)dr["menuItemId"],
                     MenuItemName = dr["menuItemName"].ToString(),
                     MenuItemPrice = (decimal)dr["menuItemPrice"],
-                    isFood = (bool)dr["isFoodOrDrink"],
+                    isFood = CheckMenuType(dr["isFoodOrDrink"]),
                     MenuItemStock = (int)dr["menuItemStock"],
                     MenuItemType = (MenuType)dr["menuItemType"],
                     MenuItemCategory = (MenuItemCategory)dr["menuItemCategory"]

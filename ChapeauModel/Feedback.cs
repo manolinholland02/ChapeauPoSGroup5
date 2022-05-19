@@ -11,6 +11,5 @@ namespace ChapeauModel
         public TypeOfFeedback TypeOfFeedback { get; set; }
         public string Note { get; set; }
         public DateTime DateOfFeedback { get; set; }
-        
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.deps.json
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ref\ChapeauDAL.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.pdb
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauModel.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauModel.pdb
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.AssemblyReference.cache
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.AssemblyInfoInputs.cache
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.AssemblyInfo.cs
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.CoreCompileInputs.cache
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.CopyComplete
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ref\ChapeauDAL.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.pdb
