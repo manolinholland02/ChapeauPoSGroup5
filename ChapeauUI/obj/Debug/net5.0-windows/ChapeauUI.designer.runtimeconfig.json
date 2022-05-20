@@ -6,7 +6,7 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\alexa\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\manol\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Lenovo\\.nuget\\packages"
     ],
     "configProperties": {
