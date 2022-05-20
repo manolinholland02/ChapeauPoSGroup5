@@ -36,5 +36,10 @@ namespace ChapeauLogic
         {
             return _employeedb.AccountExists(username, password);
         }
+        public EmployeeType GetEmployeeType(string username)
+        {
+            //hopefully converts string to EmployeeType(pls work :) )
+            return (EmployeeType)Enum.Parse(typeof(EmployeeType), _employeedb.GetEmployeeType(username));
+        }
     }
 }
