@@ -104,5 +104,12 @@ namespace ChapeauDAL
             }
             return false;
         }
+
+        public string GetEmployeeType(string username)
+        {
+            string query = "SELECT employeeType FROM [dbo.Employee] WHERE [username] = @username";
+            SqlParameter[] parameters = { new SqlParameter("@username", username) };
+            return ExecuteSelectQuery(query, parameters).ToString();
+        }
     }
 }
