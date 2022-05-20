@@ -86,6 +86,18 @@ namespace ChapeauDAL
                 throw new Exception(e.Message);
             }
         }
-
+        public void GetPassword(string password)
+        {
+            try
+            {
+                SqlParameter[] parameters = { new SqlParameter("@userPassword", password) };
+                string query = "SELECT FROM [dbo.Employee] WHERE userPassword = @password";
+                ExecuteEditQuery(query, parameters);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 }

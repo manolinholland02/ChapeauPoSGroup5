@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace ChapeauUI
 {
-    public partial class LogIn : Form
+    public partial class RestaurantOverview : Form
     {
-        public LogIn()
+        public RestaurantOverview()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // open the screen according to the employee type
+            // open the taking orders form
+            // change color if an order has been taken
+            button1.BackColor = Color.Red;
         }
     }
 }

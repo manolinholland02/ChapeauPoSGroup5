@@ -32,5 +32,9 @@ namespace ChapeauLogic
         {
             _employeedb.EditEmployee(employee);
         }
+        public void EmployeePassword(Employee employee)
+        {
+            //...
+        }
     }
 }
