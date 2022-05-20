@@ -61,10 +61,6 @@ namespace ChapeauDAL
             else return "drink";
         }
 
-        public void AddParticipant(int activityId, int studentId) {
-            string query = "INSERT INTO PARTICIPANTS (studentId,activityId) VALUES (@Student,@Activity);"; SqlParameter[] sqlParameters = { new SqlParameter("@Student", studentId), new SqlParameter("@Activity", activityId) }; ExecuteEditQuery(query, sqlParameters); 
-        }
-
         private SqlParameter[] GetParametersForMenuItem(MenuItem menuItem)
         {
             SqlParameter[] sqlParameters = { new SqlParameter("@Id", menuItem.MenuItemID), new SqlParameter("@Name", menuItem.MenuItemName), new SqlParameter("@Price", menuItem.MenuItemPrice), new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)), new SqlParameter("@Stock", menuItem.MenuItemStock), new SqlParameter("@Type", menuItem.MenuItemType), new SqlParameter("@Category", menuItem.MenuItemCategory) };
@@ -84,7 +80,7 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void UpdateDrink(MenuItem menuItem)
+        public void UpdateMenuItem(MenuItem menuItem)
         {
             string query = $"UPDATE [dbo].[MenuItems] SET menuItemName = @Name, menuItemPrice = @Price, isFoodOrDrink = @FoodOrDrink, menuItemStock = @Stock, menuItemType = @Type, menuItemCategory = @Category  WHERE menuItemId = @Id";
             ExecuteEditQuery(query, GetParametersForMenuItem(menuItem));

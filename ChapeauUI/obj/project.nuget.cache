@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bRyzOdJvSB0BHX5ioDEciuxhUPyya2IYXPtnozWqs2phmvmfMMzd1lm/GhnXFOjMWDStIkq8nN8xXOUZZHJGxg==",
+  "dgSpecHash": "M4hW7T89DLKgPW6GC8rA1gwewK45+xDqiiQ01yhxScfpmcCUnlvPHgkjFSkkud+LquKewx+RN6RLly+Ci7jQyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
   "expectedPackageFiles": [
@@ -20,5 +20,12 @@
     "C:\\Users\\miede\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\miede\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
