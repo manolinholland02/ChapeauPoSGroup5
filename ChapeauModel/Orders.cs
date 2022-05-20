@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    class Orders
+    public class Orders
     {
+        public int orderID { get; set; }
+        public int orderTable { get; set; }
+        public MenuItem orderItem { get; set; }
+        public string orderItemName { get; set; }
+
+        public int ItemQuantity { get; set; }
+        public string orderComment { get; set; }
+
+        public decimal orderPrice { get; set; }
+
+        public Status orderStatus { get; set; }
+
+        public Employee orderWaiter { get; set; }
+        public Employee orderPreparer { get; set; }
+
+        public Payment orderPayment { get; set; }
+
     }
+
 }
