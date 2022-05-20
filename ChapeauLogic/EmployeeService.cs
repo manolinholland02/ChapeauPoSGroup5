@@ -6,7 +6,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class EmployeeService
+    public class EmployeeService
     {
         private EmployeeDao _employeedb;
 
