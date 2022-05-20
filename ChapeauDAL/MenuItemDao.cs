@@ -54,5 +54,13 @@ namespace ChapeauDAL
             }
             return menuItems;
         }
+
+        public void InsertMenuItem(MenuItem menuItem)
+        {
+            int drinkType = (drink.Type) ? 1 : 0;
+            string query = $"INSERT INTO [dbo].[MenuItems] (menuItemId, menuItemName, menuItemPrice, isFoodOrDrink, menuItemStock, menuItemType, menuItemCategory) VALUES ('{drink.Name}', {drink.Price}, {drink.Stock}, {drinkType})";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }
