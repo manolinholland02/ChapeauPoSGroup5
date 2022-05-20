@@ -18,6 +18,25 @@ namespace ChapeauUI
         public ManagerView()
         {
             InitializeComponent();
+            PrintEmployees();
+        }
+
+        private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Delete_Employee_Click(object sender, EventArgs e)
+        {
+            var itemToDelete = int.Parse(listView_Employees_Management.SelectedItems[0].SubItems[0].Text);
+            EmployeeService employee = new EmployeeService();
+            employee.DeleteEmployee(itemToDelete);
+            PrintEmployees();
+
+        }
+
+        private void PrintEmployees()
+        {
             try
             {
                 EmployeeService employeeService = new EmployeeService();
@@ -27,7 +46,7 @@ namespace ChapeauUI
 
                 foreach (Employee employee in employeesList)
                 {
-                    
+
                     string[] output = { employee.EmployeeID.ToString(), employee.EmployeeFirstName, employee.EmployeeLastName,
                                         employee.EmployeeUsername, employee.EmployeeUserPassword, employee.EmployeeType.ToString() };
                     ListViewItem list = new ListViewItem(output);
@@ -39,11 +58,6 @@ namespace ChapeauUI
             {
                 MessageBox.Show("Something went wrong while loading the employees: " + e.Message);
             }
-        }
-
-        private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

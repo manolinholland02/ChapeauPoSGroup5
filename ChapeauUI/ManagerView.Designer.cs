@@ -36,6 +36,9 @@ namespace ChapeauUI
             this.EmployeeUsername = new System.Windows.Forms.ColumnHeader();
             this.EmployeePassword = new System.Windows.Forms.ColumnHeader();
             this.EmployeeType = new System.Windows.Forms.ColumnHeader();
+            this.button_Add_Employee = new System.Windows.Forms.Button();
+            this.button_Delete_Employee = new System.Windows.Forms.Button();
+            this.button_Edit_Employee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView_Employees_Management
@@ -87,11 +90,42 @@ namespace ChapeauUI
             this.EmployeeType.Text = "Occupation";
             this.EmployeeType.Width = 100;
             // 
+            // button_Add_Employee
+            // 
+            this.button_Add_Employee.Location = new System.Drawing.Point(69, 351);
+            this.button_Add_Employee.Name = "button_Add_Employee";
+            this.button_Add_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Add_Employee.TabIndex = 1;
+            this.button_Add_Employee.Text = "Add Employee";
+            this.button_Add_Employee.UseVisualStyleBackColor = true;
+            // 
+            // button_Delete_Employee
+            // 
+            this.button_Delete_Employee.Location = new System.Drawing.Point(290, 351);
+            this.button_Delete_Employee.Name = "button_Delete_Employee";
+            this.button_Delete_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Delete_Employee.TabIndex = 2;
+            this.button_Delete_Employee.Text = "Delete";
+            this.button_Delete_Employee.UseVisualStyleBackColor = true;
+            this.button_Delete_Employee.Click += new System.EventHandler(this.button_Delete_Employee_Click);
+            // 
+            // button_Edit_Employee
+            // 
+            this.button_Edit_Employee.Location = new System.Drawing.Point(576, 351);
+            this.button_Edit_Employee.Name = "button_Edit_Employee";
+            this.button_Edit_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Edit_Employee.TabIndex = 3;
+            this.button_Edit_Employee.Text = "Edit";
+            this.button_Edit_Employee.UseVisualStyleBackColor = true;
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Edit_Employee);
+            this.Controls.Add(this.button_Delete_Employee);
+            this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.listView_Employees_Management);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
@@ -108,5 +142,8 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader EmployeeUsername;
         private System.Windows.Forms.ColumnHeader EmployeePassword;
         private System.Windows.Forms.ColumnHeader EmployeeType;
+        private System.Windows.Forms.Button button_Add_Employee;
+        private System.Windows.Forms.Button button_Delete_Employee;
+        private System.Windows.Forms.Button button_Edit_Employee;
     }
 }
