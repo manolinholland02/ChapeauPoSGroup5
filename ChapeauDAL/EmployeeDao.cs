@@ -9,6 +9,7 @@ namespace ChapeauDAL
 {
     public class EmployeeDao : BaseDao
     {
+        //Creates a list with all of the employees in the Database
         public List<Employee> GetAllEmployees()
         {
             string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo.Employees]";
@@ -32,6 +33,8 @@ namespace ChapeauDAL
             }
             return employees;
         }
+
+        //Add employee to the DataBase
         public void AddEmployee(Employee employee)
         {
             try
@@ -42,7 +45,7 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (int)employee.EmployeeType)
+                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
                 };
                 string query = $"INSERT INTO [dbo.Employee] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
@@ -52,6 +55,7 @@ namespace ChapeauDAL
                 throw new Exception(e.Message);
             }
         }
+        //Deletes employee from the Database
         public void DeleteEmployee(int EmployeeId)
         {
             try
@@ -66,6 +70,7 @@ namespace ChapeauDAL
             }
         }
 
+        //Edits employee in the Database
         public void EditEmployee(Employee employee)
         {
             try
@@ -76,7 +81,7 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (int)employee.EmployeeType)
+                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
                 };
                 string query = $"UPDATE INTO [dbo.Employee] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
@@ -87,5 +92,24 @@ namespace ChapeauDAL
             }
         }
 
+        //Checks if and account with such a password exists in the Database
+        public bool AccountExists(string username, string password)
+        {
+            string query = "SELECT COUNT([username]) from [dbo.Employee] WHERE [username] = @username AND userPassword = @password;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Username", username), new SqlParameter("@password", password) };
+            DataTable output = ExecuteSelectQuery(query, sqlParameters);
+            if (Convert.ToInt32(output.Rows[0][0]) == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string GetEmployeeType(string username)
+        {
+            string query = "SELECT employeeType FROM [dbo.Employee] WHERE [username] = @username";
+            SqlParameter[] parameters = { new SqlParameter("@username", username) };
+            return ExecuteSelectQuery(query, parameters).ToString();
+        }
     }
 }
