@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {}
+    "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {}
   },
   "projects": {
-    "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
+        "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\sally\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sally\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -68,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
+    "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
+        "projectUniqueName": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
         "projectName": "ChapeauLogic",
-        "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\obj\\",
+        "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
+        "packagesPath": "C:\\Users\\sally\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sally\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +96,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -114,6 +114,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -129,21 +139,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
+        "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\sally\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sally\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,6 +178,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -183,21 +203,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {
+    "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
+        "projectUniqueName": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
         "projectName": "ChapeauUI",
-        "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\obj\\",
+        "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
+        "packagesPath": "C:\\Users\\sally\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sally\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,11 +231,11 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
-                "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj"
+              "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
+                "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj"
               },
-              "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -229,6 +249,16 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -247,7 +277,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
