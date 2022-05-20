@@ -105,6 +105,7 @@ namespace ChapeauDAL
             return false;
         }
 
+        //return the employee type of the employee 
         public string GetEmployeeType(string username)
         {
             string query = "SELECT employeeType FROM [dbo.Employee] WHERE [username] = @username";
