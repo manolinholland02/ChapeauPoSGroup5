@@ -7,6 +7,7 @@ namespace ChapeauModel
     public class Feedback
     {
         //hello
+        //this is a functionality
         public int FeedbackId { get; set; }
         public int TableId { get; set; }
         public TypeOfFeedback TypeOfFeedback { get; set; }
