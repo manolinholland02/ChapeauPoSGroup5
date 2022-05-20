@@ -14,9 +14,9 @@ namespace ChapeauDAL
             List<Orders> OrderFromTable = new List<Orders>();
 
             string query = @$"
-            SELECT [orderId], [orderTable], [orderItem], [orderItemName], [itemQuantity], [orderComment], [orderPrice],
+            SELECT [orderId], [orderTable], [orderItem], [orderItemName], [itemQuantity], [orderComment], [orderPrice]
             FROM [dbo].[Orders]
-            WHERE [orderTable] = {TableNumber}";
+            WHERE [orderTable] = {TableNumber};";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
