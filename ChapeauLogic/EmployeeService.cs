@@ -15,12 +15,12 @@ namespace ChapeauLogic
             _employeedb = new EmployeeDao();
         }
 
-        public List<Feedback> GetAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
             return _employeedb.GetAllEmployees();
         }
 
-        public void AddEmployee(Feedback employee)
+        public void AddEmployee(Employee employee)
         {
             _employeedb.AddEmployee(employee);
         }
@@ -28,7 +28,7 @@ namespace ChapeauLogic
         {
             _employeedb.DeleteEmployee(EmployeeId);
         }
-        public void EditEmployee(Feedback employee)
+        public void EditEmployee(Employee employee)
         {
             _employeedb.EditEmployee(employee);
         }

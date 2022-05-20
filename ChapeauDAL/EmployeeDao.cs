@@ -9,18 +9,18 @@ namespace ChapeauDAL
 {
     public class EmployeeDao : BaseDao
     {
-        public List<Feedback> GetAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
             string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo.Employees]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<Feedback> ReadTables(DataTable dataTable)
+        public List<Employee> ReadTables(DataTable dataTable)
         {
-            List<Feedback> employees = new List<Feedback>();
+            List<Employee> employees = new List<Employee>();
             foreach (DataRow dr in dataTable.Rows)
             {
-                Feedback employee = new Feedback()
+                Employee employee = new Employee()
                 {
                     EmployeeFirstName = dr["firstName"].ToString(),
                     EmployeeLastName = dr["lastName"].ToString(),
@@ -32,7 +32,7 @@ namespace ChapeauDAL
             }
             return employees;
         }
-        public void AddEmployee(Feedback employee)
+        public void AddEmployee(Employee employee)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace ChapeauDAL
             }
         }
 
-        public void EditEmployee(Feedback employee)
+        public void EditEmployee(Employee employee)
         {
             try
             {

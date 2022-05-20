@@ -19,10 +19,10 @@ namespace ChapeauDAL
         }
         public List<Feedback> ReadTables(DataTable dataTable)
         {
-            List<Feedback> employees = new List<Feedback>();
+            List<Feedback> feedback = new List<Feedback>();
             foreach (DataRow dr in dataTable.Rows)
             {
-                Feedback employee = new Feedback()
+                Feedback feedbacks = new Feedback()
                 {
                     TableId = (int)dr["tableId"],
                     FeedbackId = (int)dr["feedbackId"],
@@ -30,9 +30,9 @@ namespace ChapeauDAL
                     Note = dr["note"].ToString(),
                     TypeOfFeedback = (TypeOfFeedback)dr["typeOfFeedback"]
                 };
-                employees.Add(employee);
+                feedback.Add(feedbacks);
             }
-            return employees;
+            return feedback;
         }
     }
 }

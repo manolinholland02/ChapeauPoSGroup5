@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChapeauModel
 {
-    public class Feedback
+    public class Employee
     {
         public int EmployeeID { get; set; }
         public string EmployeeFirstName { get; set; }
