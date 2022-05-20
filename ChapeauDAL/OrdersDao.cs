@@ -14,12 +14,24 @@ namespace ChapeauDAL
             List<Orders> OrderFromTable = new List<Orders>();
 
             string query = @$"
-            SELECT [orderId], [orderTable], [orderItem], [orderItemName], [itemQuantity], [orderComment], [orderPrice],
+            SELECT [orderId], [orderTable], [orderItem], [orderItemName], [itemQuantity], [orderComment], [orderPrice]
             FROM [dbo].[Orders]
-            WHERE [orderTable] = {TableNumber}";
+            WHERE [orderTable] = {TableNumber};";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+
+        public void InsertNewOrder(List<Orders> NewOrders)
+        {
+            foreach (Orders Order in NewOrders)
+            {
+                string query = $"INSERT INTO dbo.Orders (orderTable, orderItem, orderItemName, itemQuantity, orderComment, orderPrice, orderStatus, orderWaiter, orderPreparer, orderPayment) VALUES('{Order.orderTable}', {Order.orderItem}, {Order.orderItemName}, {Order.ItemQuantity}, {Order.orderComment}, {Order.orderPreparer}, {Order.orderStatus}, {Order.orderWaiter}, {Order.orderPreparer},{Order.orderPayment} )";
+                SqlParameter[] sqlParameters = new SqlParameter[0];
+                ExecuteEditQuery(query, sqlParameters);
+                
+            }
+        }
+
 
         private List<Orders> ReadTables(DataTable dataTable)
         {
