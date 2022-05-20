@@ -7,3 +7,4 @@ ChapeauDAL/obj/ChapeauDAL.csproj.nuget.g.props
 ChapeauDAL/obj/Debug/net5.0/ChapeauDAL.assets.cache
 *.cache
 *.cache
+ChapeauUI/obj/Debug/net5.0-windows/ChapeauUI.designer.runtimeconfig.json

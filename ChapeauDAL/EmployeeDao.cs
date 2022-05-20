@@ -42,7 +42,7 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (int)employee.EmployeeType)
+                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
                 };
                 string query = $"INSERT INTO [dbo.Employee] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
@@ -76,7 +76,7 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (int)employee.EmployeeType)
+                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
                 };
                 string query = $"UPDATE INTO [dbo.Employee] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
