@@ -32,5 +32,9 @@ namespace ChapeauLogic
         {
             _employeedb.EditEmployee(employee);
         }
+        public bool AccountExists(string username, string password)
+        {
+            return _employeedb.AccountExists(username, password);
+        }
     }
 }
