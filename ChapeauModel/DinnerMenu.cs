@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    class DinnerMenu
+    public class DinnerMenu
     {
     }
 }
