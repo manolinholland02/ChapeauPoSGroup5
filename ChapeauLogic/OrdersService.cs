@@ -19,5 +19,10 @@ namespace ChapeauLogic
         {
             return orderDao.GetOrdersFromTableID(TableNumber);
         }
+
+        public void InsertNewOrder(List<Orders> NewOrders)
+        {
+            orderDao.InsertNewOrder(NewOrders);
+        }
     }
 }
