@@ -7,7 +7,7 @@
     },
     "additionalProbingPaths": [
       "C:\\Users\\Lenovo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sally\\.nuget\\packages"
+      "C:\\Users\\Lenovo\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
