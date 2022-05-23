@@ -6,7 +6,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class EmployeeService
+    public class EmployeeService
     {
         private EmployeeDao _employeedb;
 
@@ -32,9 +32,14 @@ namespace ChapeauLogic
         {
             _employeedb.EditEmployee(employee);
         }
-        public void EmployeePassword(Employee employee)
+        public bool AccountExists(string username, string password)
         {
-            //...
+            return _employeedb.AccountExists(username, password);
+        }
+        public EmployeeType GetEmployeeType(string username)
+        {
+            //hopefully converts string to EmployeeType(pls work :) )
+            return (EmployeeType)Enum.Parse(typeof(EmployeeType), _employeedb.GetEmployeeType(username));
         }
     }
 }

@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "r8CY/AU9wBzcIz3WXWJw0o8M0uJf1KuOmuHJ0sJvO5m+QPeQX0H035JhWrHugQ4NpQRAChn8SHKCpa7r8Ipf/w==",
+  "dgSpecHash": "Lj6GR/RD7fVrKsrLTRG/bqKiM58NXoka63JhgqjFZpeSC+Ks3H7ydEcAWzdonii3kTLhvDRBFAW6/OZeqWR64A==",
   "success": true,
-  "projectFilePath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+  "projectFilePath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -19,7 +19,7 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // open the screen according to the employee type
+
         }
     }
 }
