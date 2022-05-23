@@ -129,6 +129,7 @@ namespace ChapeauUI
             this.Controls.Add(this.listView_Employees_Management);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
+            this.Load += new System.EventHandler(this.ManagerView_Load);
             this.ResumeLayout(false);
 
         }
