@@ -28,3 +28,18 @@ C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.c
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.dll
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ref\ChapeauDAL.dll
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.pdb
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.deps.json
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.dll
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ref\ChapeauDAL.dll
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauDAL.pdb
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauModel.dll
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\bin\Debug\net5.0\ChapeauModel.pdb
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.AssemblyReference.cache
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.AssemblyInfoInputs.cache
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.AssemblyInfo.cs
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.CoreCompileInputs.cache
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.csproj.CopyComplete
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.dll
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ref\ChapeauDAL.dll
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauDAL\obj\Debug\net5.0\ChapeauDAL.pdb
