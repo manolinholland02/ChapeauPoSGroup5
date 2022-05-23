@@ -11,7 +11,7 @@ namespace ChapeauLogic
     class PaymentService
     {
         private PaymentDao _paymentdb;
-        
+
         public PaymentService()
         {
             _paymentdb = new PaymentDao();
@@ -20,6 +20,9 @@ namespace ChapeauLogic
         {
             return _paymentdb.GetPaymentFromTableId();
         }
-        
+        public void AddAmountPayedAndTip(Payment payment)
+        {
+            _paymentdb.AddAmountPayedAndTip(payment);
+        }
     }
 }
