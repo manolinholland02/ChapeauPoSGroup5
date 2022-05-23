@@ -18,12 +18,23 @@ namespace ChapeauUI
         public ManagerView()
         {
             InitializeComponent();
+            button_Edit_Employee.Enabled = false;
+            button_Delete_Employee.Enabled = false;
             PrintEmployees();
         }
 
         private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listView_Employees_Management.SelectedItems.Count > 0)
+            {
+                button_Delete_Employee.Enabled = true;
+                button_Edit_Employee.Enabled = true;
+            }
+            else
+            {
+                button_Edit_Employee.Enabled = false;
+                button_Delete_Employee.Enabled = false;
+            }
         }
 
         private void button_Delete_Employee_Click(object sender, EventArgs e)
@@ -59,5 +70,12 @@ namespace ChapeauUI
                 MessageBox.Show("Something went wrong while loading the employees: " + e.Message);
             }
         }
+
+
+        private void ManagerView_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
