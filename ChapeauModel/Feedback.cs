@@ -8,8 +8,7 @@ namespace ChapeauModel
     {
         
         public int FeedbackId { get; set; }
-        public int TableId { get; set; }
-        public TypeOfFeedback TypeOfFeedback { get; set; }
+        public int PaymentId { get; set; }
         public string Note { get; set; }
         public DateTime DateOfFeedback { get; set; }
     }
