@@ -4,10 +4,22 @@
     <Compile Update="ChoosingMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DinnerMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DrinksMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LunchMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ManagerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrderOverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
