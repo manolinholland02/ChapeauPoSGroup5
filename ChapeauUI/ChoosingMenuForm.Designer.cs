@@ -49,6 +49,7 @@ namespace ChapeauUI
             this.LunchMenubtn.TabIndex = 0;
             this.LunchMenubtn.Text = "Lunch Menu";
             this.LunchMenubtn.UseVisualStyleBackColor = true;
+            this.LunchMenubtn.Click += new System.EventHandler(this.LunchMenubtn_Click);
             // 
             // DinnerMenubtn
             // 
@@ -59,6 +60,7 @@ namespace ChapeauUI
             this.DinnerMenubtn.TabIndex = 1;
             this.DinnerMenubtn.Text = "Dinner Menu";
             this.DinnerMenubtn.UseVisualStyleBackColor = true;
+            this.DinnerMenubtn.Click += new System.EventHandler(this.DinnerMenubtn_Click);
             // 
             // DrinksMenubtn
             // 
@@ -69,6 +71,7 @@ namespace ChapeauUI
             this.DrinksMenubtn.TabIndex = 2;
             this.DrinksMenubtn.Text = "Drinks Menu";
             this.DrinksMenubtn.UseVisualStyleBackColor = true;
+            this.DrinksMenubtn.Click += new System.EventHandler(this.DrinksMenubtn_Click);
             // 
             // Paybtn
             // 
@@ -79,6 +82,7 @@ namespace ChapeauUI
             this.Paybtn.TabIndex = 3;
             this.Paybtn.Text = "Pay";
             this.Paybtn.UseVisualStyleBackColor = true;
+            this.Paybtn.Click += new System.EventHandler(this.Paybtn_Click);
             // 
             // MenuPageTableViewbtn
             // 
@@ -89,16 +93,18 @@ namespace ChapeauUI
             this.MenuPageTableViewbtn.TabIndex = 4;
             this.MenuPageTableViewbtn.Text = "Table View";
             this.MenuPageTableViewbtn.UseVisualStyleBackColor = true;
+            this.MenuPageTableViewbtn.Click += new System.EventHandler(this.MenuPageTableViewbtn_Click);
             // 
             // OrderOverviewbtn
             // 
             this.OrderOverviewbtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OrderOverviewbtn.Location = new System.Drawing.Point(410, 28);
+            this.OrderOverviewbtn.Location = new System.Drawing.Point(410, 29);
             this.OrderOverviewbtn.Name = "OrderOverviewbtn";
             this.OrderOverviewbtn.Size = new System.Drawing.Size(115, 82);
             this.OrderOverviewbtn.TabIndex = 5;
             this.OrderOverviewbtn.Text = "See Table\'s Orders";
             this.OrderOverviewbtn.UseVisualStyleBackColor = true;
+            this.OrderOverviewbtn.Click += new System.EventHandler(this.OrderOverviewbtn_Click);
             // 
             // NewOrderCountlbl
             // 
