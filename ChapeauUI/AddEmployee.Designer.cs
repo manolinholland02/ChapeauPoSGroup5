@@ -102,7 +102,6 @@ namespace ChapeauUI
             this.radioButton_AddEmployee_Bartender.Name = "radioButton_AddEmployee_Bartender";
             this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(117, 24);
             this.radioButton_AddEmployee_Bartender.TabIndex = 8;
-            this.radioButton_AddEmployee_Bartender.TabStop = true;
             this.radioButton_AddEmployee_Bartender.Text = "Bartender";
             this.radioButton_AddEmployee_Bartender.UseVisualStyleBackColor = true;
             // 
@@ -113,7 +112,6 @@ namespace ChapeauUI
             this.radioButton_AddEmployee_Manager.Name = "radioButton_AddEmployee_Manager";
             this.radioButton_AddEmployee_Manager.Size = new System.Drawing.Size(89, 24);
             this.radioButton_AddEmployee_Manager.TabIndex = 9;
-            this.radioButton_AddEmployee_Manager.TabStop = true;
             this.radioButton_AddEmployee_Manager.Text = "Manager";
             this.radioButton_AddEmployee_Manager.UseVisualStyleBackColor = true;
             // 
@@ -124,7 +122,6 @@ namespace ChapeauUI
             this.radioButton_AddEmployee_Waiter.Name = "radioButton_AddEmployee_Waiter";
             this.radioButton_AddEmployee_Waiter.Size = new System.Drawing.Size(73, 24);
             this.radioButton_AddEmployee_Waiter.TabIndex = 6;
-            this.radioButton_AddEmployee_Waiter.TabStop = true;
             this.radioButton_AddEmployee_Waiter.Text = "Waiter";
             this.radioButton_AddEmployee_Waiter.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +132,6 @@ namespace ChapeauUI
             this.radioButton_AddEmployee_Chef.Name = "radioButton_AddEmployee_Chef";
             this.radioButton_AddEmployee_Chef.Size = new System.Drawing.Size(60, 24);
             this.radioButton_AddEmployee_Chef.TabIndex = 7;
-            this.radioButton_AddEmployee_Chef.TabStop = true;
             this.radioButton_AddEmployee_Chef.Text = "Chef";
             this.radioButton_AddEmployee_Chef.UseVisualStyleBackColor = true;
             // 
@@ -175,6 +171,7 @@ namespace ChapeauUI
             this.button_AddEmployee.TabIndex = 10;
             this.button_AddEmployee.Text = "Add Employee";
             this.button_AddEmployee.UseVisualStyleBackColor = true;
+            this.button_AddEmployee.Click += new System.EventHandler(this.button_AddEmployee_Click);
             // 
             // button_Cancel
             // 
