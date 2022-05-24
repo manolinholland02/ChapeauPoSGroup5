@@ -34,10 +34,10 @@ namespace ChapeauUI
             this.label_AddEmploye_Username = new System.Windows.Forms.Label();
             this.label_AddEmployee_Password = new System.Windows.Forms.Label();
             this.groupBox_AddEmployee_Occupation = new System.Windows.Forms.GroupBox();
-            this.radioButton_AddEmployee_Waiter = new System.Windows.Forms.RadioButton();
-            this.radioButton_AddEmployee_Chef = new System.Windows.Forms.RadioButton();
             this.radioButton_AddEmployee_Bartender = new System.Windows.Forms.RadioButton();
             this.radioButton_AddEmployee_Manager = new System.Windows.Forms.RadioButton();
+            this.radioButton_AddEmployee_Waiter = new System.Windows.Forms.RadioButton();
+            this.radioButton_AddEmployee_Chef = new System.Windows.Forms.RadioButton();
             this.textBox_AddEmployee_FirstName = new System.Windows.Forms.TextBox();
             this.textBox_AddEmployee_LastName = new System.Windows.Forms.TextBox();
             this.textBox_AddEmployee_Username = new System.Windows.Forms.TextBox();
@@ -96,6 +96,27 @@ namespace ChapeauUI
             this.groupBox_AddEmployee_Occupation.TabStop = false;
             this.groupBox_AddEmployee_Occupation.Text = "Occupation";
             // 
+            // radioButton_AddEmployee_Bartender
+            // 
+            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(175, 37);
+            this.radioButton_AddEmployee_Bartender.Name = "radioButton_AddEmployee_Bartender";
+            this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(117, 24);
+            this.radioButton_AddEmployee_Bartender.TabIndex = 8;
+            this.radioButton_AddEmployee_Bartender.TabStop = true;
+            this.radioButton_AddEmployee_Bartender.Text = "Bartender";
+            this.radioButton_AddEmployee_Bartender.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_AddEmployee_Manager
+            // 
+            this.radioButton_AddEmployee_Manager.AutoSize = true;
+            this.radioButton_AddEmployee_Manager.Location = new System.Drawing.Point(175, 76);
+            this.radioButton_AddEmployee_Manager.Name = "radioButton_AddEmployee_Manager";
+            this.radioButton_AddEmployee_Manager.Size = new System.Drawing.Size(89, 24);
+            this.radioButton_AddEmployee_Manager.TabIndex = 9;
+            this.radioButton_AddEmployee_Manager.TabStop = true;
+            this.radioButton_AddEmployee_Manager.Text = "Manager";
+            this.radioButton_AddEmployee_Manager.UseVisualStyleBackColor = true;
+            // 
             // radioButton_AddEmployee_Waiter
             // 
             this.radioButton_AddEmployee_Waiter.AutoSize = true;
@@ -117,27 +138,6 @@ namespace ChapeauUI
             this.radioButton_AddEmployee_Chef.TabStop = true;
             this.radioButton_AddEmployee_Chef.Text = "Chef";
             this.radioButton_AddEmployee_Chef.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_AddEmployee_Bartender
-            // 
-            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(175, 37);
-            this.radioButton_AddEmployee_Bartender.Name = "radioButton_AddEmployee_Bartender";
-            this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(117, 24);
-            this.radioButton_AddEmployee_Bartender.TabIndex = 8;
-            this.radioButton_AddEmployee_Bartender.TabStop = true;
-            this.radioButton_AddEmployee_Bartender.Text = "Bartender";
-            this.radioButton_AddEmployee_Bartender.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_AddEmployee_Manager
-            // 
-            this.radioButton_AddEmployee_Manager.AutoSize = true;
-            this.radioButton_AddEmployee_Manager.Location = new System.Drawing.Point(175, 76);
-            this.radioButton_AddEmployee_Manager.Name = "radioButton_AddEmployee_Manager";
-            this.radioButton_AddEmployee_Manager.Size = new System.Drawing.Size(89, 24);
-            this.radioButton_AddEmployee_Manager.TabIndex = 9;
-            this.radioButton_AddEmployee_Manager.TabStop = true;
-            this.radioButton_AddEmployee_Manager.Text = "Manager";
-            this.radioButton_AddEmployee_Manager.UseVisualStyleBackColor = true;
             // 
             // textBox_AddEmployee_FirstName
             // 
@@ -173,7 +173,7 @@ namespace ChapeauUI
             this.button_AddEmployee.Name = "button_AddEmployee";
             this.button_AddEmployee.Size = new System.Drawing.Size(94, 29);
             this.button_AddEmployee.TabIndex = 10;
-            this.button_AddEmployee.Text = "button1";
+            this.button_AddEmployee.Text = "Add Employee";
             this.button_AddEmployee.UseVisualStyleBackColor = true;
             // 
             // button_Cancel
@@ -182,7 +182,7 @@ namespace ChapeauUI
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(94, 29);
             this.button_Cancel.TabIndex = 11;
-            this.button_Cancel.Text = "button2";
+            this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
