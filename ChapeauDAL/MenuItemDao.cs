@@ -13,13 +13,14 @@ namespace ChapeauDAL
         public List<MenuItem> GetAllMenuItems()
         {
             string query = @"
-            SELECT [menuItemId]
-            ,[menuItemName]
-            ,[menuItemPrice]
-            ,[isFoodOrDrink]
-            ,[menuItemStock]
-            ,[menuItemType]
-            ,[menuItemCategory]
+            SELECT [menuItemId],
+            [menuItemName],
+            [menuItemPrice],
+            [isFoodOrDrink],
+            [menuItemStock],
+            [menuItemType],
+            [menuItemCategory],
+            [averagePreparationTime]
             FROM [dbo].[MenuItems]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -47,10 +48,13 @@ namespace ChapeauDAL
                     MenuItemPrice = (decimal)dr["menuItemPrice"],
                     isFood = CheckMenuType(dr["isFoodOrDrink"]),
                     MenuItemStock = (int)dr["menuItemStock"],
-                    MenuItemType = (MenuType)dr["menuItemType"],
-                    MenuItemCategory = (MenuItemCategory)dr["menuItemCategory"]
+                    MenuItemType = (MenuType)Enum.Parse(typeof(MenuType), dr["menuItemType"].ToString()),
+                    MenuItemCategory = (MenuItemCategory)Enum.Parse(typeof(MenuItemCategory), dr["menuItemCategory"].ToString()),
+                    AveragePreparationTime = dr["averagePreparationTime"].ToString()
+
                 };
                 menuItems.Add(menuItem);
+
             }
             return menuItems;
         }

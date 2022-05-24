@@ -55,6 +55,7 @@ namespace ChapeauUI
             this.LunchStartersListView.Size = new System.Drawing.Size(265, 145);
             this.LunchStartersListView.TabIndex = 1;
             this.LunchStartersListView.UseCompatibleStateImageBehavior = false;
+            this.LunchStartersListView.View = System.Windows.Forms.View.Details;
             // 
             // LunchMainListView
             // 
@@ -64,6 +65,7 @@ namespace ChapeauUI
             this.LunchMainListView.Size = new System.Drawing.Size(265, 145);
             this.LunchMainListView.TabIndex = 2;
             this.LunchMainListView.UseCompatibleStateImageBehavior = false;
+            this.LunchMainListView.View = System.Windows.Forms.View.Details;
             // 
             // LunchDessertListView
             // 
@@ -73,6 +75,7 @@ namespace ChapeauUI
             this.LunchDessertListView.Size = new System.Drawing.Size(265, 145);
             this.LunchDessertListView.TabIndex = 3;
             this.LunchDessertListView.UseCompatibleStateImageBehavior = false;
+            this.LunchDessertListView.View = System.Windows.Forms.View.Details;
             // 
             // backbtnLunch
             // 
@@ -82,6 +85,7 @@ namespace ChapeauUI
             this.backbtnLunch.TabIndex = 4;
             this.backbtnLunch.Text = "Back";
             this.backbtnLunch.UseVisualStyleBackColor = true;
+            this.backbtnLunch.Click += new System.EventHandler(this.backbtnLunch_Click);
             // 
             // AddbtnLunch
             // 
@@ -91,6 +95,7 @@ namespace ChapeauUI
             this.AddbtnLunch.TabIndex = 5;
             this.AddbtnLunch.Text = "Add";
             this.AddbtnLunch.UseVisualStyleBackColor = true;
+            this.AddbtnLunch.Click += new System.EventHandler(this.AddbtnLunch_Click);
             // 
             // LunchCommentSection
             // 
