@@ -9,7 +9,7 @@ using ChapeauModel;
 
 namespace ChapeauDAL
 {
-    class DrinksMenuDao : BaseDao
+    public class DrinksMenuDao : BaseDao
     {
         public List<DrinkMenu> GetDrinkMenuItems()
         {

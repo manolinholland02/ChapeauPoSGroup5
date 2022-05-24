@@ -22,19 +22,15 @@ namespace ChapeauUI
         private void testformbtn_Click(object sender, EventArgs e)
         {
             testlistview.Items.Clear();
-            MenuItemService menuitemsService = new MenuItemService();
-            List<MenuItem> items = menuitemsService.GetMenuItems();
-            foreach (MenuItem item in items)
+            LunchMenuLogic LunchService = new LunchMenuLogic();
+            List<LunchMenu> items = new List<LunchMenu>();
+            items = LunchService.GetLunchMenuItems();
+            foreach (LunchMenu item in items)
             {
                 ListViewItem li = new ListViewItem();
-                li.SubItems.Add(item.MenuItemID.ToString());
+                li.SubItems.Add(item.LunchMenuId.ToString());
                 li.SubItems.Add(item.MenuItemName.ToString());
-                li.SubItems.Add(item.MenuItemPrice.ToString());
-                li.SubItems.Add(item.MenuItemStock.ToString());
-                li.SubItems.Add(item.MenuItemType.ToString());
-                li.SubItems.Add(item.MenuItemCategory.ToString());
-                li.SubItems.Add(item.AveragePreparationTime);
-                li.SubItems.Add(item.isFood.ToString());
+                
                 testlistview.Items.Add(li);
             }
 
