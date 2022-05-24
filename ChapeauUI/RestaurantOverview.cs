@@ -21,7 +21,9 @@ namespace ChapeauUI
         {
             // open the taking orders form
             // change color if an order has been taken
-            button1.BackColor = Color.Red;
+            btnTable1.BackColor = Color.Red;
         }
+
+        
     }
 }
