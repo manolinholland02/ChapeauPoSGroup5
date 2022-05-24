@@ -8,21 +8,21 @@ namespace ChapeauLogic
 {
     class OrdersService
     {
-        private OrdersDao orderDao;
+        private OrdersDao _orderDao;
 
         public OrdersService()
         {
-            orderDao = new OrdersDao();
+            _orderDao = new OrdersDao();
         }
 
         public List<Orders> GetOrdersFromTableID(int TableNumber)
         {
-            return orderDao.GetOrdersFromTableID(TableNumber);
+            return _orderDao.GetOrdersFromTableID(TableNumber);
         }
 
         public void InsertNewOrder(List<Orders> NewOrders)
         {
-            orderDao.InsertNewOrder(NewOrders);
+            _orderDao.InsertNewOrder(NewOrders);
         }
     }
 }
