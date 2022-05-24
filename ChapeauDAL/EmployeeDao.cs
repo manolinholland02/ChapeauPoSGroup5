@@ -27,7 +27,7 @@ namespace ChapeauDAL
                     EmployeeFirstName = dr["firstName"].ToString(),
                     EmployeeLastName = dr["lastName"].ToString(),
                     EmployeeUsername = dr["username"].ToString(),
-                    EmployeeUserPassword = dr["userPassword"].ToString(),
+                    EmployeeUserPassword = (int)dr["userPassword"],
                     EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower()),
                 };
                 employees.Add(employee);

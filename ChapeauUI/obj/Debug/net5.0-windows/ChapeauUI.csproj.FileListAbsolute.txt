@@ -136,3 +136,10 @@ D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLog
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.pdb
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CopyComplete
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
