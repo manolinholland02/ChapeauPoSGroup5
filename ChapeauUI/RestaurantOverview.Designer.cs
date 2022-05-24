@@ -40,7 +40,7 @@ namespace ChapeauUI
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.buttonViewManagementDemo = new System.Windows.Forms.Button();
+            this.viewManagement_tryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -153,22 +153,22 @@ namespace ChapeauUI
             this.button10.Text = "9";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // buttonViewManagementDemo
+            // viewManagement_tryButton
             // 
-            this.buttonViewManagementDemo.Location = new System.Drawing.Point(69, 633);
-            this.buttonViewManagementDemo.Name = "buttonViewManagementDemo";
-            this.buttonViewManagementDemo.Size = new System.Drawing.Size(94, 29);
-            this.buttonViewManagementDemo.TabIndex = 11;
-            this.buttonViewManagementDemo.Text = "view m";
-            this.buttonViewManagementDemo.UseVisualStyleBackColor = true;
-            this.buttonViewManagementDemo.Click += new System.EventHandler(this.buttonViewManagementDemo_Click);
+            this.viewManagement_tryButton.Location = new System.Drawing.Point(46, 674);
+            this.viewManagement_tryButton.Name = "viewManagement_tryButton";
+            this.viewManagement_tryButton.Size = new System.Drawing.Size(94, 29);
+            this.viewManagement_tryButton.TabIndex = 11;
+            this.viewManagement_tryButton.Text = "view management";
+            this.viewManagement_tryButton.UseVisualStyleBackColor = true;
+            this.viewManagement_tryButton.Click += new System.EventHandler(this.viewManagement_tryButton_Click);
             // 
             // RestaurantOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 753);
-            this.Controls.Add(this.buttonViewManagementDemo);
+            this.Controls.Add(this.viewManagement_tryButton);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button5);
@@ -200,6 +200,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button buttonViewManagementDemo;
+        private System.Windows.Forms.Button viewManagement_tryButton;
     }
 }
