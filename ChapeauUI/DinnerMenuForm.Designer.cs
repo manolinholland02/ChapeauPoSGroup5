@@ -47,6 +47,7 @@ namespace ChapeauUI
             this.DinnerDessertsListView.Size = new System.Drawing.Size(265, 145);
             this.DinnerDessertsListView.TabIndex = 0;
             this.DinnerDessertsListView.UseCompatibleStateImageBehavior = false;
+            this.DinnerDessertsListView.View = System.Windows.Forms.View.Details;
             // 
             // DinnerStartersListView
             // 
@@ -56,6 +57,7 @@ namespace ChapeauUI
             this.DinnerStartersListView.Size = new System.Drawing.Size(265, 145);
             this.DinnerStartersListView.TabIndex = 1;
             this.DinnerStartersListView.UseCompatibleStateImageBehavior = false;
+            this.DinnerStartersListView.View = System.Windows.Forms.View.Details;
             // 
             // DinnerMainListView
             // 
@@ -65,6 +67,7 @@ namespace ChapeauUI
             this.DinnerMainListView.Size = new System.Drawing.Size(265, 145);
             this.DinnerMainListView.TabIndex = 2;
             this.DinnerMainListView.UseCompatibleStateImageBehavior = false;
+            this.DinnerMainListView.View = System.Windows.Forms.View.Details;
             this.DinnerMainListView.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
             // 
             // DinnerEntremetsListView
@@ -75,6 +78,7 @@ namespace ChapeauUI
             this.DinnerEntremetsListView.Size = new System.Drawing.Size(265, 145);
             this.DinnerEntremetsListView.TabIndex = 3;
             this.DinnerEntremetsListView.UseCompatibleStateImageBehavior = false;
+            this.DinnerEntremetsListView.View = System.Windows.Forms.View.Details;
             // 
             // BackbtnDinner
             // 
@@ -94,6 +98,7 @@ namespace ChapeauUI
             this.AddbtnDinner.TabIndex = 5;
             this.AddbtnDinner.Text = "Add";
             this.AddbtnDinner.UseVisualStyleBackColor = true;
+            this.AddbtnDinner.Click += new System.EventHandler(this.AddbtnDinner_Click);
             // 
             // DinnerCommentSection
             // 

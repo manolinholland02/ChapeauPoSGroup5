@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "jej2p73qNB0NdnD3f9srbL2AeNZ/VXYNH22ngpYsRvVNNNM8Glv3akhluK6xNxvuLByNJvdn+g8HUN1Y0g0XJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sally\\Desktop\\School\\IT1.4 chapeau project\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
@@ -22,9 +23,13 @@
     "C:\\Users\\sally\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
 =======
   "dgSpecHash": "1UvFJ7+vevoM0jaig3iuFGJGZYdbqXdLuuBDg0LA0LW3YdUmZcg8buSs6DB+Sj2B4LMrcB1Bw64EaqKML6e0Tg==",
+=======
+  "dgSpecHash": "V5MuPpEOep5PU8wDLigUjy4uqlpIFoCUihsbRJi26CjgFm7028q51HZfSfHgjH/jSoeNOdeAvtCZDTeI2XS4jA==",
+>>>>>>> 045309af99339ca90068b34a9fb104674e69042a
   "success": true,
-  "projectFilePath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
+  "projectFilePath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
@@ -41,6 +46,23 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
 >>>>>>> Chapeau-Demo
+=======
+    "C:\\Users\\miede\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\miede\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+>>>>>>> 045309af99339ca90068b34a9fb104674e69042a
   ],
   "logs": []
 }
