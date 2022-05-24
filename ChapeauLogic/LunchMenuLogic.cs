@@ -22,5 +22,11 @@ namespace ChapeauLogic
             List<LunchMenu> lunchMenuItems = _lunchMenuDb.GetLunchMenuItems();
             return lunchMenuItems;
         }
+
+        public List<LunchMenu> GetSpecificLunchMenu(string MenuCategory)
+        {
+            List<LunchMenu> specificLunchMenu = _lunchMenuDb.GetSpecificLunchMenu(MenuCategory);
+            return specificLunchMenu;
+        }
     }
 }

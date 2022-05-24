@@ -2,6 +2,6 @@
 {
     public enum MenuType
     {
-        dinner, lunch, alcoholic, nonAlcoholic
+        dinner, lunch, alcoholic, nonalcoholic
     }
 }
