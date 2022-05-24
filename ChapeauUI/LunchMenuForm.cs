@@ -14,9 +14,9 @@ namespace ChapeauUI
 {
     public partial class LunchMenuForm : Form
     {
-        const string starterMenu = "starter";
-        const string mainMenu = "main";
-        const string dessertMenu = "desert";
+        const string starter = "starter";
+        const string main = "main";
+        const string dessert = "desert";
         public LunchMenuForm()
         {
             InitializeComponent();
@@ -41,54 +41,27 @@ namespace ChapeauUI
             LunchDessertListView.Items.Clear();
             LunchMenuLogic LunchService = new LunchMenuLogic();
             //Starters
-            FillStarters(LunchService);
+            FillMenu(LunchService, starter, LunchStartersListView, "Starters");
 
             //Main
-            FillMain(LunchService);
+            FillMenu(LunchService, main, LunchMainListView, "Mains");
 
             //Dessert
-            FillDessert(LunchService);
+            FillMenu(LunchService, dessert, LunchDessertListView, "Desserts");
         }
 
-        private void FillStarters(LunchMenuLogic LunchService)
+
+        private void FillMenu(LunchMenuLogic LunchService, string category, ListView listview, string Title)
         {
-            LunchStartersListView.Columns.Add("ID", 30);
-            LunchStartersListView.Columns.Add("Starters", 200);
-            List<LunchMenu> starteritems = new List<LunchMenu>();
-            starteritems = LunchService.GetSpecificLunchMenu(starterMenu);
-            foreach (LunchMenu item in starteritems)
+            listview.Columns.Add("ID", 30);
+            listview.Columns.Add(Title, 200);
+            List<LunchMenu> items = new List<LunchMenu>();
+            items = LunchService.GetSpecificLunchMenu(category);
+            foreach (LunchMenu item in items)
             {
                 string[] output = { item.LunchMenuId.ToString(), item.MenuItemName };
                 ListViewItem list = new ListViewItem(output);
-                LunchStartersListView.Items.Add(list);
-            }
-        }
-
-        private void FillMain(LunchMenuLogic LunchService)
-        {
-            LunchMainListView.Columns.Add("ID", 30);
-            LunchMainListView.Columns.Add("Main", 200);
-            List<LunchMenu> mainitems = new List<LunchMenu>();
-            mainitems = LunchService.GetSpecificLunchMenu(mainMenu);
-            foreach (LunchMenu item in mainitems)
-            {
-                string[] output = { item.LunchMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                LunchMainListView.Items.Add(list);
-            }
-        }
-
-        private void FillDessert(LunchMenuLogic LunchService)
-        {
-            LunchDessertListView.Columns.Add("ID", 30);
-            LunchDessertListView.Columns.Add("Dessert", 200);
-            List<LunchMenu> dessertitems = new List<LunchMenu>();
-            dessertitems = LunchService.GetSpecificLunchMenu(dessertMenu);
-            foreach (LunchMenu item in dessertitems)
-            {
-                string[] output = { item.LunchMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                LunchDessertListView.Items.Add(list);
+                listview.Items.Add(list);
             }
         }
 

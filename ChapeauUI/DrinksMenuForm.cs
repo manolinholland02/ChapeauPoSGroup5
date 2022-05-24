@@ -46,82 +46,28 @@ namespace ChapeauUI
 
             DrinksMenuService DrinkService = new DrinksMenuService();
             //Soft drink
-            FillSoftDrinks(DrinkService);
+            FillMenu(DrinkService, softDrinks, SoftDrinksListView, "Soft Drinks");
             //beers
-            FillBeers(DrinkService);
+            FillMenu(DrinkService, beers, BeersListView, "Beers");
             //wines
-            FillWines(DrinkService);
+            FillMenu(DrinkService, wines, WineListView, "Wines");
             //spirits
-            FillSpirits(DrinkService);
+            FillMenu(DrinkService, spirits, SpiritsListView, "Spirits");
             //caffeinated
-            FillCaffeinated(DrinkService);
+            FillMenu(DrinkService, coffeeTea, CoffeeTeaListView, "Coffee And Tea");
         }
 
-        private void FillSoftDrinks(DrinksMenuService DrinkService)
+        private void FillMenu(DrinksMenuService DrinkService, string category, ListView listview, string Title)
         {
-            SoftDrinksListView.Columns.Add("ID", 30);
-            SoftDrinksListView.Columns.Add("Soft Dinks", 200);
-            List<DrinkMenu> softdrinkitems = new List<DrinkMenu>();
-            softdrinkitems = DrinkService.GetSpecificDrinksMenu(softDrinks);
-            foreach (DrinkMenu item in softdrinkitems)
+            listview.Columns.Add("ID", 30);
+            listview.Columns.Add(Title, 200);
+            List<DrinkMenu> items = new List<DrinkMenu>();
+            items = DrinkService.GetSpecificDrinksMenu(category);
+            foreach (DrinkMenu item in items)
             {
                 string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
                 ListViewItem list = new ListViewItem(output);
-                SoftDrinksListView.Items.Add(list);
-            }
-        }
-
-        private void FillBeers(DrinksMenuService DrinkService)
-        {
-            BeersListView.Columns.Add("ID", 30);
-            BeersListView.Columns.Add("Beers", 200);
-            List<DrinkMenu> softdrinkitems = new List<DrinkMenu>();
-            softdrinkitems = DrinkService.GetSpecificDrinksMenu(beers);
-            foreach (DrinkMenu item in softdrinkitems)
-            {
-                string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                BeersListView.Items.Add(list);
-            }
-        }
-        private void FillWines(DrinksMenuService DrinkService)
-        {
-            WineListView.Columns.Add("ID", 30);
-            WineListView.Columns.Add("Wines", 200);
-            List<DrinkMenu> softdrinkitems = new List<DrinkMenu>();
-            softdrinkitems = DrinkService.GetSpecificDrinksMenu(wines);
-            foreach (DrinkMenu item in softdrinkitems)
-            {
-                string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                WineListView.Items.Add(list);
-            }
-        }
-        private void FillSpirits(DrinksMenuService DrinkService)
-        {
-            SpiritsListView.Columns.Add("ID", 30);
-            SpiritsListView.Columns.Add("Spirits", 200);
-            List<DrinkMenu> softdrinkitems = new List<DrinkMenu>();
-            softdrinkitems = DrinkService.GetSpecificDrinksMenu(spirits);
-            foreach (DrinkMenu item in softdrinkitems)
-            {
-                string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                SpiritsListView.Items.Add(list);
-            }
-        }
-
-        private void FillCaffeinated(DrinksMenuService DrinkService)
-        {
-            CoffeeTeaListView.Columns.Add("ID", 30);
-            CoffeeTeaListView.Columns.Add("Coffee and Tea", 200);
-            List<DrinkMenu> softdrinkitems = new List<DrinkMenu>();
-            softdrinkitems = DrinkService.GetSpecificDrinksMenu(coffeeTea);
-            foreach (DrinkMenu item in softdrinkitems)
-            {
-                string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                CoffeeTeaListView.Items.Add(list);
+                listview.Items.Add(list);
             }
         }
     }

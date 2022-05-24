@@ -50,67 +50,27 @@ namespace ChapeauUI
 
             DinnerMenuService DinnerService = new DinnerMenuService();
             //Starters
-            FillStarters(DinnerService);
+            FillMenu(DinnerService, starter, DinnerStartersListView, "Starters");
             //entremets
-            FillEntremets(DinnerService);
+            FillMenu(DinnerService, entremets, DinnerEntremetsListView, "Entremets");
             //mains
-            FillMains(DinnerService);
+            FillMenu(DinnerService, main, DinnerMainListView, "Mains");
             //desserts
-            FillDesserts(DinnerService);
+            FillMenu(DinnerService, dessert, DinnerDessertsListView, "Desserts");
 
         }
 
-        private void FillStarters(DinnerMenuService DinnerService)
+        private void FillMenu(DinnerMenuService DinnerService, string category, ListView listview, string Title)
         {
-            DinnerStartersListView.Columns.Add("ID", 30);
-            DinnerStartersListView.Columns.Add("Starters", 200);
-            List<DinnerMenu> starteritems = new List<DinnerMenu>();
-            starteritems = DinnerService.GetspecficDinnerMenu(starter);
-            foreach (DinnerMenu item in starteritems)
+            listview.Columns.Add("ID", 30);
+            listview.Columns.Add(Title, 200);
+            List<DinnerMenu> items = new List<DinnerMenu>();
+            items = DinnerService.GetspecficDinnerMenu(category);
+            foreach (DinnerMenu item in items)
             {
                 string[] output = { item.DinnerMenuId.ToString(), item.MenuItemName };
                 ListViewItem list = new ListViewItem(output);
-                DinnerStartersListView.Items.Add(list);
-            }
-        }
-
-        private void FillEntremets(DinnerMenuService DinnerService)
-        {
-            DinnerEntremetsListView.Columns.Add("ID", 30);
-            DinnerEntremetsListView.Columns.Add("Entremets", 200);
-            List<DinnerMenu> entremetitems = new List<DinnerMenu>();
-            entremetitems = DinnerService.GetspecficDinnerMenu(entremets);
-            foreach (DinnerMenu item in entremetitems)
-            {
-                string[] output = { item.DinnerMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                DinnerEntremetsListView.Items.Add(list);
-            }
-        }
-        private void FillMains(DinnerMenuService DinnerService)
-        {
-            DinnerMainListView.Columns.Add("ID", 30);
-            DinnerMainListView.Columns.Add("Mains", 200);
-            List<DinnerMenu> mainitems = new List<DinnerMenu>();
-            mainitems = DinnerService.GetspecficDinnerMenu(main);
-            foreach (DinnerMenu item in mainitems)
-            {
-                string[] output = { item.DinnerMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                DinnerMainListView.Items.Add(list);
-            }
-        }
-        private void FillDesserts(DinnerMenuService DinnerService)
-        {
-            DinnerDessertsListView.Columns.Add("ID", 30);
-            DinnerDessertsListView.Columns.Add("Desserts", 200);
-            List<DinnerMenu> dessertitems = new List<DinnerMenu>();
-            dessertitems = DinnerService.GetspecficDinnerMenu(dessert);
-            foreach (DinnerMenu item in dessertitems)
-            {
-                string[] output = { item.DinnerMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                DinnerDessertsListView.Items.Add(list);
+                listview.Items.Add(list);
             }
         }
     }
