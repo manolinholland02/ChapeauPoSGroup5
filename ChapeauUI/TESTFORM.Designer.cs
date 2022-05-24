@@ -30,17 +30,31 @@ namespace ChapeauUI
         private void InitializeComponent()
         {
             this.testlistview = new System.Windows.Forms.ListView();
+            this.TestformID = new System.Windows.Forms.ColumnHeader();
+            this.TestFormName = new System.Windows.Forms.ColumnHeader();
             this.testformbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // testlistview
             // 
+            this.testlistview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.TestformID,
+            this.TestFormName});
             this.testlistview.HideSelection = false;
             this.testlistview.Location = new System.Drawing.Point(155, 73);
             this.testlistview.Name = "testlistview";
             this.testlistview.Size = new System.Drawing.Size(473, 235);
             this.testlistview.TabIndex = 0;
             this.testlistview.UseCompatibleStateImageBehavior = false;
+            this.testlistview.View = System.Windows.Forms.View.Details;
+            // 
+            // TestformID
+            // 
+            this.TestformID.Text = "ID";
+            // 
+            // TestFormName
+            // 
+            this.TestFormName.Text = "Name";
             // 
             // testformbtn
             // 
@@ -69,5 +83,7 @@ namespace ChapeauUI
 
         private System.Windows.Forms.ListView testlistview;
         private System.Windows.Forms.Button testformbtn;
+        private System.Windows.Forms.ColumnHeader TestformID;
+        private System.Windows.Forms.ColumnHeader TestFormName;
     }
 }

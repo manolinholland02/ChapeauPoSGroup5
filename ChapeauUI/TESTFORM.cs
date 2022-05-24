@@ -23,16 +23,16 @@ namespace ChapeauUI
         {
 
             testlistview.Items.Clear();
+            testlistview.Columns.Add("ID", 20);
+            testlistview.Columns.Add("Name", 20);
             MenuItemService menuService = new MenuItemService();
             List<MenuItem> items = new List<MenuItem>();
             items = menuService.GetMenuItems();
             foreach (MenuItem item in items)
             {
-                ListViewItem li = new ListViewItem();
-                li.SubItems.Add(item.MenuItemID.ToString());
-                li.SubItems.Add(item.MenuItemName);
-
-                testlistview.Items.Add(li);
+                string[] output = { item.MenuItemID.ToString(), item.MenuItemName };
+                ListViewItem list = new ListViewItem(output);
+                testlistview.Items.Add(list);
             }
             //testlistview.Items.Clear();
             //LunchMenuLogic LunchService = new LunchMenuLogic();
