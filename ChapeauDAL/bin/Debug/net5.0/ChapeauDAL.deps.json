@@ -208,6 +208,10 @@
         }
       },
       "ChapeauModel/1.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "6.0.0",
+          "System.Data.SqlClient": "4.8.3"
+        },
         "runtime": {
           "ChapeauModel.dll": {}
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9rXX6bemNWp7K5TAO8ZoWDIEyBFr1UnJWxEx1m87b050kE3pCm5WsEbJGXWbm6FI7pkWTrdS1LbiVrhYxjVrcg==",
+  "dgSpecHash": "xL6fNZblKlH8ncIFWh0ku03I1FQULc66A1sotSJ1Kps1XhCxidkQ2ERUh+dw9NpXUzvwe+w8qLLh9qZx84oIxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\source\\repos\\ChapeauProject\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
