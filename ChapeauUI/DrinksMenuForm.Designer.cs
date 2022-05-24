@@ -48,6 +48,7 @@ namespace ChapeauUI
             this.SoftDrinksListView.Size = new System.Drawing.Size(265, 145);
             this.SoftDrinksListView.TabIndex = 0;
             this.SoftDrinksListView.UseCompatibleStateImageBehavior = false;
+            this.SoftDrinksListView.View = System.Windows.Forms.View.Details;
             // 
             // BeersListView
             // 
@@ -57,6 +58,7 @@ namespace ChapeauUI
             this.BeersListView.Size = new System.Drawing.Size(265, 145);
             this.BeersListView.TabIndex = 1;
             this.BeersListView.UseCompatibleStateImageBehavior = false;
+            this.BeersListView.View = System.Windows.Forms.View.Details;
             // 
             // WineListView
             // 
@@ -66,6 +68,7 @@ namespace ChapeauUI
             this.WineListView.Size = new System.Drawing.Size(265, 145);
             this.WineListView.TabIndex = 2;
             this.WineListView.UseCompatibleStateImageBehavior = false;
+            this.WineListView.View = System.Windows.Forms.View.Details;
             // 
             // SpiritsListView
             // 
@@ -75,6 +78,7 @@ namespace ChapeauUI
             this.SpiritsListView.Size = new System.Drawing.Size(265, 145);
             this.SpiritsListView.TabIndex = 3;
             this.SpiritsListView.UseCompatibleStateImageBehavior = false;
+            this.SpiritsListView.View = System.Windows.Forms.View.Details;
             // 
             // CoffeeTeaListView
             // 
@@ -84,6 +88,7 @@ namespace ChapeauUI
             this.CoffeeTeaListView.Size = new System.Drawing.Size(265, 145);
             this.CoffeeTeaListView.TabIndex = 4;
             this.CoffeeTeaListView.UseCompatibleStateImageBehavior = false;
+            this.CoffeeTeaListView.View = System.Windows.Forms.View.Details;
             // 
             // BackDrinksbtn
             // 

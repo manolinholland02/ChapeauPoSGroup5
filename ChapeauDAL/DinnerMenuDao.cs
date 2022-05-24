@@ -21,6 +21,17 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+        public List<DinnerMenu> GetSpecificDinnerMenu(string MenuType)
+        {
+            string query = @$"
+            SELECT DinnerItemID, menuItemName
+            FROM [dbo].DinnerMenu
+            JOIN [dbo].MenuItems ON DinnerMenu.menuItemID = MenuItems.menuItemId
+			WHERE MenuItems.menuItemCategory = '{MenuType}';
+            ";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
 
         private List<DinnerMenu> ReadTables(DataTable dataTable)
         {

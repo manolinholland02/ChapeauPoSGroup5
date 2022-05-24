@@ -8,7 +8,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class DinnerMenuService
+    public class DinnerMenuService
     {
         private DinnerMenuDao _dinnerMenuDb;
 
@@ -21,6 +21,12 @@ namespace ChapeauLogic
         {
             List<DinnerMenu> dinnerMenuItems = _dinnerMenuDb.GetDinnerMenuItems();
             return dinnerMenuItems;
+        }
+
+        public List<DinnerMenu> GetspecficDinnerMenu(string MenuCategory)
+        {
+            List<DinnerMenu> specificDinnerMenu = _dinnerMenuDb.GetSpecificDinnerMenu(MenuCategory);
+            return specificDinnerMenu;
         }
     }
 }
