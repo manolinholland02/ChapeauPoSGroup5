@@ -23,5 +23,12 @@ namespace ChapeauUI
             // change color if an order has been taken
             button1.BackColor = Color.Red;
         }
+
+        private void viewManagement_tryButton_Click(object sender, EventArgs e)
+        {
+            ManagerView managerView = new ManagerView();
+                managerView.Show();
+            this.Hide();
+        }
     }
 }

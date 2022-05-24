@@ -88,3 +88,6 @@ C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\Chape
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
+C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
