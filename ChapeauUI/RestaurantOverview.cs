@@ -21,9 +21,14 @@ namespace ChapeauUI
         {
             // open the taking orders form
             // change color if an order has been taken
-            btnTable1.BackColor = Color.Red;
+            button1.BackColor = Color.Red;
         }
 
-        
+        private void buttonViewManagementDemo_Click(object sender, EventArgs e)
+        {
+            ManagerView managerView = new ManagerView();
+            managerView.Show();
+            this.Hide();
+        }
     }
 }
