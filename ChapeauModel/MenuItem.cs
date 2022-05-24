@@ -13,5 +13,6 @@ namespace ChapeauModel
         public int MenuItemStock { get; set; }
         public MenuType MenuItemType { get; set; }
         public MenuItemCategory MenuItemCategory { get; set; }
+        public string AveragePreparationTime { get; set; }
     }
 }
