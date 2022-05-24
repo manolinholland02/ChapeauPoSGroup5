@@ -798,7 +798,9 @@
     "net5.0-windows7.0": [
       "ChapeauDAL >= 1.0.0",
       "ChapeauLogic >= 1.0.0",
-      "ChapeauModel >= 1.0.0"
+      "ChapeauModel >= 1.0.0",
+      "System.Configuration.ConfigurationManager >= 6.0.0",
+      "System.Data.SqlClient >= 4.8.3"
     ]
   },
   "packageFolders": {
@@ -849,6 +851,16 @@
     "frameworks": {
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

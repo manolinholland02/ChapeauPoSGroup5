@@ -8,5 +8,7 @@ namespace ChapeauModel
 {
     public class DinnerMenu
     {
+        public int DinnerMenuId { get; set; }
+        public string MenuItemName { get; set; }
     }
 }
