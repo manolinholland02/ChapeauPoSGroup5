@@ -50,9 +50,11 @@ namespace ChapeauDAL
                     MenuItemStock = (int)dr["menuItemStock"],
                     MenuItemType = (MenuType)Enum.Parse(typeof(MenuType), dr["menuItemName"].ToString()),
                     MenuItemCategory = (MenuItemCategory)Enum.Parse(typeof(MenuItemCategory), dr["menuItemCategory"].ToString()),
-                    AveragePreparationTime = dr
+                    AveragePreparationTime = dr["averagePreperationTime"].ToString()
+
                 };
                 menuItems.Add(menuItem);
+
             }
             return menuItems;
         }

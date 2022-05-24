@@ -34,3 +34,15 @@ D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.cs
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.dll
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.deps.json
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.dll
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ref\ChapeauModel.dll
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.pdb
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.AssemblyReference.cache
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfoInputs.cache
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfo.cs
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.CoreCompileInputs.cache
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.dll
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb

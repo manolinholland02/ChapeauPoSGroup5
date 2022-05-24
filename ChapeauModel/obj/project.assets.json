@@ -741,19 +741,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\miede\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+      "projectUniqueName": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
       "projectName": "ChapeauModel",
-      "projectPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Term 4\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
+      "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+      "packagesPath": "C:\\Users\\miede\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\miede\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -803,7 +803,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

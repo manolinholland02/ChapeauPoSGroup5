@@ -27,5 +27,10 @@ namespace ChapeauUI
             ChoosingMenuForm choosingForm = new ChoosingMenuForm();
             this.Close();
         }
+
+        private void AddbtnDinner_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

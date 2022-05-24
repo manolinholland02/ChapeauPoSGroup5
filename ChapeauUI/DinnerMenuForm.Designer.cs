@@ -94,6 +94,7 @@ namespace ChapeauUI
             this.AddbtnDinner.TabIndex = 5;
             this.AddbtnDinner.Text = "Add";
             this.AddbtnDinner.UseVisualStyleBackColor = true;
+            this.AddbtnDinner.Click += new System.EventHandler(this.AddbtnDinner_Click);
             // 
             // DinnerCommentSection
             // 
