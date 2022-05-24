@@ -16,5 +16,16 @@ namespace ChapeauUI
         {
             InitializeComponent();
         }
+
+        private void AddDrinksbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackDrinksbtn_Click(object sender, EventArgs e)
+        {
+            //show choosing order form
+            this.Close();
+        }
     }
 }

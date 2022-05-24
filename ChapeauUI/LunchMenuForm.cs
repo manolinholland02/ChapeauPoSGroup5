@@ -16,5 +16,16 @@ namespace ChapeauUI
         {
             InitializeComponent();
         }
+
+        private void backbtnLunch_Click(object sender, EventArgs e)
+        {
+            //show the choosing order form
+            this.Close(); // or hide
+        }
+
+        private void AddbtnLunch_Click(object sender, EventArgs e)
+        {
+            // add selected item to orders to temporary list with new orders
+        }
     }
 }

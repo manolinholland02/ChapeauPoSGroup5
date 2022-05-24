@@ -82,6 +82,7 @@ namespace ChapeauUI
             this.backbtnLunch.TabIndex = 4;
             this.backbtnLunch.Text = "Back";
             this.backbtnLunch.UseVisualStyleBackColor = true;
+            this.backbtnLunch.Click += new System.EventHandler(this.backbtnLunch_Click);
             // 
             // AddbtnLunch
             // 
@@ -91,6 +92,7 @@ namespace ChapeauUI
             this.AddbtnLunch.TabIndex = 5;
             this.AddbtnLunch.Text = "Add";
             this.AddbtnLunch.UseVisualStyleBackColor = true;
+            this.AddbtnLunch.Click += new System.EventHandler(this.AddbtnLunch_Click);
             // 
             // LunchCommentSection
             // 

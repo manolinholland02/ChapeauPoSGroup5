@@ -93,6 +93,7 @@ namespace ChapeauUI
             this.BackDrinksbtn.TabIndex = 5;
             this.BackDrinksbtn.Text = "Back";
             this.BackDrinksbtn.UseVisualStyleBackColor = true;
+            this.BackDrinksbtn.Click += new System.EventHandler(this.BackDrinksbtn_Click);
             // 
             // AddDrinksbtn
             // 
@@ -102,6 +103,7 @@ namespace ChapeauUI
             this.AddDrinksbtn.TabIndex = 6;
             this.AddDrinksbtn.Text = "Add";
             this.AddDrinksbtn.UseVisualStyleBackColor = true;
+            this.AddDrinksbtn.Click += new System.EventHandler(this.AddDrinksbtn_Click);
             // 
             // DrinksCommentSection
             // 
