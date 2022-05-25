@@ -51,6 +51,7 @@ namespace ChapeauUI
             this.enterFeedback_btn.TabIndex = 1;
             this.enterFeedback_btn.Text = "Enter";
             this.enterFeedback_btn.UseVisualStyleBackColor = true;
+            this.enterFeedback_btn.Click += new System.EventHandler(this.enterFeedback_btn_Click);
             // 
             // label1
             // 

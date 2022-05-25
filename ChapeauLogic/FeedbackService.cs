@@ -8,7 +8,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class FeedbackService
+    public class FeedbackService
     {
         private FeedbackDao _feedbackdb;
 

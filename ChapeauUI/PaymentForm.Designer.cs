@@ -29,45 +29,60 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.amountToBePayed_btn = new System.Windows.Forms.Button();
-            this.amountToBePayed_txt = new System.Windows.Forms.TextBox();
+            this.listViewOrderDetails = new System.Windows.Forms.ListView();
             this.itemName = new System.Windows.Forms.ColumnHeader();
             this.orderQuantity = new System.Windows.Forms.ColumnHeader();
             this.orderPrice = new System.Windows.Forms.ColumnHeader();
+            this.label1 = new System.Windows.Forms.Label();
+            this.amountToBePayed_btn = new System.Windows.Forms.Button();
+            this.amountToBePayed_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.regularVAT_lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.alcVAT_lbl = new System.Windows.Forms.Label();
+            this.subTotal_lbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cashPayment_btn = new System.Windows.Forms.Button();
-            this.pinPayment_btn = new System.Windows.Forms.Button();
-            this.subTotal_lbl = new System.Windows.Forms.Label();
-            this.regularVAT_lbl = new System.Windows.Forms.Label();
-            this.alcVAT_lbl = new System.Windows.Forms.Label();
             this.tip_lbl = new System.Windows.Forms.Label();
             this.total_lbl = new System.Windows.Forms.Label();
+            this.cashPayment_btn = new System.Windows.Forms.Button();
+            this.pinPayment_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewOrderDetails
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewOrderDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.itemName,
             this.orderQuantity,
             this.orderPrice});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(21, 73);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(488, 228);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewOrderDetails.HideSelection = false;
+            this.listViewOrderDetails.Location = new System.Drawing.Point(21, 73);
+            this.listViewOrderDetails.Name = "listViewOrderDetails";
+            this.listViewOrderDetails.Size = new System.Drawing.Size(488, 228);
+            this.listViewOrderDetails.TabIndex = 0;
+            this.listViewOrderDetails.UseCompatibleStateImageBehavior = false;
+            this.listViewOrderDetails.View = System.Windows.Forms.View.Details;
+            // 
+            // itemName
+            // 
+            this.itemName.Text = "Item Name";
+            this.itemName.Width = 100;
+            // 
+            // orderQuantity
+            // 
+            this.orderQuantity.Text = "Quantity";
+            this.orderQuantity.Width = 100;
+            // 
+            // orderPrice
+            // 
+            this.orderPrice.Text = "Price";
+            this.orderPrice.Width = 180;
             // 
             // label1
             // 
@@ -86,6 +101,7 @@ namespace ChapeauUI
             this.amountToBePayed_btn.TabIndex = 2;
             this.amountToBePayed_btn.Text = "Enter";
             this.amountToBePayed_btn.UseVisualStyleBackColor = true;
+            this.amountToBePayed_btn.Click += new System.EventHandler(this.amountToBePayed_btn_Click);
             // 
             // amountToBePayed_txt
             // 
@@ -93,21 +109,6 @@ namespace ChapeauUI
             this.amountToBePayed_txt.Name = "amountToBePayed_txt";
             this.amountToBePayed_txt.Size = new System.Drawing.Size(270, 27);
             this.amountToBePayed_txt.TabIndex = 3;
-            // 
-            // itemName
-            // 
-            this.itemName.Text = "Item Name";
-            this.itemName.Width = 100;
-            // 
-            // orderQuantity
-            // 
-            this.orderQuantity.Text = "Quantity";
-            this.orderQuantity.Width = 100;
-            // 
-            // orderPrice
-            // 
-            this.orderPrice.Text = "Price";
-            this.orderPrice.Width = 180;
             // 
             // label2
             // 
@@ -139,14 +140,14 @@ namespace ChapeauUI
             this.tableLayoutPanel1.Size = new System.Drawing.Size(449, 164);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
-            // label4
+            // regularVAT_lbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Sub-Total";
+            this.regularVAT_lbl.AutoSize = true;
+            this.regularVAT_lbl.Location = new System.Drawing.Point(227, 54);
+            this.regularVAT_lbl.Name = "regularVAT_lbl";
+            this.regularVAT_lbl.Size = new System.Drawing.Size(52, 20);
+            this.regularVAT_lbl.TabIndex = 4;
+            this.regularVAT_lbl.Text = "€00.00";
             // 
             // label5
             // 
@@ -165,6 +166,33 @@ namespace ChapeauUI
             this.label6.Size = new System.Drawing.Size(100, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "VAT(Alc. 21%)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Sub-Total";
+            // 
+            // alcVAT_lbl
+            // 
+            this.alcVAT_lbl.AutoSize = true;
+            this.alcVAT_lbl.Location = new System.Drawing.Point(227, 0);
+            this.alcVAT_lbl.Name = "alcVAT_lbl";
+            this.alcVAT_lbl.Size = new System.Drawing.Size(52, 20);
+            this.alcVAT_lbl.TabIndex = 5;
+            this.alcVAT_lbl.Text = "€00.00";
+            // 
+            // subTotal_lbl
+            // 
+            this.subTotal_lbl.AutoSize = true;
+            this.subTotal_lbl.Location = new System.Drawing.Point(227, 108);
+            this.subTotal_lbl.Name = "subTotal_lbl";
+            this.subTotal_lbl.Size = new System.Drawing.Size(52, 20);
+            this.subTotal_lbl.TabIndex = 3;
+            this.subTotal_lbl.Text = "€00.00";
             // 
             // label7
             // 
@@ -201,51 +229,6 @@ namespace ChapeauUI
             this.label3.TabIndex = 10;
             this.label3.Text = "Total";
             // 
-            // cashPayment_btn
-            // 
-            this.cashPayment_btn.Location = new System.Drawing.Point(104, 711);
-            this.cashPayment_btn.Name = "cashPayment_btn";
-            this.cashPayment_btn.Size = new System.Drawing.Size(94, 29);
-            this.cashPayment_btn.TabIndex = 11;
-            this.cashPayment_btn.Text = "Cash";
-            this.cashPayment_btn.UseVisualStyleBackColor = true;
-            // 
-            // pinPayment_btn
-            // 
-            this.pinPayment_btn.Location = new System.Drawing.Point(331, 711);
-            this.pinPayment_btn.Name = "pinPayment_btn";
-            this.pinPayment_btn.Size = new System.Drawing.Size(94, 29);
-            this.pinPayment_btn.TabIndex = 12;
-            this.pinPayment_btn.Text = "PIN";
-            this.pinPayment_btn.UseVisualStyleBackColor = true;
-            // 
-            // subTotal_lbl
-            // 
-            this.subTotal_lbl.AutoSize = true;
-            this.subTotal_lbl.Location = new System.Drawing.Point(227, 108);
-            this.subTotal_lbl.Name = "subTotal_lbl";
-            this.subTotal_lbl.Size = new System.Drawing.Size(52, 20);
-            this.subTotal_lbl.TabIndex = 3;
-            this.subTotal_lbl.Text = "€00.00";
-            // 
-            // regularVAT_lbl
-            // 
-            this.regularVAT_lbl.AutoSize = true;
-            this.regularVAT_lbl.Location = new System.Drawing.Point(227, 54);
-            this.regularVAT_lbl.Name = "regularVAT_lbl";
-            this.regularVAT_lbl.Size = new System.Drawing.Size(52, 20);
-            this.regularVAT_lbl.TabIndex = 4;
-            this.regularVAT_lbl.Text = "€00.00";
-            // 
-            // alcVAT_lbl
-            // 
-            this.alcVAT_lbl.AutoSize = true;
-            this.alcVAT_lbl.Location = new System.Drawing.Point(227, 0);
-            this.alcVAT_lbl.Name = "alcVAT_lbl";
-            this.alcVAT_lbl.Size = new System.Drawing.Size(52, 20);
-            this.alcVAT_lbl.TabIndex = 5;
-            this.alcVAT_lbl.Text = "€00.00";
-            // 
             // tip_lbl
             // 
             this.tip_lbl.AutoSize = true;
@@ -264,6 +247,24 @@ namespace ChapeauUI
             this.total_lbl.TabIndex = 12;
             this.total_lbl.Text = "€00.00";
             // 
+            // cashPayment_btn
+            // 
+            this.cashPayment_btn.Location = new System.Drawing.Point(104, 711);
+            this.cashPayment_btn.Name = "cashPayment_btn";
+            this.cashPayment_btn.Size = new System.Drawing.Size(94, 29);
+            this.cashPayment_btn.TabIndex = 11;
+            this.cashPayment_btn.Text = "Cash";
+            this.cashPayment_btn.UseVisualStyleBackColor = true;
+            // 
+            // pinPayment_btn
+            // 
+            this.pinPayment_btn.Location = new System.Drawing.Point(331, 711);
+            this.pinPayment_btn.Name = "pinPayment_btn";
+            this.pinPayment_btn.Size = new System.Drawing.Size(94, 29);
+            this.pinPayment_btn.TabIndex = 12;
+            this.pinPayment_btn.Text = "PIN";
+            this.pinPayment_btn.UseVisualStyleBackColor = true;
+            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -277,7 +278,7 @@ namespace ChapeauUI
             this.Controls.Add(this.amountToBePayed_txt);
             this.Controls.Add(this.amountToBePayed_btn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewOrderDetails);
             this.Name = "PaymentForm";
             this.Text = "Payment";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -291,7 +292,7 @@ namespace ChapeauUI
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewOrderDetails;
         private System.Windows.Forms.ColumnHeader itemName;
         private System.Windows.Forms.ColumnHeader orderQuantity;
         private System.Windows.Forms.ColumnHeader orderPrice;
