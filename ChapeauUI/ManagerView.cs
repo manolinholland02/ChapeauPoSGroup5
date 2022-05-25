@@ -77,5 +77,11 @@ namespace ChapeauUI
 
         }
 
+        private void button_Add_Employee_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+            this.Hide();
+        }
     }
 }

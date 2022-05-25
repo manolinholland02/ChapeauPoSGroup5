@@ -27,7 +27,7 @@ namespace ChapeauUI
         {
             ManagerView managerView = new ManagerView();
             managerView.Show();
-            managerView.Hide();
+            this.Hide();
         }
 
         private void button_AddEmployee_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace ChapeauUI
             EmployeeType employeeType = new EmployeeType();
             if(radioButton_AddEmployee_Bartender.Checked)
             {
-                employeeType = EmployeeType.bartender;
+                employeeType = EmployeeType.barman;
             }
             else if(radioButton_AddEmployee_Chef.Checked)
             {
