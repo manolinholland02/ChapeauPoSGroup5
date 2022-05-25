@@ -67,13 +67,21 @@ namespace ChapeauDAL
 
         private SqlParameter[] GetParametersForMenuItem(MenuItem menuItem)
         {
-            SqlParameter[] sqlParameters = { new SqlParameter("@Id", menuItem.MenuItemID), new SqlParameter("@Name", menuItem.MenuItemName), new SqlParameter("@Price", menuItem.MenuItemPrice), new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)), new SqlParameter("@Stock", menuItem.MenuItemStock), new SqlParameter("@Type", menuItem.MenuItemType), new SqlParameter("@Category", menuItem.MenuItemCategory) };
+            SqlParameter[] sqlParameters = { 
+                new SqlParameter("@Id", menuItem.MenuItemID), 
+                new SqlParameter("@Name", menuItem.MenuItemName), 
+                new SqlParameter("@Price", menuItem.MenuItemPrice), 
+                new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)), 
+                new SqlParameter("@Stock", menuItem.MenuItemStock), 
+                new SqlParameter("@Type", menuItem.MenuItemType), 
+                new SqlParameter("@Category", menuItem.MenuItemCategory), 
+                new SqlParameter("@AverageTime", menuItem.AveragePreparationTime) };
             return sqlParameters;
         }
 
         public void InsertMenuItem(MenuItem menuItem)
         {
-            string query = "INSERT INTO [dbo].[MenuItems] (menuItemId, menuItemName, menuItemPrice, isFoodOrDrink, menuItemStock, menuItemType, menuItemCategory) VALUES (@Id, @Name, @Price, @FoodOrDrink, @Stock, @Type, @Category)";
+            string query = "INSERT INTO [dbo].[MenuItems] (menuItemId, menuItemName, menuItemPrice, isFoodOrDrink, menuItemStock, menuItemType, menuItemCategory, averagePreparationTime) VALUES (@Id, @Name, @Price, @FoodOrDrink, @Stock, @Type, @Category, @AverageTime)";
             ExecuteEditQuery(query, GetParametersForMenuItem(menuItem));
         }
 
@@ -86,7 +94,7 @@ namespace ChapeauDAL
 
         public void UpdateMenuItem(MenuItem menuItem)
         {
-            string query = $"UPDATE [dbo].[MenuItems] SET menuItemName = @Name, menuItemPrice = @Price, isFoodOrDrink = @FoodOrDrink, menuItemStock = @Stock, menuItemType = @Type, menuItemCategory = @Category  WHERE menuItemId = @Id";
+            string query = $"UPDATE [dbo].[MenuItems] SET menuItemName = @Name, menuItemPrice = @Price, isFoodOrDrink = @FoodOrDrink, menuItemStock = @Stock, menuItemType = @Type, menuItemCategory = @Category, averagePreparationTime = @AverageTime WHERE menuItemId = @Id";
             ExecuteEditQuery(query, GetParametersForMenuItem(menuItem));
         }
     }
