@@ -20,9 +20,32 @@ namespace ChapeauLogic
         {
             return _paymentdb.GetPaymentFromTableId();
         }
-        public void AddAmountPayedAndTip(Payment payment)
+        public void AddAmountPayed(Payment payment)
         {
-            _paymentdb.AddAmountPayedAndTip(payment);
+            //insert amount to be payed
+
+            _paymentdb.AddAmountPayed(payment);
+        }
+
+        public void CalcSubTotal(Payment payment)
+        {
+            //sum of all items in order * quantity
+
+            _paymentdb.CalcSubTotal(payment);
+        }
+
+        public void CalcVAT(Payment payment)
+        {
+            //Calc  VAT if alcholic == *21% else *6%
+            _paymentdb.CalcVAT(payment);
+            
+        }
+
+        public void CalcTip(Payment payment)
+        {
+            // calc amountPayed - (Subtotal + CalcVAT(6* && 21%))
+
+            _paymentdb.CalcTip(payment);
         }
     }
 }

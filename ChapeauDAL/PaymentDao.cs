@@ -21,22 +21,46 @@ namespace ChapeauDAL
         public void CalcSubTotal(Payment payment)
         {
             //sum of all items in order * quantity
+
+            string query = $"";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void AddAmountPayedAndTip(Payment payment)
+        public void CalcVAT(Payment payment)
         {
-                string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ({payment.PaymentPrice},{payment.Tip}) WHERE (paymentId = @paymentId AND tableId = @tableId)";
-                SqlParameter[] sqlParameters = new SqlParameter[0];
-                ExecuteEditQuery(query, sqlParameters); 
+            //Calc  VAT if alcholic == *21% else *6%
+
+            string query = $"";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void AddAmountPayed(Payment payment)
+        {
+            //insert amount to be payed
+
+            string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ({payment.PaymentPrice},{payment.Tip}) WHERE (paymentId = @paymentId AND tableId = @tableId)";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void CalcTip(Payment payment)
+        {
+            // calc amountPayed - (Subtotal + VAT(6* && 21%))
+
+            string query = $"";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
 
 
         public List<Payment> ReadTables(DataTable dataTable)
         {
-            List<Payment> feedback = new List<Payment>();
+            List<Payment> payment = new List<Payment>();
             foreach (DataRow dr in dataTable.Rows)
             {
-                Payment feedbacks = new Payment()
+                Payment payments = new Payment()
                 {
 
                     PaymentId = (int)dr["paymentId"],
@@ -47,9 +71,9 @@ namespace ChapeauDAL
 
 
                 };
-                feedback.Add(feedbacks);
+                payment.Add(payments);
             }
-            return feedback;
+            return payment;
         }
     }
 }
