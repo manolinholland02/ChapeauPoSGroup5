@@ -10,9 +10,6 @@
     <Compile Update="DinnerMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DrinksMenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FeedbackForm.cs">
       <SubType>Form</SubType>
     </Compile>

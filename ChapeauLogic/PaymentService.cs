@@ -8,7 +8,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class PaymentService
+    public class PaymentService
     {
         private PaymentDao _paymentdb;
 
