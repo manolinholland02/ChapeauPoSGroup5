@@ -8,11 +8,11 @@ using ChapeauDAL;
 
 namespace ChapeauLogic
 {
-    public class LunchMenuLogic
+    public class LunchMenuService
     {
         private LunchMenuDao _lunchMenuDb;
 
-        public LunchMenuLogic()
+        public LunchMenuService()
         {
             _lunchMenuDb = new LunchMenuDao();
         }
@@ -23,9 +23,9 @@ namespace ChapeauLogic
             return lunchMenuItems;
         }
 
-        public List<LunchMenu> GetSpecificLunchMenu(string MenuCategory)
+        public List<LunchMenu> GetSpecificLunchMenu(MenuItemCategory menuItemCategory)
         {
-            List<LunchMenu> specificLunchMenu = _lunchMenuDb.GetSpecificLunchMenu(MenuCategory);
+            List<LunchMenu> specificLunchMenu = _lunchMenuDb.GetSpecificLunchMenu(menuItemCategory);
             return specificLunchMenu;
         }
     }

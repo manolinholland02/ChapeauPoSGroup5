@@ -31,16 +31,27 @@ namespace ChapeauUI
         {
             this.DinnerDessertsListView = new System.Windows.Forms.ListView();
             this.DinnerStartersListView = new System.Windows.Forms.ListView();
+            this.starterId = new System.Windows.Forms.ColumnHeader();
+            this.starterName = new System.Windows.Forms.ColumnHeader();
             this.DinnerMainListView = new System.Windows.Forms.ListView();
             this.DinnerEntremetsListView = new System.Windows.Forms.ListView();
             this.BackbtnDinner = new System.Windows.Forms.Button();
             this.AddbtnDinner = new System.Windows.Forms.Button();
             this.DinnerCommentSection = new System.Windows.Forms.TextBox();
             this.DinnerTableOverview = new System.Windows.Forms.Button();
+            this.entremetId = new System.Windows.Forms.ColumnHeader();
+            this.entremetName = new System.Windows.Forms.ColumnHeader();
+            this.mainId = new System.Windows.Forms.ColumnHeader();
+            this.mainName = new System.Windows.Forms.ColumnHeader();
+            this.deserId = new System.Windows.Forms.ColumnHeader();
+            this.desertName = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // DinnerDessertsListView
             // 
+            this.DinnerDessertsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.deserId,
+            this.desertName});
             this.DinnerDessertsListView.HideSelection = false;
             this.DinnerDessertsListView.Location = new System.Drawing.Point(274, 338);
             this.DinnerDessertsListView.Name = "DinnerDessertsListView";
@@ -51,6 +62,9 @@ namespace ChapeauUI
             // 
             // DinnerStartersListView
             // 
+            this.DinnerStartersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.starterId,
+            this.starterName});
             this.DinnerStartersListView.HideSelection = false;
             this.DinnerStartersListView.Location = new System.Drawing.Point(3, 187);
             this.DinnerStartersListView.Name = "DinnerStartersListView";
@@ -59,8 +73,21 @@ namespace ChapeauUI
             this.DinnerStartersListView.UseCompatibleStateImageBehavior = false;
             this.DinnerStartersListView.View = System.Windows.Forms.View.Details;
             // 
+            // starterId
+            // 
+            this.starterId.Text = "ID";
+            this.starterId.Width = 0;
+            // 
+            // starterName
+            // 
+            this.starterName.Text = "Name";
+            this.starterName.Width = 250;
+            // 
             // DinnerMainListView
             // 
+            this.DinnerMainListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.mainId,
+            this.mainName});
             this.DinnerMainListView.HideSelection = false;
             this.DinnerMainListView.Location = new System.Drawing.Point(3, 338);
             this.DinnerMainListView.Name = "DinnerMainListView";
@@ -68,10 +95,12 @@ namespace ChapeauUI
             this.DinnerMainListView.TabIndex = 2;
             this.DinnerMainListView.UseCompatibleStateImageBehavior = false;
             this.DinnerMainListView.View = System.Windows.Forms.View.Details;
-            this.DinnerMainListView.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
             // 
             // DinnerEntremetsListView
             // 
+            this.DinnerEntremetsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.entremetId,
+            this.entremetName});
             this.DinnerEntremetsListView.HideSelection = false;
             this.DinnerEntremetsListView.Location = new System.Drawing.Point(274, 187);
             this.DinnerEntremetsListView.Name = "DinnerEntremetsListView";
@@ -116,6 +145,36 @@ namespace ChapeauUI
             this.DinnerTableOverview.Text = "See Table\'s Order";
             this.DinnerTableOverview.UseVisualStyleBackColor = true;
             // 
+            // entremetId
+            // 
+            this.entremetId.Text = "ID";
+            this.entremetId.Width = 0;
+            // 
+            // entremetName
+            // 
+            this.entremetName.Text = "Name";
+            this.entremetName.Width = 250;
+            // 
+            // mainId
+            // 
+            this.mainId.Text = "ID";
+            this.mainId.Width = 0;
+            // 
+            // mainName
+            // 
+            this.mainName.Text = "Name";
+            this.mainName.Width = 250;
+            // 
+            // deserId
+            // 
+            this.deserId.Text = "ID";
+            this.deserId.Width = 0;
+            // 
+            // desertName
+            // 
+            this.desertName.Text = "Name";
+            this.desertName.Width = 250;
+            // 
             // DinnerMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -146,5 +205,13 @@ namespace ChapeauUI
         private System.Windows.Forms.Button AddbtnDinner;
         private System.Windows.Forms.TextBox DinnerCommentSection;
         private System.Windows.Forms.Button DinnerTableOverview;
+        private System.Windows.Forms.ColumnHeader starterId;
+        private System.Windows.Forms.ColumnHeader starterName;
+        private System.Windows.Forms.ColumnHeader deserId;
+        private System.Windows.Forms.ColumnHeader desertName;
+        private System.Windows.Forms.ColumnHeader mainId;
+        private System.Windows.Forms.ColumnHeader mainName;
+        private System.Windows.Forms.ColumnHeader entremetId;
+        private System.Windows.Forms.ColumnHeader entremetName;
     }
 }

@@ -23,9 +23,9 @@ namespace ChapeauLogic
             return dinnerMenuItems;
         }
 
-        public List<DinnerMenu> GetspecficDinnerMenu(string MenuCategory)
+        public List<DinnerMenu> GetspecficDinnerMenu(MenuItemCategory menuItemCategory)
         {
-            List<DinnerMenu> specificDinnerMenu = _dinnerMenuDb.GetSpecificDinnerMenu(MenuCategory);
+            List<DinnerMenu> specificDinnerMenu = _dinnerMenuDb.GetSpecificDinnerMenu(menuItemCategory);
             return specificDinnerMenu;
         }
     }
