@@ -46,7 +46,7 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", employee.EmployeeType.ToString())
+                    new SqlParameter("@type", employee.EmployeeType)
                 };
                 string query = $"INSERT INTO [dbo].[Employees] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
