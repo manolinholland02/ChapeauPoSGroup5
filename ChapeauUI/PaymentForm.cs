@@ -24,6 +24,8 @@ namespace ChapeauUI
 
         private void DisplayOrderDetails()
         {
+            //change from paymentservice to ordersservice
+            
             PaymentService paymentService = new PaymentService();
             List<Payment> paymentList = paymentService.GetPaymentFromTableId();
 

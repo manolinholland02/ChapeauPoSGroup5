@@ -18,6 +18,11 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public void CalcSubTotal(Payment payment)
+        {
+            //sum of all items in order * quantity
+        }
+
         public void AddAmountPayedAndTip(Payment payment)
         {
                 string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ({payment.PaymentPrice},{payment.Tip}) WHERE (paymentId = @paymentId AND tableId = @tableId)";
