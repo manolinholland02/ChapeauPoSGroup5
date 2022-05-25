@@ -37,6 +37,7 @@ namespace ChapeauLogic
         public void CalcVAT(Payment payment)
         {
             //Calc  VAT if alcholic == *21% else *6%
+
             _paymentdb.CalcVAT(payment);
             
         }

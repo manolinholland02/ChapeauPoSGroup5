@@ -13,6 +13,7 @@ namespace ChapeauDAL
     {
         public List<Payment> GetPaymentFromTableId()
         {
+            //take from orderdao
             string query = $"SELECT [tip], [paymentPrice], [dateOfPayment] FROM Payments WHERE (paymentId = @paymentId AND tableId = @tableId)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -22,7 +23,7 @@ namespace ChapeauDAL
         {
             //sum of all items in order * quantity
 
-            string query = $"";
+            string query = $"SELECT SUM ((itemQuantity) * (orderPrice)) FROM Orders Where (orderItem = @orderItem AND orderPayment = @orderPayment)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
