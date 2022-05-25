@@ -14,23 +14,21 @@ namespace ChapeauDAL
         public List<LunchMenu> GetLunchMenuItems()
         {
             string query = @"
-            SELECT lunchItemID, menuItemName
+            SELECT lunchItemId, menuItemName
             FROM [dbo].LunchMenu
-            JOIN [dbo].MenuItems ON LunchMenu.menuItemID = MenuItems.menuItemId;
-            ";
+            JOIN [dbo].MenuItems ON LunchMenu.menuItemId = MenuItems.menuItemId;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<LunchMenu> GetSpecificLunchMenu(string MenuType)
+        public List<LunchMenu> GetSpecificLunchMenu(MenuItemCategory menuItemCategory)
         {
             string query = @$"
-            SELECT lunchItemID, menuItemName
+            SELECT lunchItemId, menuItemName
             FROM [dbo].LunchMenu
-            JOIN [dbo].MenuItems ON LunchMenu.menuItemID = MenuItems.menuItemId
-			WHERE MenuItems.menuItemCategory = '{MenuType}';
-            ";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            JOIN [dbo].MenuItems ON LunchMenu.menuItemId = MenuItems.menuItemId
+			WHERE MenuItems.menuItemCategory = @Category;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Category", menuItemCategory.ToString())};
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
@@ -42,7 +40,7 @@ namespace ChapeauDAL
             {
                 LunchMenu lunchMenu = new LunchMenu()
                 {
-                    LunchMenuId = (int)dr["lunchItemID"],
+                    LunchMenuId = (int)dr["lunchItemId"],
                     MenuItemName = dr["menuItemName"].ToString()
                 };
                 lunchMenus.Add(lunchMenu);

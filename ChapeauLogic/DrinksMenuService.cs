@@ -23,9 +23,9 @@ namespace ChapeauLogic
             return drinkMenuItems;
         }
 
-        public List<DrinkMenu> GetSpecificDrinksMenu(string MenuCategory)
+        public List<DrinkMenu> GetSpecificDrinksMenu(MenuItemCategory menuItemCategory)
         {
-            List<DrinkMenu> specficDrinkMenu = _drinkMenuDb.GetSpecificDrinksMenu(MenuCategory);
+            List<DrinkMenu> specficDrinkMenu = _drinkMenuDb.GetSpecificDrinksMenu(menuItemCategory);
             return specficDrinkMenu;
         }
     }

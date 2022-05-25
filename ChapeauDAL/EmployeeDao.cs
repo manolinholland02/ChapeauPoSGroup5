@@ -12,7 +12,7 @@ namespace ChapeauDAL
         //Creates a list with all of the employees in the Database
         public List<Employee> GetAllEmployees()
         {
-            string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].Employees";
+            string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -23,12 +23,12 @@ namespace ChapeauDAL
             {
                 Employee employee = new Employee()
                 {
-                    EmployeeID = (int)dr["employeeId"],
+                    EmployeeID = (int)dr["EmployeeId"],
                     EmployeeFirstName = dr["firstName"].ToString(),
                     EmployeeLastName = dr["lastName"].ToString(),
                     EmployeeUsername = dr["username"].ToString(),
-                    EmployeeUserPassword = dr["userPassword"].ToString(),
-                    EmployeeType = (EmployeeType)dr["employeeType"]
+                    EmployeeUserPassword = (int)dr["userPassword"],
+                    EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower()),
                 };
                 employees.Add(employee);
             }
@@ -46,9 +46,9 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@userame", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
+                    new SqlParameter("@type", employee.EmployeeType.ToString())
                 };
-                string query = $"INSERT INTO [dbo].Employee (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
+                string query = $"INSERT INTO [dbo].[Employees] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ namespace ChapeauDAL
             try
             {
                 SqlParameter[] parameters = { new SqlParameter("@employeeId", EmployeeId) };
-                string query = "DELETE FROM [dbo].Employee WHERE employeeId = @employeeId";
+                string query = "DELETE FROM [dbo].[Employees] WHERE employeeId = @employeeId";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)
@@ -84,7 +84,7 @@ namespace ChapeauDAL
                     new SqlParameter("@password", employee.EmployeeUserPassword),
                     new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
                 };
-                string query = $"UPDATE INTO [dbo].Employee (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
+                string query = $"UPDATE INTO [dbo].[Employees] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)
@@ -96,7 +96,7 @@ namespace ChapeauDAL
         //Checks if and account with such a password exists in the Database
         public bool AccountExists(string username, string password)
         {
-            string query = "SELECT COUNT([username]) from [dbo].Employee WHERE [username] = @username AND userPassword = @password;";
+            string query = "SELECT COUNT([username]) from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password;";
             SqlParameter[] sqlParameters = { new SqlParameter("@Username", username), new SqlParameter("@password", password) };
             DataTable output = ExecuteSelectQuery(query, sqlParameters);
             if (Convert.ToInt32(output.Rows[0][0]) == 1)
@@ -109,7 +109,7 @@ namespace ChapeauDAL
         //return the employee type of the employee 
         public string GetEmployeeType(string username)
         {
-            string query = "SELECT employeeType FROM [dbo].Employee WHERE [username] = @username";
+            string query = "SELECT employeeType FROM [dbo].[Employees] WHERE [username] = @username";
             SqlParameter[] parameters = { new SqlParameter("@username", username) };
             return ExecuteSelectQuery(query, parameters).ToString();
         }

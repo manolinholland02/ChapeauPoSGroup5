@@ -24,10 +24,10 @@ namespace ChapeauUI
             button1.BackColor = Color.Red;
         }
 
-        private void buttonViewManagementDemo_Click(object sender, EventArgs e)
+        private void viewManagement_tryButton_Click(object sender, EventArgs e)
         {
             ManagerView managerView = new ManagerView();
-            managerView.Show();
+                managerView.Show();
             this.Hide();
         }
     }

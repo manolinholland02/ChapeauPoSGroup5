@@ -14,14 +14,19 @@ namespace ChapeauUI
 {
     public partial class DrinksMenuForm : Form
     {
-        const string softDrinks = "softdrink";
-        const string beers = "beer";
-        const string wines = "wine";
-        const string spirits = "spirit";
-        const string coffeeTea = "caffeinated";
+        private MenuItemCategory _category;
+        private List<ListView> _listViews;
+
         public DrinksMenuForm()
         {
             InitializeComponent();
+            _category = MenuItemCategory.softdrink;
+            _listViews =  new List<ListView>();
+            _listViews.Add(SoftDrinksListView);
+            _listViews.Add(BeersListView);
+            _listViews.Add(WineListView);
+            _listViews.Add(SpiritsListView);
+            _listViews.Add(CoffeeTeaListView);
             PopulateDrinkMenus();
         }
 
@@ -38,36 +43,27 @@ namespace ChapeauUI
 
         private void PopulateDrinkMenus()
         {
-            SoftDrinksListView.Items.Clear();
-            BeersListView.Items.Clear();
-            WineListView.Items.Clear();
-            SpiritsListView.Items.Clear();
-            CoffeeTeaListView.Items.Clear();
+            DrinksMenuService drinksMenuService = new DrinksMenuService();
+            List<DrinkMenu> drinkMenuItems = new List<DrinkMenu>();
 
-            DrinksMenuService DrinkService = new DrinksMenuService();
-            //Soft drink
-            FillMenu(DrinkService, softDrinks, SoftDrinksListView, "Soft Drinks");
-            //beers
-            FillMenu(DrinkService, beers, BeersListView, "Beers");
-            //wines
-            FillMenu(DrinkService, wines, WineListView, "Wines");
-            //spirits
-            FillMenu(DrinkService, spirits, SpiritsListView, "Spirits");
-            //caffeinated
-            FillMenu(DrinkService, coffeeTea, CoffeeTeaListView, "Coffee And Tea");
+            int i = 0;
+            while(_category <= MenuItemCategory.caffeinated)
+            {
+                _listViews[i].Items.Clear();
+                drinkMenuItems = drinksMenuService.GetSpecificDrinksMenu(_category);
+                FillMenu(drinkMenuItems, _listViews[i]);
+                _category++;
+                i++;
+            }
         }
 
-        private void FillMenu(DrinksMenuService DrinkService, string category, ListView listview, string Title)
+        private void FillMenu(List<DrinkMenu> drinkMenuItems, ListView listView)
         {
-            listview.Columns.Add("ID", 30);
-            listview.Columns.Add(Title, 200);
-            List<DrinkMenu> items = new List<DrinkMenu>();
-            items = DrinkService.GetSpecificDrinksMenu(category);
-            foreach (DrinkMenu item in items)
+            foreach (DrinkMenu drinkMenu in drinkMenuItems)
             {
-                string[] output = { item.DrinkMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                listview.Items.Add(list);
+                string[] output = { drinkMenu.DrinkMenuId.ToString(), drinkMenu.MenuItemName };
+                ListViewItem item = new ListViewItem(output);
+                listView.Items.Add(item);
             }
         }
     }

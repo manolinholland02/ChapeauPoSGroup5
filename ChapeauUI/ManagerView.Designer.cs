@@ -98,6 +98,7 @@ namespace ChapeauUI
             this.button_Add_Employee.TabIndex = 1;
             this.button_Add_Employee.Text = "Add Employee";
             this.button_Add_Employee.UseVisualStyleBackColor = true;
+            this.button_Add_Employee.Click += new System.EventHandler(this.button_Add_Employee_Click);
             // 
             // button_Delete_Employee
             // 

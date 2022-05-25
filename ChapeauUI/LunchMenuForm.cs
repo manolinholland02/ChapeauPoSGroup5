@@ -14,12 +14,16 @@ namespace ChapeauUI
 {
     public partial class LunchMenuForm : Form
     {
-        const string starter = "starter";
-        const string main = "main";
-        const string dessert = "desert";
+        private MenuItemCategory _category;
+        private List<ListView> _listViews;
         public LunchMenuForm()
         {
             InitializeComponent();
+            _category = MenuItemCategory.starter;
+            _listViews = new List<ListView>();
+            _listViews.Add(LunchStartersListView);
+            _listViews.Add(LunchMainListView);
+            _listViews.Add(LunchDessertListView);
             PopulateLunchMenus();
         }
 
@@ -36,34 +40,28 @@ namespace ChapeauUI
 
         private void PopulateLunchMenus()
         {
-            LunchStartersListView.Items.Clear();
-            LunchMainListView.Items.Clear();
-            LunchDessertListView.Items.Clear();
-            LunchMenuLogic LunchService = new LunchMenuLogic();
-            //Starters
-            FillMenu(LunchService, starter, LunchStartersListView, "Starters");
+            LunchMenuService lunchMenuService = new LunchMenuService();
+            List<LunchMenu> lunchMenuItems = new List<LunchMenu>();
 
-            //Main
-            FillMenu(LunchService, main, LunchMainListView, "Mains");
-
-            //Dessert
-            FillMenu(LunchService, dessert, LunchDessertListView, "Desserts");
-        }
-
-
-        private void FillMenu(LunchMenuLogic LunchService, string category, ListView listview, string Title)
-        {
-            listview.Columns.Add("ID", 30);
-            listview.Columns.Add(Title, 200);
-            List<LunchMenu> items = new List<LunchMenu>();
-            items = LunchService.GetSpecificLunchMenu(category);
-            foreach (LunchMenu item in items)
+            int i = 0;
+            while (_category <= MenuItemCategory.desert)
             {
-                string[] output = { item.LunchMenuId.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                listview.Items.Add(list);
+                _listViews[i].Items.Clear();
+                lunchMenuItems = lunchMenuService.GetSpecificLunchMenu(_category);
+                FillMenu(lunchMenuItems, _listViews[i]);
+                _category++;
+                i++;
             }
         }
 
+        private void FillMenu(List<LunchMenu> lunchMenuItems, ListView listView)
+        {
+            foreach (LunchMenu lunchMenu in lunchMenuItems)
+            {
+                string[] output = { lunchMenu.LunchMenuId.ToString(), lunchMenu.MenuItemName };
+                ListViewItem item = new ListViewItem(output);
+                listView.Items.Add(item);
+            }
+        }
     }
 }
