@@ -45,4 +45,3 @@ C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.dll
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.AssemblyReference.cache
