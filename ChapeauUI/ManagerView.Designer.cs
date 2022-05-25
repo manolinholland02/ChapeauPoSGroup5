@@ -50,12 +50,13 @@ namespace ChapeauUI
             this.EmployeeUsername,
             this.EmployeePassword,
             this.EmployeeType});
+            this.listView_Employees_Management.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_Employees_Management.FullRowSelect = true;
             this.listView_Employees_Management.HideSelection = false;
-            this.listView_Employees_Management.Location = new System.Drawing.Point(69, 101);
+            this.listView_Employees_Management.Location = new System.Drawing.Point(69, 240);
             this.listView_Employees_Management.MultiSelect = false;
             this.listView_Employees_Management.Name = "listView_Employees_Management";
-            this.listView_Employees_Management.Size = new System.Drawing.Size(619, 209);
+            this.listView_Employees_Management.Size = new System.Drawing.Size(1200, 420);
             this.listView_Employees_Management.TabIndex = 0;
             this.listView_Employees_Management.UseCompatibleStateImageBehavior = false;
             this.listView_Employees_Management.View = System.Windows.Forms.View.Details;
@@ -64,37 +65,38 @@ namespace ChapeauUI
             // EmployeeId
             // 
             this.EmployeeId.Text = "Id";
+            this.EmployeeId.Width = 0;
             // 
             // EmployeeFirstName
             // 
             this.EmployeeFirstName.Text = "First Name";
-            this.EmployeeFirstName.Width = 100;
+            this.EmployeeFirstName.Width = 240;
             // 
             // EmployeeLastName
             // 
             this.EmployeeLastName.Text = "Last Name";
-            this.EmployeeLastName.Width = 100;
+            this.EmployeeLastName.Width = 240;
             // 
             // EmployeeUsername
             // 
             this.EmployeeUsername.Text = "Username";
-            this.EmployeeUsername.Width = 100;
+            this.EmployeeUsername.Width = 240;
             // 
             // EmployeePassword
             // 
             this.EmployeePassword.Text = "Password";
-            this.EmployeePassword.Width = 100;
+            this.EmployeePassword.Width = 240;
             // 
             // EmployeeType
             // 
             this.EmployeeType.Text = "Occupation";
-            this.EmployeeType.Width = 100;
+            this.EmployeeType.Width = 230;
             // 
             // button_Add_Employee
             // 
-            this.button_Add_Employee.Location = new System.Drawing.Point(69, 351);
+            this.button_Add_Employee.Location = new System.Drawing.Point(69, 764);
             this.button_Add_Employee.Name = "button_Add_Employee";
-            this.button_Add_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Add_Employee.Size = new System.Drawing.Size(150, 80);
             this.button_Add_Employee.TabIndex = 1;
             this.button_Add_Employee.Text = "Add Employee";
             this.button_Add_Employee.UseVisualStyleBackColor = true;
@@ -102,9 +104,9 @@ namespace ChapeauUI
             // 
             // button_Delete_Employee
             // 
-            this.button_Delete_Employee.Location = new System.Drawing.Point(290, 351);
+            this.button_Delete_Employee.Location = new System.Drawing.Point(625, 764);
             this.button_Delete_Employee.Name = "button_Delete_Employee";
-            this.button_Delete_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Delete_Employee.Size = new System.Drawing.Size(150, 80);
             this.button_Delete_Employee.TabIndex = 2;
             this.button_Delete_Employee.Text = "Delete";
             this.button_Delete_Employee.UseVisualStyleBackColor = true;
@@ -112,9 +114,9 @@ namespace ChapeauUI
             // 
             // button_Edit_Employee
             // 
-            this.button_Edit_Employee.Location = new System.Drawing.Point(576, 351);
+            this.button_Edit_Employee.Location = new System.Drawing.Point(1131, 764);
             this.button_Edit_Employee.Name = "button_Edit_Employee";
-            this.button_Edit_Employee.Size = new System.Drawing.Size(94, 29);
+            this.button_Edit_Employee.Size = new System.Drawing.Size(150, 80);
             this.button_Edit_Employee.TabIndex = 3;
             this.button_Edit_Employee.Text = "Edit";
             this.button_Edit_Employee.UseVisualStyleBackColor = true;
@@ -123,7 +125,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.button_Edit_Employee);
             this.Controls.Add(this.button_Delete_Employee);
             this.Controls.Add(this.button_Add_Employee);
