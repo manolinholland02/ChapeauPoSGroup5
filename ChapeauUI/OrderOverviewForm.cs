@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChapeauDAL;
 
 namespace ChapeauUI
 {
@@ -15,6 +16,19 @@ namespace ChapeauUI
         public OrderOverviewForm()
         {
             InitializeComponent();
+            
+        }
+
+        private void PlusOrderbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PopulateLunchMenus()
+        {
+            OrderlistView.Items.Clear();
+            O LunchService = new LunchMenuLogic();
+            
         }
     }
 }
