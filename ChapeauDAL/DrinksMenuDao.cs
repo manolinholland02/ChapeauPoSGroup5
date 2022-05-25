@@ -14,23 +14,21 @@ namespace ChapeauDAL
         public List<DrinkMenu> GetDrinkMenuItems()
         {
             string query = @"
-            SELECT DrinkItemID, menuItemName
+            SELECT drinkItemId, menuItemName
             FROM [dbo].DrinkMenu
-            JOIN [dbo].MenuItems ON DrinkMenu.menuItemID = MenuItems.menuItemId;
-            ";
+            JOIN [dbo].MenuItems ON DrinkMenu.menuItemId = MenuItems.menuItemId;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<DrinkMenu> GetSpecificDrinksMenu(string MenuType)
+        public List<DrinkMenu> GetSpecificDrinksMenu(MenuItemCategory menuItemCategory)
         {
             string query = @$"
-            SELECT DrinkItemID, menuItemName
+            SELECT drinkItemId, menuItemName
             FROM [dbo].DrinkMenu
-            JOIN [dbo].MenuItems ON DrinkMenu.menuItemID = MenuItems.menuItemId
-			WHERE MenuItems.menuItemCategory = '{MenuType}';
-            ";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            JOIN [dbo].MenuItems ON DrinkMenu.menuItemId = MenuItems.menuItemId
+			WHERE MenuItems.menuItemCategory = @Category;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Category", menuItemCategory.ToString()) };
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
@@ -42,7 +40,7 @@ namespace ChapeauDAL
             {
                 DrinkMenu drinkMenu = new DrinkMenu()
                 {
-                    DrinkMenuId = (int)dr["DrinkItemID"],
+                    DrinkMenuId = (int)dr["drinkItemId"],
                     MenuItemName = dr["menuItemName"].ToString()
                 };
                 drinkMenus.Add(drinkMenu);

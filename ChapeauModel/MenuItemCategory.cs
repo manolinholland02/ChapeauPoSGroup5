@@ -2,6 +2,6 @@
 {
     public enum MenuItemCategory
     {
-        starter, main, desert, entremet, softdrink, beer, wine, spirit, caffeinated
+        entremet = 0, starter, main, desert, softdrink, beer, wine, spirit, caffeinated
     }
 }
