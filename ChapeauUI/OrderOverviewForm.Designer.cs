@@ -36,10 +36,17 @@ namespace ChapeauUI
             this.PlaceOrderbtn = new System.Windows.Forms.Button();
             this.oderOverviewbackbtn = new System.Windows.Forms.Button();
             this.OrderOverviewPaybtn = new System.Windows.Forms.Button();
+            this.OrderItemName = new System.Windows.Forms.ColumnHeader();
+            this.OrderItemQuantity = new System.Windows.Forms.ColumnHeader();
+            this.OrderComment = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // OrderlistView
             // 
+            this.OrderlistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderItemName,
+            this.OrderItemQuantity,
+            this.OrderComment});
             this.OrderlistView.HideSelection = false;
             this.OrderlistView.Location = new System.Drawing.Point(0, 119);
             this.OrderlistView.Name = "OrderlistView";
@@ -103,6 +110,21 @@ namespace ChapeauUI
             this.OrderOverviewPaybtn.Text = "Pay";
             this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
             // 
+            // OrderItemName
+            // 
+            this.OrderItemName.Text = "Item Name";
+            this.OrderItemName.Width = 150;
+            // 
+            // OrderItemQuantity
+            // 
+            this.OrderItemQuantity.Text = "Quantity";
+            this.OrderItemQuantity.Width = 75;
+            // 
+            // OrderComment
+            // 
+            this.OrderComment.Text = "Comment";
+            this.OrderComment.Width = 250;
+            // 
             // OrderOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -130,5 +152,8 @@ namespace ChapeauUI
         private System.Windows.Forms.Button PlaceOrderbtn;
         private System.Windows.Forms.Button oderOverviewbackbtn;
         private System.Windows.Forms.Button OrderOverviewPaybtn;
+        private System.Windows.Forms.ColumnHeader OrderItemName;
+        private System.Windows.Forms.ColumnHeader OrderItemQuantity;
+        private System.Windows.Forms.ColumnHeader OrderComment;
     }
 }
