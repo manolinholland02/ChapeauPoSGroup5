@@ -59,7 +59,7 @@ namespace ChapeauUI
                 {
 
                     string[] output = { employee.EmployeeID.ToString(), employee.EmployeeFirstName, employee.EmployeeLastName,
-                                        employee.EmployeeUsername, employee.EmployeeUserPassword.ToString() , employee.EmployeeType.ToString() };
+                                        employee.EmployeeUsername, employee.EmployeeUserPassword.ToString(), employee.EmployeeType.ToString() };
                     ListViewItem list = new ListViewItem(output);
                     listView_Employees_Management.Items.Add(list);
 
@@ -77,11 +77,5 @@ namespace ChapeauUI
 
         }
 
-        private void button_Add_Employee_Click(object sender, EventArgs e)
-        {
-            AddEmployee addEmployee = new AddEmployee();
-            addEmployee.Show();
-            this.Hide();
-        }
     }
 }

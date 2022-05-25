@@ -13,7 +13,10 @@
     <Compile Update="DrinksMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="EditEmployee.cs">
+    <Compile Update="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TESTFORM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LogIn.cs">

@@ -13,10 +13,19 @@ namespace ChapeauDAL
     {
         public List<Payment> GetPaymentFromTableId()
         {
-            string query = "SELECT [tip], [paymentPrice], [dateOfPayment] FROM Payments WHERE (paymentId = @paymentId AND tableId = @tableId)";
+            string query = $"SELECT [tip], [paymentPrice], [dateOfPayment] FROM Payments WHERE (paymentId = @paymentId AND tableId = @tableId)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+
+        public void AddAmountPayedAndTip(Payment payment)
+        {
+                string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ({payment.PaymentPrice},{payment.Tip}) WHERE (paymentId = @paymentId AND tableId = @tableId)";
+                SqlParameter[] sqlParameters = new SqlParameter[0];
+                ExecuteEditQuery(query, sqlParameters); 
+        }
+
+
         public List<Payment> ReadTables(DataTable dataTable)
         {
             List<Payment> feedback = new List<Payment>();
