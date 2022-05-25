@@ -6,7 +6,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    public class OrdersService
+    class OrdersService
     {
         private OrdersDao _orderDao;
 
