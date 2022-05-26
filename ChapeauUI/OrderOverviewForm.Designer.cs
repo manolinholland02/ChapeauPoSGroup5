@@ -30,15 +30,15 @@ namespace ChapeauUI
         private void InitializeComponent()
         {
             this.OrderlistView = new System.Windows.Forms.ListView();
+            this.OrderItemName = new System.Windows.Forms.ColumnHeader();
+            this.OrderItemQuantity = new System.Windows.Forms.ColumnHeader();
+            this.OrderComment = new System.Windows.Forms.ColumnHeader();
             this.PlusOrderbtn = new System.Windows.Forms.Button();
             this.MinusOrderbtn = new System.Windows.Forms.Button();
             this.DeleteOrderbtn = new System.Windows.Forms.Button();
             this.PlaceOrderbtn = new System.Windows.Forms.Button();
             this.oderOverviewbackbtn = new System.Windows.Forms.Button();
             this.OrderOverviewPaybtn = new System.Windows.Forms.Button();
-            this.OrderItemName = new System.Windows.Forms.ColumnHeader();
-            this.OrderItemQuantity = new System.Windows.Forms.ColumnHeader();
-            this.OrderComment = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // OrderlistView
@@ -54,6 +54,21 @@ namespace ChapeauUI
             this.OrderlistView.TabIndex = 0;
             this.OrderlistView.UseCompatibleStateImageBehavior = false;
             this.OrderlistView.View = System.Windows.Forms.View.Details;
+            // 
+            // OrderItemName
+            // 
+            this.OrderItemName.Text = "Item Name";
+            this.OrderItemName.Width = 150;
+            // 
+            // OrderItemQuantity
+            // 
+            this.OrderItemQuantity.Text = "Quantity";
+            this.OrderItemQuantity.Width = 75;
+            // 
+            // OrderComment
+            // 
+            this.OrderComment.Text = "Comment";
+            this.OrderComment.Width = 250;
             // 
             // PlusOrderbtn
             // 
@@ -110,21 +125,6 @@ namespace ChapeauUI
             this.OrderOverviewPaybtn.Text = "Pay";
             this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
             // 
-            // OrderItemName
-            // 
-            this.OrderItemName.Text = "Item Name";
-            this.OrderItemName.Width = 150;
-            // 
-            // OrderItemQuantity
-            // 
-            this.OrderItemQuantity.Text = "Quantity";
-            this.OrderItemQuantity.Width = 75;
-            // 
-            // OrderComment
-            // 
-            this.OrderComment.Text = "Comment";
-            this.OrderComment.Width = 250;
-            // 
             // OrderOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -139,6 +139,7 @@ namespace ChapeauUI
             this.Controls.Add(this.OrderlistView);
             this.Name = "OrderOverviewForm";
             this.Text = "OrderOverviewForm";
+            this.Load += new System.EventHandler(this.OrderOverviewForm_Load);
             this.ResumeLayout(false);
 
         }

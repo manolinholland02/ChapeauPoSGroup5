@@ -15,9 +15,11 @@ namespace ChapeauUI
     public partial class OrderOverviewForm : Form
     {
         List<Orders> currentOrders;
-        public OrderOverviewForm()
+        public OrderOverviewForm(List<Orders> current_orders)
         {
             InitializeComponent();
+            currentOrders = current_orders;
+
 
         }
 
@@ -36,6 +38,11 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 OrderlistView.Items.Add(item);
             }
+
+        }
+
+        private void OrderOverviewForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

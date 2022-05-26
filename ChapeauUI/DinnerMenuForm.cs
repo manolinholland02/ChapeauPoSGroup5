@@ -16,12 +16,14 @@ namespace ChapeauUI
     {
         private MenuItemCategory _category;
         private List<ListView> _listViews;
+        private List<Orders> _currentOrders;
 
         public DinnerMenuForm()
         {
             InitializeComponent();
             _category = MenuItemCategory.entremet;
             _listViews = new List<ListView>();
+            _currentOrders = new List<Orders>();
             _listViews.Add(DinnerEntremetsListView);
             _listViews.Add(DinnerStartersListView);
             _listViews.Add(DinnerMainListView);
@@ -37,6 +39,61 @@ namespace ChapeauUI
 
         private void AddbtnDinner_Click(object sender, EventArgs e)
         {
+            //check if only one is selected
+            Orders order = CheckSelectedItems();
+            if (order != null)
+            {
+                MenuItemService menuservice = new MenuItemService();
+                List<MenuItem> menuItems = menuservice.GetMenuItems();
+                order.orderComment = DinnerCommentSection.Text;
+
+                foreach (MenuItem item in menuItems)
+                {
+                    if (item.MenuItemID == order.orderID)
+                    {
+                        order.orderPrice = item.MenuItemPrice;
+                        order.orderItemName = item.MenuItemName;
+                    }
+                }
+                //order.table
+                //order waiter
+                //order preparer
+                //order payment
+
+                _currentOrders.Add(order);
+                //order counter +1
+            }
+
+            DinnerCommentSection.Clear();
+            foreach (ListView listView in _listViews)
+            {
+                listView.SelectedItems.Clear();
+            }
+        }
+        private Orders CheckSelectedItems()
+        {
+            int count = 0;
+            Orders item = new Orders();
+            Orders emptyitem = new Orders();
+            foreach (ListView listViews in _listViews)
+            {
+
+                if (listViews.SelectedItems.Count == 1)
+                {
+                    count++;
+                    item.orderItem = int.Parse(listViews.SelectedItems[0].Text);
+                }
+
+            }
+            if (count == 1)
+            {
+                return item;
+            }
+            else
+            {
+                MessageBox.Show("Select only one item");
+                return emptyitem;
+            }
 
         }
 
@@ -63,6 +120,7 @@ namespace ChapeauUI
                 string[] output = { dinnerMenu.DinnerMenuId.ToString(), dinnerMenu.MenuItemName };
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
+                listView.FullRowSelect = true;
             }
         }
     }

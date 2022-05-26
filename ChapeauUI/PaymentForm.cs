@@ -29,7 +29,7 @@ namespace ChapeauUI
             //change from paymentservice to ordersservice
 
             
-            List<Orders> ordersList = ordersService.GetOrdersFromTableID();
+            List<Orders> ordersList = ordersService.GetOrders();
 
             listViewOrderDetails.Items.Clear();
 

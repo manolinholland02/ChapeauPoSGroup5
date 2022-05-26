@@ -34,14 +34,14 @@ namespace ChapeauUI
             this.starterId = new System.Windows.Forms.ColumnHeader();
             this.starterName = new System.Windows.Forms.ColumnHeader();
             this.LunchMainListView = new System.Windows.Forms.ListView();
+            this.mainId = new System.Windows.Forms.ColumnHeader();
+            this.mainName = new System.Windows.Forms.ColumnHeader();
             this.LunchDessertListView = new System.Windows.Forms.ListView();
+            this.desertId = new System.Windows.Forms.ColumnHeader();
+            this.desertName = new System.Windows.Forms.ColumnHeader();
             this.backbtnLunch = new System.Windows.Forms.Button();
             this.AddbtnLunch = new System.Windows.Forms.Button();
             this.LunchCommentSection = new System.Windows.Forms.TextBox();
-            this.mainId = new System.Windows.Forms.ColumnHeader();
-            this.mainName = new System.Windows.Forms.ColumnHeader();
-            this.desertId = new System.Windows.Forms.ColumnHeader();
-            this.desertName = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // OrderOverviewLunchbtn
@@ -60,6 +60,7 @@ namespace ChapeauUI
             this.starterName});
             this.LunchStartersListView.HideSelection = false;
             this.LunchStartersListView.Location = new System.Drawing.Point(12, 112);
+            this.LunchStartersListView.MultiSelect = false;
             this.LunchStartersListView.Name = "LunchStartersListView";
             this.LunchStartersListView.Size = new System.Drawing.Size(265, 145);
             this.LunchStartersListView.TabIndex = 1;
@@ -83,11 +84,22 @@ namespace ChapeauUI
             this.mainName});
             this.LunchMainListView.HideSelection = false;
             this.LunchMainListView.Location = new System.Drawing.Point(12, 263);
+            this.LunchMainListView.MultiSelect = false;
             this.LunchMainListView.Name = "LunchMainListView";
             this.LunchMainListView.Size = new System.Drawing.Size(265, 145);
             this.LunchMainListView.TabIndex = 2;
             this.LunchMainListView.UseCompatibleStateImageBehavior = false;
             this.LunchMainListView.View = System.Windows.Forms.View.Details;
+            // 
+            // mainId
+            // 
+            this.mainId.Text = "ID";
+            this.mainId.Width = 0;
+            // 
+            // mainName
+            // 
+            this.mainName.Text = "Name";
+            this.mainName.Width = 250;
             // 
             // LunchDessertListView
             // 
@@ -96,11 +108,23 @@ namespace ChapeauUI
             this.desertName});
             this.LunchDessertListView.HideSelection = false;
             this.LunchDessertListView.Location = new System.Drawing.Point(12, 414);
+            this.LunchDessertListView.MultiSelect = false;
             this.LunchDessertListView.Name = "LunchDessertListView";
             this.LunchDessertListView.Size = new System.Drawing.Size(265, 145);
             this.LunchDessertListView.TabIndex = 3;
             this.LunchDessertListView.UseCompatibleStateImageBehavior = false;
             this.LunchDessertListView.View = System.Windows.Forms.View.Details;
+            this.LunchDessertListView.SelectedIndexChanged += new System.EventHandler(this.LunchDessertListView_SelectedIndexChanged);
+            // 
+            // desertId
+            // 
+            this.desertId.Text = "ID";
+            this.desertId.Width = 0;
+            // 
+            // desertName
+            // 
+            this.desertName.Text = "Name";
+            this.desertName.Width = 250;
             // 
             // backbtnLunch
             // 
@@ -128,26 +152,7 @@ namespace ChapeauUI
             this.LunchCommentSection.Name = "LunchCommentSection";
             this.LunchCommentSection.Size = new System.Drawing.Size(513, 27);
             this.LunchCommentSection.TabIndex = 6;
-            // 
-            // mainId
-            // 
-            this.mainId.Text = "ID";
-            this.mainId.Width = 0;
-            // 
-            // mainName
-            // 
-            this.mainName.Text = "Name";
-            this.mainName.Width = 250;
-            // 
-            // desertId
-            // 
-            this.desertId.Text = "ID";
-            this.desertId.Width = 0;
-            // 
-            // desertName
-            // 
-            this.desertName.Text = "Name";
-            this.desertName.Width = 250;
+            this.LunchCommentSection.TextChanged += new System.EventHandler(this.LunchCommentSection_TextChanged);
             // 
             // LunchMenuForm
             // 
