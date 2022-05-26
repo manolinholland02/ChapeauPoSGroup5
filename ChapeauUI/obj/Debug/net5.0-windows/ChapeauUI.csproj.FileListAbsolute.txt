@@ -172,7 +172,6 @@ C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
