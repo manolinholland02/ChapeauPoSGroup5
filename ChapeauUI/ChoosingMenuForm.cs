@@ -35,9 +35,9 @@ namespace ChapeauUI
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-            //DrinksMenuForm drink = new DrinksMenuForm();
+          //  DrinksMenuForm drink = new DrinksMenuForm();
             this.Hide();
-            //drink.Show();
+           // drink.Show();
         }
 
         private void MenuPageTableViewbtn_Click(object sender, EventArgs e)

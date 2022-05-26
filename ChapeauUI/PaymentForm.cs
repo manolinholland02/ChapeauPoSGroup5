@@ -14,6 +14,8 @@ namespace ChapeauUI
 {
     public partial class PaymentForm : Form
     {
+        PaymentService paymentService = new PaymentService();
+        OrdersService ordersService = new OrdersService();
         
         public PaymentForm()
         {
@@ -24,17 +26,19 @@ namespace ChapeauUI
 
         private void DisplayOrderDetails()
         {
-            PaymentService paymentService = new PaymentService();
-            List<Payment> paymentList = paymentService.GetPaymentFromTableId();
+            //change from paymentservice to ordersservice
+
+            
+            List<Orders> ordersList = ordersService.GetOrdersFromTableID();
 
             listViewOrderDetails.Items.Clear();
 
-            foreach (Payment p in paymentList)
+            foreach (Orders O in ordersList)
             {
-                ListViewItem li = new ListViewItem(p.ToString());
-                //li.SubItems.Add();
-                //li.SubItems.Add();
-                //li.SubItems.Add();
+                ListViewItem li = new ListViewItem(O.ToString());
+                li.SubItems.Add(O.orderItemName);
+                li.SubItems.Add($"{O.ItemQuantity}");
+                li.SubItems.Add($"{O.orderPrice}");
                 listViewOrderDetails.Items.Add(li);
             }
         }
@@ -42,9 +46,12 @@ namespace ChapeauUI
         private void amountToBePayed_btn_Click(object sender, EventArgs e)
         {
             decimal payedAmount;
-            
 
-            PaymentService paymentService = new PaymentService();
+            alcVAT_lbl.Text = $"";
+            regularVAT_lbl.Text = $"";
+            subTotal_lbl.Text = $"";
+
+            
             payedAmount = decimal.Parse(amountToBePayed_txt.Text);
 
             Payment payment = new Payment()
@@ -52,7 +59,10 @@ namespace ChapeauUI
                 PaymentPrice = payedAmount
             };
 
-            paymentService.AddAmountPayedAndTip(payment);
+            tip_lbl.Text = $"";
+            total_lbl.Text = $"";
+
+            paymentService.AddAmountPayed(payment);
             
         }
     }

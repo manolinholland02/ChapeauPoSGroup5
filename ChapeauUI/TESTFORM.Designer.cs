@@ -33,15 +33,19 @@ namespace ChapeauUI
             this.TestformID = new System.Windows.Forms.ColumnHeader();
             this.TestFormName = new System.Windows.Forms.ColumnHeader();
             this.testformbtn = new System.Windows.Forms.Button();
+            this.TestFormComment = new System.Windows.Forms.ColumnHeader();
+            this.TestOrderQuantity = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // testlistview
             // 
             this.testlistview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.TestformID,
-            this.TestFormName});
+            this.TestOrderQuantity,
+            this.TestFormName,
+            this.TestFormComment});
             this.testlistview.HideSelection = false;
-            this.testlistview.Location = new System.Drawing.Point(155, 73);
+            this.testlistview.Location = new System.Drawing.Point(149, 75);
             this.testlistview.Name = "testlistview";
             this.testlistview.Size = new System.Drawing.Size(473, 235);
             this.testlistview.TabIndex = 0;
@@ -51,10 +55,13 @@ namespace ChapeauUI
             // TestformID
             // 
             this.TestformID.Text = "ID";
+            this.TestformID.Width = 0;
             // 
             // TestFormName
             // 
+            this.TestFormName.DisplayIndex = 1;
             this.TestFormName.Text = "Name";
+            this.TestFormName.Width = 100;
             // 
             // testformbtn
             // 
@@ -65,6 +72,16 @@ namespace ChapeauUI
             this.testformbtn.Text = "test";
             this.testformbtn.UseVisualStyleBackColor = true;
             this.testformbtn.Click += new System.EventHandler(this.testformbtn_Click);
+            // 
+            // TestFormComment
+            // 
+            this.TestFormComment.DisplayIndex = 2;
+            this.TestFormComment.Text = "Comment";
+            // 
+            // TestOrderQuantity
+            // 
+            this.TestOrderQuantity.DisplayIndex = 3;
+            this.TestOrderQuantity.Text = "Quantity";
             // 
             // TESTFORM
             // 
@@ -85,5 +102,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button testformbtn;
         private System.Windows.Forms.ColumnHeader TestformID;
         private System.Windows.Forms.ColumnHeader TestFormName;
+        private System.Windows.Forms.ColumnHeader TestOrderQuantity;
+        private System.Windows.Forms.ColumnHeader TestFormComment;
     }
 }
