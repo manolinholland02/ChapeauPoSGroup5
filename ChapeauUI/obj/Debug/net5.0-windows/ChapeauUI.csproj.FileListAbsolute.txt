@@ -199,3 +199,4 @@ C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
