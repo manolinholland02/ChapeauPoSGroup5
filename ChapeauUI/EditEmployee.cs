@@ -19,6 +19,8 @@ namespace ChapeauUI
         public EditEmployee(Employee employee)
         {
             InitializeComponent();
+            label_Password_Error.Text = "Password should contain 4 digits!";
+            label_Password_Error.Visible = false;
             _EmployeeToEdit = employee;
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
             textBox_EditEmployee_FirstName.Text = _EmployeeToEdit.EmployeeFirstName.ToString();
@@ -66,11 +68,19 @@ namespace ChapeauUI
             {
                 _EmployeeToEdit.EmployeeType = EmployeeType.waiter;
             }
-            EmployeeService employeeService = new EmployeeService();
-            employeeService.EditEmployee(_EmployeeToEdit);
-            ManagerView managerView = new ManagerView();
-            managerView.Show();
-            this.Hide();
+            if(PasswordChecker(_EmployeeToEdit.EmployeeUserPassword))
+            {
+                EmployeeService employeeService = new EmployeeService();
+                employeeService.EditEmployee(_EmployeeToEdit);
+                ManagerView managerView = new ManagerView();
+                managerView.Show();
+                this.Hide();
+            }
+            else
+            {
+                label_Password_Error.Visible = true;
+            }
+            
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -78,6 +88,14 @@ namespace ChapeauUI
             ManagerView managerView = new ManagerView();
             managerView.Show();
             this.Hide();
+        }
+        private bool PasswordChecker(int password)
+        {
+            if(password.ToString().Length != 4)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

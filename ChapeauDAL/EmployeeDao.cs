@@ -48,7 +48,9 @@ namespace ChapeauDAL
                     new SqlParameter("@password", employee.EmployeeUserPassword),
                     new SqlParameter("@type", (string)employee.EmployeeType.ToString())
                 };
-                string query = $"INSERT INTO [dbo].[Employees] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
+                string query = @$"INSERT INTO [dbo].[Employees] 
+                                (firstName, lastName, username, userPassword, employeeType) 
+                                VALUES (@firstName, @lastName, @username, @password, @type)";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)
@@ -83,9 +85,12 @@ namespace ChapeauDAL
                     new SqlParameter("@lastName", employee.EmployeeLastName),
                     new SqlParameter("@username", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", employee.EmployeeType)
+                    new SqlParameter("@type", employee.EmployeeType.ToString())
                 };
-                string query = $"UPDATE [dbo].[Employees] SET (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type) WHERE employeeId = @ID";
+                
+                string query = @$"UPDATE[dbo].[Employees] 
+                                SET firstName = @firstName, lastName = @lastName, username = @username, userPassword = @password, employeeType = @type 
+                                WHERE employeeId = @ID;";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)
