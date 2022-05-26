@@ -120,6 +120,7 @@ namespace ChapeauUI
             this.button_Edit_Employee.TabIndex = 3;
             this.button_Edit_Employee.Text = "Edit";
             this.button_Edit_Employee.UseVisualStyleBackColor = true;
+            this.button_Edit_Employee.Click += new System.EventHandler(this.button_Edit_Employee_Click);
             // 
             // ManagerView
             // 

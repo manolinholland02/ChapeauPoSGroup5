@@ -78,13 +78,14 @@ namespace ChapeauDAL
             {
                 SqlParameter[] parameters =
                 {
+                    new SqlParameter("@ID", employee.EmployeeID ),
                     new SqlParameter("@firstName", employee.EmployeeFirstName),
                     new SqlParameter("@lastName", employee.EmployeeLastName),
-                    new SqlParameter("@userame", employee.EmployeeUsername),
+                    new SqlParameter("@username", employee.EmployeeUsername),
                     new SqlParameter("@password", employee.EmployeeUserPassword),
-                    new SqlParameter("@type", (EmployeeType)employee.EmployeeType)
+                    new SqlParameter("@type", employee.EmployeeType)
                 };
-                string query = $"UPDATE INTO [dbo].[Employees] (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type)";
+                string query = $"UPDATE [dbo].[Employees] SET (firstName, lastName, username, userPassword, employeeType) VALUES (@firstName, @lastName, @username, @password, @type) WHERE employeeId = @ID";
                 ExecuteEditQuery(query, parameters);
             }
             catch (Exception e)

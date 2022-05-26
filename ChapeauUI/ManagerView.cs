@@ -51,7 +51,7 @@ namespace ChapeauUI
             try
             {
                 EmployeeService employeeService = new EmployeeService();
-                List<Employee> employeesList = employeeService.GetAllEmployees(); ;
+                List<Employee> employeesList = employeeService.GetAllEmployees(); 
 
                 listView_Employees_Management.Items.Clear();
 
@@ -71,7 +71,6 @@ namespace ChapeauUI
             }
         }
 
-
         private void ManagerView_Load(object sender, EventArgs e)
         {
 
@@ -82,6 +81,22 @@ namespace ChapeauUI
             AddEmployee addEmployee = new AddEmployee();
             addEmployee.Show();
             this.Hide();
+        }
+
+        private void button_Edit_Employee_Click(object sender, EventArgs e)
+        {
+            int employeeToEditID = int.Parse(listView_Employees_Management.SelectedItems[0].SubItems[0].Text);
+            EmployeeService employeeService = new EmployeeService();
+            List<Employee> employeesList = employeeService.GetAllEmployees();
+            foreach (Employee employee in employeesList)
+            {
+                if(employee.EmployeeID == employeeToEditID)
+                {
+                    EditEmployee edit = new EditEmployee(employee);
+                    edit.Show();
+                    this.Hide();
+                }
+            }
         }
     }
 }
