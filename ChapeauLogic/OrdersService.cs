@@ -15,14 +15,24 @@ namespace ChapeauLogic
             _orderDao = new OrdersDao();
         }
 
-        public List<Orders> GetOrdersFromTableID(int TableNumber)
+        public List<Orders> GetOrders()
         {
-            return _orderDao.GetOrdersFromTableID(TableNumber);
+            return _orderDao.GetAllOrders();
         }
 
         public void InsertNewOrder(List<Orders> NewOrders)
         {
             _orderDao.InsertNewOrder(NewOrders);
+        }
+
+        public List<Orders> GetFoodOnlyOrders(List<Orders> orders)
+        {
+            return _orderDao.GetFoodOnlyOrders(orders);
+        }
+
+        public System.Data.DataTable GetFood()
+        {
+            return _orderDao.GetFood();
         }
     }
 }

@@ -21,32 +21,16 @@ namespace ChapeauUI
 
         private void testformbtn_Click(object sender, EventArgs e)
         {
-
             testlistview.Items.Clear();
-            testlistview.Columns.Add("ID", 20);
-            testlistview.Columns.Add("Name", 20);
-            MenuItemService menuService = new MenuItemService();
-            List<MenuItem> items = new List<MenuItem>();
-            items = menuService.GetMenuItems();
-            foreach (MenuItem item in items)
+            OrdersService ordersService = new OrdersService();
+            List<Orders> foodOrders = ordersService.GetFoodOnlyOrders(ordersService.GetOrders());
+
+            foreach(Orders order in foodOrders)
             {
-                string[] output = { item.MenuItemID.ToString(), item.MenuItemName };
-                ListViewItem list = new ListViewItem(output);
-                testlistview.Items.Add(list);
+                string[] output = { order.orderID.ToString(), order.orderItemName, order.ItemQuantity.ToString(), order.orderComment };
+                ListViewItem item = new ListViewItem(output);
+                testlistview.Items.Add(item);
             }
-            //testlistview.Items.Clear();
-            //LunchMenuLogic LunchService = new LunchMenuLogic();
-            //List<LunchMenu> items = new List<LunchMenu>();
-            //items = LunchService.GetLunchMenuItems();
-            //foreach (LunchMenu item in items)
-            //{
-            //    ListViewItem li = new ListViewItem();
-            //    li.SubItems.Add(item.LunchMenuId.ToString());
-            //    li.SubItems.Add(item.MenuItemName);
-
-            //    testlistview.Items.Add(li);
-            //}
-
         }
     }
 }
