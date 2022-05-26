@@ -1,7 +1,7 @@
 ﻿
 namespace ChapeauUI
 {
-    partial class ManagerView
+    partial class ManagerViewEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,10 @@ namespace ChapeauUI
             this.button_Add_Employee = new System.Windows.Forms.Button();
             this.button_Delete_Employee = new System.Windows.Forms.Button();
             this.button_Edit_Employee = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem_Employees = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView_Employees_Management
@@ -122,6 +126,31 @@ namespace ChapeauUI
             this.button_Edit_Employee.UseVisualStyleBackColor = true;
             this.button_Edit_Employee.Click += new System.EventHandler(this.button_Edit_Employee_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Employees,
+            this.toolStripMenuItem_Menu});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(1422, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem_Employees
+            // 
+            this.toolStripMenuItem_Employees.Name = "toolStripMenuItem_Employees";
+            this.toolStripMenuItem_Employees.Size = new System.Drawing.Size(95, 24);
+            this.toolStripMenuItem_Employees.Text = "Employees";
+            // 
+            // toolStripMenuItem_Menu
+            // 
+            this.toolStripMenuItem_Menu.Name = "toolStripMenuItem_Menu";
+            this.toolStripMenuItem_Menu.Size = new System.Drawing.Size(60, 24);
+            this.toolStripMenuItem_Menu.Text = "Menu";
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -131,10 +160,14 @@ namespace ChapeauUI
             this.Controls.Add(this.button_Delete_Employee);
             this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.listView_Employees_Management);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
             this.Load += new System.EventHandler(this.ManagerView_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -150,5 +183,8 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button_Add_Employee;
         private System.Windows.Forms.Button button_Delete_Employee;
         private System.Windows.Forms.Button button_Edit_Employee;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Employees;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Menu;
     }
 }
