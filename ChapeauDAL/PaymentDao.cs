@@ -31,8 +31,8 @@ namespace ChapeauDAL
         public void CalcVAT(Payment payment)
         {
             //Calc  VAT if alcholic == *21% else *6%
-
-            string query = $"";
+            //change
+            string query = $"Select ((orderPrice * itemQuantity)* 0.21) FROM orders INNER JOIN MenuItems ON Orders.orderItem = MenuItems.menuItemId";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
