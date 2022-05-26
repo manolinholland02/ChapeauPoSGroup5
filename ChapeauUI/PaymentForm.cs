@@ -15,7 +15,7 @@ namespace ChapeauUI
     public partial class PaymentForm : Form
     {
         PaymentService paymentService = new PaymentService();
-        OrdersService ordersService = new OrdersService();
+        
         
         public PaymentForm()
         {
@@ -29,16 +29,16 @@ namespace ChapeauUI
             //change from paymentservice to ordersservice
 
             
-            List<Orders> ordersList = ordersService.GetOrdersFromTableID();
+            List<Payment> ordersList = paymentService.GetPaymentFromTableId();
 
             listViewOrderDetails.Items.Clear();
 
-            foreach (Orders O in ordersList)
+            foreach (Payment O in ordersList)
             {
                 ListViewItem li = new ListViewItem(O.ToString());
-                li.SubItems.Add(O.orderItemName);
-                li.SubItems.Add($"{O.ItemQuantity}");
-                li.SubItems.Add($"{O.orderPrice}");
+                li.SubItems.Add($"{O.PaymentId}");
+                li.SubItems.Add($"{O.PaymentPrice}");
+                li.SubItems.Add($"{O.TableId}");
                 listViewOrderDetails.Items.Add(li);
             }
         }
