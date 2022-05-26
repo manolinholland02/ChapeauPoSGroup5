@@ -51,7 +51,6 @@ namespace ChapeauUI
             _EmployeeToEdit.EmployeeFirstName = textBox_EditEmployee_FirstName.Text;
             _EmployeeToEdit.EmployeeLastName = textBox_EditEmployee_LastName.Text;
             _EmployeeToEdit.EmployeeUsername = textBox_EditEmployee_Username.Text;
-            _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
             if (radioButton_EditEmployee_Bartender.Checked)
             {
                 _EmployeeToEdit.EmployeeType = EmployeeType.barman;
@@ -68,11 +67,13 @@ namespace ChapeauUI
             {
                 _EmployeeToEdit.EmployeeType = EmployeeType.waiter;
             }
-            if(PasswordChecker(_EmployeeToEdit.EmployeeUserPassword))
+            if(PasswordChecker(textBox_EditEmployee_Password.Text))
             {
+
+                _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
                 EmployeeService employeeService = new EmployeeService();
                 employeeService.EditEmployee(_EmployeeToEdit);
-                ManagerView managerView = new ManagerView();
+                ManagerViewEmployee managerView = new ManagerViewEmployee();
                 managerView.Show();
                 this.Hide();
             }
@@ -85,14 +86,27 @@ namespace ChapeauUI
 
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            ManagerView managerView = new ManagerView();
+            ManagerViewEmployee managerView = new ManagerViewEmployee();
             managerView.Show();
             this.Hide();
         }
-        private bool PasswordChecker(int password)
+        private bool PasswordChecker(string password)
         {
-            if(password.ToString().Length != 4)
+            string specialCharacter = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
+            foreach (char ch in specialCharacter)
             {
+                //checks if password contains special characters
+                if (password.Contains(ch))
+                    return false;
+            }
+            if (password.ToString().Length != 4)
+            {
+                //checks if password is more or less than 4 symbols
+                return false;
+            }
+            else if ( password.Any(char.IsUpper) || password.Any(char.IsLower))
+            {
+                //checks if password contains characters
                 return false;
             }
             return true;
