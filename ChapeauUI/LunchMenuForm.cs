@@ -17,16 +17,20 @@ namespace ChapeauUI
         private MenuItemCategory _category;
         private List<ListView> _listViews;
         private List<Orders> _currentOrders;
-        public LunchMenuForm()
+        private int TableID;
+        private int WaiterID;
+        public LunchMenuForm(List<Orders> currentorders, int TableID, int waiterID)
         {
             InitializeComponent();
             _category = MenuItemCategory.starter;
             _listViews = new List<ListView>();
-            _currentOrders = new List<Orders>();
+            _currentOrders = currentorders;
             _listViews.Add(LunchStartersListView);
             _listViews.Add(LunchMainListView);
             _listViews.Add(LunchDessertListView);
             PopulateLunchMenus();
+            this.TableID = TableID;
+            this.WaiterID = waiterID;
         }
 
         private void backbtnLunch_Click(object sender, EventArgs e)
@@ -50,6 +54,7 @@ namespace ChapeauUI
                     {
                         order.orderPrice = item.MenuItemPrice;
                         order.orderItemName = item.MenuItemName;
+                        order.orderStatus = Status.processing;
                     }
                 }
                 //order.table
@@ -58,6 +63,7 @@ namespace ChapeauUI
                 //order payment
                 
                 _currentOrders.Add(order);
+                orderCounterlbl.Text = $"count : {_currentOrders.Count}";
                 //order counter +1
             }
 
@@ -130,6 +136,13 @@ namespace ChapeauUI
         private void LunchDessertListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void OrderOverviewLunchbtn_Click(object sender, EventArgs e)
+        {
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            orderOverview.Show();
+            this.Hide();
         }
     }
 }

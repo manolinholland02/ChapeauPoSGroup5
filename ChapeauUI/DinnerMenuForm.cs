@@ -17,23 +17,27 @@ namespace ChapeauUI
         private MenuItemCategory _category;
         private List<ListView> _listViews;
         private List<Orders> _currentOrders;
+        private int TableID;
+        private int WaiterID;
 
-        public DinnerMenuForm()
+        public DinnerMenuForm(List<Orders> currentorders, int TableID, int waiterID)
         {
             InitializeComponent();
             _category = MenuItemCategory.entremet;
             _listViews = new List<ListView>();
-            _currentOrders = new List<Orders>();
+            _currentOrders = currentorders;
             _listViews.Add(DinnerEntremetsListView);
             _listViews.Add(DinnerStartersListView);
             _listViews.Add(DinnerMainListView);
             _listViews.Add(DinnerDessertsListView);
             PopulateDinnerMenus();
+            this.TableID = TableID;
+            this.WaiterID = waiterID;
         }
 
         private void BackbtnDinner_Click(object sender, EventArgs e)
         {
-            ChoosingMenuForm choosingForm = new ChoosingMenuForm();
+            ChoosingMenuForm choosingForm = new ChoosingMenuForm(TableID, WaiterID);
             this.Close();
         }
 
@@ -53,6 +57,7 @@ namespace ChapeauUI
                     {
                         order.orderPrice = item.MenuItemPrice;
                         order.orderItemName = item.MenuItemName;
+                        order.orderStatus = Status.processing;
                     }
                 }
                 //order.table
@@ -122,6 +127,13 @@ namespace ChapeauUI
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
             }
+        }
+
+        private void DinnerTableOverview_Click(object sender, EventArgs e)
+        {
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            orderOverview.Show();
+            this.Hide();
         }
     }
 }

@@ -15,9 +15,10 @@ namespace ChapeauUI
     public partial class OrderOverviewForm : Form
     {
         List<Orders> currentOrders;
-        public OrderOverviewForm(List<Orders> current_orders)
+        public OrderOverviewForm(List<Orders> current_orders, int tableNumber, int waiterID)
         {
             InitializeComponent();
+            PopulateOrderOverView(tableNumber);
             currentOrders = current_orders;
 
 
@@ -28,9 +29,10 @@ namespace ChapeauUI
 
         }
 
-        private void PopulateODerOverView(int tableID)
+        private void PopulateOrderOverView(int tableID)
         {
             OrderlistView.Items.Clear();
+
 
             foreach (Orders order in currentOrders)
             {
@@ -41,7 +43,27 @@ namespace ChapeauUI
 
         }
 
+        //private List<Orders> GetOrderByTable(int tableID)
+        //{
+        //    List<Orders> orders = new List<Orders>();
+        //    OrdersService orderService = new OrdersService();
+        //    orders = orderService.GetOrders();
+        //    foreach (Orders order in orders)
+        //    {
+        //        if (order.orderTable != tableID)
+        //        {
+        //            orders.Remove(order);
+        //        }
+        //    }
+        //    return orders;
+        //}
+
         private void OrderOverviewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderOverviewPaybtn_Click(object sender, EventArgs e)
         {
 
         }

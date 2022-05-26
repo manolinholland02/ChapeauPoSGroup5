@@ -202,6 +202,7 @@ namespace ChapeauUI
             this.DrinksTableOverview.TabIndex = 8;
             this.DrinksTableOverview.Text = "See Table\'s Orders";
             this.DrinksTableOverview.UseVisualStyleBackColor = true;
+            this.DrinksTableOverview.Click += new System.EventHandler(this.DrinksTableOverview_Click);
             // 
             // DrinksMenuForm
             // 

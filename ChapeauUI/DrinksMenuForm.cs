@@ -17,18 +17,22 @@ namespace ChapeauUI
         private MenuItemCategory _category;
         private List<ListView> _listViews;
         private List<Orders> _currentOrders;
-        public DrinksMenuForm()
+        private int TableID;
+        private int WaiterID;
+        public DrinksMenuForm(List<Orders> currentorders, int TableID, int waiterID)
         {
             InitializeComponent();
             _category = MenuItemCategory.softdrink;
             _listViews =  new List<ListView>();
-            _currentOrders = new List<Orders>();
+            _currentOrders = currentorders;
             _listViews.Add(SoftDrinksListView);
             _listViews.Add(BeersListView);
             _listViews.Add(WineListView);
             _listViews.Add(SpiritsListView);
             _listViews.Add(CoffeeTeaListView);
             PopulateDrinkMenus();
+            this.TableID = TableID;
+            this.WaiterID = waiterID;
         }
 
         private void AddDrinksbtn_Click(object sender, EventArgs e)
@@ -46,6 +50,7 @@ namespace ChapeauUI
                     {
                         order.orderPrice = item.MenuItemPrice;
                         order.orderItemName = item.MenuItemName;
+                        order.orderStatus = Status.processing;
                     }
                 }
                 //order.table
@@ -126,6 +131,13 @@ namespace ChapeauUI
         private void BeersListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DrinksTableOverview_Click(object sender, EventArgs e)
+        {
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            orderOverview.Show();
+            this.Hide();
         }
     }
 }

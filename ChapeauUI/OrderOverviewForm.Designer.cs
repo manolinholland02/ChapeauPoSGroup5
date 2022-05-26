@@ -124,6 +124,7 @@ namespace ChapeauUI
             this.OrderOverviewPaybtn.TabIndex = 6;
             this.OrderOverviewPaybtn.Text = "Pay";
             this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
+            this.OrderOverviewPaybtn.Click += new System.EventHandler(this.OrderOverviewPaybtn_Click);
             // 
             // OrderOverviewForm
             // 
