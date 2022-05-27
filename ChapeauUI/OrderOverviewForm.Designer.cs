@@ -88,6 +88,7 @@ namespace ChapeauUI
             this.MinusOrderbtn.TabIndex = 2;
             this.MinusOrderbtn.Text = "-";
             this.MinusOrderbtn.UseVisualStyleBackColor = true;
+            this.MinusOrderbtn.Click += new System.EventHandler(this.MinusOrderbtn_Click);
             // 
             // DeleteOrderbtn
             // 
@@ -97,6 +98,7 @@ namespace ChapeauUI
             this.DeleteOrderbtn.TabIndex = 3;
             this.DeleteOrderbtn.Text = "Delete Whole Order";
             this.DeleteOrderbtn.UseVisualStyleBackColor = true;
+            this.DeleteOrderbtn.Click += new System.EventHandler(this.DeleteOrderbtn_Click);
             // 
             // PlaceOrderbtn
             // 
