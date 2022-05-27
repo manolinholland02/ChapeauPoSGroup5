@@ -36,12 +36,13 @@ namespace ChapeauUI
             // ordersDataGridView
             // 
             this.ordersDataGridView.AllowUserToAddRows = false;
+            this.ordersDataGridView.AllowUserToOrderColumns = true;
             this.ordersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ordersDataGridView.Location = new System.Drawing.Point(135, 152);
+            this.ordersDataGridView.Location = new System.Drawing.Point(117, 12);
             this.ordersDataGridView.Name = "ordersDataGridView";
             this.ordersDataGridView.RowHeadersWidth = 51;
             this.ordersDataGridView.RowTemplate.Height = 29;
-            this.ordersDataGridView.Size = new System.Drawing.Size(554, 188);
+            this.ordersDataGridView.Size = new System.Drawing.Size(606, 322);
             this.ordersDataGridView.TabIndex = 0;
             // 
             // KitchenBarView
