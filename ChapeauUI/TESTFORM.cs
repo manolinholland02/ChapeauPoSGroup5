@@ -19,7 +19,7 @@ namespace ChapeauUI
             InitializeComponent();
         }
 
-        private void testformbtn_Click(object sender, EventArgs e)
+        /*private void testformbtn_Click(object sender, EventArgs e)
         {
             testlistview.Items.Clear();
             OrdersService ordersService = new OrdersService();
@@ -31,6 +31,6 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 testlistview.Items.Add(item);
             }
-        }
+        }*/
     }
 }

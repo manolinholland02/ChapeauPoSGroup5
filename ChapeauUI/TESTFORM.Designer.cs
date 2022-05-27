@@ -71,7 +71,6 @@ namespace ChapeauUI
             this.testformbtn.TabIndex = 1;
             this.testformbtn.Text = "test";
             this.testformbtn.UseVisualStyleBackColor = true;
-            this.testformbtn.Click += new System.EventHandler(this.testformbtn_Click);
             // 
             // TestFormComment
             // 
