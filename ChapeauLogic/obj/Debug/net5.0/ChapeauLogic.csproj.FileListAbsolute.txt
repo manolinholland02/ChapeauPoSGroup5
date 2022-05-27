@@ -66,3 +66,20 @@ C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauDAL.pdb
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauModel.pdb
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.CopyComplete
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.deps.json
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ref\ChapeauLogic.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauLogic.pdb
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauDAL.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauModel.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauDAL.pdb
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\bin\Debug\net5.0\ChapeauModel.pdb
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.AssemblyReference.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.AssemblyInfoInputs.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.AssemblyInfo.cs
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.CoreCompileInputs.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.csproj.CopyComplete
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ref\ChapeauLogic.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauLogic\obj\Debug\net5.0\ChapeauLogic.pdb
