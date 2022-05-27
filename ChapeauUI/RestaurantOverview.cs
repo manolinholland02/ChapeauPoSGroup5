@@ -17,12 +17,6 @@ namespace ChapeauUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // open the taking orders form
-            // change color if an order has been taken
-            button1.BackColor = Color.Red;
-        }
 
         private void viewManagement_tryButton_Click(object sender, EventArgs e)
         {
@@ -46,6 +40,27 @@ namespace ChapeauUI
             {
                 //
             }
+        }
+        private void btnTable1_Click(object sender, EventArgs e)
+        {
+            string message = btnTable1.Text;
+            string title = btnTable1.Text;
+            MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+            }
+            else
+            {
+                //
+            }
+        }
+
+        private void btnTable2_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
