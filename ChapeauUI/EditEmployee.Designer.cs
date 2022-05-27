@@ -44,6 +44,7 @@ namespace ChapeauUI
             this.label_EditEmploye_Username = new System.Windows.Forms.Label();
             this.label_EditEmployee_LastName = new System.Windows.Forms.Label();
             this.label_EditEmployee_FirstName = new System.Windows.Forms.Label();
+            this.label_Password_Error = new System.Windows.Forms.Label();
             this.groupBox_EditEmployee_Occupation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,11 +195,23 @@ namespace ChapeauUI
             this.label_EditEmployee_FirstName.TabIndex = 12;
             this.label_EditEmployee_FirstName.Text = "First Name";
             // 
+            // label_Password_Error
+            // 
+            this.label_Password_Error.AutoSize = true;
+            this.label_Password_Error.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Password_Error.ForeColor = System.Drawing.Color.Red;
+            this.label_Password_Error.Location = new System.Drawing.Point(373, 537);
+            this.label_Password_Error.Name = "label_Password_Error";
+            this.label_Password_Error.Size = new System.Drawing.Size(178, 23);
+            this.label_Password_Error.TabIndex = 23;
+            this.label_Password_Error.Text = "label_Password_Error";
+            // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 1055);
+            this.Controls.Add(this.label_Password_Error);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_EditEmployee);
             this.Controls.Add(this.textBox_EditEmployee_Password);
@@ -236,5 +249,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_EditEmploye_Username;
         private System.Windows.Forms.Label label_EditEmployee_LastName;
         private System.Windows.Forms.Label label_EditEmployee_FirstName;
+        private System.Windows.Forms.Label label_Password_Error;
     }
 }

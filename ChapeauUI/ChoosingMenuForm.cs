@@ -8,36 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauLogic;
+using ChapeauModel;
 
 namespace ChapeauUI
 {
     public partial class ChoosingMenuForm : Form
     {
-        public ChoosingMenuForm()
+        private List<Orders> _currentOrders;
+        private int TableID;
+        private int WaiterID;
+
+        public ChoosingMenuForm(int TableID, int WaiterID)
         {
             InitializeComponent();
-            this.Show();
+            if (_currentOrders == null)
+            {
+                _currentOrders = new List<Orders>();
+            }
+            this.TableID = TableID;
+            this.WaiterID = WaiterID;
+
+            
         }
 
         private void LunchMenubtn_Click(object sender, EventArgs e)
         {
-            LunchMenuForm lunch = new LunchMenuForm();
+            LunchMenuForm lunch = new LunchMenuForm(_currentOrders, TableID, WaiterID);
             this.Hide();
             lunch.Show(); // or close
         }
 
         private void DinnerMenubtn_Click(object sender, EventArgs e)
         {
-            DinnerMenuForm dinner = new DinnerMenuForm();
+            DinnerMenuForm dinner = new DinnerMenuForm(_currentOrders, TableID, WaiterID);
             this.Hide(); // or close
             dinner.Show();
         }
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-          //  DrinksMenuForm drink = new DrinksMenuForm();
+            DrinksMenuForm drink = new DrinksMenuForm(_currentOrders, TableID, WaiterID);
             this.Hide();
-           // drink.Show();
+            drink.Show();
         }
 
         private void MenuPageTableViewbtn_Click(object sender, EventArgs e)
@@ -49,9 +61,9 @@ namespace ChapeauUI
 
         private void OrderOverviewbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm();
-            this.Hide();
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
             orderOverview.Show();
+            this.Hide();
         }
 
         private void Paybtn_Click(object sender, EventArgs e)

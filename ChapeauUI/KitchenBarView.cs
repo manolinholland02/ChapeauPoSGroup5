@@ -18,16 +18,34 @@ namespace ChapeauUI
         {
             InitializeComponent();
             OrdersService ordersService = new OrdersService();
-            List<Orders> foodOrders = ordersService.GetFoodOnlyOrders(ordersService.GetOrders());
-            ordersDataGridView.DataSource = foodOrders.Select(o => new KitchenBarViewModel()
-            { Id = o.orderID, Name = o.orderItemName, Quantity = o.ItemQuantity, Comment = o.orderComment }).ToList();
-            ordersDataGridView.Columns[1].Visible = false;
+            InitializeDataGridView(ordersService.GetFoodOnlyOrders(ordersService.GetOrders()));
+        }
 
+        private void InitializeDataGridView(List<Orders> foodOrders)
+        {
+            DataGridViewTextBoxColumn orderId = new DataGridViewTextBoxColumn();
+            orderId.HeaderText = "OrderId";
+            orderId.DataPropertyName = "OrderId";
+            orderId.Visible = false;
 
-            //ordersDataGridView.AutoGenerateColumns = false;
-            //ordersDataGridView.DataSource = ordersService.GetFood();
+            DataGridViewTextBoxColumn orderItemName = new DataGridViewTextBoxColumn();
+            orderItemName.HeaderText = "Order";
+            orderItemName.DataPropertyName = "OrderDesign";
 
-            //ordersDataGridView.DataSource = foodOrders;
+            DataGridViewTextBoxColumn orderComment = new DataGridViewTextBoxColumn();
+            orderComment.HeaderText = "Price";
+            orderComment.DataPropertyName = "OrderPrice";
+
+            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            button.Text = "Ready";
+            button.UseColumnTextForButtonValue = true;
+
+            ordersDataGridView.AutoGenerateColumns = false;
+            ordersDataGridView.Columns.Add(orderId);
+            ordersDataGridView.Columns.Add(orderItemName);
+            ordersDataGridView.Columns.Add(orderComment);
+            ordersDataGridView.DataSource = foodOrders;
+            ordersDataGridView.Columns.Add(button);
         }
     }
 }
