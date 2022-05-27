@@ -28,14 +28,28 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void CalcVAT(Payment payment)
-        {
-            //Calc  VAT if alcholic == *21% else *6%
-            //change
-            string query = $"Select ((orderPrice * itemQuantity)* 0.21) FROM orders INNER JOIN MenuItems ON Orders.orderItem = MenuItems.menuItemId";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteEditQuery(query, sqlParameters);
-        }
+        //public decimal CalcVAT(Payment payment)
+        //{
+        //    //Calc  VAT if alcholic == *21% else *6%
+        //    //change
+        //    string query = $"Select ((orderPrice * itemQuantity)* 0.21) FROM orders INNER JOIN MenuItems ON Orders.orderItem = MenuItems.menuItemId";
+        //    SqlParameter[] sqlParameters = new SqlParameter[0];
+        //    ExecuteEditQuery(query, sqlParameters);
+
+        //    return ReadVAT(ExecuteSelectQuery(query, sqlParameters));
+        //}
+
+        //private decimal ReadVAT(Payment payment)
+        //{
+        //    DataRow dr = DataTable.Rows[0];
+
+        //    if (dr["VAT"] == DBNull.Value)
+        //    {
+        //        return 0;
+        //    }
+        //    return (decimal)dr["VAT"];
+        //}
+
 
         public void AddAmountPayed(Payment payment)
         {
