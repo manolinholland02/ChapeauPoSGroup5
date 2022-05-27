@@ -30,5 +30,23 @@ namespace ChapeauUI
                 managerView.Show();
             this.Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+            }
+            else
+            {
+                //
+            }
+        }
+
     }
 }

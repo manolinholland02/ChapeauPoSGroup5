@@ -20,28 +20,28 @@ namespace ChapeauUI
         public PaymentForm()
         {
             InitializeComponent();
-            DisplayOrderDetails();
+            //DisplayOrderDetails();
 
         }
 
-        private void DisplayOrderDetails()
-        {
-            //change from paymentservice to ordersservice
+        //private void DisplayOrderDetails()
+        //{
+        //    //change from paymentservice to ordersservice
 
             
-            List<Orders> ordersList = ordersService.GetOrdersFromTableID();
+        //    List<Orders> ordersList = ordersService.GetOrdersFromTableID();
 
-            listViewOrderDetails.Items.Clear();
+        //    listViewOrderDetails.Items.Clear();
 
-            foreach (Orders O in ordersList)
-            {
-                ListViewItem li = new ListViewItem(O.ToString());
-                li.SubItems.Add(O.orderItemName);
-                li.SubItems.Add($"{O.ItemQuantity}");
-                li.SubItems.Add($"{O.orderPrice}");
-                listViewOrderDetails.Items.Add(li);
-            }
-        }
+        //    foreach (Orders O in ordersList)
+        //    {
+        //        ListViewItem li = new ListViewItem(O.ToString());
+        //        li.SubItems.Add(O.orderItemName);
+        //        li.SubItems.Add($"{O.ItemQuantity}");
+        //        li.SubItems.Add($"{O.orderPrice}");
+        //        listViewOrderDetails.Items.Add(li);
+        //    }
+        //}
 
         private void amountToBePayed_btn_Click(object sender, EventArgs e)
         {

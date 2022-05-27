@@ -210,3 +210,12 @@ C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\Chape
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources

@@ -41,6 +41,7 @@ namespace ChapeauUI
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.viewManagement_tryButton = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -163,11 +164,22 @@ namespace ChapeauUI
             this.viewManagement_tryButton.UseVisualStyleBackColor = true;
             this.viewManagement_tryButton.Click += new System.EventHandler(this.viewManagement_tryButton_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(403, 26);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(94, 29);
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // RestaurantOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 753);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.viewManagement_tryButton);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
@@ -201,5 +213,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button viewManagement_tryButton;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -95,9 +95,9 @@ namespace ChapeauDAL
         }
 
         //Checks if and account with such a password exists in the Database
-        public bool AccountExists(string username, string password)
+        public bool AccountExists(string username, int password)
         {
-            string query = "SELECT COUNT([username]) from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password;";
+            string query = "SELECT * from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password;";
             SqlParameter[] sqlParameters = { new SqlParameter("@Username", username), new SqlParameter("@password", password) };
             DataTable output = ExecuteSelectQuery(query, sqlParameters);
             if (Convert.ToInt32(output.Rows[0][0]) == 1)
