@@ -14,29 +14,85 @@ namespace ChapeauUI
 {
     public partial class OrderOverviewForm : Form
     {
-        List<Orders> currentOrders;
-        public OrderOverviewForm()
+        private List<Orders> CurrentOrders;
+        public OrderOverviewForm(List<Orders> currentOrders, int waiterID, int preparerID)
         {
             InitializeComponent();
+            CurrentOrders = new List<Orders>();
+            CurrentOrders = currentOrders;
             
         }
 
         private void PlusOrderbtn_Click(object sender, EventArgs e)
         {
-
+            Orders selectedOrder;
+            foreach (Orders order in CurrentOrders)
+            {
+                if (order.MenuItem.MenuItemID == int.Parse(OrderlistView.SelectedItems[0].Text))
+                {
+                    selectedOrder = order;
+                    selectedOrder.ItemQuantity++;
+                }
+            }
+            OrderlistView.Update();
+            
+        }
+        private void MinusOrderbtn_Click(object sender, EventArgs e)
+        {
+            Orders selectedOrder;
+            foreach (Orders order in CurrentOrders)
+            {
+                if (order.MenuItem.MenuItemID == int.Parse(OrderlistView.SelectedItems[0].Text))
+                {
+                    selectedOrder = order;
+                    selectedOrder.ItemQuantity--;
+                    if (selectedOrder.ItemQuantity <= 0)
+                    {
+                        CurrentOrders.Remove(selectedOrder);
+                    }
+                }
+            }
+            OrderlistView.Update();
         }
 
         private void PopulateODerOverView(int tableID)
         {
             OrderlistView.Items.Clear();
 
-            foreach (Orders order in currentOrders)
+            foreach (Orders order in CurrentOrders)
             {
                 string[] output = { order.MenuItem.MenuItemName, order.ItemQuantity.ToString(), order.OrderComment};
                 ListViewItem item = new ListViewItem(output);
                 OrderlistView.Items.Add(item);
             }
             
+        }
+
+        private void OrderOverviewPaybtn_Click(object sender, EventArgs e)
+        {
+
+        }
+         
+        private void OrderOverviewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteOrderbtn_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the whole order?", "deleting order", buttons);
+            //check if order list is empty
+            if (result == DialogResult.Yes)
+            {
+                foreach (Orders order in CurrentOrders)
+                {
+                    CurrentOrders.Remove(order);
+                }
+
+
+            }  
+            OrderlistView.Update();
         }
     }
 }

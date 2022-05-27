@@ -55,9 +55,9 @@ namespace ChapeauUI
                 {
                     if (item.MenuItemID == order.OrderID)
                     {
-                        order.MenuItem.MenuItemPrice = item.MenuItemPrice;
-                        order.MenuItem.MenuItemName = item.MenuItemName;
                         order.OrderStatus = Status.processing;
+                        order.MenuItem.MenuItemName = item.MenuItemName;
+                        
                     }
                 }
                 //order.table
@@ -94,9 +94,14 @@ namespace ChapeauUI
             {
                 return item;
             }
-            else
+            else if (count > 1)
             {
                 MessageBox.Show("Select only one item");
+                return emptyitem;
+            }
+            else
+            {
+                MessageBox.Show("Select at least one item");
                 return emptyitem;
             }
 
@@ -131,7 +136,7 @@ namespace ChapeauUI
 
         private void DinnerTableOverview_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm();
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
             orderOverview.Show();
             this.Hide();
         }

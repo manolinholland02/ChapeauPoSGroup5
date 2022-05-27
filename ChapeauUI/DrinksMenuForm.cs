@@ -46,9 +46,9 @@ namespace ChapeauUI
                 order.OrderComment = DrinksCommentSection.Text;
                 foreach (MenuItem item in menuItems)
                 {
-                    if (item.MenuItemID == order.OrderID)
+                    if (item.MenuItemID == order.MenuItem.MenuItemID)
                     {
-                        order.MenuItem.MenuItemPrice = item.MenuItemPrice;
+                        
                         order.MenuItem.MenuItemName = item.MenuItemName;
                         order.OrderStatus = Status.processing;
                     }
@@ -135,7 +135,7 @@ namespace ChapeauUI
 
         private void DrinksTableOverview_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm();
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
             orderOverview.Show();
             this.Hide();
         }
