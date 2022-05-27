@@ -13,9 +13,9 @@ using ChapeauLogic;
 
 namespace ChapeauUI
 {
-    public partial class ManagerView : Form
+    public partial class ManagerViewEmployee : Form
     {
-        public ManagerView()
+        public ManagerViewEmployee()
         {
             InitializeComponent();
             button_Edit_Employee.Enabled = false;
@@ -98,5 +98,6 @@ namespace ChapeauUI
                 }
             }
         }
+
     }
 }

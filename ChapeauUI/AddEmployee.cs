@@ -25,7 +25,7 @@ namespace ChapeauUI
 
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            ManagerView managerView = new ManagerView();
+            ManagerViewEmployee managerView = new ManagerViewEmployee();
             managerView.Show();
             this.Hide();
         }
@@ -61,7 +61,7 @@ namespace ChapeauUI
             employee.EmployeeType = employeeType;
             EmployeeService employeeService = new EmployeeService();
             employeeService.AddEmployee(employee);
-            ManagerView mv = new ManagerView();
+            ManagerViewEmployee mv = new ManagerViewEmployee();
             mv.Show();
             this.Hide();
         }
