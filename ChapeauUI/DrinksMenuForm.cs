@@ -16,22 +16,82 @@ namespace ChapeauUI
     {
         private MenuItemCategory _category;
         private List<ListView> _listViews;
-
-        public DrinksMenuForm()
+        private List<Orders> _currentOrders;
+        private int TableID;
+        private int WaiterID;
+        public DrinksMenuForm(List<Orders> currentorders, int TableID, int waiterID)
         {
             InitializeComponent();
             _category = MenuItemCategory.softdrink;
             _listViews =  new List<ListView>();
+            _currentOrders = currentorders;
             _listViews.Add(SoftDrinksListView);
             _listViews.Add(BeersListView);
             _listViews.Add(WineListView);
             _listViews.Add(SpiritsListView);
             _listViews.Add(CoffeeTeaListView);
             PopulateDrinkMenus();
+            this.TableID = TableID;
+            this.WaiterID = waiterID;
         }
 
         private void AddDrinksbtn_Click(object sender, EventArgs e)
         {
+            //check if only one is selected
+            Orders order = CheckSelectedItems();
+            if (order != null)
+            {
+                MenuItemService menuservice = new MenuItemService();
+                List<MenuItem> menuItems = menuservice.GetMenuItems();
+                order.orderComment = DrinksCommentSection.Text;
+                foreach (MenuItem item in menuItems)
+                {
+                    if (item.MenuItemID == order.orderID)
+                    {
+                        order.orderPrice = item.MenuItemPrice;
+                        order.orderItemName = item.MenuItemName;
+                        order.orderStatus = Status.processing;
+                    }
+                }
+                //order.table
+                //order waiter
+                //order preparer
+                //order payment
+
+                _currentOrders.Add(order);
+                //order counter +1
+            }
+
+            DrinksCommentSection.Clear();
+            foreach (ListView listView in _listViews)
+            {
+                listView.SelectedItems.Clear();
+            }
+        }
+        private Orders CheckSelectedItems()
+        {
+            int count = 0;
+            Orders item = new Orders();
+            Orders emptyitem = new Orders();
+            foreach (ListView listViews in _listViews)
+            {
+
+                if (listViews.SelectedItems.Count == 1)
+                {
+                    count++;
+                    item.orderItem = int.Parse(listViews.SelectedItems[0].Text);
+                }
+
+            }
+            if (count == 1)
+            {
+                return item;
+            }
+            else
+            {
+                MessageBox.Show("Select only one item");
+                return emptyitem;
+            }
 
         }
 
@@ -64,7 +124,20 @@ namespace ChapeauUI
                 string[] output = { drinkMenu.DrinkMenuId.ToString(), drinkMenu.MenuItemName };
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
+                listView.FullRowSelect = true;
             }
+        }
+
+        private void BeersListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrinksTableOverview_Click(object sender, EventArgs e)
+        {
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            orderOverview.Show();
+            this.Hide();
         }
     }
 }
