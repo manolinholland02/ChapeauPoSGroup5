@@ -65,5 +65,15 @@ namespace ChapeauUI
             paymentService.AddAmountPayed(payment);
             
         }
+
+        private void cashPayment_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pinPayment_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

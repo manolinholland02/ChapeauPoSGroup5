@@ -255,6 +255,7 @@ namespace ChapeauUI
             this.cashPayment_btn.TabIndex = 11;
             this.cashPayment_btn.Text = "Cash";
             this.cashPayment_btn.UseVisualStyleBackColor = true;
+            this.cashPayment_btn.Click += new System.EventHandler(this.cashPayment_btn_Click);
             // 
             // pinPayment_btn
             // 
@@ -264,6 +265,7 @@ namespace ChapeauUI
             this.pinPayment_btn.TabIndex = 12;
             this.pinPayment_btn.Text = "PIN";
             this.pinPayment_btn.UseVisualStyleBackColor = true;
+            this.pinPayment_btn.Click += new System.EventHandler(this.pinPayment_btn_Click);
             // 
             // PaymentForm
             // 
