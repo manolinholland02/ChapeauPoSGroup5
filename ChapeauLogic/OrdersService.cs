@@ -29,10 +29,5 @@ namespace ChapeauLogic
         {
             return _orderDao.GetFoodOnlyOrders(orders);
         }
-
-        public System.Data.DataTable GetFood()
-        {
-            return _orderDao.GetFood();
-        }
     }
 }

@@ -20,7 +20,7 @@ namespace ChapeauUI
 
         private void viewManagement_tryButton_Click(object sender, EventArgs e)
         {
-            ManagerView managerView = new ManagerView();
+            ManagerViewEmployee managerView = new ManagerViewEmployee();
                 managerView.Show();
             this.Hide();
         }
