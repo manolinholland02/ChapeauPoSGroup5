@@ -30,16 +30,16 @@ namespace ChapeauUI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnTable1 = new System.Windows.Forms.Button();
+            this.btnTable2 = new System.Windows.Forms.Button();
+            this.btnTable4 = new System.Windows.Forms.Button();
+            this.btnTable3 = new System.Windows.Forms.Button();
+            this.btnTable8 = new System.Windows.Forms.Button();
+            this.btnTable7 = new System.Windows.Forms.Button();
+            this.btnTable6 = new System.Windows.Forms.Button();
+            this.btnTable5 = new System.Windows.Forms.Button();
+            this.btnTable10 = new System.Windows.Forms.Button();
+            this.btnTable9 = new System.Windows.Forms.Button();
             this.viewManagement_tryButton = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,106 +53,107 @@ namespace ChapeauUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Restaurant Overview";
             // 
-            // button1
+            // btnTable1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(171, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 61);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable1.Location = new System.Drawing.Point(171, 157);
+            this.btnTable1.Name = "btnTable1";
+            this.btnTable1.Size = new System.Drawing.Size(61, 61);
+            this.btnTable1.TabIndex = 1;
+            this.btnTable1.Text = "Table 1";
+            this.btnTable1.UseVisualStyleBackColor = false;
+            this.btnTable1.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // button2
+            // btnTable2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(247, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 61);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnTable2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable2.Location = new System.Drawing.Point(247, 154);
+            this.btnTable2.Name = "btnTable2";
+            this.btnTable2.Size = new System.Drawing.Size(61, 61);
+            this.btnTable2.TabIndex = 2;
+            this.btnTable2.Text = "Table 2";
+            this.btnTable2.UseVisualStyleBackColor = false;
+            this.btnTable2.Click += new System.EventHandler(this.btnTable2_Click);
             // 
-            // button3
+            // btnTable4
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(247, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 61);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "4";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTable4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable4.Location = new System.Drawing.Point(247, 238);
+            this.btnTable4.Name = "btnTable4";
+            this.btnTable4.Size = new System.Drawing.Size(61, 61);
+            this.btnTable4.TabIndex = 4;
+            this.btnTable4.Text = "Table 4";
+            this.btnTable4.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTable3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(171, 238);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 61);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "3";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTable3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable3.Location = new System.Drawing.Point(171, 238);
+            this.btnTable3.Name = "btnTable3";
+            this.btnTable3.Size = new System.Drawing.Size(61, 61);
+            this.btnTable3.TabIndex = 3;
+            this.btnTable3.Text = "Table 3";
+            this.btnTable3.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnTable8
             // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(247, 398);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 61);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "8";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnTable8.BackColor = System.Drawing.Color.Red;
+            this.btnTable8.Location = new System.Drawing.Point(247, 398);
+            this.btnTable8.Name = "btnTable8";
+            this.btnTable8.Size = new System.Drawing.Size(61, 61);
+            this.btnTable8.TabIndex = 8;
+            this.btnTable8.Text = "Table 8";
+            this.btnTable8.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnTable7
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(171, 398);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(61, 61);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "7";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnTable7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable7.Location = new System.Drawing.Point(171, 398);
+            this.btnTable7.Name = "btnTable7";
+            this.btnTable7.Size = new System.Drawing.Size(61, 61);
+            this.btnTable7.TabIndex = 7;
+            this.btnTable7.Text = "Table 7";
+            this.btnTable7.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnTable6
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(247, 317);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(61, 61);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "6";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnTable6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable6.Location = new System.Drawing.Point(247, 317);
+            this.btnTable6.Name = "btnTable6";
+            this.btnTable6.Size = new System.Drawing.Size(61, 61);
+            this.btnTable6.TabIndex = 6;
+            this.btnTable6.Text = "Table 6";
+            this.btnTable6.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnTable5
             // 
-            this.button8.BackColor = System.Drawing.Color.Red;
-            this.button8.Location = new System.Drawing.Point(171, 317);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(61, 61);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "5";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnTable5.BackColor = System.Drawing.Color.Red;
+            this.btnTable5.Location = new System.Drawing.Point(171, 317);
+            this.btnTable5.Name = "btnTable5";
+            this.btnTable5.Size = new System.Drawing.Size(61, 61);
+            this.btnTable5.TabIndex = 5;
+            this.btnTable5.Text = "Table 5";
+            this.btnTable5.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnTable10
             // 
-            this.button9.BackColor = System.Drawing.Color.Red;
-            this.button9.Location = new System.Drawing.Point(247, 478);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(61, 61);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "10";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnTable10.BackColor = System.Drawing.Color.Red;
+            this.btnTable10.Location = new System.Drawing.Point(247, 478);
+            this.btnTable10.Name = "btnTable10";
+            this.btnTable10.Size = new System.Drawing.Size(61, 61);
+            this.btnTable10.TabIndex = 10;
+            this.btnTable10.Text = "Table 10";
+            this.btnTable10.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btnTable9
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(171, 478);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(61, 61);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "9";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnTable9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTable9.Location = new System.Drawing.Point(171, 478);
+            this.btnTable9.Name = "btnTable9";
+            this.btnTable9.Size = new System.Drawing.Size(61, 61);
+            this.btnTable9.TabIndex = 9;
+            this.btnTable9.Text = "Table 9";
+            this.btnTable9.UseVisualStyleBackColor = false;
             // 
             // viewManagement_tryButton
             // 
@@ -181,16 +182,16 @@ namespace ChapeauUI
             this.ClientSize = new System.Drawing.Size(532, 753);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.viewManagement_tryButton);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTable10);
+            this.Controls.Add(this.btnTable9);
+            this.Controls.Add(this.btnTable8);
+            this.Controls.Add(this.btnTable7);
+            this.Controls.Add(this.btnTable6);
+            this.Controls.Add(this.btnTable5);
+            this.Controls.Add(this.btnTable4);
+            this.Controls.Add(this.btnTable3);
+            this.Controls.Add(this.btnTable2);
+            this.Controls.Add(this.btnTable1);
             this.Controls.Add(this.label1);
             this.Name = "RestaurantOverview";
             this.Text = "RestaurantOverview";
@@ -202,16 +203,16 @@ namespace ChapeauUI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnTable1;
+        private System.Windows.Forms.Button btnTable2;
+        private System.Windows.Forms.Button btnTable4;
+        private System.Windows.Forms.Button btnTable3;
+        private System.Windows.Forms.Button btnTable8;
+        private System.Windows.Forms.Button btnTable7;
+        private System.Windows.Forms.Button btnTable6;
+        private System.Windows.Forms.Button btnTable5;
+        private System.Windows.Forms.Button btnTable10;
+        private System.Windows.Forms.Button btnTable9;
         private System.Windows.Forms.Button viewManagement_tryButton;
         private System.Windows.Forms.Button btnLogout;
     }
