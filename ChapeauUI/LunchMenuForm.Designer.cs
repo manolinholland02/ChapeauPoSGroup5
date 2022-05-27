@@ -42,6 +42,7 @@ namespace ChapeauUI
             this.backbtnLunch = new System.Windows.Forms.Button();
             this.AddbtnLunch = new System.Windows.Forms.Button();
             this.LunchCommentSection = new System.Windows.Forms.TextBox();
+            this.orderCounterlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OrderOverviewLunchbtn
@@ -52,6 +53,7 @@ namespace ChapeauUI
             this.OrderOverviewLunchbtn.TabIndex = 0;
             this.OrderOverviewLunchbtn.Text = "See Table\'s Orders";
             this.OrderOverviewLunchbtn.UseVisualStyleBackColor = true;
+            this.OrderOverviewLunchbtn.Click += new System.EventHandler(this.OrderOverviewLunchbtn_Click);
             // 
             // LunchStartersListView
             // 
@@ -60,6 +62,7 @@ namespace ChapeauUI
             this.starterName});
             this.LunchStartersListView.HideSelection = false;
             this.LunchStartersListView.Location = new System.Drawing.Point(12, 112);
+            this.LunchStartersListView.MultiSelect = false;
             this.LunchStartersListView.Name = "LunchStartersListView";
             this.LunchStartersListView.Size = new System.Drawing.Size(265, 145);
             this.LunchStartersListView.TabIndex = 1;
@@ -83,6 +86,7 @@ namespace ChapeauUI
             this.mainName});
             this.LunchMainListView.HideSelection = false;
             this.LunchMainListView.Location = new System.Drawing.Point(12, 263);
+            this.LunchMainListView.MultiSelect = false;
             this.LunchMainListView.Name = "LunchMainListView";
             this.LunchMainListView.Size = new System.Drawing.Size(265, 145);
             this.LunchMainListView.TabIndex = 2;
@@ -106,11 +110,13 @@ namespace ChapeauUI
             this.desertName});
             this.LunchDessertListView.HideSelection = false;
             this.LunchDessertListView.Location = new System.Drawing.Point(12, 414);
+            this.LunchDessertListView.MultiSelect = false;
             this.LunchDessertListView.Name = "LunchDessertListView";
             this.LunchDessertListView.Size = new System.Drawing.Size(265, 145);
             this.LunchDessertListView.TabIndex = 3;
             this.LunchDessertListView.UseCompatibleStateImageBehavior = false;
             this.LunchDessertListView.View = System.Windows.Forms.View.Details;
+            this.LunchDessertListView.SelectedIndexChanged += new System.EventHandler(this.LunchDessertListView_SelectedIndexChanged);
             // 
             // desertId
             // 
@@ -148,12 +154,23 @@ namespace ChapeauUI
             this.LunchCommentSection.Name = "LunchCommentSection";
             this.LunchCommentSection.Size = new System.Drawing.Size(513, 27);
             this.LunchCommentSection.TabIndex = 6;
+            this.LunchCommentSection.TextChanged += new System.EventHandler(this.LunchCommentSection_TextChanged);
+            // 
+            // orderCounterlbl
+            // 
+            this.orderCounterlbl.AutoSize = true;
+            this.orderCounterlbl.Location = new System.Drawing.Point(401, 122);
+            this.orderCounterlbl.Name = "orderCounterlbl";
+            this.orderCounterlbl.Size = new System.Drawing.Size(49, 20);
+            this.orderCounterlbl.TabIndex = 7;
+            this.orderCounterlbl.Text = "count:";
             // 
             // LunchMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.orderCounterlbl);
             this.Controls.Add(this.LunchCommentSection);
             this.Controls.Add(this.AddbtnLunch);
             this.Controls.Add(this.backbtnLunch);
@@ -183,5 +200,6 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader mainName;
         private System.Windows.Forms.ColumnHeader desertId;
         private System.Windows.Forms.ColumnHeader desertName;
+        private System.Windows.Forms.Label orderCounterlbl;
     }
 }

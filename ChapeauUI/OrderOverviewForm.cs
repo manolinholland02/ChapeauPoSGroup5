@@ -32,7 +32,7 @@ namespace ChapeauUI
 
             foreach (Orders order in currentOrders)
             {
-                string[] output = { order.orderItemName, order.ItemQuantity.ToString(), order.orderComment};
+                string[] output = { order.MenuItem.MenuItemName, order.ItemQuantity.ToString(), order.OrderComment};
                 ListViewItem item = new ListViewItem(output);
                 OrderlistView.Items.Add(item);
             }
