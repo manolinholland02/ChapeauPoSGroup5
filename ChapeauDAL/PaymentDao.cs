@@ -41,7 +41,7 @@ namespace ChapeauDAL
         {
             //insert amount to be payed
 
-            string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ({payment.PaymentPrice},{payment.Tip}) WHERE (paymentId = @paymentId AND tableId = @tableId)";
+            string query = $"INSERT INTO dbo.Payments (paymentPrice, tip) VALUES ([PaymentPrice], [payment.Tip]) WHERE (paymentId = @paymentId AND tableId = @tableId)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
