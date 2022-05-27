@@ -49,7 +49,7 @@ namespace ChapeauUI
         {
             DrinksMenuForm drink = new DrinksMenuForm(_currentOrders, TableID, WaiterID);
             this.Hide();
-           // drink.Show();
+            drink.Show();
         }
 
         private void MenuPageTableViewbtn_Click(object sender, EventArgs e)
