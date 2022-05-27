@@ -49,15 +49,15 @@ namespace ChapeauUI
             {
                 MenuItemService menuservice = new MenuItemService();
                 List<MenuItem> menuItems = menuservice.GetMenuItems();
-                order.orderComment = DinnerCommentSection.Text;
+                order.OrderComment = DinnerCommentSection.Text;
 
                 foreach (MenuItem item in menuItems)
                 {
-                    if (item.MenuItemID == order.orderID)
+                    if (item.MenuItemID == order.OrderID)
                     {
-                        order.orderPrice = item.MenuItemPrice;
-                        order.orderItemName = item.MenuItemName;
-                        order.orderStatus = Status.processing;
+                        order.OrderStatus = Status.processing;
+                        order.MenuItem.MenuItemName = item.MenuItemName;
+                        
                     }
                 }
                 //order.table
@@ -86,7 +86,7 @@ namespace ChapeauUI
                 if (listViews.SelectedItems.Count == 1)
                 {
                     count++;
-                    item.orderItem = int.Parse(listViews.SelectedItems[0].Text);
+                    item.MenuItem.MenuItemID = int.Parse(listViews.SelectedItems[0].Text);
                 }
 
             }
@@ -94,9 +94,14 @@ namespace ChapeauUI
             {
                 return item;
             }
-            else
+            else if (count > 1)
             {
                 MessageBox.Show("Select only one item");
+                return emptyitem;
+            }
+            else
+            {
+                MessageBox.Show("Select at least one item");
                 return emptyitem;
             }
 

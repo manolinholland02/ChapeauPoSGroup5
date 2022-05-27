@@ -175,7 +175,6 @@ C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
@@ -213,3 +212,10 @@ C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\Chape
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
