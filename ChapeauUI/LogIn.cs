@@ -27,6 +27,7 @@ namespace ChapeauUI
             int password = int.Parse(txtPassword.Text);
             // open the corresponding screens depending on the type of employee
             EmployeeService employeeService = new EmployeeService();
+            Employee employee = employeeService.GetEmployee();
             EmployeeType type = employeeService.GetEmployeeType(username);
             bool exists = employeeService.AccountExists(username, password);
             if ( exists == true)
