@@ -102,22 +102,27 @@ namespace ChapeauDAL
         //Checks if and account with such a password exists in the Database
         public bool AccountExists(string username, int password)
         {
-            string query = "SELECT * from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password;";
+            string query = " SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password";
             SqlParameter[] sqlParameters = { new SqlParameter("@Username", username), new SqlParameter("@password", password) };
-            DataTable output = ExecuteSelectQuery(query, sqlParameters);
-            if (Convert.ToInt32(output.Rows[0][0]) == 1)
-            {
+            DataTable table = ExecuteSelectQuery(query, sqlParameters);
+            if (table.Columns.Contains("Count"))
                 return true;
-            }
-            return false;
+            else
+                return false;
         }
 
-        //return the employee type of the employee 
+        // return the employee type of the employee 
         public string GetEmployeeType(string username)
         {
+            string type = "";
             string query = "SELECT employeeType FROM [dbo].[Employees] WHERE [username] = @username";
             SqlParameter[] parameters = { new SqlParameter("@username", username) };
-            return ExecuteSelectQuery(query, parameters).ToString();
+            DataTable table = ExecuteSelectQuery(query, parameters);
+            foreach(DataRow dr in table.Rows)
+            {
+                type = dr["employeeType"].ToString();
+            }
+            return type;
         }
     }
 }

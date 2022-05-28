@@ -38,7 +38,7 @@ namespace ChapeauLogic
         }
         public EmployeeType GetEmployeeType(string username)
         {
-            //hopefully converts string to EmployeeType(pls work :) )
+            // convert string to EmployeeType
             return (EmployeeType)Enum.Parse(typeof(EmployeeType), _employeedb.GetEmployeeType(username));
         }
         

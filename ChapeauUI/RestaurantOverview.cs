@@ -58,10 +58,5 @@ namespace ChapeauUI
             }
         }
 
-        private void btnTable2_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

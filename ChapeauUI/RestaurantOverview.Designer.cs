@@ -32,7 +32,7 @@ namespace ChapeauUI
             this.label1 = new System.Windows.Forms.Label();
             this.btnTable1 = new System.Windows.Forms.Button();
             this.btnTable2 = new System.Windows.Forms.Button();
-            this.btnTable4 = new System.Windows.Forms.Button();
+           // this.btnTable4 = new System.Windows.Forms.Button();
             this.btnTable3 = new System.Windows.Forms.Button();
             this.btnTable8 = new System.Windows.Forms.Button();
             this.btnTable7 = new System.Windows.Forms.Button();
@@ -73,17 +73,16 @@ namespace ChapeauUI
             this.btnTable2.TabIndex = 2;
             this.btnTable2.Text = "Table 2";
             this.btnTable2.UseVisualStyleBackColor = false;
-            this.btnTable2.Click += new System.EventHandler(this.btnTable2_Click);
             // 
             // btnTable4
             // 
-            this.btnTable4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTable4.Location = new System.Drawing.Point(247, 238);
-            this.btnTable4.Name = "btnTable4";
-            this.btnTable4.Size = new System.Drawing.Size(61, 61);
-            this.btnTable4.TabIndex = 4;
-            this.btnTable4.Text = "Table 4";
-            this.btnTable4.UseVisualStyleBackColor = false;
+            //this.btnTable4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            //this.btnTable4.Location = new System.Drawing.Point(247, 238);
+            //this.btnTable4.Name = "btnTable4";
+            //this.btnTable4.Size = new System.Drawing.Size(61, 61);
+            //this.btnTable4.TabIndex = 4;
+            //this.btnTable4.Text = "Table 4";
+            //this.btnTable4.UseVisualStyleBackColor = false;
             // 
             // btnTable3
             // 
@@ -188,7 +187,7 @@ namespace ChapeauUI
             this.Controls.Add(this.btnTable7);
             this.Controls.Add(this.btnTable6);
             this.Controls.Add(this.btnTable5);
-            this.Controls.Add(this.btnTable4);
+            //this.Controls.Add(this.btnTable4);
             this.Controls.Add(this.btnTable3);
             this.Controls.Add(this.btnTable2);
             this.Controls.Add(this.btnTable1);

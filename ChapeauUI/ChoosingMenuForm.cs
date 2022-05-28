@@ -61,8 +61,8 @@ namespace ChapeauUI
 
         private void OrderOverviewbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
-            orderOverview.Show();
+            //OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            //orderOverview.Show();
             this.Hide();
         }
 

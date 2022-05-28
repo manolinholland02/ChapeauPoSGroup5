@@ -27,35 +27,36 @@ namespace ChapeauUI
             int password = int.Parse(txtPassword.Text);
             // open the corresponding screens depending on the type of employee
             EmployeeService employeeService = new EmployeeService();
-            //MessageBox.Show($"{employeeService.GetEmployeeType(username)}");
-
-            if (employeeService.AccountExists(username, password) == true)
+            EmployeeType type = employeeService.GetEmployeeType(username);
+            bool exists = employeeService.AccountExists(username, password);
+            if ( exists == true)
             {
-                EmployeeType type = employeeService.GetEmployeeType(username);
                 // 1) employee type = manager -> Open ManagerViewForm
                 if (type == EmployeeType.manager)
                 {
-                    ManagerView mv = new ManagerView();
-                    mv.Show();
+                    this.Hide();
+                    ManagerViewMenu managerView = new ManagerViewMenu();
+                    managerView.Show();
                 }
                 else if (type == EmployeeType.waiter)
                 // 2) employee type = waiter -> Open RestaurantOverview
                 {
-                    RestaurantOverview ro = new RestaurantOverview();
-                    ro.Show();
+                    this.Hide();
+                    RestaurantOverview restaurantOverview = new RestaurantOverview();
+                    restaurantOverview.Show();
                 }
-                // 3) employee type = chef -> Open KitchenView
-                else if (type == EmployeeType.chef)
+                // 3) employee type = chef/barman -> Open KitchenBarView
+                else if (type == EmployeeType.chef || type == EmployeeType.barman)
                 {
-                    //...
-                }
-                // 4) employee type = bartender -> Open BarView
-                else if (type == EmployeeType.barman)
-                {
-                    //
+                    this.Hide();
+                    KitchenBarView barView = new KitchenBarView();
+                    barView.Show();
                 }
             }
-            else MessageBox.Show("No employee found");
+            else
+            {
+                MessageBox.Show("No employee found");
+            }
         }
 
     }
