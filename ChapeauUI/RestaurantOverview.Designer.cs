@@ -204,7 +204,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTable1;
         private System.Windows.Forms.Button btnTable2;
-        private System.Windows.Forms.Button btnTable4;
+        //private System.Windows.Forms.Button btnTable4;
         private System.Windows.Forms.Button btnTable3;
         private System.Windows.Forms.Button btnTable8;
         private System.Windows.Forms.Button btnTable7;
