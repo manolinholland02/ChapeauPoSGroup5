@@ -18,6 +18,7 @@ namespace ChapeauUI
         public LogIn()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '●';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,19 +28,17 @@ namespace ChapeauUI
             int password = int.Parse(txtPassword.Text);
             // open the corresponding screens depending on the type of employee
             EmployeeService employeeService = new EmployeeService();
-            Employee employee = employeeService.GetEmployee();
-            EmployeeType type = employeeService.GetEmployeeType(username);
-            bool exists = employeeService.AccountExists(username, password);
-            if ( exists == true)
+            Employee employee = employeeService.GetEmployee(username);
+            if (employeeService.AccountExists(username, password))
             {
                 // 1) employee type = manager -> Open ManagerViewForm
-                if (type == EmployeeType.manager)
+                if (employee.EmployeeType == EmployeeType.manager)
                 {
                     this.Hide();
                     ManagerViewMenu managerView = new ManagerViewMenu();
                     managerView.Show();
                 }
-                else if (type == EmployeeType.waiter)
+                else if (employee.EmployeeType == EmployeeType.waiter)
                 // 2) employee type = waiter -> Open RestaurantOverview
                 {
                     this.Hide();
@@ -47,7 +46,7 @@ namespace ChapeauUI
                     restaurantOverview.Show();
                 }
                 // 3) employee type = chef/barman -> Open KitchenBarView
-                else if (type == EmployeeType.chef || type == EmployeeType.barman)
+                else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                 {
                     this.Hide();
                     KitchenBarView barView = new KitchenBarView();
@@ -56,7 +55,7 @@ namespace ChapeauUI
             }
             else
             {
-                MessageBox.Show("No employee found");
+                DialogResult result = MessageBox.Show("No employee found", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

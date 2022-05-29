@@ -102,13 +102,12 @@ namespace ChapeauDAL
         // check if account exists in the database
         public bool AccountExists(string username, int password)
         {
-            string query = " SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND userPassword = @password";
-            SqlParameter[] sqlParameters = { new SqlParameter("@Username", username), new SqlParameter("@password", password) };
+            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = '@username' AND [userPassword] = @password";
+            SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
             DataTable table = ExecuteSelectQuery(query, sqlParameters);
-            if (table.Columns.Contains("Count"))
-                return true;
-            else
-                return false;
+            DataRow[] dr = table.Select();
+            string count = dr[0]["Count"].ToString();
+            return Convert.ToInt32(count) == 0;
         }
 
         // return the employee type of the employee 
@@ -124,27 +123,29 @@ namespace ChapeauDAL
             }
             return type;
         }
-        public Employee GetEmployee()
+        public Employee GetEmployee(string username)
         {
-            string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTable(ExecuteSelectQuery(query, sqlParameters));
+            string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees] WHERE [username] = @username";
+            SqlParameter[] parameters = { new SqlParameter("@username", username) };
+            return ReadTable(ExecuteSelectQuery(query, parameters));
         }
         public Employee ReadTable(DataTable dataTable)
         {
-
             Employee employee = new Employee();
             foreach (DataRow dr in dataTable.Rows)
             {
-                employee.EmployeeID = (int)dr["EmployeeId"];
-                employee.EmployeeFirstName = dr["firstName"].ToString();
+                //Employee employee = new Employee()
+                //{
+                employee.EmployeeID = (int)dr["employeeId"];
+                    employee.EmployeeFirstName = dr["firstName"].ToString();
                 employee.EmployeeLastName = dr["lastName"].ToString();
                 employee.EmployeeUsername = dr["username"].ToString();
                 employee.EmployeeUserPassword = (int)dr["userPassword"];
                 employee.EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower());
-                
+                //};
             }
             return employee;
         }
+        
     }
 }

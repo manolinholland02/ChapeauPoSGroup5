@@ -36,10 +36,6 @@ namespace ChapeauUI
                 LogIn login = new LogIn();
                 login.Show();
             }
-            else
-            {
-                //
-            }
         }
         private void btnTable1_Click(object sender, EventArgs e)
         {
