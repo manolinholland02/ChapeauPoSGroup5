@@ -19,6 +19,7 @@ namespace ChapeauUI
         private List<Orders> _currentOrders;
         private int TableID;
         private int WaiterID;
+        Form ChoosingMenuForm = new Form();
         public LunchMenuForm(List<Orders> currentorders, int TableID, int waiterID)
         {
             InitializeComponent();
@@ -36,7 +37,8 @@ namespace ChapeauUI
         private void backbtnLunch_Click(object sender, EventArgs e)
         {
             //show the choosing order form
-            this.Close(); // or hide
+            ChoosingMenuForm.Show();
+            this.Hide(); // or hide
         }
 
         private void AddbtnLunch_Click(object sender, EventArgs e)
