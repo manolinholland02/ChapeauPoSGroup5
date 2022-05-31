@@ -102,12 +102,13 @@ namespace ChapeauDAL
         // check if account exists in the database
         public bool AccountExists(string username, int password)
         {
-            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = '@username' AND [userPassword] = @password";
+            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND [userPassword] = @password";
             SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
             DataTable table = ExecuteSelectQuery(query, sqlParameters);
             DataRow[] dr = table.Select();
             string count = dr[0]["Count"].ToString();
-            return Convert.ToInt32(count) == 0;
+            if (Convert.ToInt32(count) == 0) return false;
+            else return true;
         }
 
         // return the employee type of the employee 

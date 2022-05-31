@@ -16,9 +16,9 @@ namespace ChapeauUI
     {
         private List<Orders> _currentOrders;
         private int TableID;
-        private int WaiterID;
+        private Employee Waiter;
 
-        public ChoosingMenuForm(int TableID, int WaiterID)
+        public ChoosingMenuForm(int TableID, Employee employee)
         {
             InitializeComponent();
             if (_currentOrders == null)
@@ -26,28 +26,28 @@ namespace ChapeauUI
                 _currentOrders = new List<Orders>();
             }
             this.TableID = TableID;
-            this.WaiterID = WaiterID;
+            this.Waiter = employee;
 
             
         }
 
         private void LunchMenubtn_Click(object sender, EventArgs e)
         {
-            LunchMenuForm lunch = new LunchMenuForm(_currentOrders, TableID, WaiterID);
+            LunchMenuForm lunch = new LunchMenuForm(_currentOrders, TableID, Waiter);
             this.Hide();
             lunch.Show(); // or close
         }
 
         private void DinnerMenubtn_Click(object sender, EventArgs e)
         {
-            DinnerMenuForm dinner = new DinnerMenuForm(_currentOrders, TableID, WaiterID);
+            DinnerMenuForm dinner = new DinnerMenuForm(_currentOrders, TableID, Waiter);
             this.Hide(); // or close
             dinner.Show();
         }
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-            DrinksMenuForm drink = new DrinksMenuForm(_currentOrders, TableID, WaiterID);
+            DrinksMenuForm drink = new DrinksMenuForm(_currentOrders, TableID, Waiter);
             this.Hide();
             drink.Show();
         }
@@ -61,7 +61,7 @@ namespace ChapeauUI
 
         private void OrderOverviewbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm();
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
             orderOverview.Show();
             this.Hide();
         }
