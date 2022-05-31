@@ -175,6 +175,7 @@ C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
+C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
 C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
@@ -212,10 +213,27 @@ C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\Chape
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
 C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfo.cs
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CoreCompileInputs.cache
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
+C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb

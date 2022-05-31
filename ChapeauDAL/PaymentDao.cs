@@ -23,7 +23,7 @@ namespace ChapeauDAL
         {
             //sum of all items in order * quantity
 
-            string query = $"SELECT SUM ((itemQuantity) * (orderPrice)) FROM Orders WHERE (orderItem = @orderItem AND orderPayment = @orderPayment)";
+            string query = $"SELECT SUM ([itemQuantity] * [orderPrice]) FROM Orders WHERE (orderItem = @orderItem AND orderPayment = @orderPayment)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
