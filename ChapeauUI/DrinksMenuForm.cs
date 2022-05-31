@@ -18,8 +18,8 @@ namespace ChapeauUI
         private List<ListView> _listViews;
         private List<Orders> _currentOrders;
         private int TableID;
-        private int WaiterID;
-        public DrinksMenuForm(List<Orders> currentorders, int TableID, int waiterID)
+        private Employee Waiter;
+        public DrinksMenuForm(List<Orders> currentorders, int TableID, Employee waiter)
         {
             InitializeComponent();
             _category = MenuItemCategory.softdrink;
@@ -32,7 +32,7 @@ namespace ChapeauUI
             _listViews.Add(CoffeeTeaListView);
             PopulateDrinkMenus();
             this.TableID = TableID;
-            this.WaiterID = waiterID;
+            this.Waiter = waiter;
         }
 
         private void AddDrinksbtn_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace ChapeauUI
 
         private void DrinksTableOverview_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
             orderOverview.Show();
             this.Hide();
         }
