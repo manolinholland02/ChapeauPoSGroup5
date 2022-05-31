@@ -15,13 +15,22 @@ namespace ChapeauUI
 {
     public partial class KitchenBarView : Form
     {
+        private static KitchenBarView uniqueInstance;
+
         //Dictionary<int, System.Windows.Forms.Timer> _timers = new Dictionary<int, System.Windows.Forms.Timer>();
         List<Timer> timers = new List<Timer> { new Timer(), new Timer()};
-        public KitchenBarView()
+        private KitchenBarView()
         {
             InitializeComponent();
             OrdersService ordersService = new OrdersService();
             InitializeDataGridView(ordersService.GetFoodOnlyOrders(ordersService.GetOrders()));
+        }
+
+        public static KitchenBarView GetInstance()
+        {
+            if (uniqueInstance == null) uniqueInstance = new KitchenBarView();
+
+            return uniqueInstance;
         }
 
         private void InitializeDataGridView(List<Orders> foodOrders)

@@ -49,13 +49,13 @@ namespace ChapeauUI
                 else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                 {
                     this.Hide();
-                    KitchenBarView barView = new KitchenBarView();
+                    KitchenBarView barView = KitchenBarView.GetInstance();
                     barView.Show();
                 }
             }
             else
             {
-                DialogResult result = MessageBox.Show("No employee found", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
