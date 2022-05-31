@@ -43,14 +43,14 @@ namespace ChapeauUI
             {
                 MenuItemService menuservice = new MenuItemService();
                 List<MenuItem> menuItems = menuservice.GetMenuItems();
-                order.orderComment = DrinksCommentSection.Text;
+                order.OrderComment = DrinksCommentSection.Text;
                 foreach (MenuItem item in menuItems)
                 {
-                    if (item.MenuItemID == order.orderID)
+                    if (item.MenuItemID == order.MenuItem.MenuItemID)
                     {
-                        order.orderPrice = item.MenuItemPrice;
-                        order.orderItemName = item.MenuItemName;
-                        order.orderStatus = Status.processing;
+                        
+                        order.MenuItem.MenuItemName = item.MenuItemName;
+                        order.OrderStatus = Status.processing;
                     }
                 }
                 //order.table
@@ -79,7 +79,7 @@ namespace ChapeauUI
                 if (listViews.SelectedItems.Count == 1)
                 {
                     count++;
-                    item.orderItem = int.Parse(listViews.SelectedItems[0].Text);
+                    item.MenuItem.MenuItemID = int.Parse(listViews.SelectedItems[0].Text);
                 }
 
             }
