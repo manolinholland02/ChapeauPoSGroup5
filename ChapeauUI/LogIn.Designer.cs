@@ -45,9 +45,9 @@ namespace ChapeauUI
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(176, 582);
+            this.btnLogin.Location = new System.Drawing.Point(174, 596);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(131, 51);
+            this.btnLogin.Size = new System.Drawing.Size(148, 51);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@ namespace ChapeauUI
             // 
             this.lblWelcomeBack.AutoSize = true;
             this.lblWelcomeBack.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWelcomeBack.Location = new System.Drawing.Point(191, 28);
+            this.lblWelcomeBack.Location = new System.Drawing.Point(201, 20);
             this.lblWelcomeBack.Name = "lblWelcomeBack";
             this.lblWelcomeBack.Size = new System.Drawing.Size(116, 66);
             this.lblWelcomeBack.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace ChapeauUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(109, 528);
+            this.label3.Location = new System.Drawing.Point(124, 540);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace ChapeauUI
             // 
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(211, 548);
+            this.label5.Location = new System.Drawing.Point(226, 560);
             this.label5.MaximumSize = new System.Drawing.Size(40, 3);
             this.label5.MinimumSize = new System.Drawing.Size(150, 2);
             this.label5.Name = "label5";
@@ -89,7 +89,7 @@ namespace ChapeauUI
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(217, 521);
+            this.txtPassword.Location = new System.Drawing.Point(232, 533);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(125, 20);
             this.txtPassword.TabIndex = 7;
@@ -98,7 +98,7 @@ namespace ChapeauUI
             // 
             this.lblContinue.AutoSize = true;
             this.lblContinue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblContinue.Location = new System.Drawing.Point(181, 111);
+            this.lblContinue.Location = new System.Drawing.Point(191, 103);
             this.lblContinue.Name = "lblContinue";
             this.lblContinue.Size = new System.Drawing.Size(131, 40);
             this.lblContinue.TabIndex = 8;
@@ -109,7 +109,7 @@ namespace ChapeauUI
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.Menu;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Location = new System.Drawing.Point(211, 480);
+            this.txtUsername.Location = new System.Drawing.Point(226, 492);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(125, 20);
             this.txtUsername.TabIndex = 11;
@@ -118,7 +118,7 @@ namespace ChapeauUI
             // 
             this.lblUsernameLine.AutoSize = true;
             this.lblUsernameLine.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUsernameLine.Location = new System.Drawing.Point(211, 503);
+            this.lblUsernameLine.Location = new System.Drawing.Point(226, 515);
             this.lblUsernameLine.MaximumSize = new System.Drawing.Size(40, 3);
             this.lblUsernameLine.MinimumSize = new System.Drawing.Size(150, 2);
             this.lblUsernameLine.Name = "lblUsernameLine";
@@ -129,7 +129,7 @@ namespace ChapeauUI
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(109, 483);
+            this.lblUsername.Location = new System.Drawing.Point(124, 495);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(91, 23);
             this.lblUsername.TabIndex = 9;

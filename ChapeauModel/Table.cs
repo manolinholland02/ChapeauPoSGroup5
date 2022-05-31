@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    class Table
+    public class Table
     {
         public int TableId { get; set; }
         public string TableStatus { get; set; }
+
     }
 }

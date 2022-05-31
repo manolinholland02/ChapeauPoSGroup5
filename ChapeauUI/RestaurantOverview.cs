@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChapeauModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace ChapeauUI
             InitializeComponent();
         }
 
-
+        Table table = new Table();
         private void viewManagement_tryButton_Click(object sender, EventArgs e)
         {
             ManagerViewEmployee managerView = new ManagerViewEmployee();
@@ -40,6 +41,7 @@ namespace ChapeauUI
         }
         private void btnTable1_Click(object sender, EventArgs e)
         {
+            table.TableId = 1;
             string message = btnTable1.Text;
             string title = btnTable1.Text;
             MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
