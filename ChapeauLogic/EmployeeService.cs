@@ -32,15 +32,20 @@ namespace ChapeauLogic
         {
             _employeedb.EditEmployee(employee);
         }
-        public bool AccountExists(string username, string password)
+        public bool AccountExists(string username, int password)
         {
             return _employeedb.AccountExists(username, password);
         }
         public EmployeeType GetEmployeeType(string username)
         {
-            //hopefully converts string to EmployeeType(pls work :) )
+            // convert string to EmployeeType
             return (EmployeeType)Enum.Parse(typeof(EmployeeType), _employeedb.GetEmployeeType(username));
         }
-        
+        public Employee GetEmployee(string username)
+        {
+            return _employeedb.GetEmployee(username);
+        }
+
+
     }
 }
