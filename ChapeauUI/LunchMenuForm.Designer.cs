@@ -88,7 +88,7 @@ namespace ChapeauUI
             this.LunchMainListView.Location = new System.Drawing.Point(12, 263);
             this.LunchMainListView.MultiSelect = false;
             this.LunchMainListView.Name = "LunchMainListView";
-            this.LunchMainListView.Size = new System.Drawing.Size(265, 145);
+            this.LunchMainListView.Size = new System.Drawing.Size(376, 145);
             this.LunchMainListView.TabIndex = 2;
             this.LunchMainListView.UseCompatibleStateImageBehavior = false;
             this.LunchMainListView.View = System.Windows.Forms.View.Details;
