@@ -29,6 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblWelcomeBack = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +39,13 @@ namespace ChapeauUI
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsernameLine = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(176, 323);
+            this.btnLogin.Location = new System.Drawing.Point(176, 582);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(131, 51);
             this.btnLogin.TabIndex = 0;
@@ -65,7 +68,7 @@ namespace ChapeauUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(109, 269);
+            this.label3.Location = new System.Drawing.Point(109, 528);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 3;
@@ -75,7 +78,7 @@ namespace ChapeauUI
             // 
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(211, 289);
+            this.label5.Location = new System.Drawing.Point(211, 548);
             this.label5.MaximumSize = new System.Drawing.Size(40, 3);
             this.label5.MinimumSize = new System.Drawing.Size(150, 2);
             this.label5.Name = "label5";
@@ -86,7 +89,7 @@ namespace ChapeauUI
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(217, 262);
+            this.txtPassword.Location = new System.Drawing.Point(217, 521);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(125, 20);
             this.txtPassword.TabIndex = 7;
@@ -106,7 +109,7 @@ namespace ChapeauUI
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.Menu;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Location = new System.Drawing.Point(211, 221);
+            this.txtUsername.Location = new System.Drawing.Point(211, 480);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(125, 20);
             this.txtUsername.TabIndex = 11;
@@ -115,7 +118,7 @@ namespace ChapeauUI
             // 
             this.lblUsernameLine.AutoSize = true;
             this.lblUsernameLine.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUsernameLine.Location = new System.Drawing.Point(211, 244);
+            this.lblUsernameLine.Location = new System.Drawing.Point(211, 503);
             this.lblUsernameLine.MaximumSize = new System.Drawing.Size(40, 3);
             this.lblUsernameLine.MinimumSize = new System.Drawing.Size(150, 2);
             this.lblUsernameLine.Name = "lblUsernameLine";
@@ -126,17 +129,29 @@ namespace ChapeauUI
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(109, 224);
+            this.lblUsername.Location = new System.Drawing.Point(109, 483);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(91, 23);
             this.lblUsername.TabIndex = 9;
             this.lblUsername.Text = "Username:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(35, 182);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(456, 256);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 753);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsernameLine);
             this.Controls.Add(this.lblUsername);
@@ -148,6 +163,7 @@ namespace ChapeauUI
             this.Controls.Add(this.btnLogin);
             this.Name = "LogIn";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +180,7 @@ namespace ChapeauUI
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsernameLine;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

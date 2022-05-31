@@ -134,15 +134,12 @@ namespace ChapeauDAL
             Employee employee = new Employee();
             foreach (DataRow dr in dataTable.Rows)
             {
-                //Employee employee = new Employee()
-                //{
                 employee.EmployeeID = (int)dr["employeeId"];
-                    employee.EmployeeFirstName = dr["firstName"].ToString();
+                employee.EmployeeFirstName = dr["firstName"].ToString();
                 employee.EmployeeLastName = dr["lastName"].ToString();
                 employee.EmployeeUsername = dr["username"].ToString();
                 employee.EmployeeUserPassword = (int)dr["userPassword"];
                 employee.EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower());
-                //};
             }
             return employee;
         }

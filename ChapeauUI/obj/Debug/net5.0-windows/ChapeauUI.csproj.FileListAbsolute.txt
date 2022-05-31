@@ -224,3 +224,4 @@ D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ref\ChapeauUI.dll
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CopyComplete
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources

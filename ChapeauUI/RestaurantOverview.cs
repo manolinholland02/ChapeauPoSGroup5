@@ -35,6 +35,7 @@ namespace ChapeauUI
             {
                 LogIn login = new LogIn();
                 login.Show();
+                this.Hide();
             }
         }
         private void btnTable1_Click(object sender, EventArgs e)
@@ -54,5 +55,9 @@ namespace ChapeauUI
             }
         }
 
+        private void btnTable2_Click(object sender, EventArgs e)
+        {
+            // code
+        }
     }
 }
