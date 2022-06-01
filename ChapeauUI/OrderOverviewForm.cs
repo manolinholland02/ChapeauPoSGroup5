@@ -15,7 +15,7 @@ namespace ChapeauUI
     public partial class OrderOverviewForm : Form
     {
         private List<Orders> CurrentOrders;
-        public OrderOverviewForm(List<Orders> currentOrders, int waiterID, int preparerID)
+        public OrderOverviewForm(List<Orders> currentOrders, Employee waiter)
         {
             InitializeComponent();
             CurrentOrders = new List<Orders>();

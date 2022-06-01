@@ -38,7 +38,7 @@ namespace ChapeauLogic
         {
             //Calc  VAT if alcholic == *21% else *6%
 
-            _paymentdb.CalcVAT(payment);
+            //_paymentdb.CalcVAT(payment);
             
         }
 

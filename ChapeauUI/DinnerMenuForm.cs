@@ -18,9 +18,9 @@ namespace ChapeauUI
         private List<ListView> _listViews;
         private List<Orders> _currentOrders;
         private int TableID;
-        private int WaiterID;
+        private Employee Waiter;
 
-        public DinnerMenuForm(List<Orders> currentorders, int TableID, int waiterID)
+        public DinnerMenuForm(List<Orders> currentorders, int TableID, Employee waiter)
         {
             InitializeComponent();
             _category = MenuItemCategory.entremet;
@@ -32,12 +32,12 @@ namespace ChapeauUI
             _listViews.Add(DinnerDessertsListView);
             PopulateDinnerMenus();
             this.TableID = TableID;
-            this.WaiterID = waiterID;
+            this.Waiter = waiter;
         }
 
         private void BackbtnDinner_Click(object sender, EventArgs e)
         {
-            ChoosingMenuForm choosingForm = new ChoosingMenuForm(TableID, WaiterID);
+            ChoosingMenuForm choosingForm = new ChoosingMenuForm(TableID, Waiter);
             this.Close();
         }
 
@@ -136,7 +136,7 @@ namespace ChapeauUI
 
         private void DinnerTableOverview_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, TableID, WaiterID);
+            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
             orderOverview.Show();
             this.Hide();
         }
