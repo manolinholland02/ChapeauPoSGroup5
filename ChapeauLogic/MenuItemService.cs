@@ -37,5 +37,12 @@ namespace ChapeauLogic
         {
             _menuItemDb.UpdateMenuItem(menuItem);
         }
+
+        public List<MenuItem> GetMenuItemByID(int id)
+        {
+            List<MenuItem> menuItem = new List<MenuItem>();
+            menuItem = _menuItemDb.GetMenuItemByID(id);
+            return menuItem;
+        }
     }
 }

@@ -94,5 +94,16 @@ namespace ChapeauUI
             }  
             OrderlistView.Update();
         }
+
+        private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlaceOrderbtn_Click(object sender, EventArgs e)
+        {
+            OrdersService orderService = new OrdersService();
+            orderService.InsertNewOrder(CurrentOrders);
+        }
     }
 }

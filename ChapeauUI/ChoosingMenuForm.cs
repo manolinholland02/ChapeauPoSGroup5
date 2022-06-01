@@ -27,7 +27,23 @@ namespace ChapeauUI
             }
             this.TableID = TableID;
             this.Waiter = employee;
-
+            DrinksMenubtn.BackColor = Color.SkyBlue;
+            CheckMenuTime();
+            
+        }
+        private void CheckMenuTime() //changes the colour of the buttons according to the time - lunch or dinner time
+        {
+            DateTime DinnerTime = DateTime.Now.Date.AddHours(18);
+            if (DateTime.Now <= DinnerTime)
+            {
+                LunchMenubtn.BackColor = Color.SkyBlue;
+                DinnerMenubtn.BackColor = Color.LightGray;
+            }
+            else
+            {
+                LunchMenubtn.BackColor = Color.LightGray;
+                DinnerMenubtn.BackColor = Color.SkyBlue;
+            }
             
         }
 
@@ -70,6 +86,11 @@ namespace ChapeauUI
         {
             // open new paying form
             //hide this form
+        }
+
+        private void ChoosingMenuForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

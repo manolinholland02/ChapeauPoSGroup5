@@ -108,6 +108,7 @@ namespace ChapeauUI
             this.PlaceOrderbtn.TabIndex = 4;
             this.PlaceOrderbtn.Text = "Place Order";
             this.PlaceOrderbtn.UseVisualStyleBackColor = true;
+            this.PlaceOrderbtn.Click += new System.EventHandler(this.PlaceOrderbtn_Click);
             // 
             // oderOverviewbackbtn
             // 
@@ -126,7 +127,7 @@ namespace ChapeauUI
             this.OrderOverviewPaybtn.TabIndex = 6;
             this.OrderOverviewPaybtn.Text = "Pay";
             this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
-            
+            this.OrderOverviewPaybtn.Click += new System.EventHandler(this.OrderOverviewPaybtn_Click_1);
             // 
             // OrderOverviewForm
             // 
@@ -142,7 +143,6 @@ namespace ChapeauUI
             this.Controls.Add(this.OrderlistView);
             this.Name = "OrderOverviewForm";
             this.Text = "OrderOverviewForm";
-           
             this.ResumeLayout(false);
 
         }

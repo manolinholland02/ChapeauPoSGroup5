@@ -13,9 +13,11 @@ namespace ChapeauUI
 {
     public partial class RestaurantOverview : Form
     {
-        public RestaurantOverview()
+        Employee employee1;
+        public RestaurantOverview(Employee employee)
         {
             InitializeComponent();
+            employee1 = employee;
         }
 
         Table table = new Table();
@@ -50,6 +52,9 @@ namespace ChapeauUI
             {
                 LogIn login = new LogIn();
                 login.Show();
+                // mip delete the following AND the parameters of this whole form - also in the login form where this is called -also the gloabl variable and the one inside the ctor
+                ChoosingMenuForm menu = new ChoosingMenuForm(table.TableId, employee1);
+                menu.Show();
             }
             else
             {

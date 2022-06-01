@@ -67,7 +67,7 @@ namespace ChapeauUI
             // 
             // desertName
             // 
-            this.desertName.Text = "Name";
+            this.desertName.Text = "Desserts";
             this.desertName.Width = 250;
             // 
             // DinnerStartersListView
@@ -86,11 +86,11 @@ namespace ChapeauUI
             // starterId
             // 
             this.starterId.Text = "ID";
-            this.starterId.Width = 0;
+            this.starterId.Width = 35;
             // 
             // starterName
             // 
-            this.starterName.Text = "Name";
+            this.starterName.Text = "Starters";
             this.starterName.Width = 250;
             // 
             // DinnerMainListView
@@ -113,7 +113,7 @@ namespace ChapeauUI
             // 
             // mainName
             // 
-            this.mainName.Text = "Name";
+            this.mainName.Text = "Mains";
             this.mainName.Width = 250;
             // 
             // DinnerEntremetsListView

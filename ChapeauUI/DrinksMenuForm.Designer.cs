@@ -70,7 +70,7 @@ namespace ChapeauUI
             // 
             // softdrinkName
             // 
-            this.softdrinkName.Text = "Name";
+            this.softdrinkName.Text = "Soft Drinks";
             this.softdrinkName.Width = 250;
             // 
             // BeersListView
@@ -94,7 +94,7 @@ namespace ChapeauUI
             // 
             // beerName
             // 
-            this.beerName.Text = "Name";
+            this.beerName.Text = "Beers";
             this.beerName.Width = 250;
             // 
             // WineListView
@@ -117,7 +117,7 @@ namespace ChapeauUI
             // 
             // wineName
             // 
-            this.wineName.Text = "Name";
+            this.wineName.Text = "Wines";
             this.wineName.Width = 250;
             // 
             // SpiritsListView
@@ -141,7 +141,7 @@ namespace ChapeauUI
             // 
             // spiritName
             // 
-            this.spiritName.Text = "Name";
+            this.spiritName.Text = "Spirits";
             this.spiritName.Width = 250;
             // 
             // CoffeeTeaListView
@@ -164,7 +164,7 @@ namespace ChapeauUI
             // 
             // caffeinatedName
             // 
-            this.caffeinatedName.Text = "Name";
+            this.caffeinatedName.Text = "Coffee and Tea";
             this.caffeinatedName.Width = 250;
             // 
             // BackDrinksbtn

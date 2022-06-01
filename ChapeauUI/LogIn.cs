@@ -42,7 +42,7 @@ namespace ChapeauUI
                 // 2) employee type = waiter -> Open RestaurantOverview
                 {
                     this.Hide();
-                    RestaurantOverview restaurantOverview = new RestaurantOverview();
+                    RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
                     restaurantOverview.Show();
                 }
                 // 3) employee type = chef/barman -> Open KitchenBarView

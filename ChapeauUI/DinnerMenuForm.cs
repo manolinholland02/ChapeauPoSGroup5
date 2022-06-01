@@ -44,26 +44,16 @@ namespace ChapeauUI
         private void AddbtnDinner_Click(object sender, EventArgs e)
         {
             //check if only one is selected
-            Orders order = CheckSelectedItems();
-            if (order != null)
+            List<MenuItem> OrderedItem = CheckSelectedItems();
+            if (OrderedItem != null)
             {
-                MenuItemService menuservice = new MenuItemService();
-                List<MenuItem> menuItems = menuservice.GetMenuItems();
+                Orders order = new Orders();
                 order.OrderComment = DinnerCommentSection.Text;
-
-                foreach (MenuItem item in menuItems)
-                {
-                    if (item.MenuItemID == order.OrderID)
-                    {
-                        order.OrderStatus = Status.processing;
-                        order.MenuItem.MenuItemName = item.MenuItemName;
-                        
-                    }
-                }
-                //order.table
-                //order waiter
-                //order preparer
-                //order payment
+                order.OrderTable = TableID;
+                order.OrderWaiter = Waiter.EmployeeID;
+                order.ItemQuantity += 1;
+                //order.MenuItem.MenuItemID = OrderedItem[0].MenuItemID;
+                order.MenuItem = OrderedItem[0];
 
                 _currentOrders.Add(order);
                 //order counter +1
@@ -75,18 +65,21 @@ namespace ChapeauUI
                 listView.SelectedItems.Clear();
             }
         }
-        private Orders CheckSelectedItems()
+        private List<MenuItem> CheckSelectedItems()
         {
             int count = 0;
-            Orders item = new Orders();
-            Orders emptyitem = new Orders();
+            List<MenuItem> item = new List<MenuItem>();
+            MenuItemService menuItemService = new MenuItemService();
+            Orders orderedItem = new Orders();
             foreach (ListView listViews in _listViews)
             {
 
                 if (listViews.SelectedItems.Count == 1)
                 {
                     count++;
-                    item.MenuItem.MenuItemID = int.Parse(listViews.SelectedItems[0].Text);
+                    item = menuItemService.GetMenuItemByID(int.Parse(listViews.SelectedItems[0].Text));
+                    
+
                 }
 
             }
@@ -97,12 +90,12 @@ namespace ChapeauUI
             else if (count > 1)
             {
                 MessageBox.Show("Select only one item");
-                return emptyitem;
+                return null;
             }
             else
             {
                 MessageBox.Show("Select at least one item");
-                return emptyitem;
+                return null;
             }
 
         }
@@ -131,6 +124,10 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
+            }
+            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+            {
+                listView.Items[i].BackColor = Color.AliceBlue;
             }
         }
 
