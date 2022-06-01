@@ -18,6 +18,7 @@ namespace ChapeauModel
         public int OrderWaiter { get; set; }
         public int OrderPreparer { get; set; }
         public int OrderPayment { get; set; }
+        public bool OrderPayed { get; set; }
         //this calculated property is purely for design purposes when an order is passed to the Kitchen/Bar view
         public string OrderDesign { get { return ItemQuantity.ToString() + " x " + MenuItem.MenuItemName; } }
     }
