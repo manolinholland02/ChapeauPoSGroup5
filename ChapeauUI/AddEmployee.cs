@@ -65,5 +65,10 @@ namespace ChapeauUI
             mv.Show();
             this.Hide();
         }
+
+        private void AddEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
