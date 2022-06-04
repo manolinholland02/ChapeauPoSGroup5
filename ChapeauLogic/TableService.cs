@@ -11,9 +11,20 @@ namespace ChapeauLogic
     public class TableService
     {
         private TableDao _tabledb;
-        public Table GetTable(string id)
+
+        public TableService()
         {
-           return _tabledb.GetTable(id);
+            _tabledb = new TableDao();
+        }
+
+        public Table GetTable(int id)
+        {
+            return _tabledb.GetTable(id);
+        }
+
+        public void UpdateTableStatus(Table table)
+        {
+            _tabledb.UpdateTableStatus(table);
         }
     }
 }
