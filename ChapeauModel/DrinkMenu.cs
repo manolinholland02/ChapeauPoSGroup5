@@ -12,3 +12,4 @@ namespace ChapeauModel
         public string MenuItemName { get; set; }
     }
 }
+
