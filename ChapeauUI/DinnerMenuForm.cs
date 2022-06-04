@@ -55,7 +55,7 @@ namespace ChapeauUI
                 {
                     if (item.MenuItemID == order.OrderID)
                     {
-                        order.OrderStatus = Status.processing;
+                        //order.OrderStatus = Status.processing;
                         order.MenuItem.MenuItemName = item.MenuItemName;
                         
                     }
