@@ -8,6 +8,6 @@ namespace ChapeauModel
 {
     public enum Status
     {
-        processing, prepared
+        preparing, ready, finished
     }
 }

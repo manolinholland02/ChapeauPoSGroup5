@@ -14,56 +14,66 @@ namespace ChapeauUI
 {
     public partial class ChoosingMenuForm : Form
     {
-        private List<Orders> _currentOrders;
-        private int TableID;
-        private Employee Waiter;
+        private Order _currentOrder;
+        private int tableID;
+        private Employee waiter;
+        private RestaurantOverview restaurantOverview;
+        private OrderOverviewForm orderOverview;
+        private OrderService orderService;
 
-        public ChoosingMenuForm(int TableID, Employee employee)
+        public ChoosingMenuForm(int TableID, Employee employee, OrderService orderService, RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
-            if (_currentOrders == null)
-            {
-                _currentOrders = new List<Orders>();
-            }
-            this.TableID = TableID;
-            this.Waiter = employee;
+            this.tableID = TableID;
+            this.waiter = employee;
+            this.orderService = orderService;
+            _currentOrder = this.orderService.GetLastOrder(tableID);
+            EmployeeNamelbl.Text = $"{this.waiter.EmployeeFirstName} {this.waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {tableID}";
+            this.restaurantOverview = restaurantOverview;
+            this.orderOverview = new OrderOverviewForm(this.orderService, waiter, tableID, this);
+            totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
+        }
 
-            
+        public void UpdateTotalTotalOrderCount()
+        {
+            totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
         }
 
         private void LunchMenubtn_Click(object sender, EventArgs e)
         {
-            LunchMenuForm lunch = new LunchMenuForm(_currentOrders, TableID, Waiter);
+            LunchMenuForm lunch = new LunchMenuForm(orderService, tableID, this, waiter, orderOverview);
             this.Hide();
             lunch.Show(); // or close
         }
 
         private void DinnerMenubtn_Click(object sender, EventArgs e)
         {
-            DinnerMenuForm dinner = new DinnerMenuForm(_currentOrders, TableID, Waiter);
+            DinnerMenuForm dinner = new DinnerMenuForm(orderService, tableID, this, waiter, orderOverview);
             this.Hide(); // or close
             dinner.Show();
         }
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-            DrinksMenuForm drink = new DrinksMenuForm(_currentOrders, TableID, Waiter);
+            DrinksMenuForm drink = new DrinksMenuForm(orderService, tableID, waiter, orderOverview);
             this.Hide();
             drink.Show();
         }
 
         private void MenuPageTableViewbtn_Click(object sender, EventArgs e)
         {
-            // go back to table view
-            //table number = none
+            this.Hide();
+            restaurantOverview.Show();
 
         }
 
         private void OrderOverviewbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
-            orderOverview.Show();
             this.Hide();
+            orderOverview.FillListViewWithOrderItems();
+            orderOverview.Show();
+            
         }
 
         private void Paybtn_Click(object sender, EventArgs e)

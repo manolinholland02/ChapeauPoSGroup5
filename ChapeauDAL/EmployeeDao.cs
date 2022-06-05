@@ -16,7 +16,8 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<Employee> ReadTables(DataTable dataTable)
+
+        private List<Employee> ReadTables(DataTable dataTable)
         {
             List<Employee> employees = new List<Employee>();
             foreach (DataRow dr in dataTable.Rows)
@@ -87,7 +88,7 @@ namespace ChapeauDAL
                     new SqlParameter("@password", employee.EmployeeUserPassword),
                     new SqlParameter("@type", employee.EmployeeType.ToString())
                 };
-                
+
                 string query = @$"UPDATE[dbo].[Employees] 
                                 SET firstName = @firstName, lastName = @lastName, username = @username, userPassword = @password, employeeType = @type 
                                 WHERE employeeId = @ID;";
@@ -102,12 +103,13 @@ namespace ChapeauDAL
         // check if account exists in the database
         public bool AccountExists(string username, int password)
         {
-            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = '@username' AND [userPassword] = @password";
+            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND [userPassword] = @password";
             SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
             DataTable table = ExecuteSelectQuery(query, sqlParameters);
             DataRow[] dr = table.Select();
             string count = dr[0]["Count"].ToString();
-            return Convert.ToInt32(count) == 0;
+            if (Convert.ToInt32(count) == 0) return false;
+            else return true;
         }
 
         // return the employee type of the employee 
@@ -117,7 +119,7 @@ namespace ChapeauDAL
             string query = "SELECT employeeType FROM [dbo].[Employees] WHERE [username] = @username";
             SqlParameter[] parameters = { new SqlParameter("@username", username) };
             DataTable table = ExecuteSelectQuery(query, parameters);
-            foreach(DataRow dr in table.Rows)
+            foreach (DataRow dr in table.Rows)
             {
                 type = dr["employeeType"].ToString();
             }
@@ -143,6 +145,6 @@ namespace ChapeauDAL
             }
             return employee;
         }
-        
+
     }
 }
