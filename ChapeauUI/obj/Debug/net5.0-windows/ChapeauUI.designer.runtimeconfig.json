@@ -6,12 +6,17 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\miede\\.dotnet\\store\\|arch|\\|tfm|",
 <<<<<<< Updated upstream
       "C:\\Users\\miede\\.nuget\\packages"
 =======
       "C:\\Users\\sally\\.nuget\\packages"
 >>>>>>> Stashed changes
+=======
+      "C:\\Users\\sally\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sally\\.nuget\\packages"
+>>>>>>> Chapeau-Demo
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

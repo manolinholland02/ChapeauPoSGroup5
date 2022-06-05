@@ -35,7 +35,7 @@ namespace ChapeauUI
             this.Paybtn = new System.Windows.Forms.Button();
             this.MenuPageTableViewbtn = new System.Windows.Forms.Button();
             this.OrderOverviewbtn = new System.Windows.Forms.Button();
-            this.NewOrderCountlbl = new System.Windows.Forms.Label();
+            this.totalOrderCountlbl = new System.Windows.Forms.Label();
             this.tableNumberlbl = new System.Windows.Forms.Label();
             this.EmployeeNamelbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -107,14 +107,14 @@ namespace ChapeauUI
             this.OrderOverviewbtn.UseVisualStyleBackColor = true;
             this.OrderOverviewbtn.Click += new System.EventHandler(this.OrderOverviewbtn_Click);
             // 
-            // NewOrderCountlbl
+            // totalOrderCountlbl
             // 
-            this.NewOrderCountlbl.AutoSize = true;
-            this.NewOrderCountlbl.Location = new System.Drawing.Point(359, 113);
-            this.NewOrderCountlbl.Name = "NewOrderCountlbl";
-            this.NewOrderCountlbl.Size = new System.Drawing.Size(139, 20);
-            this.NewOrderCountlbl.TabIndex = 6;
-            this.NewOrderCountlbl.Text = "Items in new order: ";
+            this.totalOrderCountlbl.AutoSize = true;
+            this.totalOrderCountlbl.Location = new System.Drawing.Point(12, 49);
+            this.totalOrderCountlbl.Name = "totalOrderCountlbl";
+            this.totalOrderCountlbl.Size = new System.Drawing.Size(170, 20);
+            this.totalOrderCountlbl.TabIndex = 6;
+            this.totalOrderCountlbl.Text = "Total items in the order: ";
             // 
             // tableNumberlbl
             // 
@@ -141,7 +141,7 @@ namespace ChapeauUI
             this.ClientSize = new System.Drawing.Size(537, 752);
             this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.tableNumberlbl);
-            this.Controls.Add(this.NewOrderCountlbl);
+            this.Controls.Add(this.totalOrderCountlbl);
             this.Controls.Add(this.OrderOverviewbtn);
             this.Controls.Add(this.MenuPageTableViewbtn);
             this.Controls.Add(this.Paybtn);
@@ -149,6 +149,7 @@ namespace ChapeauUI
             this.Controls.Add(this.DinnerMenubtn);
             this.Controls.Add(this.LunchMenubtn);
             this.Name = "ChoosingMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChoosingMenuForm";
             this.Load += new System.EventHandler(this.ChoosingMenuForm_Load);
             this.ResumeLayout(false);
@@ -164,7 +165,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button Paybtn;
         private System.Windows.Forms.Button MenuPageTableViewbtn;
         private System.Windows.Forms.Button OrderOverviewbtn;
-        private System.Windows.Forms.Label NewOrderCountlbl;
+        private System.Windows.Forms.Label totalOrderCountlbl;
         private System.Windows.Forms.Label tableNumberlbl;
         private System.Windows.Forms.Label EmployeeNamelbl;
     }

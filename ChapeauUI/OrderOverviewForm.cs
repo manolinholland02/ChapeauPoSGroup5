@@ -14,58 +14,133 @@ namespace ChapeauUI
 {
     public partial class OrderOverviewForm : Form
     {
-        private List<Orders> CurrentOrders;
-        public OrderOverviewForm(List<Orders> currentOrders, Employee waiter)
+        private Order currentOrder;
+        private Employee waiter;
+        private int tableId;
+        private ChoosingMenuForm choosingMenu;
+        private OrderService orderService;
+        private OrderItem selectedOrderItem;
+        private OrderItemService orderItemService;
+        private List<OrderItem> allOrderItems;
+
+        public OrderOverviewForm(OrderService orderService, Employee waiter, int tableId, ChoosingMenuForm choosingMenu)
         {
             InitializeComponent();
-            CurrentOrders = new List<Orders>();
-            CurrentOrders = currentOrders;
-            
+            this.orderService = orderService;
+            this.currentOrder = this.orderService.GetLastOrder(tableId);
+            this.waiter = waiter;
+            this.tableId = tableId;
+            this.choosingMenu = choosingMenu;
+            orderItemService = new OrderItemService();
+            allOrderItems = new List<OrderItem>();
         }
 
         private void PlusOrderbtn_Click(object sender, EventArgs e)
         {
-            Orders selectedOrder;
-            foreach (Orders order in CurrentOrders)
+            if (OrderlistView.SelectedItems.Count == 0)
             {
-                if (order.MenuItem.MenuItemID == int.Parse(OrderlistView.SelectedItems[0].Text))
-                {
-                    selectedOrder = order;
-                    selectedOrder.ItemQuantity++;
-                }
+                MessageBox.Show("Please select an item first.");
             }
-            OrderlistView.Update();
-            
-        }
-        private void MinusOrderbtn_Click(object sender, EventArgs e)
-        {
-            Orders selectedOrder;
-            foreach (Orders order in CurrentOrders)
+            else
             {
-                if (order.MenuItem.MenuItemID == int.Parse(OrderlistView.SelectedItems[0].Text))
+                selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
+                if (selectedOrderItem.Availability == 0)
                 {
-                    selectedOrder = order;
-                    selectedOrder.ItemQuantity--;
-                    if (selectedOrder.ItemQuantity <= 0)
+                    MessageBox.Show("Stock limit has been reached!");
+                }
+                else
+                {
+                    selectedOrderItem.Quantity += 1;
+                    
+                    string[] output = { selectedOrderItem.OrderItemID.ToString(), selectedOrderItem.MenuItem.MenuItemName, selectedOrderItem.Quantity.ToString(), selectedOrderItem.Comment, selectedOrderItem.Availability.ToString() };
+                    ListViewItem item = new ListViewItem(output);
+                    for (int i = 0; i < OrderlistView.Items.Count; i++)
                     {
-                        CurrentOrders.Remove(selectedOrder);
+                        if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
+                        {
+                            OrderlistView.Items[i] = (ListViewItem)item.Clone();
+                            OrderlistView.Items[i].Selected = true;
+                        }
                     }
+
+                    UpdateAllOrderItemsList(selectedOrderItem);
                 }
             }
-            OrderlistView.Update();
         }
 
-        private void PopulateODerOverView(int tableID)
+        private void MinusOrderbtn_Click(object sender, EventArgs e)
+        {
+            if (OrderlistView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select an item first.");
+            }
+            else
+            {
+                selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
+                if (selectedOrderItem.Quantity == 1)
+                {
+                    MessageBox.Show("Quantity must be at least 1!");
+                }
+                else
+                {
+                    selectedOrderItem.Quantity -= 1;
+
+                    string[] output = { selectedOrderItem.OrderItemID.ToString(), selectedOrderItem.MenuItem.MenuItemName, selectedOrderItem.Quantity.ToString(), selectedOrderItem.Comment, selectedOrderItem.Availability.ToString() };
+                    ListViewItem item = new ListViewItem(output);
+                    for (int i = 0; i < OrderlistView.Items.Count; i++)
+                    {
+                        if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
+                        {
+                            OrderlistView.Items[i] = (ListViewItem)item.Clone();
+                            OrderlistView.Items[i].Selected = true;
+                        }
+                    }
+
+                    UpdateAllOrderItemsList(selectedOrderItem);
+                }
+            }
+        }
+
+        public void FillListViewWithOrderItems()
         {
             OrderlistView.Items.Clear();
 
-            foreach (Orders order in CurrentOrders)
+            foreach (OrderItem orderItem in allOrderItems)
             {
-                string[] output = { order.MenuItem.MenuItemName, order.ItemQuantity.ToString(), order.OrderComment};
+                string[] output = {orderItem.OrderItemID.ToString(), orderItem.MenuItem.MenuItemName, orderItem.Quantity.ToString(), orderItem.Comment, orderItem.Availability.ToString() };
                 ListViewItem item = new ListViewItem(output);
                 OrderlistView.Items.Add(item);
+                OrderlistView.FullRowSelect = true;
             }
-            
+        }
+
+        private OrderItem GetOrderItemFromListView(string menuItemName)
+        {
+            foreach (OrderItem orderItem in allOrderItems)
+            {
+                if (orderItem.MenuItem.MenuItemName == menuItemName)
+                {
+                    return orderItem;
+                }
+            }
+
+            throw new Exception("Menu item was not found.");
+        }
+
+        public void AddOrderItemsToOrderOverview(OrderItem orderItem)
+        {
+            allOrderItems.Add(orderItem);
+        }
+
+        public void UpdateAllOrderItemsList(OrderItem orderItem)
+        {
+            int index = allOrderItems.IndexOf(GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text));
+            allOrderItems[index] = orderItem;
+        }
+
+        public int GetCountOfAllOrderItems()
+        {
+            return allOrderItems.Count;
         }
 
         private void OrderOverviewPaybtn_Click(object sender, EventArgs e)
@@ -83,27 +158,39 @@ namespace ChapeauUI
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("Are you sure you want to delete the whole order?", "deleting order", buttons);
             //check if order list is empty
-            if (result == DialogResult.Yes)
+            /*if (result == DialogResult.Yes)
             {
-                foreach (Orders order in CurrentOrders)
+                foreach (OrderItem order in currentOrder.OrderItems)
                 {
-                    CurrentOrders.Remove(order);
+                    currentOrder.OrderItems.Remove(order);
                 }
 
 
-            }  
+            }  */
             OrderlistView.Update();
         }
 
+<<<<<<< HEAD
         private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
         {
 
+=======
+        private void oderOverviewbackbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            choosingMenu.UpdateTotalTotalOrderCount();
+            choosingMenu.Show();
+>>>>>>> Chapeau-Demo
         }
 
         private void PlaceOrderbtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             OrdersService orderService = new OrdersService();
             orderService.InsertNewOrder(CurrentOrders);
+=======
+            orderItemService.InsertOrderItems(allOrderItems);
+>>>>>>> Chapeau-Demo
         }
     }
 }

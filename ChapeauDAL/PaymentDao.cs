@@ -14,7 +14,7 @@ namespace ChapeauDAL
         public List<Payment> GetPaymentFromTableId()
         {
             //take from orderdao
-            string query = $"SELECT [tip], [paymentPrice], [dateOfPayment] FROM Payments WHERE (paymentId = @paymentId AND tableId = @tableId)";
+            string query = $"SELECT [tip], [paymentPrice], FROM Payments WHERE (paymentId = @paymentId AND tableId = @tableId)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,14 +28,60 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void CalcVAT(Payment payment)
+        public void InsertPayment(Payment payment)
         {
-            //Calc  VAT if alcholic == *21% else *6%
-            //change
-            string query = $"Select ((orderPrice * itemQuantity)* 0.21) FROM orders INNER JOIN MenuItems ON Orders.orderItem = MenuItems.menuItemId";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = "INSERT INTO [Payments] (paymentPrice, tip, tableId) VALUES (@Price, @Tip, @Table)";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Price", payment.PaymentPrice), new SqlParameter("@Tip", payment.Tip), new SqlParameter("@Table", payment.TableId) };
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        public Payment GetLastPayment(int tableId)
+        {
+            string query = @"
+            SELECT TOP 1 [paymentId], [paymentPrice], [tip], [tableId]
+            FROM [dbo].[Payments]
+            WHERE [paymentPrice] = 0 AND [tableId] = @Table
+            ORDER BY [paymentId] DESC;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Table", tableId) };
+            return ReadTable(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Payment ReadTable(DataTable dataTable)
+        {
+            Payment payment = new Payment();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                payment.PaymentId = (int)dr["paymentId"];
+                payment.TableId = (int)dr["tableId"];
+                payment.PaymentPrice = (decimal)dr["paymentPrice"];
+                payment.Tip = (decimal)dr["tip"];
+            }
+            return payment;
+        }
+
+        //public decimal CalcVAT(Payment payment)
+        //{
+        //    //Calc  VAT if alcholic == *21% else *6%
+        //    //change
+        //    string query = $"Select ((orderPrice * itemQuantity)* 0.21) FROM orders INNER JOIN MenuItems ON Orders.orderItem = MenuItems.menuItemId";
+        //    SqlParameter[] sqlParameters = new SqlParameter[0];
+        //    ExecuteEditQuery(query, sqlParameters);
+
+        //    return ReadVAT(ExecuteSelectQuery(query, sqlParameters));
+        //}
+
+        //private decimal ReadVAT(Payment payment)
+        //{
+        //    DataRow dr = DataTable.Rows[0];
+
+        //    if (dr["VAT"] == DBNull.Value)
+        //    {
+        //        return 0;
+        //    }
+        //    return (decimal)dr["VAT"];
+        //}
+
 
         public void AddAmountPayed(Payment payment)
         {
@@ -66,9 +112,8 @@ namespace ChapeauDAL
 
                     PaymentId = (int)dr["paymentId"],
                     TableId = (int)dr["tableTd"],
-                    DateOfPayment = (DateTime)dr["dateOfPayment"],
                     PaymentPrice = (decimal)dr["paymentPrice"],
-                    Tip = (decimal)dr["tip"],
+                    Tip = (decimal)dr["tip"]
 
 
                 };

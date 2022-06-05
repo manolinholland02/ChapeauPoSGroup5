@@ -31,12 +31,15 @@ namespace ChapeauUI
         {
             this.OrderOverviewLunchbtn = new System.Windows.Forms.Button();
             this.LunchStartersListView = new System.Windows.Forms.ListView();
+            this.lunchStarterId = new System.Windows.Forms.ColumnHeader();
             this.starterId = new System.Windows.Forms.ColumnHeader();
             this.starterName = new System.Windows.Forms.ColumnHeader();
             this.LunchMainListView = new System.Windows.Forms.ListView();
+            this.lunchMainId = new System.Windows.Forms.ColumnHeader();
             this.mainId = new System.Windows.Forms.ColumnHeader();
             this.mainName = new System.Windows.Forms.ColumnHeader();
             this.LunchDessertListView = new System.Windows.Forms.ListView();
+            this.lunchDesertId = new System.Windows.Forms.ColumnHeader();
             this.desertId = new System.Windows.Forms.ColumnHeader();
             this.desertName = new System.Windows.Forms.ColumnHeader();
             this.backbtnLunch = new System.Windows.Forms.Button();
@@ -58,16 +61,23 @@ namespace ChapeauUI
             // LunchStartersListView
             // 
             this.LunchStartersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lunchStarterId,
             this.starterId,
             this.starterName});
             this.LunchStartersListView.HideSelection = false;
             this.LunchStartersListView.Location = new System.Drawing.Point(12, 112);
             this.LunchStartersListView.MultiSelect = false;
             this.LunchStartersListView.Name = "LunchStartersListView";
-            this.LunchStartersListView.Size = new System.Drawing.Size(265, 145);
+            this.LunchStartersListView.Size = new System.Drawing.Size(376, 145);
             this.LunchStartersListView.TabIndex = 1;
             this.LunchStartersListView.UseCompatibleStateImageBehavior = false;
             this.LunchStartersListView.View = System.Windows.Forms.View.Details;
+            this.LunchStartersListView.SelectedIndexChanged += new System.EventHandler(this.LunchStartersListView_SelectedIndexChanged);
+            // 
+            // lunchStarterId
+            // 
+            this.lunchStarterId.Text = "ID";
+            this.lunchStarterId.Width = 0;
             // 
             // starterId
             // 
@@ -82,6 +92,7 @@ namespace ChapeauUI
             // LunchMainListView
             // 
             this.LunchMainListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lunchMainId,
             this.mainId,
             this.mainName});
             this.LunchMainListView.HideSelection = false;
@@ -92,6 +103,12 @@ namespace ChapeauUI
             this.LunchMainListView.TabIndex = 2;
             this.LunchMainListView.UseCompatibleStateImageBehavior = false;
             this.LunchMainListView.View = System.Windows.Forms.View.Details;
+            this.LunchMainListView.SelectedIndexChanged += new System.EventHandler(this.LunchMainListView_SelectedIndexChanged);
+            // 
+            // lunchMainId
+            // 
+            this.lunchMainId.Text = "ID";
+            this.lunchMainId.Width = 0;
             // 
             // mainId
             // 
@@ -106,17 +123,23 @@ namespace ChapeauUI
             // LunchDessertListView
             // 
             this.LunchDessertListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lunchDesertId,
             this.desertId,
             this.desertName});
             this.LunchDessertListView.HideSelection = false;
             this.LunchDessertListView.Location = new System.Drawing.Point(12, 414);
             this.LunchDessertListView.MultiSelect = false;
             this.LunchDessertListView.Name = "LunchDessertListView";
-            this.LunchDessertListView.Size = new System.Drawing.Size(265, 145);
+            this.LunchDessertListView.Size = new System.Drawing.Size(376, 145);
             this.LunchDessertListView.TabIndex = 3;
             this.LunchDessertListView.UseCompatibleStateImageBehavior = false;
             this.LunchDessertListView.View = System.Windows.Forms.View.Details;
             this.LunchDessertListView.SelectedIndexChanged += new System.EventHandler(this.LunchDessertListView_SelectedIndexChanged);
+            // 
+            // lunchDesertId
+            // 
+            this.lunchDesertId.Text = "ID";
+            this.lunchDesertId.Width = 0;
             // 
             // desertId
             // 
@@ -154,7 +177,6 @@ namespace ChapeauUI
             this.LunchCommentSection.Name = "LunchCommentSection";
             this.LunchCommentSection.Size = new System.Drawing.Size(513, 27);
             this.LunchCommentSection.TabIndex = 6;
-            this.LunchCommentSection.TextChanged += new System.EventHandler(this.LunchCommentSection_TextChanged);
             // 
             // orderCounterlbl
             // 
@@ -194,12 +216,15 @@ namespace ChapeauUI
         private System.Windows.Forms.Button backbtnLunch;
         private System.Windows.Forms.Button AddbtnLunch;
         private System.Windows.Forms.TextBox LunchCommentSection;
-        private System.Windows.Forms.ColumnHeader starterId;
+        private System.Windows.Forms.ColumnHeader lunchStarterId;
         private System.Windows.Forms.ColumnHeader starterName;
         private System.Windows.Forms.ColumnHeader mainId;
         private System.Windows.Forms.ColumnHeader mainName;
         private System.Windows.Forms.ColumnHeader desertId;
         private System.Windows.Forms.ColumnHeader desertName;
         private System.Windows.Forms.Label orderCounterlbl;
+        private System.Windows.Forms.ColumnHeader starterId;
+        private System.Windows.Forms.ColumnHeader lunchMainId;
+        private System.Windows.Forms.ColumnHeader lunchDesertId;
     }
 }

@@ -6,7 +6,7 @@ namespace ChapeauModel
 {
     public class Feedback
     {
-        
+
         public int FeedbackId { get; set; }
         public int PaymentId { get; set; }
         public string Note { get; set; }

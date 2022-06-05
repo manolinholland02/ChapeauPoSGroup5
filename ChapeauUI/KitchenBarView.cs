@@ -15,16 +15,27 @@ namespace ChapeauUI
 {
     public partial class KitchenBarView : Form
     {
+        private static KitchenBarView uniqueInstance;
+        private Employee employee;
+
         //Dictionary<int, System.Windows.Forms.Timer> _timers = new Dictionary<int, System.Windows.Forms.Timer>();
         List<Timer> timers = new List<Timer> { new Timer(), new Timer()};
-        public KitchenBarView()
+        private KitchenBarView(Employee employee)
         {
+            this.employee = employee;
             InitializeComponent();
-            OrdersService ordersService = new OrdersService();
-            InitializeDataGridView(ordersService.GetFoodOnlyOrders(ordersService.GetOrders()));
+            OrderService ordersService = new OrderService();
+            //InitializeDataGridView(ordersService.GetFoodOnlyOrders(ordersService.GetOrders()));
         }
 
-        private void InitializeDataGridView(List<Orders> foodOrders)
+        public static KitchenBarView GetInstance(Employee employee)
+        {
+            if (uniqueInstance == null) uniqueInstance = new KitchenBarView(employee);
+
+            return uniqueInstance;
+        }
+
+        /*private void InitializeDataGridView(List<Orders> foodOrders)
         {
             DataGridViewTextBoxColumn orderId = new DataGridViewTextBoxColumn();
             orderId.HeaderText = "OrderId";
@@ -45,9 +56,9 @@ namespace ChapeauUI
             orderTime.ReadOnly = true;
 
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-            /*Stopwatch stopwatch = new Stopwatch();
+            *//*Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            ordersDataGridView[3, 1].Value = stopwatch.ToString();*/
+            ordersDataGridView[3, 1].Value = stopwatch.ToString();*//*
             timer.Tick += (ss, ee) => { ordersDataGridView[3, 1].Value = DateTime.Now.ToLongTimeString(); };
             timer.Interval = 1000;
             timer.Start();
@@ -64,6 +75,6 @@ namespace ChapeauUI
             ordersDataGridView.Columns.Add(orderTime);
             ordersDataGridView.Columns.Add(button);
             ordersDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
+        }*/
     }
 }

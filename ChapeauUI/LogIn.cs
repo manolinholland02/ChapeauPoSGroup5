@@ -28,13 +28,14 @@ namespace ChapeauUI
             int password = int.Parse(txtPassword.Text);
             // open the corresponding screens depending on the type of employee
             EmployeeService employeeService = new EmployeeService();
-            Employee employee = employeeService.GetEmployee(username);
             if (employeeService.AccountExists(username, password))
             {
+                Employee employee = employeeService.GetEmployee(username);
+
                 // 1) employee type = manager -> Open ManagerViewForm
                 if (employee.EmployeeType == EmployeeType.manager)
                 {
-                    this.Hide();
+                    this.Close();
                     ManagerViewMenu managerView = new ManagerViewMenu();
                     managerView.Show();
                 }
@@ -48,14 +49,14 @@ namespace ChapeauUI
                 // 3) employee type = chef/barman -> Open KitchenBarView
                 else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                 {
-                    this.Hide();
-                    KitchenBarView barView = new KitchenBarView();
-                    barView.Show();
+                    this.Close();
+                    KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
+                    kitchenBarView.Show();
                 }
             }
             else
             {
-                DialogResult result = MessageBox.Show("No employee found", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
