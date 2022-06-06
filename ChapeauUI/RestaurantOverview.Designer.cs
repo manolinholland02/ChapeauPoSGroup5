@@ -41,6 +41,17 @@ namespace ChapeauUI
             this.btnTable9 = new System.Windows.Forms.Button();
             this.btnTable4 = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.pnlDisplayOrderItems = new System.Windows.Forms.Panel();
+            this.btnSetItemAsServed = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.lblTable = new System.Windows.Forms.Label();
+            this.btnDeleteOrder = new System.Windows.Forms.Button();
+            this.orderItemsListView = new System.Windows.Forms.ListView();
+            this.orderItemId = new System.Windows.Forms.ColumnHeader();
+            this.orderItemName = new System.Windows.Forms.ColumnHeader();
+            this.orderItemStatus = new System.Windows.Forms.ColumnHeader();
+            this.btnAddOrderItems = new System.Windows.Forms.Button();
+            this.pnlDisplayOrderItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -172,11 +183,103 @@ namespace ChapeauUI
             this.lblName.Text = "Name";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
+            // pnlDisplayOrderItems
+            // 
+            this.pnlDisplayOrderItems.Controls.Add(this.btnAddOrderItems);
+            this.pnlDisplayOrderItems.Controls.Add(this.btnSetItemAsServed);
+            this.pnlDisplayOrderItems.Controls.Add(this.btnDeleteOrder);
+            this.pnlDisplayOrderItems.Controls.Add(this.btnPay);
+            this.pnlDisplayOrderItems.Controls.Add(this.lblTable);
+            this.pnlDisplayOrderItems.Controls.Add(this.orderItemsListView);
+            this.pnlDisplayOrderItems.Location = new System.Drawing.Point(98, 154);
+            this.pnlDisplayOrderItems.Name = "pnlDisplayOrderItems";
+            this.pnlDisplayOrderItems.Size = new System.Drawing.Size(333, 444);
+            this.pnlDisplayOrderItems.TabIndex = 15;
+            // 
+            // btnSetItemAsServed
+            // 
+            this.btnSetItemAsServed.Location = new System.Drawing.Point(10, 371);
+            this.btnSetItemAsServed.Name = "btnSetItemAsServed";
+            this.btnSetItemAsServed.Size = new System.Drawing.Size(95, 70);
+            this.btnSetItemAsServed.TabIndex = 4;
+            this.btnSetItemAsServed.Text = "Set item as served";
+            this.btnSetItemAsServed.UseVisualStyleBackColor = true;
+            this.btnSetItemAsServed.Click += new System.EventHandler(this.btnSetItemAsServed_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(226, 371);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(95, 70);
+            this.btnPay.TabIndex = 3;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // lblTable
+            // 
+            this.lblTable.AutoSize = true;
+            this.lblTable.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTable.Location = new System.Drawing.Point(71, 0);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(0, 31);
+            this.lblTable.TabIndex = 2;
+            // 
+            // btnDeleteOrder
+            // 
+            this.btnDeleteOrder.Location = new System.Drawing.Point(10, 371);
+            this.btnDeleteOrder.Name = "btnDeleteOrder";
+            this.btnDeleteOrder.Size = new System.Drawing.Size(95, 70);
+            this.btnDeleteOrder.TabIndex = 1;
+            this.btnDeleteOrder.Text = "Set table free";
+            this.btnDeleteOrder.UseVisualStyleBackColor = true;
+            this.btnDeleteOrder.Click += new System.EventHandler(this.btnDeleteOrder_Click);
+            // 
+            // orderItemsListView
+            // 
+            this.orderItemsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderItemId,
+            this.orderItemName,
+            this.orderItemStatus});
+            this.orderItemsListView.HideSelection = false;
+            this.orderItemsListView.Location = new System.Drawing.Point(10, 35);
+            this.orderItemsListView.Name = "orderItemsListView";
+            this.orderItemsListView.Size = new System.Drawing.Size(311, 330);
+            this.orderItemsListView.TabIndex = 0;
+            this.orderItemsListView.UseCompatibleStateImageBehavior = false;
+            this.orderItemsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // orderItemId
+            // 
+            this.orderItemId.Text = "ID";
+            this.orderItemId.Width = 0;
+            // 
+            // orderItemName
+            // 
+            this.orderItemName.Text = "Item";
+            this.orderItemName.Width = 200;
+            // 
+            // orderItemStatus
+            // 
+            this.orderItemStatus.Text = "Status";
+            this.orderItemStatus.Width = 105;
+            // 
+            // btnAddOrderItems
+            // 
+            this.btnAddOrderItems.Location = new System.Drawing.Point(118, 371);
+            this.btnAddOrderItems.Name = "btnAddOrderItems";
+            this.btnAddOrderItems.Size = new System.Drawing.Size(95, 70);
+            this.btnAddOrderItems.TabIndex = 5;
+            this.btnAddOrderItems.Text = "Add new items to the order";
+            this.btnAddOrderItems.UseVisualStyleBackColor = true;
+            this.btnAddOrderItems.Click += new System.EventHandler(this.btnAddOrderItems_Click);
+            // 
             // RestaurantOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 753);
+            this.Controls.Add(this.pnlDisplayOrderItems);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnTable4);
             this.Controls.Add(this.btnTable10);
@@ -192,6 +295,8 @@ namespace ChapeauUI
             this.Name = "RestaurantOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RestaurantOverview";
+            this.pnlDisplayOrderItems.ResumeLayout(false);
+            this.pnlDisplayOrderItems.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +317,15 @@ namespace ChapeauUI
         private System.Windows.Forms.Button btnTable9;
         private System.Windows.Forms.Button btnTable4;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Panel pnlDisplayOrderItems;
+        private System.Windows.Forms.Button btnDeleteOrder;
+        private System.Windows.Forms.ListView orderItemsListView;
+        private System.Windows.Forms.Label lblTable;
+        private System.Windows.Forms.ColumnHeader orderItemId;
+        private System.Windows.Forms.ColumnHeader orderItemName;
+        private System.Windows.Forms.ColumnHeader orderItemStatus;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnSetItemAsServed;
+        private System.Windows.Forms.Button btnAddOrderItems;
     }
 }
