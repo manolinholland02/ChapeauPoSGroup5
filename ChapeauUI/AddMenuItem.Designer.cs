@@ -141,7 +141,7 @@ namespace ChapeauUI
             this.Controls.Add(this.label_Menu_Item_Price);
             this.Controls.Add(this.label_menu_Item_Name);
             this.Name = "AddMenuItem";
-            this.Text = "AddMenuItem";
+            this.Text = " ";
             this.groupBox_Food_Or_Drink.ResumeLayout(false);
             this.groupBox_Food_Or_Drink.PerformLayout();
             this.ResumeLayout(false);
