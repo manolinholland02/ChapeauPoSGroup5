@@ -57,61 +57,6 @@ namespace ChapeauUI
 
         private void AddbtnDinner_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //check if only one is selected
-            List<MenuItem> OrderedItem = CheckSelectedItems();
-            if (OrderedItem != null)
-            {
-                Orders order = new Orders();
-                order.OrderComment = DinnerCommentSection.Text;
-                order.OrderTable = TableID;
-                order.OrderWaiter = Waiter.EmployeeID;
-                order.ItemQuantity += 1;
-                //order.MenuItem.MenuItemID = OrderedItem[0].MenuItemID;
-                order.MenuItem = OrderedItem[0];
-
-                _currentOrders.Add(order);
-                //order counter +1
-            }
-
-            DinnerCommentSection.Clear();
-            foreach (ListView listView in _listViews)
-            {
-                listView.SelectedItems.Clear();
-            }
-        }
-        private List<MenuItem> CheckSelectedItems()
-        {
-            int count = 0;
-            List<MenuItem> item = new List<MenuItem>();
-            MenuItemService menuItemService = new MenuItemService();
-            Orders orderedItem = new Orders();
-            foreach (ListView listViews in _listViews)
-            {
-
-                if (listViews.SelectedItems.Count == 1)
-                {
-                    count++;
-                    item = menuItemService.GetMenuItemByID(int.Parse(listViews.SelectedItems[0].Text));
-                    
-
-                }
-
-            }
-            if (count == 1)
-            {
-                return item;
-            }
-            else if (count > 1)
-            {
-                MessageBox.Show("Select only one item");
-                return null;
-            }
-            else
-            {
-                MessageBox.Show("Select at least one item");
-                return null;
-=======
             if (_selectedItem == null)
             {
                 MessageBox.Show("Please select an item first.");
@@ -151,7 +96,6 @@ namespace ChapeauUI
 
             }
         }
-
         private void IncreaseQuantityOfItem(OrderItem selectedOrderItem)
         {
             foreach (OrderItem orderItem in _allDinnerOrderItems)
@@ -165,7 +109,6 @@ namespace ChapeauUI
             foreach (OrderItem orderItem in _allDinnerOrderItems)
             {
                 if (orderItem.MenuItem.MenuItemID == menuItemId) return true;
->>>>>>> Chapeau-Demo
             }
 
             return false;
@@ -195,10 +138,6 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
-            }
-            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
-            {
-                listView.Items[i].BackColor = Color.AliceBlue;
             }
         }
 

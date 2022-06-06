@@ -24,32 +24,6 @@ namespace ChapeauUI
         public ChoosingMenuForm(int TableID, Employee employee, OrderService orderService, RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
-<<<<<<< HEAD
-            if (_currentOrders == null)
-            {
-                _currentOrders = new List<Orders>();
-            }
-            this.TableID = TableID;
-            this.Waiter = employee;
-            DrinksMenubtn.BackColor = Color.SkyBlue;
-            CheckMenuTime();
-            
-        }
-        private void CheckMenuTime() //changes the colour of the buttons according to the time - lunch or dinner time
-        {
-            DateTime DinnerTime = DateTime.Now.Date.AddHours(18);
-            if (DateTime.Now <= DinnerTime)
-            {
-                LunchMenubtn.BackColor = Color.SkyBlue;
-                DinnerMenubtn.BackColor = Color.LightGray;
-            }
-            else
-            {
-                LunchMenubtn.BackColor = Color.LightGray;
-                DinnerMenubtn.BackColor = Color.SkyBlue;
-            }
-            
-=======
             this.tableID = TableID;
             this.waiter = employee;
             this.orderService = orderService;
@@ -64,7 +38,6 @@ namespace ChapeauUI
         public void UpdateTotalTotalOrderCount()
         {
             totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
->>>>>>> Chapeau-Demo
         }
 
         private void LunchMenubtn_Click(object sender, EventArgs e)
@@ -83,7 +56,7 @@ namespace ChapeauUI
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-            DrinksMenuForm drink = new DrinksMenuForm(orderService, tableID, waiter, orderOverview);
+            DrinksMenuForm drink = new DrinksMenuForm(orderService, tableID, this, waiter, orderOverview);
             this.Hide();
             drink.Show();
         }
@@ -100,18 +73,13 @@ namespace ChapeauUI
             this.Hide();
             orderOverview.FillListViewWithOrderItems();
             orderOverview.Show();
-            
+
         }
 
         private void Paybtn_Click(object sender, EventArgs e)
         {
             // open new paying form
             //hide this form
-        }
-
-        private void ChoosingMenuForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

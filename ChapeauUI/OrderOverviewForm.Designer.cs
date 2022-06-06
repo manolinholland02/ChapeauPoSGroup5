@@ -132,7 +132,7 @@ namespace ChapeauUI
             this.oderOverviewbackbtn.TabIndex = 5;
             this.oderOverviewbackbtn.Text = "Back";
             this.oderOverviewbackbtn.UseVisualStyleBackColor = true;
-            this.oderOverviewbackbtn.Click += new System.EventHandler(this.oderOverviewbackbtn_Click);
+            //this.oderOverviewbackbtn.Click += new System.EventHandler(this.oderOverviewbackbtn_Click);
             // 
             // OrderOverviewPaybtn
             // 
@@ -142,10 +142,8 @@ namespace ChapeauUI
             this.OrderOverviewPaybtn.TabIndex = 6;
             this.OrderOverviewPaybtn.Text = "Pay";
             this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.OrderOverviewPaybtn.Click += new System.EventHandler(this.OrderOverviewPaybtn_Click_1);
-=======
->>>>>>> Chapeau-Demo
+
             // 
             // OrderOverviewForm
             // 

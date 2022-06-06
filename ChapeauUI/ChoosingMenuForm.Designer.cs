@@ -151,7 +151,7 @@ namespace ChapeauUI
             this.Name = "ChoosingMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChoosingMenuForm";
-            this.Load += new System.EventHandler(this.ChoosingMenuForm_Load);
+            //this.Load += new System.EventHandler(this.ChoosingMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

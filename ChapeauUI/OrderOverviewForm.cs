@@ -58,7 +58,9 @@ namespace ChapeauUI
                     {
                         if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
                         {
+                            //replace item in list
                             OrderlistView.Items[i] = (ListViewItem)item.Clone();
+                            // keep order selected
                             OrderlistView.Items[i].Selected = true;
                         }
                     }
@@ -170,27 +172,23 @@ namespace ChapeauUI
             OrderlistView.Update();
         }
 
-<<<<<<< HEAD
-        private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
-        {
-
-=======
         private void oderOverviewbackbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             choosingMenu.UpdateTotalTotalOrderCount();
             choosingMenu.Show();
->>>>>>> Chapeau-Demo
         }
 
         private void PlaceOrderbtn_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            OrdersService orderService = new OrdersService();
-            orderService.InsertNewOrder(CurrentOrders);
-=======
             orderItemService.InsertOrderItems(allOrderItems);
->>>>>>> Chapeau-Demo
+            // delete items from current order
+            // delete stock
+        }
+
+        private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

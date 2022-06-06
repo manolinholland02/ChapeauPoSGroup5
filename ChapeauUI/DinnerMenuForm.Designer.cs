@@ -30,15 +30,19 @@ namespace ChapeauUI
         private void InitializeComponent()
         {
             this.DinnerDessertsListView = new System.Windows.Forms.ListView();
+            this.dinnerDeserId = new System.Windows.Forms.ColumnHeader();
             this.deserId = new System.Windows.Forms.ColumnHeader();
             this.desertName = new System.Windows.Forms.ColumnHeader();
             this.DinnerStartersListView = new System.Windows.Forms.ListView();
+            this.dinnerStarterId = new System.Windows.Forms.ColumnHeader();
             this.starterId = new System.Windows.Forms.ColumnHeader();
             this.starterName = new System.Windows.Forms.ColumnHeader();
             this.DinnerMainListView = new System.Windows.Forms.ListView();
+            this.dinnerMainId = new System.Windows.Forms.ColumnHeader();
             this.mainId = new System.Windows.Forms.ColumnHeader();
             this.mainName = new System.Windows.Forms.ColumnHeader();
             this.DinnerEntremetsListView = new System.Windows.Forms.ListView();
+            this.dinnerEntrementId = new System.Windows.Forms.ColumnHeader();
             this.entremetId = new System.Windows.Forms.ColumnHeader();
             this.entremetName = new System.Windows.Forms.ColumnHeader();
             this.BackbtnDinner = new System.Windows.Forms.Button();
@@ -46,10 +50,6 @@ namespace ChapeauUI
             this.DinnerCommentSection = new System.Windows.Forms.TextBox();
             this.OrderOverviewDinnerbtn = new System.Windows.Forms.Button();
             this.orderCounterlbl = new System.Windows.Forms.Label();
-            this.dinnerStarterId = new System.Windows.Forms.ColumnHeader();
-            this.dinnerEntrementId = new System.Windows.Forms.ColumnHeader();
-            this.dinnerMainId = new System.Windows.Forms.ColumnHeader();
-            this.dinnerDeserId = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // DinnerDessertsListView
@@ -66,6 +66,11 @@ namespace ChapeauUI
             this.DinnerDessertsListView.UseCompatibleStateImageBehavior = false;
             this.DinnerDessertsListView.View = System.Windows.Forms.View.Details;
             this.DinnerDessertsListView.SelectedIndexChanged += new System.EventHandler(this.DinnerDessertsListView_SelectedIndexChanged);
+            // 
+            // dinnerDeserId
+            // 
+            this.dinnerDeserId.Text = "ID";
+            this.dinnerDeserId.Width = 0;
             // 
             // deserId
             // 
@@ -92,6 +97,11 @@ namespace ChapeauUI
             this.DinnerStartersListView.View = System.Windows.Forms.View.Details;
             this.DinnerStartersListView.SelectedIndexChanged += new System.EventHandler(this.DinnerStartersListView_SelectedIndexChanged);
             // 
+            // dinnerStarterId
+            // 
+            this.dinnerStarterId.Text = "ID";
+            this.dinnerStarterId.Width = 0;
+            // 
             // starterId
             // 
             this.starterId.Text = "ID";
@@ -116,6 +126,11 @@ namespace ChapeauUI
             this.DinnerMainListView.UseCompatibleStateImageBehavior = false;
             this.DinnerMainListView.View = System.Windows.Forms.View.Details;
             this.DinnerMainListView.SelectedIndexChanged += new System.EventHandler(this.DinnerMainListView_SelectedIndexChanged);
+            // 
+            // dinnerMainId
+            // 
+            this.dinnerMainId.Text = "ID";
+            this.dinnerMainId.Width = 0;
             // 
             // mainId
             // 
@@ -142,6 +157,11 @@ namespace ChapeauUI
             this.DinnerEntremetsListView.View = System.Windows.Forms.View.Details;
             this.DinnerEntremetsListView.SelectedIndexChanged += new System.EventHandler(this.DinnerEntremetsListView_SelectedIndexChanged);
             // 
+            // dinnerEntrementId
+            // 
+            this.dinnerEntrementId.Text = "ID";
+            this.dinnerEntrementId.Width = 0;
+            // 
             // entremetId
             // 
             this.entremetId.Text = "ID";
@@ -149,7 +169,7 @@ namespace ChapeauUI
             // 
             // entremetName
             // 
-            this.entremetName.Text = "Name";
+            this.entremetName.Text = "Entremets";
             this.entremetName.Width = 250;
             // 
             // BackbtnDinner
@@ -197,26 +217,6 @@ namespace ChapeauUI
             this.orderCounterlbl.Size = new System.Drawing.Size(46, 20);
             this.orderCounterlbl.TabIndex = 8;
             this.orderCounterlbl.Text = "count";
-            // 
-            // dinnerStarterId
-            // 
-            this.dinnerStarterId.Text = "ID";
-            this.dinnerStarterId.Width = 0;
-            // 
-            // dinnerEntrementId
-            // 
-            this.dinnerEntrementId.Text = "ID";
-            this.dinnerEntrementId.Width = 0;
-            // 
-            // dinnerMainId
-            // 
-            this.dinnerMainId.Text = "ID";
-            this.dinnerMainId.Width = 0;
-            // 
-            // dinnerDeserId
-            // 
-            this.dinnerDeserId.Text = "ID";
-            this.dinnerDeserId.Width = 0;
             // 
             // DinnerMenuForm
             // 

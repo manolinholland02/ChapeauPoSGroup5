@@ -14,9 +14,6 @@ namespace ChapeauUI
 {
     public partial class RestaurantOverview : Form
     {
-<<<<<<< HEAD
-        Employee employee1;
-=======
         private Employee employee;
         private Table table;
         private Table[] tables;
@@ -25,21 +22,16 @@ namespace ChapeauUI
         private MessageBoxButtons msgBoxButtons;
         private DialogResult result;
 
->>>>>>> Chapeau-Demo
         public RestaurantOverview(Employee employee)
         {
             this.employee = employee;
             InitializeComponent();
-<<<<<<< HEAD
-            employee1 = employee;
-=======
             lblName.Text = $"{this.employee.EmployeeFirstName} {this.employee.EmployeeLastName}";
             msgBoxButtons = MessageBoxButtons.YesNo;
             tableService = new TableService();
             tables = LoadTables();
             buttons = AddButtonsToList();
             LoadButtons(tables, AddButtonsToList());
->>>>>>> Chapeau-Demo
         }
 
         private Table[] LoadTables()
@@ -55,7 +47,7 @@ namespace ChapeauUI
 
         private Button[] AddButtonsToList()
         {
-            Button[] buttonArray = new Button[10] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10};
+            Button[] buttonArray = new Button[10] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10 };
 
             return buttonArray;
         }
@@ -128,28 +120,8 @@ namespace ChapeauUI
 
         private void btnTable1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            table.TableId = 1;
-            string message = btnTable1.Text;
-            string title = btnTable1.Text;
-            MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-            {
-                LogIn login = new LogIn();
-                login.Show();
-                // mip delete the following AND the parameters of this whole form - also in the login form where this is called -also the gloabl variable and the one inside the ctor
-                ChoosingMenuForm menu = new ChoosingMenuForm(table.TableId, employee1);
-                menu.Show();
-            }
-            else
-            {
-                //
-            }
-=======
             table = tables[0];
             CheckTableStatus(table);
->>>>>>> Chapeau-Demo
         }
 
         private void btnTable2_Click(object sender, EventArgs e)
