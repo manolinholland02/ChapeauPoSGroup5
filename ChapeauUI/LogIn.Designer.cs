@@ -162,6 +162,7 @@ namespace ChapeauUI
             this.Controls.Add(this.lblWelcomeBack);
             this.Controls.Add(this.btnLogin);
             this.Name = "LogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

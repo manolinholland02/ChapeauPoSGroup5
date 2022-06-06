@@ -44,12 +44,18 @@ namespace ChapeauUI
             this.BackbtnDinner = new System.Windows.Forms.Button();
             this.AddbtnDinner = new System.Windows.Forms.Button();
             this.DinnerCommentSection = new System.Windows.Forms.TextBox();
-            this.DinnerTableOverview = new System.Windows.Forms.Button();
+            this.OrderOverviewDinnerbtn = new System.Windows.Forms.Button();
+            this.orderCounterlbl = new System.Windows.Forms.Label();
+            this.dinnerStarterId = new System.Windows.Forms.ColumnHeader();
+            this.dinnerEntrementId = new System.Windows.Forms.ColumnHeader();
+            this.dinnerMainId = new System.Windows.Forms.ColumnHeader();
+            this.dinnerDeserId = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // DinnerDessertsListView
             // 
             this.DinnerDessertsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dinnerDeserId,
             this.deserId,
             this.desertName});
             this.DinnerDessertsListView.HideSelection = false;
@@ -59,6 +65,7 @@ namespace ChapeauUI
             this.DinnerDessertsListView.TabIndex = 0;
             this.DinnerDessertsListView.UseCompatibleStateImageBehavior = false;
             this.DinnerDessertsListView.View = System.Windows.Forms.View.Details;
+            this.DinnerDessertsListView.SelectedIndexChanged += new System.EventHandler(this.DinnerDessertsListView_SelectedIndexChanged);
             // 
             // deserId
             // 
@@ -73,6 +80,7 @@ namespace ChapeauUI
             // DinnerStartersListView
             // 
             this.DinnerStartersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dinnerStarterId,
             this.starterId,
             this.starterName});
             this.DinnerStartersListView.HideSelection = false;
@@ -82,6 +90,7 @@ namespace ChapeauUI
             this.DinnerStartersListView.TabIndex = 1;
             this.DinnerStartersListView.UseCompatibleStateImageBehavior = false;
             this.DinnerStartersListView.View = System.Windows.Forms.View.Details;
+            this.DinnerStartersListView.SelectedIndexChanged += new System.EventHandler(this.DinnerStartersListView_SelectedIndexChanged);
             // 
             // starterId
             // 
@@ -96,6 +105,7 @@ namespace ChapeauUI
             // DinnerMainListView
             // 
             this.DinnerMainListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dinnerMainId,
             this.mainId,
             this.mainName});
             this.DinnerMainListView.HideSelection = false;
@@ -105,6 +115,7 @@ namespace ChapeauUI
             this.DinnerMainListView.TabIndex = 2;
             this.DinnerMainListView.UseCompatibleStateImageBehavior = false;
             this.DinnerMainListView.View = System.Windows.Forms.View.Details;
+            this.DinnerMainListView.SelectedIndexChanged += new System.EventHandler(this.DinnerMainListView_SelectedIndexChanged);
             // 
             // mainId
             // 
@@ -119,6 +130,7 @@ namespace ChapeauUI
             // DinnerEntremetsListView
             // 
             this.DinnerEntremetsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dinnerEntrementId,
             this.entremetId,
             this.entremetName});
             this.DinnerEntremetsListView.HideSelection = false;
@@ -128,6 +140,7 @@ namespace ChapeauUI
             this.DinnerEntremetsListView.TabIndex = 3;
             this.DinnerEntremetsListView.UseCompatibleStateImageBehavior = false;
             this.DinnerEntremetsListView.View = System.Windows.Forms.View.Details;
+            this.DinnerEntremetsListView.SelectedIndexChanged += new System.EventHandler(this.DinnerEntremetsListView_SelectedIndexChanged);
             // 
             // entremetId
             // 
@@ -166,22 +179,52 @@ namespace ChapeauUI
             this.DinnerCommentSection.Size = new System.Drawing.Size(513, 27);
             this.DinnerCommentSection.TabIndex = 6;
             // 
-            // DinnerTableOverview
+            // OrderOverviewDinnerbtn
             // 
-            this.DinnerTableOverview.Location = new System.Drawing.Point(410, 29);
-            this.DinnerTableOverview.Name = "DinnerTableOverview";
-            this.DinnerTableOverview.Size = new System.Drawing.Size(115, 82);
-            this.DinnerTableOverview.TabIndex = 7;
-            this.DinnerTableOverview.Text = "See Table\'s Order";
-            this.DinnerTableOverview.UseVisualStyleBackColor = true;
-            this.DinnerTableOverview.Click += new System.EventHandler(this.DinnerTableOverview_Click);
+            this.OrderOverviewDinnerbtn.Location = new System.Drawing.Point(410, 29);
+            this.OrderOverviewDinnerbtn.Name = "OrderOverviewDinnerbtn";
+            this.OrderOverviewDinnerbtn.Size = new System.Drawing.Size(115, 82);
+            this.OrderOverviewDinnerbtn.TabIndex = 7;
+            this.OrderOverviewDinnerbtn.Text = "See Table\'s Order";
+            this.OrderOverviewDinnerbtn.UseVisualStyleBackColor = true;
+            this.OrderOverviewDinnerbtn.Click += new System.EventHandler(this.OrderOverviewDinnerbtn_Click);
+            // 
+            // orderCounterlbl
+            // 
+            this.orderCounterlbl.AutoSize = true;
+            this.orderCounterlbl.Location = new System.Drawing.Point(12, 43);
+            this.orderCounterlbl.Name = "orderCounterlbl";
+            this.orderCounterlbl.Size = new System.Drawing.Size(46, 20);
+            this.orderCounterlbl.TabIndex = 8;
+            this.orderCounterlbl.Text = "count";
+            // 
+            // dinnerStarterId
+            // 
+            this.dinnerStarterId.Text = "ID";
+            this.dinnerStarterId.Width = 0;
+            // 
+            // dinnerEntrementId
+            // 
+            this.dinnerEntrementId.Text = "ID";
+            this.dinnerEntrementId.Width = 0;
+            // 
+            // dinnerMainId
+            // 
+            this.dinnerMainId.Text = "ID";
+            this.dinnerMainId.Width = 0;
+            // 
+            // dinnerDeserId
+            // 
+            this.dinnerDeserId.Text = "ID";
+            this.dinnerDeserId.Width = 0;
             // 
             // DinnerMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
-            this.Controls.Add(this.DinnerTableOverview);
+            this.Controls.Add(this.orderCounterlbl);
+            this.Controls.Add(this.OrderOverviewDinnerbtn);
             this.Controls.Add(this.DinnerCommentSection);
             this.Controls.Add(this.AddbtnDinner);
             this.Controls.Add(this.BackbtnDinner);
@@ -205,7 +248,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button BackbtnDinner;
         private System.Windows.Forms.Button AddbtnDinner;
         private System.Windows.Forms.TextBox DinnerCommentSection;
-        private System.Windows.Forms.Button DinnerTableOverview;
+        private System.Windows.Forms.Button OrderOverviewDinnerbtn;
         private System.Windows.Forms.ColumnHeader starterId;
         private System.Windows.Forms.ColumnHeader starterName;
         private System.Windows.Forms.ColumnHeader deserId;
@@ -214,5 +257,10 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader mainName;
         private System.Windows.Forms.ColumnHeader entremetId;
         private System.Windows.Forms.ColumnHeader entremetName;
+        private System.Windows.Forms.Label orderCounterlbl;
+        private System.Windows.Forms.ColumnHeader dinnerStarterId;
+        private System.Windows.Forms.ColumnHeader dinnerEntrementId;
+        private System.Windows.Forms.ColumnHeader dinnerDeserId;
+        private System.Windows.Forms.ColumnHeader dinnerMainId;
     }
 }

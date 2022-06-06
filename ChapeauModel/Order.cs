@@ -12,6 +12,6 @@ namespace ChapeauModel
         public int WaiterId { get; set; }
         public int TableId { get; set; }
         public int PaymentId { get; set; }
-        public bool isPaid { get; set; }
+        public bool IsPaid { get; set; }
     }
 }

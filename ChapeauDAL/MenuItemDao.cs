@@ -67,14 +67,14 @@ namespace ChapeauDAL
 
         private SqlParameter[] GetParametersForMenuItem(MenuItem menuItem)
         {
-            SqlParameter[] sqlParameters = { 
-                new SqlParameter("@Id", menuItem.MenuItemID), 
-                new SqlParameter("@Name", menuItem.MenuItemName), 
-                new SqlParameter("@Price", menuItem.MenuItemPrice), 
-                new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)), 
-                new SqlParameter("@Stock", menuItem.MenuItemStock), 
-                new SqlParameter("@Type", menuItem.MenuItemType), 
-                new SqlParameter("@Category", menuItem.MenuItemCategory), 
+            SqlParameter[] sqlParameters = {
+                new SqlParameter("@Id", menuItem.MenuItemID),
+                new SqlParameter("@Name", menuItem.MenuItemName),
+                new SqlParameter("@Price", menuItem.MenuItemPrice),
+                new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)),
+                new SqlParameter("@Stock", menuItem.MenuItemStock),
+                new SqlParameter("@Type", menuItem.MenuItemType),
+                new SqlParameter("@Category", menuItem.MenuItemCategory),
                 new SqlParameter("@AverageTime", menuItem.AveragePreparationTime) };
             return sqlParameters;
         }
@@ -88,7 +88,7 @@ namespace ChapeauDAL
         public void DeleteMenuItem(int id)
         {
             string query = $"DELETE FROM [dbo].[MenuItems] WHERE menuItemId = @Id";
-            SqlParameter[] sqlParameters = { new SqlParameter("@Id", id)};
+            SqlParameter[] sqlParameters = { new SqlParameter("@Id", id) };
             ExecuteEditQuery(query, sqlParameters);
         }
 

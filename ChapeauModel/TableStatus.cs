@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    public class Table
+    public enum TableStatus
     {
-        public int TableId { get; set; }
-        public TableStatus TableStatus { get; set; }
-
+        free, occupied, haveOrder
     }
 }

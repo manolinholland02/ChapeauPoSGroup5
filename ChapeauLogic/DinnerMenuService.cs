@@ -23,7 +23,7 @@ namespace ChapeauLogic
             return dinnerMenuItems;
         }
 
-        public List<DinnerMenu> GetspecficDinnerMenu(MenuItemCategory menuItemCategory)
+        public List<DinnerMenu> GetSpecficDinnerMenu(MenuItemCategory menuItemCategory)
         {
             List<DinnerMenu> specificDinnerMenu = _dinnerMenuDb.GetSpecificDinnerMenu(menuItemCategory);
             return specificDinnerMenu;

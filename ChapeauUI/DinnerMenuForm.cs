@@ -16,95 +16,103 @@ namespace ChapeauUI
     {
         private MenuItemCategory _category;
         private List<ListView> _listViews;
-        private List<Orders> _currentOrders;
-        private int TableID;
-        private Employee Waiter;
+        private Order _currentOrder;
+        private int _tableID;
+        private ChoosingMenuForm _choosingMenuForm;
+        private Employee _waiter;
+        private ListViewItem _selectedItem;
+        private OrderItemService _orderItemService;
+        private OrderOverviewForm _orderOverview;
+        private OrderService _orderService;
+        private List<OrderItem> _allDinnerOrderItems;
 
-        public DinnerMenuForm(List<Orders> currentorders, int TableID, Employee waiter)
+        public DinnerMenuForm(OrderService orderService, int tableID, ChoosingMenuForm choosingMenuForm, Employee waiter, OrderOverviewForm orderOverview)
         {
             InitializeComponent();
             _category = MenuItemCategory.entremet;
             _listViews = new List<ListView>();
-            _currentOrders = currentorders;
+            this._orderService = orderService;
+            _currentOrder = this._orderService.GetLastOrder(tableID);
             _listViews.Add(DinnerEntremetsListView);
             _listViews.Add(DinnerStartersListView);
             _listViews.Add(DinnerMainListView);
-            _listViews.Add(DinnerDessertsListView);
+            _listViews.Add(DinnerDessertsListView); ;
             PopulateDinnerMenus();
-            this.TableID = TableID;
-            this.Waiter = waiter;
+            this._tableID = tableID;
+            this._choosingMenuForm = choosingMenuForm;
+            this._waiter = waiter;
+            _selectedItem = new ListViewItem();
+            _orderItemService = new OrderItemService();
+            this._orderOverview = orderOverview;
+            _allDinnerOrderItems = new List<OrderItem>();
         }
 
         private void BackbtnDinner_Click(object sender, EventArgs e)
         {
-            ChoosingMenuForm choosingForm = new ChoosingMenuForm(TableID, Waiter);
-            this.Close();
+            //show the choosing order form
+            this.Hide();
+            _choosingMenuForm.UpdateTotalTotalOrderCount();
+            _choosingMenuForm.Show();
         }
 
         private void AddbtnDinner_Click(object sender, EventArgs e)
         {
-            //check if only one is selected
-            Orders order = CheckSelectedItems();
-            if (order != null)
+            if (_selectedItem == null)
             {
-                MenuItemService menuservice = new MenuItemService();
-                List<MenuItem> menuItems = menuservice.GetMenuItems();
-                order.OrderComment = DinnerCommentSection.Text;
-
-                foreach (MenuItem item in menuItems)
-                {
-                    if (item.MenuItemID == order.OrderID)
-                    {
-                        //order.OrderStatus = Status.processing;
-                        order.MenuItem.MenuItemName = item.MenuItemName;
-                        
-                    }
-                }
-                //order.table
-                //order waiter
-                //order preparer
-                //order payment
-
-                _currentOrders.Add(order);
-                //order counter +1
-            }
-
-            DinnerCommentSection.Clear();
-            foreach (ListView listView in _listViews)
-            {
-                listView.SelectedItems.Clear();
-            }
-        }
-        private Orders CheckSelectedItems()
-        {
-            int count = 0;
-            Orders item = new Orders();
-            Orders emptyitem = new Orders();
-            foreach (ListView listViews in _listViews)
-            {
-
-                if (listViews.SelectedItems.Count == 1)
-                {
-                    count++;
-                    item.MenuItem.MenuItemID = int.Parse(listViews.SelectedItems[0].Text);
-                }
-
-            }
-            if (count == 1)
-            {
-                return item;
-            }
-            else if (count > 1)
-            {
-                MessageBox.Show("Select only one item");
-                return emptyitem;
+                MessageBox.Show("Please select an item first.");
             }
             else
             {
-                MessageBox.Show("Select at least one item");
-                return emptyitem;
+                OrderItem orderItem = new OrderItem()
+                {
+                    MenuItem = _orderItemService.GetCorrespondingMenuItem(int.Parse(_selectedItem.SubItems[1].Text)),
+                    Comment = DinnerCommentSection.Text,
+                    Quantity = 1,
+                    Order = _currentOrder.OrderId,
+                    Status = Status.preparing
+                };
+
+                if (IsItemAlreadyAdded(orderItem.MenuItem.MenuItemID))
+                {
+                    DialogResult result = MessageBox.Show($"{orderItem.MenuItem.MenuItemName} has already been added to the order once. Do you want to add it again?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        IncreaseQuantityOfItem(orderItem);
+                    }
+                }
+                else
+                {
+                    _allDinnerOrderItems.Add(orderItem);
+                    _orderOverview.AddOrderItemsToOrderOverview(orderItem);
+                    orderCounterlbl.Text = $"count : {_allDinnerOrderItems.Count}";
+                }
+
+                DinnerCommentSection.Clear();
+
+                foreach (ListView listView in _listViews)
+                {
+                    listView.SelectedItems.Clear();
+                }
+
+            }
+        }
+
+        private void IncreaseQuantityOfItem(OrderItem selectedOrderItem)
+        {
+            foreach (OrderItem orderItem in _allDinnerOrderItems)
+            {
+                if (orderItem.MenuItem.MenuItemID == selectedOrderItem.MenuItem.MenuItemID) orderItem.Quantity++;
+            }
+        }
+
+        private bool IsItemAlreadyAdded(int menuItemId)
+        {
+            foreach (OrderItem orderItem in _allDinnerOrderItems)
+            {
+                if (orderItem.MenuItem.MenuItemID == menuItemId) return true;
             }
 
+            return false;
         }
 
         private void PopulateDinnerMenus()
@@ -116,7 +124,7 @@ namespace ChapeauUI
             while (_category <= MenuItemCategory.desert)
             {
                 _listViews[i].Items.Clear();
-                dinnerMenuItems = dinnerMenuService.GetspecficDinnerMenu(_category);
+                dinnerMenuItems = dinnerMenuService.GetSpecficDinnerMenu(_category);
                 FillMenu(dinnerMenuItems, _listViews[i]);
                 _category++;
                 i++;
@@ -127,18 +135,50 @@ namespace ChapeauUI
         {
             foreach (DinnerMenu dinnerMenu in dinnerMenuItems)
             {
-                string[] output = { dinnerMenu.DinnerMenuId.ToString(), dinnerMenu.MenuItemName };
+                string[] output = { dinnerMenu.DinnerMenuId.ToString(), dinnerMenu.MenuItemId.ToString(), dinnerMenu.MenuItemName };
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
             }
         }
 
-        private void DinnerTableOverview_Click(object sender, EventArgs e)
+        private void OrderOverviewDinnerbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
-            orderOverview.Show();
             this.Hide();
+            _orderOverview.FillListViewWithOrderItems();
+            _orderOverview.Show();
+        }
+
+        private void DinnerStartersListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DinnerStartersListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = DinnerStartersListView.SelectedItems[0];
+            }
+        }
+
+        private void DinnerEntremetsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DinnerEntremetsListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = DinnerEntremetsListView.SelectedItems[0];
+            }
+        }
+
+        private void DinnerMainListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DinnerMainListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = DinnerMainListView.SelectedItems[0];
+            }
+        }
+
+        private void DinnerDessertsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DinnerDessertsListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = DinnerDessertsListView.SelectedItems[0];
+            }
         }
     }
 }

@@ -11,14 +11,14 @@ namespace ChapeauDAL
 {
     public class FeedbackDao : BaseDao
     {
-        
+
         public List<Feedback> GetAllFeedback()
         {
             string query = "SELECT [paymentId], [feedbackId], [dateOfFeedback], [note] FROM [Feedbacks]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        
+
 
         public void AddFeedback(Feedback feedback)
         {
@@ -50,7 +50,7 @@ namespace ChapeauDAL
                     FeedbackId = (int)dr["feedbackId"],
                     DateOfFeedback = (DateTime)dr["dateOfFeedback"],
                     Note = dr["note"].ToString(),
-                    
+
                 };
                 feedback.Add(feedbacks);
             }

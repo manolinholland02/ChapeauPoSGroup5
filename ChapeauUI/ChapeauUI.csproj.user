@@ -38,6 +38,9 @@
     <Compile Update="ManagerViewMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="OccupyDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="OrderOverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -45,6 +48,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RestaurantOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StartOrderDialogBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TESTFORM.cs">

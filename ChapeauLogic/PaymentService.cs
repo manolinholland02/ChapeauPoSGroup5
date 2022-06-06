@@ -34,12 +34,22 @@ namespace ChapeauLogic
             _paymentdb.CalcSubTotal(payment);
         }
 
+        public void InsertPayment(Payment payment)
+        {
+            _paymentdb.InsertPayment(payment);
+        }
+
+        public Payment GetLastPayment(int tableId)
+        {
+            return _paymentdb.GetLastPayment(tableId);
+        }
+
         public void CalcVAT(Payment payment)
         {
             //Calc  VAT if alcholic == *21% else *6%
 
             //_paymentdb.CalcVAT(payment);
-            
+
         }
 
         public void CalcTip(Payment payment)

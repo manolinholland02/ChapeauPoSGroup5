@@ -16,15 +16,19 @@ namespace ChapeauUI
     {
         private MenuItemCategory _category;
         private List<ListView> _listViews;
-        private List<Orders> _currentOrders;
+        private Order _currentOrders;
         private int TableID;
         private Employee Waiter;
-        public DrinksMenuForm(List<Orders> currentorders, int TableID, Employee waiter)
+        private OrderOverviewForm orderOverview;
+        private OrderService orderService;
+
+        public DrinksMenuForm(OrderService orderService, int TableID, Employee waiter, OrderOverviewForm orderOverview)
         {
             InitializeComponent();
             _category = MenuItemCategory.softdrink;
             _listViews =  new List<ListView>();
-            _currentOrders = currentorders;
+            this.orderService = orderService;
+            _currentOrders = this.orderService.GetLastOrder(TableID);
             _listViews.Add(SoftDrinksListView);
             _listViews.Add(BeersListView);
             _listViews.Add(WineListView);
@@ -33,24 +37,25 @@ namespace ChapeauUI
             PopulateDrinkMenus();
             this.TableID = TableID;
             this.Waiter = waiter;
+            this.orderOverview = orderOverview;
         }
 
         private void AddDrinksbtn_Click(object sender, EventArgs e)
         {
             //check if only one is selected
-            Orders order = CheckSelectedItems();
+            OrderItem order = CheckSelectedItems();
             if (order != null)
             {
                 MenuItemService menuservice = new MenuItemService();
                 List<MenuItem> menuItems = menuservice.GetMenuItems();
-                order.OrderComment = DrinksCommentSection.Text;
+                order.Comment = DrinksCommentSection.Text;
                 foreach (MenuItem item in menuItems)
                 {
                     if (item.MenuItemID == order.MenuItem.MenuItemID)
                     {
                         
                         order.MenuItem.MenuItemName = item.MenuItemName;
-                       // order.OrderStatus = Status.processing;
+                        order.Status = Status.preparing;
                     }
                 }
                 //order.table
@@ -58,7 +63,7 @@ namespace ChapeauUI
                 //order preparer
                 //order payment
 
-                _currentOrders.Add(order);
+                //_currentOrders.OrderItems.Add(order);
                 //order counter +1
             }
 
@@ -68,11 +73,11 @@ namespace ChapeauUI
                 listView.SelectedItems.Clear();
             }
         }
-        private Orders CheckSelectedItems()
+        private OrderItem CheckSelectedItems()
         {
             int count = 0;
-            Orders item = new Orders();
-            Orders emptyitem = new Orders();
+            OrderItem item = new OrderItem();
+            OrderItem emptyitem = new OrderItem();
             foreach (ListView listViews in _listViews)
             {
 
@@ -135,9 +140,9 @@ namespace ChapeauUI
 
         private void DrinksTableOverview_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
-            orderOverview.Show();
             this.Hide();
+            orderOverview.FillListViewWithOrderItems();
+            orderOverview.Show();
         }
     }
 }
