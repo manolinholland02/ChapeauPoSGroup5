@@ -39,7 +39,7 @@ namespace ChapeauLogic
         }
         public List<string> GetFoodCategory()
         {
-           return _menuItemDb.GetFoodCategory();
+            return _menuItemDb.GetFoodCategory();
         }
         public List<string> GetDrinkCategory()
         {
