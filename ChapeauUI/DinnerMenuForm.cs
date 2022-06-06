@@ -139,6 +139,10 @@ namespace ChapeauUI
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
             }
+            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+            {
+                listView.Items[i].BackColor = Color.AliceBlue;
+            }
         }
 
         private void OrderOverviewDinnerbtn_Click(object sender, EventArgs e)

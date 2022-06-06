@@ -141,6 +141,10 @@ namespace ChapeauUI
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
             }
+            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+            {
+                listView.Items[i].BackColor = Color.AliceBlue;
+            }
         }
 
         private void DrinksTableOverview_Click(object sender, EventArgs e)
@@ -187,6 +191,11 @@ namespace ChapeauUI
             {
                 _selectedItem = SpiritsListView.SelectedItems[0];
             }
+        }
+
+        private void BackDrinksbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

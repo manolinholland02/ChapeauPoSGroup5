@@ -207,6 +207,7 @@ namespace ChapeauUI
             this.BackDrinksbtn.TabIndex = 5;
             this.BackDrinksbtn.Text = "Back";
             this.BackDrinksbtn.UseVisualStyleBackColor = true;
+            this.BackDrinksbtn.Click += new System.EventHandler(this.BackDrinksbtn_Click);
             // 
             // AddDrinksbtn
             // 

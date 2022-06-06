@@ -24,6 +24,7 @@ namespace ChapeauUI
         public ChoosingMenuForm(int TableID, Employee employee, OrderService orderService, RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
+            CheckMenuTime();
             this.tableID = TableID;
             this.waiter = employee;
             this.orderService = orderService;
@@ -80,6 +81,22 @@ namespace ChapeauUI
         {
             // open new paying form
             //hide this form
+        }
+
+        private void CheckMenuTime() //changes the colour of the buttons according to the time - lunch or dinner time
+        {
+            DateTime DinnerTime = DateTime.Now.Date.AddHours(18);
+            if (DateTime.Now <= DinnerTime)
+            {
+                LunchMenubtn.BackColor = Color.SkyBlue;
+                DinnerMenubtn.BackColor = Color.LightGray;
+            }
+            else
+            {
+                LunchMenubtn.BackColor = Color.LightGray;
+                DinnerMenubtn.BackColor = Color.SkyBlue;
+            }
+
         }
     }
 }
