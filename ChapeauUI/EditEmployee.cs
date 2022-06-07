@@ -18,6 +18,8 @@ namespace ChapeauUI
         private Employee _EmployeeToEdit;
         private Employee _manager;
         private string _operation = "EditEmployee";
+        private MessageBoxButtons messageBoxButtons;
+        private DialogResult result;
         public EditEmployee(Employee employee, Employee manager)
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace ChapeauUI
             {
                 radioButton_EditEmployee_Chef.Checked = true;
             }
+            messageBoxButtons = MessageBoxButtons.YesNo;
         }
 
         private void button_EditEmployee_Click(object sender, EventArgs e)
@@ -72,12 +75,9 @@ namespace ChapeauUI
             {
 
                 _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
-                ManagerConformation conformation = new ManagerConformation(_manager, _operation, _EmployeeToEdit);
-                //EmployeeService employeeService = new EmployeeService();
-                //employeeService.EditEmployee(_EmployeeToEdit);
-                //ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
-                //managerView.Show();
-                this.Hide();
+                ManagerConformation conformation = new ManagerConformation(_manager, _operation, _EmployeeToEdit,this);
+                conformation.Show();
+                //this.Hide();
             }
             else
             {
@@ -112,6 +112,19 @@ namespace ChapeauUI
                 return false;
             }
             return true;
+        }
+
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }

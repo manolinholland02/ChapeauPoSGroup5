@@ -194,6 +194,7 @@ namespace ChapeauUI
             this.button_Edit_Employee.TabIndex = 10;
             this.button_Edit_Employee.Text = "Edit";
             this.button_Edit_Employee.UseVisualStyleBackColor = false;
+            this.button_Edit_Employee.Click += new System.EventHandler(this.button_Edit_Employee_Click);
             // 
             // button_Delete_Employee
             // 

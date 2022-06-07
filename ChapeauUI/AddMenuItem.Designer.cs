@@ -29,6 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMenuItem));
             this.label_menu_Item_Name = new System.Windows.Forms.Label();
             this.label_Menu_Item_Price = new System.Windows.Forms.Label();
             this.label_Menu_Item_Time = new System.Windows.Forms.Label();
@@ -48,7 +49,12 @@ namespace ChapeauUI
             this.textBox_Menu_Time_Seconds = new System.Windows.Forms.TextBox();
             this.label_points2 = new System.Windows.Forms.Label();
             this.label_points = new System.Windows.Forms.Label();
+            this.label_managerName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox_Food_Or_Drink.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_menu_Item_Name
@@ -239,11 +245,46 @@ namespace ChapeauUI
             this.label_points.TabIndex = 16;
             this.label_points.Text = ":";
             // 
+            // label_managerName
+            // 
+            this.label_managerName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_managerName.ForeColor = System.Drawing.Color.Black;
+            this.label_managerName.Location = new System.Drawing.Point(1187, 9);
+            this.label_managerName.Name = "label_managerName";
+            this.label_managerName.Size = new System.Drawing.Size(223, 88);
+            this.label_managerName.TabIndex = 14;
+            this.label_managerName.Text = "label1";
+            this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(616, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label_managerName);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1422, 99);
+            this.panel1.TabIndex = 17;
+            // 
             // AddMenuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_points);
             this.Controls.Add(this.label_points2);
             this.Controls.Add(this.textBox_Menu_Time_Seconds);
@@ -265,6 +306,8 @@ namespace ChapeauUI
             this.Text = " ";
             this.groupBox_Food_Or_Drink.ResumeLayout(false);
             this.groupBox_Food_Or_Drink.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +334,8 @@ namespace ChapeauUI
         private System.Windows.Forms.TextBox textBox_Menu_Time_Seconds;
         private System.Windows.Forms.Label label_points2;
         private System.Windows.Forms.Label label_points;
+        private System.Windows.Forms.Label label_managerName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

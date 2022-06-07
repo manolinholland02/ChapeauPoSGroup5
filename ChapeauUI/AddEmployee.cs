@@ -16,6 +16,9 @@ namespace ChapeauUI
     {
         private Employee _manager;
         private string operation = "AddEmployee";
+
+        private MessageBoxButtons messageBoxButtons;
+        private DialogResult result;
         public AddEmployee(Employee manager)
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace ChapeauUI
             radioButton_AddEmployee_Manager.Checked = false;
             radioButton_AddEmployee_Waiter.Checked = false;
             _manager = manager;
+            messageBoxButtons = MessageBoxButtons.YesNo;
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace ChapeauUI
                 {
                     MessageBox.Show("Password is taken! Please select a new one!");
                 }
-                else if(radioButton_AddEmployee_Bartender.Checked == false || radioButton_AddEmployee_Chef.Checked == false || radioButton_AddEmployee_Manager.Checked == false || radioButton_AddEmployee_Waiter.Checked == false)
+                else if(radioButton_AddEmployee_Bartender.Checked == false && radioButton_AddEmployee_Chef.Checked == false && radioButton_AddEmployee_Manager.Checked == false && radioButton_AddEmployee_Waiter.Checked == false)
                 {
                     MessageBox.Show("Please select an occupation!");
                 }
@@ -94,7 +98,8 @@ namespace ChapeauUI
                         EmployeeType = employeeType
                     };
 
-                    ManagerConformation conformation = new ManagerConformation(_manager, operation,employee);
+                    ManagerConformation conformation = new ManagerConformation(_manager, operation,employee,this);
+                    conformation.Show();
                     this.Hide();
                     //employeeService.AddEmployee(employee);
                     //OpenManagerViewEmoloyees();
@@ -137,6 +142,19 @@ namespace ChapeauUI
                 return false;
             }
             return true;
+        }
+
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }

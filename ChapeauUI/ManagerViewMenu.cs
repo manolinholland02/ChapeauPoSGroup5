@@ -136,6 +136,23 @@ namespace ChapeauUI
                 button_Delete_Employee.Enabled = false;
             }
         }
+
+        private void button_Edit_Employee_Click(object sender, EventArgs e)
+        {
+            int itemToEditID = int.Parse(listView_Menu_Management.SelectedItems[0].SubItems[0].Text);
+            MenuItemService service = new MenuItemService();
+            List<MenuItem> items = service.GetMenuItems();
+            foreach (MenuItem item in items)
+            {
+                if (item.MenuItemID == itemToEditID)
+                {
+                    EditMenuItem edit = new EditMenuItem(item, _manager);
+                    edit.Show();
+                    this.Hide();
+                }
+            }
+        }
+
     }
 
 

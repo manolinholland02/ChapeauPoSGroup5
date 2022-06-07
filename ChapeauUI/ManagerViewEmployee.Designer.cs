@@ -157,6 +157,7 @@ namespace ChapeauUI
             this.button_Menu_Form.TabIndex = 5;
             this.button_Menu_Form.Text = "Menu Items";
             this.button_Menu_Form.UseVisualStyleBackColor = true;
+            this.button_Menu_Form.Click += new System.EventHandler(this.button_Menu_Form_Click);
             // 
             // panel1
             // 

@@ -128,5 +128,12 @@ namespace ChapeauUI
                 this.Hide();
             }
         }
+
+        private void button_Menu_Form_Click(object sender, EventArgs e)
+        {
+            ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
+            viewMenu.Show();
+            this.Hide();
+        }
     }
 }

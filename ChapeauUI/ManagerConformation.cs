@@ -22,7 +22,8 @@ namespace ChapeauUI
         private int _IdToDelete;
         private Employee _employee;
         private MenuItem _item;
-        public ManagerConformation(Employee manager, string operation, Employee employee)
+        Form previousForm;
+        public ManagerConformation(Employee manager, string operation, Employee employee,Form previous)
         {
             InitializeComponent();
             label_Error.Visible = false;
@@ -32,8 +33,9 @@ namespace ChapeauUI
             _menuItemService = new MenuItemService();
             _employeeService = new EmployeeService();
             _employee = employee;
+            previousForm = previous;
         }
-        public ManagerConformation(Employee manager, string operation, int Id)
+        public ManagerConformation(Employee manager, string operation, int Id, Form previous)
         {
             InitializeComponent();
             label_Error.Visible = false;
@@ -42,8 +44,9 @@ namespace ChapeauUI
             _operation = operation;
             _menuItemService = new MenuItemService();
             _employeeService = new EmployeeService();
+            previousForm = previous;
         }
-        public ManagerConformation(Employee manager, string operation, MenuItem menuItem)
+        public ManagerConformation(Employee manager, string operation, MenuItem menuItem, Form previous)
         {
             InitializeComponent();
             label_Error.Visible = false;
@@ -53,6 +56,7 @@ namespace ChapeauUI
             _menuItemService = new MenuItemService();
             _employeeService = new EmployeeService();
             _item = menuItem;
+            previousForm = previous;
         }
         private void button_Cancel_Click(object sender, EventArgs e)
         {
@@ -85,21 +89,25 @@ namespace ChapeauUI
         {
             _employeeService.DeleteEmployee(_IdToDelete);
             OpenEmployeeForm();
+            previousForm.Hide();
         }
         private void DeleteMenuItem()
         {
             _menuItemService.DeleteMenuItem(_IdToDelete);
             OpenMenuItemForm();
+            previousForm.Hide();
         }
         
         private void AddEmployee()
         {
             _employeeService.AddEmployee(_employee);
             OpenEmployeeForm();
+            previousForm.Hide();
         }
         private void EditEmployee()
         {
             _employeeService.EditEmployee(_employee);
+            previousForm.Hide();
             OpenEmployeeForm();
         }
         private void OpenMenuItemForm()

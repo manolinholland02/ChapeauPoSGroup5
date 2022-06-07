@@ -29,6 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEmployee));
             this.button_Cancel = new System.Windows.Forms.Button();
             this.button_EditEmployee = new System.Windows.Forms.Button();
             this.textBox_EditEmployee_Password = new System.Windows.Forms.TextBox();
@@ -44,13 +45,18 @@ namespace ChapeauUI
             this.label_EditEmploye_Username = new System.Windows.Forms.Label();
             this.label_EditEmployee_LastName = new System.Windows.Forms.Label();
             this.label_EditEmployee_FirstName = new System.Windows.Forms.Label();
+            this.label_managerName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox_EditEmployee_Occupation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Cancel
             // 
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Cancel.Location = new System.Drawing.Point(971, 607);
+            this.button_Cancel.Location = new System.Drawing.Point(989, 713);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(219, 80);
             this.button_Cancel.TabIndex = 22;
@@ -61,7 +67,7 @@ namespace ChapeauUI
             // button_EditEmployee
             // 
             this.button_EditEmployee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_EditEmployee.Location = new System.Drawing.Point(177, 607);
+            this.button_EditEmployee.Location = new System.Drawing.Point(195, 713);
             this.button_EditEmployee.Name = "button_EditEmployee";
             this.button_EditEmployee.Size = new System.Drawing.Size(219, 80);
             this.button_EditEmployee.TabIndex = 21;
@@ -72,7 +78,7 @@ namespace ChapeauUI
             // textBox_EditEmployee_Password
             // 
             this.textBox_EditEmployee_Password.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_EditEmployee_Password.Location = new System.Drawing.Point(657, 299);
+            this.textBox_EditEmployee_Password.Location = new System.Drawing.Point(675, 405);
             this.textBox_EditEmployee_Password.Name = "textBox_EditEmployee_Password";
             this.textBox_EditEmployee_Password.Size = new System.Drawing.Size(273, 43);
             this.textBox_EditEmployee_Password.TabIndex = 20;
@@ -80,7 +86,7 @@ namespace ChapeauUI
             // textBox_EditEmployee_Username
             // 
             this.textBox_EditEmployee_Username.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_EditEmployee_Username.Location = new System.Drawing.Point(657, 246);
+            this.textBox_EditEmployee_Username.Location = new System.Drawing.Point(675, 352);
             this.textBox_EditEmployee_Username.Name = "textBox_EditEmployee_Username";
             this.textBox_EditEmployee_Username.Size = new System.Drawing.Size(273, 43);
             this.textBox_EditEmployee_Username.TabIndex = 19;
@@ -88,7 +94,7 @@ namespace ChapeauUI
             // textBox_EditEmployee_LastName
             // 
             this.textBox_EditEmployee_LastName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_EditEmployee_LastName.Location = new System.Drawing.Point(657, 190);
+            this.textBox_EditEmployee_LastName.Location = new System.Drawing.Point(675, 296);
             this.textBox_EditEmployee_LastName.Name = "textBox_EditEmployee_LastName";
             this.textBox_EditEmployee_LastName.Size = new System.Drawing.Size(273, 43);
             this.textBox_EditEmployee_LastName.TabIndex = 18;
@@ -96,7 +102,7 @@ namespace ChapeauUI
             // textBox_EditEmployee_FirstName
             // 
             this.textBox_EditEmployee_FirstName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_EditEmployee_FirstName.Location = new System.Drawing.Point(657, 131);
+            this.textBox_EditEmployee_FirstName.Location = new System.Drawing.Point(675, 237);
             this.textBox_EditEmployee_FirstName.Name = "textBox_EditEmployee_FirstName";
             this.textBox_EditEmployee_FirstName.Size = new System.Drawing.Size(273, 43);
             this.textBox_EditEmployee_FirstName.TabIndex = 17;
@@ -108,7 +114,7 @@ namespace ChapeauUI
             this.groupBox_EditEmployee_Occupation.Controls.Add(this.radioButton_EditEmployee_Waiter);
             this.groupBox_EditEmployee_Occupation.Controls.Add(this.radioButton_EditEmployee_Chef);
             this.groupBox_EditEmployee_Occupation.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_EditEmployee_Occupation.Location = new System.Drawing.Point(499, 355);
+            this.groupBox_EditEmployee_Occupation.Location = new System.Drawing.Point(517, 461);
             this.groupBox_EditEmployee_Occupation.Name = "groupBox_EditEmployee_Occupation";
             this.groupBox_EditEmployee_Occupation.Size = new System.Drawing.Size(431, 167);
             this.groupBox_EditEmployee_Occupation.TabIndex = 16;
@@ -158,7 +164,7 @@ namespace ChapeauUI
             // 
             this.label_EditEmployee_Password.AutoSize = true;
             this.label_EditEmployee_Password.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_EditEmployee_Password.Location = new System.Drawing.Point(499, 299);
+            this.label_EditEmployee_Password.Location = new System.Drawing.Point(517, 405);
             this.label_EditEmployee_Password.Name = "label_EditEmployee_Password";
             this.label_EditEmployee_Password.Size = new System.Drawing.Size(128, 37);
             this.label_EditEmployee_Password.TabIndex = 15;
@@ -168,7 +174,7 @@ namespace ChapeauUI
             // 
             this.label_EditEmploye_Username.AutoSize = true;
             this.label_EditEmploye_Username.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_EditEmploye_Username.Location = new System.Drawing.Point(499, 246);
+            this.label_EditEmploye_Username.Location = new System.Drawing.Point(517, 352);
             this.label_EditEmploye_Username.Name = "label_EditEmploye_Username";
             this.label_EditEmploye_Username.Size = new System.Drawing.Size(136, 37);
             this.label_EditEmploye_Username.TabIndex = 14;
@@ -178,7 +184,7 @@ namespace ChapeauUI
             // 
             this.label_EditEmployee_LastName.AutoSize = true;
             this.label_EditEmployee_LastName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_EditEmployee_LastName.Location = new System.Drawing.Point(499, 190);
+            this.label_EditEmployee_LastName.Location = new System.Drawing.Point(517, 296);
             this.label_EditEmployee_LastName.Name = "label_EditEmployee_LastName";
             this.label_EditEmployee_LastName.Size = new System.Drawing.Size(142, 37);
             this.label_EditEmployee_LastName.TabIndex = 13;
@@ -188,17 +194,52 @@ namespace ChapeauUI
             // 
             this.label_EditEmployee_FirstName.AutoSize = true;
             this.label_EditEmployee_FirstName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_EditEmployee_FirstName.Location = new System.Drawing.Point(499, 131);
+            this.label_EditEmployee_FirstName.Location = new System.Drawing.Point(517, 237);
             this.label_EditEmployee_FirstName.Name = "label_EditEmployee_FirstName";
             this.label_EditEmployee_FirstName.Size = new System.Drawing.Size(144, 37);
             this.label_EditEmployee_FirstName.TabIndex = 12;
             this.label_EditEmployee_FirstName.Text = "First Name";
+            // 
+            // label_managerName
+            // 
+            this.label_managerName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_managerName.ForeColor = System.Drawing.Color.Black;
+            this.label_managerName.Location = new System.Drawing.Point(1187, 9);
+            this.label_managerName.Name = "label_managerName";
+            this.label_managerName.Size = new System.Drawing.Size(223, 88);
+            this.label_managerName.TabIndex = 14;
+            this.label_managerName.Text = "label1";
+            this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(616, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label_managerName);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1422, 99);
+            this.panel1.TabIndex = 23;
             // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 1055);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_EditEmployee);
             this.Controls.Add(this.textBox_EditEmployee_Password);
@@ -214,6 +255,8 @@ namespace ChapeauUI
             this.Text = "EditEmployee";
             this.groupBox_EditEmployee_Occupation.ResumeLayout(false);
             this.groupBox_EditEmployee_Occupation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +279,8 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_EditEmploye_Username;
         private System.Windows.Forms.Label label_EditEmployee_LastName;
         private System.Windows.Forms.Label label_EditEmployee_FirstName;
+        private System.Windows.Forms.Label label_managerName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

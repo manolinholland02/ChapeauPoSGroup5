@@ -16,6 +16,9 @@ namespace ChapeauUI
     {
         private MenuItemService _menuItemService;
         private Employee _manager;
+        private MessageBoxButtons messageBoxButtons;
+        private DialogResult result;
+        private string _operation = "AddMenuItem";
         public AddMenuItem(Employee manager)
         {
             InitializeComponent();
@@ -30,6 +33,7 @@ namespace ChapeauUI
             textBox_Menu_Time_Seconds.Text = "00";
             _menuItemService = new MenuItemService();
             _manager = manager;
+            messageBoxButtons = MessageBoxButtons.YesNo;
 
         }
 
@@ -154,8 +158,9 @@ namespace ChapeauUI
                     MenuItemCategory = menuItemCategory,
                     AveragePreparationTime = AverageTime
                 };
-                _menuItemService.AddMenuItem(item);
-                OpenManagerViewMenu();
+
+                ManagerConformation conformation = new ManagerConformation(_manager, _operation, item);
+                conformation.Show();
             }
             catch (Exception _exception)
             {
@@ -170,6 +175,19 @@ namespace ChapeauUI
             ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
             viewMenu.Show();
             this.Hide();
+        }
+
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }

@@ -220,6 +220,7 @@ namespace ChapeauUI
             this.label_managerName.TabIndex = 14;
             this.label_managerName.Text = "label1";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
             // 
             // pictureBox1
             // 
