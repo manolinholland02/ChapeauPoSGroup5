@@ -23,41 +23,49 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // get password & username from user
-            string username = txtUsername.Text;
-            int password = int.Parse(txtPassword.Text);
-            // open the corresponding screens depending on the type of employee
-            EmployeeService employeeService = new EmployeeService();
-            if (employeeService.AccountExists(username, password))
+            try 
             {
-                Employee employee = employeeService.GetEmployee(username);
+                // get password & username from user
+                string username = txtUsername.Text;
+                int password = int.Parse(txtPassword.Text);
+                // open the corresponding screens depending on the type of employee
+                EmployeeService employeeService = new EmployeeService();
+                if (employeeService.AccountExists(username, password))
+                {
+                    Employee employee = employeeService.GetEmployee(username);
 
-                // 1) employee type = manager -> Open ManagerViewForm
-                if (employee.EmployeeType == EmployeeType.manager)
-                {
-                    this.Close();
-                    ManagerViewMenu managerView = new ManagerViewMenu();
-                    managerView.Show();
+                    // 1) employee type = manager -> Open ManagerViewForm
+                    if (employee.EmployeeType == EmployeeType.manager)
+                    {
+                        this.Close();
+                        ManagerViewMenu managerView = new ManagerViewMenu();
+                        managerView.Show();
+                    }
+                    else if (employee.EmployeeType == EmployeeType.waiter)
+                    // 2) employee type = waiter -> Open RestaurantOverview
+                    {
+                        this.Hide();
+                        RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
+                        restaurantOverview.Show();
+                    }
+                    // 3) employee type = chef/barman -> Open KitchenBarView
+                    else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
+                    {
+                        this.Close();
+                        KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
+                        kitchenBarView.Show();
+                    }
                 }
-                else if (employee.EmployeeType == EmployeeType.waiter)
-                // 2) employee type = waiter -> Open RestaurantOverview
+                else
                 {
-                    this.Hide();
-                    RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
-                    restaurantOverview.Show();
-                }
-                // 3) employee type = chef/barman -> Open KitchenBarView
-                else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
-                {
-                    this.Close();
-                    KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
-                    kitchenBarView.Show();
+                    MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Console.WriteLine(ex);
             }
+            
         }
 
     }
