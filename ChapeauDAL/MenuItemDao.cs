@@ -26,6 +26,21 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<MenuItem> GetMenuItemByID(int id)
+        {
+            string query = @"
+            SELECT [menuItemId],
+            [menuItemName],
+            [menuItemPrice],
+            [isFoodOrDrink],
+            [menuItemStock],
+            [menuItemType],
+            [menuItemCategory],
+            [averagePreparationTime]
+            FROM [dbo].[MenuItems] WHERE [menuItemId] = @Id";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Id", id) };
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
         private bool CheckMenuType(Object value)
         {
             if (value.ToString() == "food") return true;

@@ -55,7 +55,7 @@ namespace ChapeauUI
 
         private Button[] AddButtonsToList()
         {
-            Button[] buttonArray = new Button[10] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10};
+            Button[] buttonArray = new Button[10] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10 };
 
             return buttonArray;
         }

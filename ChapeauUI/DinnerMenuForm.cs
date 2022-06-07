@@ -96,7 +96,6 @@ namespace ChapeauUI
 
             }
         }
-
         private void IncreaseQuantityOfItem(OrderItem selectedOrderItem)
         {
             foreach (OrderItem orderItem in _allDinnerOrderItems)
@@ -139,6 +138,10 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 listView.Items.Add(item);
                 listView.FullRowSelect = true;
+            }
+            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+            {
+                listView.Items[i].BackColor = Color.AliceBlue;
             }
         }
 
