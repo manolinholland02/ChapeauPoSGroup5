@@ -21,6 +21,10 @@ namespace ChapeauUI
         TableService tableService;
         private MessageBoxButtons msgBoxButtons;
         private DialogResult result;
+        private OrderItemService orderItemService;
+        private Order order;
+        private OrderService orderService;
+        private ChoosingMenuForm choosingMenuForm;
 
         public RestaurantOverview(Employee employee)
         {
@@ -29,9 +33,13 @@ namespace ChapeauUI
             lblName.Text = $"{this.employee.EmployeeFirstName} {this.employee.EmployeeLastName}";
             msgBoxButtons = MessageBoxButtons.YesNo;
             tableService = new TableService();
+            orderItemService = new OrderItemService();
             tables = LoadTables();
             buttons = AddButtonsToList();
             LoadButtons(tables, AddButtonsToList());
+            pnlDisplayOrderItems.Visible = false;
+            orderService = new OrderService();
+            orderItemsListView.FullRowSelect = true;
         }
 
         private Table[] LoadTables()
@@ -66,6 +74,8 @@ namespace ChapeauUI
         {
             if (table.TableStatus == TableStatus.free)
             {
+                if (pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = false;
+
                 OccupyDialogBox occupyDialogBox = OccupyDialogBox.GetInstance();
                 if (occupyDialogBox.ShowDialog() == DialogResult.Yes)
                 {
@@ -76,6 +86,8 @@ namespace ChapeauUI
             }
             else if (table.TableStatus == TableStatus.occupied)
             {
+                if (pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = false;
+
                 StartOrderDialogBox orderDialogBox = StartOrderDialogBox.GetInstance();
                 if (orderDialogBox.ShowDialog() == DialogResult.Yes)
                 {
@@ -92,20 +104,19 @@ namespace ChapeauUI
                     paymentService.InsertPayment(payment);
                     payment = paymentService.GetLastPayment(table.TableId);
 
-                    Order order = new Order()
+                    order = new Order()
                     {
                         WaiterId = employee.EmployeeID,
                         TableId = table.TableId,
                         PaymentId = payment.PaymentId,
                         IsPaid = false
                     };
-                    OrderService orderService = new OrderService();
                     orderService.InsertNewOrder(order);
                     order = orderService.GetLastOrder(table.TableId);
 
                     LoadButtons(tables, buttons);
                     this.Hide();
-                    ChoosingMenuForm choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
+                    choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
                     choosingMenuForm.Show();
                 }
                 else if (orderDialogBox.ShowDialog() == DialogResult.OK)
@@ -113,6 +124,38 @@ namespace ChapeauUI
                     table.TableStatus = TableStatus.free;
                     tableService.UpdateTableStatus(table);
                     LoadButtons(tables, buttons);
+                }
+            }
+            else if (table.TableStatus == TableStatus.haveOrder)
+            {
+                if (!pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = true;
+                //else pnlDisplayOrderItems.Visible = false;
+
+                orderItemsListView.Items.Clear();
+                lblTable.Text = "Orders of Table " + table.TableId.ToString();
+
+                order = orderService.GetLastOrder(table.TableId);
+                List<OrderItem> orderItems = orderItemService.GetAllOrders(order.OrderId);
+                if (orderItems.Count == 0)
+                {
+                    btnDeleteOrder.Visible = true;
+                    btnAddOrderItems.Visible = true;
+                    btnSetItemAsServed.Visible = false;
+                    btnPay.Visible = false;
+                }
+                else
+                {
+                    btnDeleteOrder.Visible = false;
+                    btnSetItemAsServed.Visible = true;
+                    btnPay.Visible = true;
+                    btnAddOrderItems.Visible = true;
+                }
+
+                foreach(OrderItem orderItem in orderItems)
+                {
+                    string[] output = { orderItem.OrderItemID.ToString(), orderItem.OrderDesign, orderItem.Status.ToString() };
+                    ListViewItem item = new ListViewItem(output);
+                    orderItemsListView.Items.Add(item);
                 }
             }
 
@@ -189,6 +232,69 @@ namespace ChapeauUI
                 login.Show();
                 this.Close();
             }
+        }
+
+        private List<OrderItem> GetSelectedOrderItemsFromListView()
+        {
+            List<OrderItem> selectedOrderItems = new List<OrderItem>();
+            foreach (ListViewItem item in orderItemsListView.SelectedItems)
+            {
+                selectedOrderItems.Add(orderItemService.GetSpecificOrder(int.Parse(item.SubItems[0].Text)));
+            }
+
+            return selectedOrderItems;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteOrder_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show($"Do you want to free table {table.TableId}?", "Conformation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                orderService.DeleteOrder(order.OrderId);
+                table.TableStatus = TableStatus.free;
+                tableService.UpdateTableStatus(table);
+                pnlDisplayOrderItems.Visible = false;
+                LoadButtons(tables, buttons);
+            }
+        }
+
+        private void btnSetItemAsServed_Click(object sender, EventArgs e)
+        {
+            if(orderItemsListView.SelectedItems.Count == 0) MessageBox.Show($"No items have been selected.", "Please select an item first", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                DialogResult result = MessageBox.Show($"Do you want to set {orderItemsListView.SelectedItems.Count} items of table {table.TableId} as served?", "Conformation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    List<OrderItem> orderItems = GetSelectedOrderItemsFromListView();
+                    foreach (OrderItem orderItem in orderItems)
+                    {
+                        if (orderItem.Status == Status.ready)
+                        {
+                            orderItemService.UpdateOrderItemStatus(orderItem.OrderItemID, Status.finished);
+                            orderItemsListView.SelectedItems.Clear();
+                            CheckTableStatus(table);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Only ready items in that table can be checked as served.", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnAddOrderItems_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
+            choosingMenuForm.Show();
         }
     }
 }

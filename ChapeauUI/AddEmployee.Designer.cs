@@ -103,9 +103,9 @@ namespace ChapeauUI
             // 
             // radioButton_AddEmployee_Bartender
             // 
-            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(175, 37);
+            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(175, 33);
             this.radioButton_AddEmployee_Bartender.Name = "radioButton_AddEmployee_Bartender";
-            this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(117, 24);
+            this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(117, 42);
             this.radioButton_AddEmployee_Bartender.TabIndex = 8;
             this.radioButton_AddEmployee_Bartender.Text = "Barman";
             this.radioButton_AddEmployee_Bartender.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@ namespace ChapeauUI
             this.textBox_AddEmployee_FirstName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_AddEmployee_FirstName.Location = new System.Drawing.Point(188, 105);
             this.textBox_AddEmployee_FirstName.Name = "textBox_AddEmployee_FirstName";
-            this.textBox_AddEmployee_FirstName.Size = new System.Drawing.Size(125, 38);
+            this.textBox_AddEmployee_FirstName.Size = new System.Drawing.Size(273, 38);
             this.textBox_AddEmployee_FirstName.TabIndex = 6;
             // 
             // textBox_AddEmployee_LastName
@@ -153,7 +153,7 @@ namespace ChapeauUI
             this.textBox_AddEmployee_LastName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_AddEmployee_LastName.Location = new System.Drawing.Point(188, 149);
             this.textBox_AddEmployee_LastName.Name = "textBox_AddEmployee_LastName";
-            this.textBox_AddEmployee_LastName.Size = new System.Drawing.Size(125, 38);
+            this.textBox_AddEmployee_LastName.Size = new System.Drawing.Size(273, 38);
             this.textBox_AddEmployee_LastName.TabIndex = 7;
             // 
             // textBox_AddEmployee_Username
@@ -161,7 +161,7 @@ namespace ChapeauUI
             this.textBox_AddEmployee_Username.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_AddEmployee_Username.Location = new System.Drawing.Point(188, 195);
             this.textBox_AddEmployee_Username.Name = "textBox_AddEmployee_Username";
-            this.textBox_AddEmployee_Username.Size = new System.Drawing.Size(125, 38);
+            this.textBox_AddEmployee_Username.Size = new System.Drawing.Size(273, 38);
             this.textBox_AddEmployee_Username.TabIndex = 8;
             // 
             // textBox_AddEmployee_Password
@@ -169,13 +169,13 @@ namespace ChapeauUI
             this.textBox_AddEmployee_Password.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_AddEmployee_Password.Location = new System.Drawing.Point(188, 235);
             this.textBox_AddEmployee_Password.Name = "textBox_AddEmployee_Password";
-            this.textBox_AddEmployee_Password.Size = new System.Drawing.Size(125, 38);
+            this.textBox_AddEmployee_Password.Size = new System.Drawing.Size(273, 38);
             this.textBox_AddEmployee_Password.TabIndex = 9;
             // 
             // button_AddEmployee
             // 
             this.button_AddEmployee.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_AddEmployee.Location = new System.Drawing.Point(985, 105);
+            this.button_AddEmployee.Location = new System.Drawing.Point(37, 501);
             this.button_AddEmployee.Name = "button_AddEmployee";
             this.button_AddEmployee.Size = new System.Drawing.Size(150, 80);
             this.button_AddEmployee.TabIndex = 10;
@@ -186,7 +186,7 @@ namespace ChapeauUI
             // button_Cancel
             // 
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Cancel.Location = new System.Drawing.Point(985, 223);
+            this.button_Cancel.Location = new System.Drawing.Point(311, 501);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(150, 80);
             this.button_Cancel.TabIndex = 11;
@@ -212,6 +212,7 @@ namespace ChapeauUI
             this.Controls.Add(this.label_AddEmployee_FirstName);
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
+            this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.groupBox_AddEmployee_Occupation.ResumeLayout(false);
             this.groupBox_AddEmployee_Occupation.PerformLayout();
             this.ResumeLayout(false);

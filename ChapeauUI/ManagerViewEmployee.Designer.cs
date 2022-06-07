@@ -54,13 +54,13 @@ namespace ChapeauUI
             this.EmployeeUsername,
             this.EmployeePassword,
             this.EmployeeType});
-            this.listView_Employees_Management.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView_Employees_Management.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_Employees_Management.FullRowSelect = true;
             this.listView_Employees_Management.HideSelection = false;
-            this.listView_Employees_Management.Location = new System.Drawing.Point(69, 240);
+            this.listView_Employees_Management.Location = new System.Drawing.Point(12, 205);
             this.listView_Employees_Management.MultiSelect = false;
             this.listView_Employees_Management.Name = "listView_Employees_Management";
-            this.listView_Employees_Management.Size = new System.Drawing.Size(1200, 420);
+            this.listView_Employees_Management.Size = new System.Drawing.Size(1398, 420);
             this.listView_Employees_Management.TabIndex = 0;
             this.listView_Employees_Management.UseCompatibleStateImageBehavior = false;
             this.listView_Employees_Management.View = System.Windows.Forms.View.Details;
@@ -74,22 +74,22 @@ namespace ChapeauUI
             // EmployeeFirstName
             // 
             this.EmployeeFirstName.Text = "First Name";
-            this.EmployeeFirstName.Width = 240;
+            this.EmployeeFirstName.Width = 300;
             // 
             // EmployeeLastName
             // 
             this.EmployeeLastName.Text = "Last Name";
-            this.EmployeeLastName.Width = 240;
+            this.EmployeeLastName.Width = 300;
             // 
             // EmployeeUsername
             // 
             this.EmployeeUsername.Text = "Username";
-            this.EmployeeUsername.Width = 240;
+            this.EmployeeUsername.Width = 300;
             // 
             // EmployeePassword
             // 
             this.EmployeePassword.Text = "Password";
-            this.EmployeePassword.Width = 240;
+            this.EmployeePassword.Width = 300;
             // 
             // EmployeeType
             // 
@@ -151,7 +151,7 @@ namespace ChapeauUI
             this.toolStripMenuItem_Menu.Size = new System.Drawing.Size(60, 24);
             this.toolStripMenuItem_Menu.Text = "Menu";
             // 
-            // ManagerView
+            // ManagerViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +161,7 @@ namespace ChapeauUI
             this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.listView_Employees_Management);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "ManagerView";
+            this.Name = "ManagerViewEmployee";
             this.Text = "ManagerView";
             this.Load += new System.EventHandler(this.ManagerView_Load);
             this.menuStrip1.ResumeLayout(false);

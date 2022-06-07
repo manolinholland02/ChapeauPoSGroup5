@@ -16,8 +16,7 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-
-        private List<Employee> ReadTables(DataTable dataTable)
+        public List<Employee> ReadTables(DataTable dataTable)
         {
             List<Employee> employees = new List<Employee>();
             foreach (DataRow dr in dataTable.Rows)

@@ -112,5 +112,57 @@ namespace ChapeauDAL
             string query = $"UPDATE [dbo].[MenuItems] SET menuItemName = @Name, menuItemPrice = @Price, isFoodOrDrink = @FoodOrDrink, menuItemStock = @Stock, menuItemType = @Type, menuItemCategory = @Category, averagePreparationTime = @AverageTime WHERE menuItemId = @Id";
             ExecuteEditQuery(query, GetParametersForMenuItem(menuItem));
         }
+        public List<string> GetFoodCategory()
+        {
+            string query = "SELECT DISTINCT menuItemCategory FROM [dbo].[MenuItems] WHERE isFoodOrDrink = 'food';";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetCategory(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public List<string> GetDrinkCategory()
+        {
+            string query = "SELECT DISTINCT menuItemCategory FROM [dbo].[MenuItems] WHERE isFoodOrDrink = 'drink';";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetCategory(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public List<string> GetFoodType()
+        {
+            string query = "SELECT DISTINCT menuItemType FROM [dbo].[MenuItems] WHERE isFoodOrDrink = 'food';";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetType(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public List<string> GetDrinkType()
+        {
+            string query = "SELECT DISTINCT menuItemType FROM [dbo].[MenuItems] WHERE isFoodOrDrink = 'drink';";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetType(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private List<string> GetCategory(DataTable dataTable)
+        {
+            List<string> categories = new List<string>();
+            string menuItemCategory = "";
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+
+                menuItemCategory = dr["menuItemCategory"].ToString();
+                categories.Add(menuItemCategory);
+
+            }
+            return categories;
+        }
+        private List<string> GetType(DataTable dataTable)
+        {
+            List<string> types = new List<string>();
+            string menuItemType = "";
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+
+                menuItemType = dr["menuItemType"].ToString();
+                types.Add(menuItemType);
+
+            }
+            return types;
+        }
     }
 }
