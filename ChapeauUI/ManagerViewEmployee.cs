@@ -32,6 +32,8 @@ namespace ChapeauUI
             _manager = manager;
             label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             messageBoxButtons = MessageBoxButtons.YesNo;
+
+            button_Add_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
         }
 
         private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,19 +42,27 @@ namespace ChapeauUI
             {
                 button_Delete_Employee.Enabled = true;
                 button_Edit_Employee.Enabled = true;
+                button_Edit_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+                button_Delete_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+                
             }
             else
             {
                 button_Edit_Employee.Enabled = false;
                 button_Delete_Employee.Enabled = false;
+                button_Edit_Employee.BackColor = Color.Gainsboro;
+                button_Delete_Employee.BackColor = Color.Gainsboro;
             }
+            
+                
+           
         }
 
         private void button_Delete_Employee_Click(object sender, EventArgs e)
         {
             var itemToDelete = int.Parse(listView_Employees_Management.SelectedItems[0].SubItems[0].Text);
             ManagerConformation managerConformation = new ManagerConformation(_manager, operation, itemToDelete,this);
-            this.Hide();
+            managerConformation.Show();
             //PrintEmployees();
 
         }

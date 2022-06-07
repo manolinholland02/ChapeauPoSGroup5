@@ -103,18 +103,19 @@ namespace ChapeauUI
             // 
             // button_Add_Employee
             // 
+            this.button_Add_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Add_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Add_Employee.Location = new System.Drawing.Point(69, 764);
             this.button_Add_Employee.Name = "button_Add_Employee";
             this.button_Add_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Add_Employee.TabIndex = 1;
             this.button_Add_Employee.Text = "Add Employee";
-            this.button_Add_Employee.UseVisualStyleBackColor = true;
+            this.button_Add_Employee.UseVisualStyleBackColor = false;
             this.button_Add_Employee.Click += new System.EventHandler(this.button_Add_Employee_Click);
             // 
             // button_Delete_Employee
             // 
-            this.button_Delete_Employee.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button_Delete_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Delete_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Delete_Employee.ForeColor = System.Drawing.Color.Black;
             this.button_Delete_Employee.Location = new System.Drawing.Point(1131, 764);
@@ -127,7 +128,7 @@ namespace ChapeauUI
             // 
             // button_Edit_Employee
             // 
-            this.button_Edit_Employee.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button_Edit_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Edit_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Edit_Employee.ForeColor = System.Drawing.Color.Black;
             this.button_Edit_Employee.Location = new System.Drawing.Point(625, 764);
@@ -140,25 +141,27 @@ namespace ChapeauUI
             // 
             // button_Employees_Form
             // 
+            this.button_Employees_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Employees_Form.Enabled = false;
-            this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Employees_Form.Location = new System.Drawing.Point(29, 123);
             this.button_Employees_Form.Name = "button_Employees_Form";
             this.button_Employees_Form.Size = new System.Drawing.Size(135, 50);
             this.button_Employees_Form.TabIndex = 4;
             this.button_Employees_Form.Text = "Employees";
-            this.button_Employees_Form.UseVisualStyleBackColor = true;
+            this.button_Employees_Form.UseVisualStyleBackColor = false;
             // 
             // button_Menu_Form
             // 
+            this.button_Menu_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Menu_Form.Location = new System.Drawing.Point(150, 123);
             this.button_Menu_Form.Name = "button_Menu_Form";
             this.button_Menu_Form.Size = new System.Drawing.Size(135, 50);
             this.button_Menu_Form.TabIndex = 5;
             this.button_Menu_Form.Text = "Menu Items";
-            this.button_Menu_Form.UseVisualStyleBackColor = true;
+            this.button_Menu_Form.UseVisualStyleBackColor = false;
             this.button_Menu_Form.Click += new System.EventHandler(this.button_Menu_Form_Click);
             // 
             // panel1

@@ -189,24 +189,26 @@ namespace ChapeauUI
             // 
             // button_Add_MenuItem
             // 
+            this.button_Add_MenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Add_MenuItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Add_MenuItem.Location = new System.Drawing.Point(290, 803);
             this.button_Add_MenuItem.Name = "button_Add_MenuItem";
             this.button_Add_MenuItem.Size = new System.Drawing.Size(200, 85);
             this.button_Add_MenuItem.TabIndex = 11;
             this.button_Add_MenuItem.Text = "Add";
-            this.button_Add_MenuItem.UseVisualStyleBackColor = true;
+            this.button_Add_MenuItem.UseVisualStyleBackColor = false;
             this.button_Add_MenuItem.Click += new System.EventHandler(this.button_Add_MenuItem_Click);
             // 
             // button_Cancel
             // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Location = new System.Drawing.Point(900, 803);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(200, 85);
             this.button_Cancel.TabIndex = 12;
             this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // textBox_Menu_Time_Minutes
@@ -283,6 +285,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_points);

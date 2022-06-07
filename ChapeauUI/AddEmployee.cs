@@ -27,6 +27,7 @@ namespace ChapeauUI
             radioButton_AddEmployee_Manager.Checked = false;
             radioButton_AddEmployee_Waiter.Checked = false;
             _manager = manager;
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             messageBoxButtons = MessageBoxButtons.YesNo;
         }
 
@@ -100,9 +101,6 @@ namespace ChapeauUI
 
                     ManagerConformation conformation = new ManagerConformation(_manager, operation,employee,this);
                     conformation.Show();
-                    this.Hide();
-                    //employeeService.AddEmployee(employee);
-                    //OpenManagerViewEmoloyees();
                 }
             }
             catch (Exception _e)

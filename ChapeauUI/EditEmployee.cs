@@ -25,6 +25,7 @@ namespace ChapeauUI
             InitializeComponent();
             _EmployeeToEdit = employee;
             _manager = manager;
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
             textBox_EditEmployee_FirstName.Text = _EmployeeToEdit.EmployeeFirstName.ToString();
             textBox_EditEmployee_LastName.Text = _EmployeeToEdit.EmployeeLastName.ToString();
@@ -51,7 +52,8 @@ namespace ChapeauUI
 
         private void button_EditEmployee_Click(object sender, EventArgs e)
         {
-            
+
+            EmployeeService employeeService = new EmployeeService();
             _EmployeeToEdit.EmployeeFirstName = textBox_EditEmployee_FirstName.Text;
             _EmployeeToEdit.EmployeeLastName = textBox_EditEmployee_LastName.Text;
             _EmployeeToEdit.EmployeeUsername = textBox_EditEmployee_Username.Text;
@@ -71,13 +73,11 @@ namespace ChapeauUI
             {
                 _EmployeeToEdit.EmployeeType = EmployeeType.waiter;
             }
-            if(PasswordChecker(textBox_EditEmployee_Password.Text))
+            if (PasswordChecker(textBox_EditEmployee_Password.Text))
             {
-
                 _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
                 ManagerConformation conformation = new ManagerConformation(_manager, _operation, _EmployeeToEdit,this);
                 conformation.Show();
-                //this.Hide();
             }
             else
             {

@@ -56,24 +56,26 @@ namespace ChapeauUI
             // 
             // button_Proceed
             // 
+            this.button_Proceed.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Proceed.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Proceed.Location = new System.Drawing.Point(41, 240);
             this.button_Proceed.Name = "button_Proceed";
             this.button_Proceed.Size = new System.Drawing.Size(158, 54);
             this.button_Proceed.TabIndex = 2;
             this.button_Proceed.Text = "OK";
-            this.button_Proceed.UseVisualStyleBackColor = true;
+            this.button_Proceed.UseVisualStyleBackColor = false;
             this.button_Proceed.Click += new System.EventHandler(this.button_Proceed_Click);
             // 
             // button_Cancel
             // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Location = new System.Drawing.Point(282, 240);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(158, 54);
             this.button_Cancel.TabIndex = 3;
             this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // label_Error
@@ -90,6 +92,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(482, 328);
             this.Controls.Add(this.label_Error);
             this.Controls.Add(this.button_Cancel);

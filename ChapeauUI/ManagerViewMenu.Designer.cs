@@ -45,8 +45,8 @@ namespace ChapeauUI
             this.label_managerName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_Edit_Employee = new System.Windows.Forms.Button();
-            this.button_Delete_Employee = new System.Windows.Forms.Button();
+            this.button_Edit_MenuItem = new System.Windows.Forms.Button();
+            this.button_Delete_MenuItem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,7 +117,7 @@ namespace ChapeauUI
             // 
             // button_Add_Menu_Item
             // 
-            this.button_Add_Menu_Item.BackColor = System.Drawing.Color.White;
+            this.button_Add_Menu_Item.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Add_Menu_Item.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Add_Menu_Item.Location = new System.Drawing.Point(69, 764);
             this.button_Add_Menu_Item.Name = "button_Add_Menu_Item";
@@ -129,16 +129,18 @@ namespace ChapeauUI
             // 
             // button_Menu_Form
             // 
-            this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Menu_Form.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Menu_Form.Location = new System.Drawing.Point(162, 123);
             this.button_Menu_Form.Name = "button_Menu_Form";
             this.button_Menu_Form.Size = new System.Drawing.Size(135, 50);
             this.button_Menu_Form.TabIndex = 7;
             this.button_Menu_Form.Text = "Menu Items";
-            this.button_Menu_Form.UseVisualStyleBackColor = true;
+            this.button_Menu_Form.UseVisualStyleBackColor = false;
             // 
             // button_Employees_Form
             // 
+            this.button_Employees_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Employees_Form.Location = new System.Drawing.Point(29, 123);
@@ -146,7 +148,7 @@ namespace ChapeauUI
             this.button_Employees_Form.Size = new System.Drawing.Size(135, 50);
             this.button_Employees_Form.TabIndex = 6;
             this.button_Employees_Form.Text = "Employees";
-            this.button_Employees_Form.UseVisualStyleBackColor = true;
+            this.button_Employees_Form.UseVisualStyleBackColor = false;
             this.button_Employees_Form.Click += new System.EventHandler(this.button_Employees_Form_Click);
             // 
             // label_managerName
@@ -183,30 +185,31 @@ namespace ChapeauUI
             this.panel1.Size = new System.Drawing.Size(1422, 99);
             this.panel1.TabIndex = 8;
             // 
-            // button_Edit_Employee
+            // button_Edit_MenuItem
             // 
-            this.button_Edit_Employee.BackColor = System.Drawing.Color.Gainsboro;
-            this.button_Edit_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Edit_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Edit_Employee.Location = new System.Drawing.Point(625, 764);
-            this.button_Edit_Employee.Name = "button_Edit_Employee";
-            this.button_Edit_Employee.Size = new System.Drawing.Size(200, 85);
-            this.button_Edit_Employee.TabIndex = 10;
-            this.button_Edit_Employee.Text = "Edit";
-            this.button_Edit_Employee.UseVisualStyleBackColor = false;
-            this.button_Edit_Employee.Click += new System.EventHandler(this.button_Edit_Employee_Click);
+            this.button_Edit_MenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Edit_MenuItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Edit_MenuItem.ForeColor = System.Drawing.Color.Black;
+            this.button_Edit_MenuItem.Location = new System.Drawing.Point(625, 764);
+            this.button_Edit_MenuItem.Name = "button_Edit_MenuItem";
+            this.button_Edit_MenuItem.Size = new System.Drawing.Size(200, 85);
+            this.button_Edit_MenuItem.TabIndex = 10;
+            this.button_Edit_MenuItem.Text = "Edit";
+            this.button_Edit_MenuItem.UseVisualStyleBackColor = false;
+            this.button_Edit_MenuItem.Click += new System.EventHandler(this.button_Edit_MenuItem_Click);
             // 
-            // button_Delete_Employee
+            // button_Delete_MenuItem
             // 
-            this.button_Delete_Employee.BackColor = System.Drawing.Color.Gainsboro;
-            this.button_Delete_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Delete_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Delete_Employee.Location = new System.Drawing.Point(1131, 764);
-            this.button_Delete_Employee.Name = "button_Delete_Employee";
-            this.button_Delete_Employee.Size = new System.Drawing.Size(200, 85);
-            this.button_Delete_Employee.TabIndex = 9;
-            this.button_Delete_Employee.Text = "Delete";
-            this.button_Delete_Employee.UseVisualStyleBackColor = false;
+            this.button_Delete_MenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Delete_MenuItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Delete_MenuItem.ForeColor = System.Drawing.Color.Black;
+            this.button_Delete_MenuItem.Location = new System.Drawing.Point(1131, 764);
+            this.button_Delete_MenuItem.Name = "button_Delete_MenuItem";
+            this.button_Delete_MenuItem.Size = new System.Drawing.Size(200, 85);
+            this.button_Delete_MenuItem.TabIndex = 9;
+            this.button_Delete_MenuItem.Text = "Delete";
+            this.button_Delete_MenuItem.UseVisualStyleBackColor = false;
+            this.button_Delete_MenuItem.Click += new System.EventHandler(this.button_Delete_MenuItem_Click);
             // 
             // ManagerViewMenu
             // 
@@ -214,8 +217,8 @@ namespace ChapeauUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.Controls.Add(this.button_Edit_Employee);
-            this.Controls.Add(this.button_Delete_Employee);
+            this.Controls.Add(this.button_Edit_MenuItem);
+            this.Controls.Add(this.button_Delete_MenuItem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Menu_Form);
             this.Controls.Add(this.button_Employees_Form);
@@ -248,7 +251,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_managerName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button_Edit_Employee;
-        private System.Windows.Forms.Button button_Delete_Employee;
+        private System.Windows.Forms.Button button_Edit_MenuItem;
+        private System.Windows.Forms.Button button_Delete_MenuItem;
     }
 }

@@ -33,6 +33,7 @@ namespace ChapeauUI
             textBox_Menu_Time_Seconds.Text = "00";
             _menuItemService = new MenuItemService();
             _manager = manager;
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             messageBoxButtons = MessageBoxButtons.YesNo;
 
         }

@@ -55,24 +55,26 @@ namespace ChapeauUI
             // 
             // button_Cancel
             // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Location = new System.Drawing.Point(989, 713);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(219, 80);
             this.button_Cancel.TabIndex = 22;
             this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // button_EditEmployee
             // 
+            this.button_EditEmployee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_EditEmployee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_EditEmployee.Location = new System.Drawing.Point(195, 713);
             this.button_EditEmployee.Name = "button_EditEmployee";
             this.button_EditEmployee.Size = new System.Drawing.Size(219, 80);
             this.button_EditEmployee.TabIndex = 21;
             this.button_EditEmployee.Text = "Edit Employee";
-            this.button_EditEmployee.UseVisualStyleBackColor = true;
+            this.button_EditEmployee.UseVisualStyleBackColor = false;
             this.button_EditEmployee.Click += new System.EventHandler(this.button_EditEmployee_Click);
             // 
             // textBox_EditEmployee_Password
@@ -238,6 +240,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 1055);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Cancel);

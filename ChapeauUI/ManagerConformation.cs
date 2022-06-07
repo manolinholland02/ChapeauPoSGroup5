@@ -63,6 +63,7 @@ namespace ChapeauUI
         private void button_Cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+            previousForm.Show();
         }
 
         private void button_Proceed_Click(object sender, EventArgs e)

@@ -19,6 +19,8 @@ namespace ChapeauUI
         private Employee _manager;
         private MenuItemService _menuItemService;
         string _operation = "EditMenuItem";
+        private MessageBoxButtons messageBoxButtons;
+        private DialogResult result;
 
         public EditMenuItem(MenuItem item, Employee manager)
         {
@@ -26,6 +28,8 @@ namespace ChapeauUI
             _menuItemService = new MenuItemService();
             _ItemToEdit = item;
             _manager = manager;
+            messageBoxButtons = MessageBoxButtons.YesNo;
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             textBox_Menu_Name.Text = _ItemToEdit.MenuItemName;
             textBox_Menu_Price.Text = _ItemToEdit.MenuItemPrice.ToString("0.00");
             textBox_Menu_Stock.Text = _ItemToEdit.MenuItemStock.ToString();
@@ -161,6 +165,24 @@ namespace ChapeauUI
             ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
             viewMenu.Show();
             this.Hide();
+        }
+
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void EditMenuItem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

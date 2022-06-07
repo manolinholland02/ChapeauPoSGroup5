@@ -95,24 +95,26 @@ namespace ChapeauUI
             // 
             // button_Cancel
             // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Location = new System.Drawing.Point(911, 796);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(200, 85);
             this.button_Cancel.TabIndex = 29;
             this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // button_Edit_MenuItem
             // 
+            this.button_Edit_MenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Edit_MenuItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Edit_MenuItem.Location = new System.Drawing.Point(301, 796);
             this.button_Edit_MenuItem.Name = "button_Edit_MenuItem";
             this.button_Edit_MenuItem.Size = new System.Drawing.Size(200, 85);
             this.button_Edit_MenuItem.TabIndex = 28;
             this.button_Edit_MenuItem.Text = "Edit";
-            this.button_Edit_MenuItem.UseVisualStyleBackColor = true;
+            this.button_Edit_MenuItem.UseVisualStyleBackColor = false;
             this.button_Edit_MenuItem.Click += new System.EventHandler(this.button_Edit_MenuItem_Click);
             // 
             // textBox_Menu_Time_Hours
@@ -265,6 +267,7 @@ namespace ChapeauUI
             this.label_managerName.TabIndex = 14;
             this.label_managerName.Text = "label1";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
             // 
             // panel1
             // 
@@ -280,6 +283,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_points);
@@ -301,6 +305,7 @@ namespace ChapeauUI
             this.Controls.Add(this.label_menu_Item_Name);
             this.Name = "EditMenuItem";
             this.Text = "EditMenuItem";
+            this.Load += new System.EventHandler(this.EditMenuItem_Load);
             this.groupBox_Food_Or_Drink.ResumeLayout(false);
             this.groupBox_Food_Or_Drink.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

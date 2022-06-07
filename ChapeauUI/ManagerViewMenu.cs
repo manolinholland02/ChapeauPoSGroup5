@@ -19,6 +19,7 @@ namespace ChapeauUI
 
         private MessageBoxButtons messageBoxButtons;
         private DialogResult result;
+        string _operation = "DeleteMenuItem";
 
         public ManagerViewMenu(Employee manager)
         {
@@ -27,8 +28,8 @@ namespace ChapeauUI
             button_Menu_Form.BackColor = Color.DarkGray;
             button_Menu_Form.ForeColor = Color.Black;
             button_Add_Menu_Item.BackColor = ColorTranslator.FromHtml("#66CCFF");
-            button_Delete_Employee.Enabled = false;
-            button_Edit_Employee.Enabled = false;
+            button_Delete_MenuItem.Enabled = false;
+            button_Edit_MenuItem.Enabled = false;
             DisplayMenu();
             _manager = manager;
 
@@ -125,20 +126,21 @@ namespace ChapeauUI
         {
             if (listView_Menu_Management.SelectedItems.Count > 0)
             {
-                button_Delete_Employee.Enabled = true;
-                button_Edit_Employee.Enabled = true;
-                button_Edit_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
-                button_Delete_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+                button_Delete_MenuItem.Enabled = true;
+                button_Edit_MenuItem.Enabled = true;
+                button_Edit_MenuItem.BackColor = ColorTranslator.FromHtml("#66CCFF");
+                button_Delete_MenuItem.BackColor = ColorTranslator.FromHtml("#66CCFF");
             }
             else
             {
-                button_Edit_Employee.Enabled = false;
-                button_Delete_Employee.Enabled = false;
+                button_Edit_MenuItem.Enabled = false;
+                button_Delete_MenuItem.Enabled = false;
             }
         }
 
-        private void button_Edit_Employee_Click(object sender, EventArgs e)
+        private void button_Edit_MenuItem_Click(object sender, EventArgs e)
         {
+            
             int itemToEditID = int.Parse(listView_Menu_Management.SelectedItems[0].SubItems[0].Text);
             MenuItemService service = new MenuItemService();
             List<MenuItem> items = service.GetMenuItems();
@@ -153,6 +155,12 @@ namespace ChapeauUI
             }
         }
 
+        private void button_Delete_MenuItem_Click(object sender, EventArgs e)
+        {
+            int itemToDelete = int.Parse(listView_Menu_Management.SelectedItems[0].SubItems[0].Text);
+            ManagerConformation managerConformation = new ManagerConformation(_manager, _operation, itemToDelete, this);
+            managerConformation.Show();
+        }
     }
 
 
