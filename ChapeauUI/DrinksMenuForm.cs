@@ -195,7 +195,9 @@ namespace ChapeauUI
 
         private void BackDrinksbtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            _choosingMenuForm.UpdateTotalTotalOrderCount();
+            _choosingMenuForm.Show();
         }
     }
 }

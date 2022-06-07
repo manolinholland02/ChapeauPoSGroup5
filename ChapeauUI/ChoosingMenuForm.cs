@@ -32,7 +32,7 @@ namespace ChapeauUI
             EmployeeNamelbl.Text = $"{this.waiter.EmployeeFirstName} {this.waiter.EmployeeLastName}";
             tableNumberlbl.Text = $"Table {tableID}";
             this.restaurantOverview = restaurantOverview;
-            this.orderOverview = new OrderOverviewForm(this.orderService, waiter, tableID, this);
+            this.orderOverview = new OrderOverviewForm(this.orderService, waiter, tableID, this, restaurantOverview);
             totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
         }
 
@@ -96,7 +96,7 @@ namespace ChapeauUI
                 LunchMenubtn.BackColor = Color.LightGray;
                 DinnerMenubtn.BackColor = Color.SkyBlue;
             }
-
+            DrinksMenubtn.BackColor = Color.SkyBlue;
         }
     }
 }

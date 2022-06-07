@@ -40,7 +40,7 @@ namespace ChapeauUI
             this.DeleteOrderbtn = new System.Windows.Forms.Button();
             this.PlaceOrderbtn = new System.Windows.Forms.Button();
             this.oderOverviewbackbtn = new System.Windows.Forms.Button();
-            this.OrderOverviewPaybtn = new System.Windows.Forms.Button();
+            this.TableOverviewbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OrderlistView
@@ -106,9 +106,9 @@ namespace ChapeauUI
             // 
             // DeleteOrderbtn
             // 
-            this.DeleteOrderbtn.Location = new System.Drawing.Point(400, 374);
+            this.DeleteOrderbtn.Location = new System.Drawing.Point(0, 494);
             this.DeleteOrderbtn.Name = "DeleteOrderbtn";
-            this.DeleteOrderbtn.Size = new System.Drawing.Size(128, 114);
+            this.DeleteOrderbtn.Size = new System.Drawing.Size(113, 81);
             this.DeleteOrderbtn.TabIndex = 3;
             this.DeleteOrderbtn.Text = "Delete Whole Order";
             this.DeleteOrderbtn.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@ namespace ChapeauUI
             // 
             // PlaceOrderbtn
             // 
-            this.PlaceOrderbtn.Location = new System.Drawing.Point(169, 551);
+            this.PlaceOrderbtn.Location = new System.Drawing.Point(173, 571);
             this.PlaceOrderbtn.Name = "PlaceOrderbtn";
             this.PlaceOrderbtn.Size = new System.Drawing.Size(200, 77);
             this.PlaceOrderbtn.TabIndex = 4;
@@ -132,25 +132,24 @@ namespace ChapeauUI
             this.oderOverviewbackbtn.TabIndex = 5;
             this.oderOverviewbackbtn.Text = "Back";
             this.oderOverviewbackbtn.UseVisualStyleBackColor = true;
-            //this.oderOverviewbackbtn.Click += new System.EventHandler(this.oderOverviewbackbtn_Click);
+            this.oderOverviewbackbtn.Click += new System.EventHandler(this.oderOverviewbackbtn_Click_1);
             // 
-            // OrderOverviewPaybtn
+            // TableOverviewbtn
             // 
-            this.OrderOverviewPaybtn.Location = new System.Drawing.Point(325, 663);
-            this.OrderOverviewPaybtn.Name = "OrderOverviewPaybtn";
-            this.OrderOverviewPaybtn.Size = new System.Drawing.Size(200, 77);
-            this.OrderOverviewPaybtn.TabIndex = 6;
-            this.OrderOverviewPaybtn.Text = "Pay";
-            this.OrderOverviewPaybtn.UseVisualStyleBackColor = true;
-            this.OrderOverviewPaybtn.Click += new System.EventHandler(this.OrderOverviewPaybtn_Click_1);
-
+            this.TableOverviewbtn.Location = new System.Drawing.Point(330, 663);
+            this.TableOverviewbtn.Name = "TableOverviewbtn";
+            this.TableOverviewbtn.Size = new System.Drawing.Size(197, 78);
+            this.TableOverviewbtn.TabIndex = 6;
+            this.TableOverviewbtn.Text = "Table View";
+            this.TableOverviewbtn.UseVisualStyleBackColor = true;
+            this.TableOverviewbtn.Click += new System.EventHandler(this.TableOverviewbtn_Click);
             // 
             // OrderOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
-            this.Controls.Add(this.OrderOverviewPaybtn);
+            this.Controls.Add(this.TableOverviewbtn);
             this.Controls.Add(this.oderOverviewbackbtn);
             this.Controls.Add(this.PlaceOrderbtn);
             this.Controls.Add(this.DeleteOrderbtn);
@@ -171,11 +170,11 @@ namespace ChapeauUI
         private System.Windows.Forms.Button DeleteOrderbtn;
         private System.Windows.Forms.Button PlaceOrderbtn;
         private System.Windows.Forms.Button oderOverviewbackbtn;
-        private System.Windows.Forms.Button OrderOverviewPaybtn;
         private System.Windows.Forms.ColumnHeader OrderItemName;
         private System.Windows.Forms.ColumnHeader OrderItemQuantity;
         private System.Windows.Forms.ColumnHeader OrderComment;
         private System.Windows.Forms.ColumnHeader orderItemId;
         private System.Windows.Forms.ColumnHeader menuItemStock;
+        private System.Windows.Forms.Button TableOverviewbtn;
     }
 }
