@@ -170,9 +170,9 @@ namespace ChapeauUI
             // 
             this.label_managerName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_managerName.ForeColor = System.Drawing.Color.Black;
-            this.label_managerName.Location = new System.Drawing.Point(1191, 0);
+            this.label_managerName.Location = new System.Drawing.Point(1187, 9);
             this.label_managerName.Name = "label_managerName";
-            this.label_managerName.Size = new System.Drawing.Size(219, 99);
+            this.label_managerName.Size = new System.Drawing.Size(223, 88);
             this.label_managerName.TabIndex = 14;
             this.label_managerName.Text = "label1";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;

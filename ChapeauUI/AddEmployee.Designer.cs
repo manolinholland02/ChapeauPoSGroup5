@@ -175,7 +175,7 @@ namespace ChapeauUI
             // button_AddEmployee
             // 
             this.button_AddEmployee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_AddEmployee.Location = new System.Drawing.Point(180, 569);
+            this.button_AddEmployee.Location = new System.Drawing.Point(177, 607);
             this.button_AddEmployee.Name = "button_AddEmployee";
             this.button_AddEmployee.Size = new System.Drawing.Size(219, 80);
             this.button_AddEmployee.TabIndex = 10;
@@ -186,7 +186,7 @@ namespace ChapeauUI
             // button_Cancel
             // 
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Cancel.Location = new System.Drawing.Point(984, 569);
+            this.button_Cancel.Location = new System.Drawing.Point(989, 607);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(187, 80);
             this.button_Cancel.TabIndex = 11;

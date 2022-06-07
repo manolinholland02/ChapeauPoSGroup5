@@ -59,26 +59,22 @@ namespace ChapeauUI
         {
             comboBox_Menu_Item_Type.Items.Clear();
             List<string> type = _menuItemService.GetDrinkType();
-            //add drink categories
-            foreach (string cat in type)
+            //add drink types
+            foreach (string t in type)
             {
-
-                comboBox_Menu_Item_Type.Items.Add(cat);
-                for (int i = 0; i <= comboBox_Menu_Item_Type.Items.Count - 1; i = (i + 2))
-                {
-                    comboBox_Menu_Item_Type.BackColor = Color.AliceBlue;
-                }
+                comboBox_Menu_Item_Type.Items.Add(t);
+                
             }
         }
         private void PrintFoodType()
         {
             comboBox_Menu_Item_Type.Items.Clear();
             List<string> type = _menuItemService.GetFoodType();
-            //add drink categories
-            foreach (string cat in type)
+            //add drink types
+            foreach (string t in type)
             {
 
-                comboBox_Menu_Item_Type.Items.Add(cat);
+                comboBox_Menu_Item_Type.Items.Add(t);
             }
         }
         private void radioButton_Menu_Item_Food_CheckedChanged(object sender, EventArgs e)

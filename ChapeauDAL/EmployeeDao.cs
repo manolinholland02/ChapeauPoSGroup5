@@ -111,6 +111,29 @@ namespace ChapeauDAL
             else return true;
         }
 
+        //checks if username is taken
+        public bool AccountExists(string username)
+        {
+            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username";
+            SqlParameter[] sqlParameters = { new SqlParameter("@username", username)};
+            DataTable table = ExecuteSelectQuery(query, sqlParameters);
+            DataRow[] dr = table.Select();
+            string count = dr[0]["Count"].ToString();
+            if (Convert.ToInt32(count) == 0) return false;
+            else return true;
+        }
+        //checks if username is taken
+        public bool AccountExists(int password)
+        {
+            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [userPassword] = @password";
+            SqlParameter[] sqlParameters = { new SqlParameter("@password", password) };
+            DataTable table = ExecuteSelectQuery(query, sqlParameters);
+            DataRow[] dr = table.Select();
+            string count = dr[0]["Count"].ToString();
+            if (Convert.ToInt32(count) == 0) return false;
+            else return true;
+        }
+
         // return the employee type of the employee 
         public string GetEmployeeType(string username)
         {
