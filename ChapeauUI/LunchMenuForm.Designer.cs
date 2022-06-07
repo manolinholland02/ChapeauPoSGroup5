@@ -72,12 +72,11 @@ namespace ChapeauUI
             this.LunchStartersListView.TabIndex = 1;
             this.LunchStartersListView.UseCompatibleStateImageBehavior = false;
             this.LunchStartersListView.View = System.Windows.Forms.View.Details;
-            this.LunchStartersListView.SelectedIndexChanged += new System.EventHandler(this.LunchStartersListView_SelectedIndexChanged);
             // 
             // lunchStarterId
             // 
             this.lunchStarterId.Text = "ID";
-            this.lunchStarterId.Width = 0;
+            this.lunchStarterId.Width = 50;
             // 
             // starterId
             // 
@@ -103,7 +102,6 @@ namespace ChapeauUI
             this.LunchMainListView.TabIndex = 2;
             this.LunchMainListView.UseCompatibleStateImageBehavior = false;
             this.LunchMainListView.View = System.Windows.Forms.View.Details;
-            this.LunchMainListView.SelectedIndexChanged += new System.EventHandler(this.LunchMainListView_SelectedIndexChanged);
             // 
             // lunchMainId
             // 

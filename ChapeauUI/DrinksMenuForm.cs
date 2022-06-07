@@ -159,6 +159,7 @@ namespace ChapeauUI
             if (SoftDrinksListView.SelectedItems.Count == 1)
             {
                 _selectedItem = SoftDrinksListView.SelectedItems[0];
+                UnselectOtherListViews(SoftDrinksListView);
             }
         }
 
@@ -167,6 +168,7 @@ namespace ChapeauUI
             if (CoffeeTeaListView.SelectedItems.Count == 1)
             {
                 _selectedItem = CoffeeTeaListView.SelectedItems[0];
+                UnselectOtherListViews(CoffeeTeaListView);
             }
         }
 
@@ -175,6 +177,7 @@ namespace ChapeauUI
             if (BeersListView.SelectedItems.Count == 1)
             {
                 _selectedItem = BeersListView.SelectedItems[0];
+                UnselectOtherListViews(BeersListView);
             }
         }
 
@@ -183,6 +186,7 @@ namespace ChapeauUI
             if (WineListView.SelectedItems.Count == 1)
             {
                 _selectedItem = WineListView.SelectedItems[0];
+                UnselectOtherListViews(WineListView);
             }
         }
         private void SpiritsListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,6 +194,7 @@ namespace ChapeauUI
             if (SpiritsListView.SelectedItems.Count == 1)
             {
                 _selectedItem = SpiritsListView.SelectedItems[0];
+                UnselectOtherListViews(SpiritsListView);
             }
         }
 
@@ -198,6 +203,59 @@ namespace ChapeauUI
             this.Hide();
             _choosingMenuForm.UpdateTotalTotalOrderCount();
             _choosingMenuForm.Show();
+        }
+
+        private void UnselectOtherListViews(ListView SelectedListView) // ensures only one item from all list views is selected at a time
+        {
+            foreach (ListView listView in _listViews)
+            {
+                if (listView != SelectedListView)
+                {
+                    listView.SelectedItems.Clear();
+                }
+            }
+        }
+
+        private void AddDrinksbtn_Click(object sender, EventArgs e)
+        {
+            if (_selectedItem == null)
+            {
+                MessageBox.Show("Please select an item first.");
+            }
+            else
+            {
+                OrderItem orderItem = new OrderItem()
+                {
+                    MenuItem = _orderItemService.GetCorrespondingMenuItem(int.Parse(_selectedItem.SubItems[1].Text)),
+                    Comment = DrinksCommentSection.Text,
+                    Quantity = 1,
+                    Order = _currentOrder.OrderId,
+                    Status = Status.preparing
+                };
+
+                if (IsItemAlreadyAdded(orderItem.MenuItem.MenuItemID))
+                {
+                    DialogResult result = MessageBox.Show($"{orderItem.MenuItem.MenuItemName} has already been added to the order once. Do you want to add it again?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        IncreaseQuantityOfItem(orderItem);
+                    }
+                }
+                else
+                {
+                    _allDrinkOrderItems.Add(orderItem);
+                    _orderOverview.AddOrderItemsToOrderOverview(orderItem);
+                    orderCountlbl.Text = $"Count : {_allDrinkOrderItems.Count}";
+                }
+
+                DrinksCommentSection.Clear();
+
+                foreach (ListView listView in _listViews)
+                {
+                    listView.SelectedItems.Clear();
+                }
+
+            }
         }
     }
 }

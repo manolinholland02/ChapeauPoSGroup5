@@ -157,6 +157,7 @@ namespace ChapeauUI
             if (DinnerStartersListView.SelectedItems.Count == 1)
             {
                 _selectedItem = DinnerStartersListView.SelectedItems[0];
+                UnselectOtherListViews(DinnerStartersListView);
             }
         }
 
@@ -165,6 +166,7 @@ namespace ChapeauUI
             if (DinnerEntremetsListView.SelectedItems.Count == 1)
             {
                 _selectedItem = DinnerEntremetsListView.SelectedItems[0];
+                UnselectOtherListViews(DinnerEntremetsListView);
             }
         }
 
@@ -173,6 +175,7 @@ namespace ChapeauUI
             if (DinnerMainListView.SelectedItems.Count == 1)
             {
                 _selectedItem = DinnerMainListView.SelectedItems[0];
+                UnselectOtherListViews(DinnerMainListView);
             }
         }
 
@@ -181,6 +184,18 @@ namespace ChapeauUI
             if (DinnerDessertsListView.SelectedItems.Count == 1)
             {
                 _selectedItem = DinnerDessertsListView.SelectedItems[0];
+                UnselectOtherListViews(DinnerDessertsListView);
+            }
+        }
+
+        private void UnselectOtherListViews(ListView SelectedListView) // ensures only one item from all list views is selected at a time
+        {
+            foreach (ListView listView in _listViews)
+            {
+                if (listView != SelectedListView)
+                {
+                    listView.SelectedItems.Clear();
+                }
             }
         }
     }
