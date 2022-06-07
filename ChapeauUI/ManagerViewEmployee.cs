@@ -51,7 +51,7 @@ namespace ChapeauUI
         private void button_Delete_Employee_Click(object sender, EventArgs e)
         {
             var itemToDelete = int.Parse(listView_Employees_Management.SelectedItems[0].SubItems[0].Text);
-            ManagerConformation managerConformation = new ManagerConformation(_manager, operation, itemToDelete);
+            ManagerConformation managerConformation = new ManagerConformation(_manager, operation, itemToDelete,this);
             this.Hide();
             //PrintEmployees();
 

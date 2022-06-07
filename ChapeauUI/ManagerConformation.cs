@@ -34,6 +34,7 @@ namespace ChapeauUI
             _employeeService = new EmployeeService();
             _employee = employee;
             previousForm = previous;
+            
         }
         public ManagerConformation(Employee manager, string operation, int Id, Form previous)
         {
@@ -45,6 +46,7 @@ namespace ChapeauUI
             _menuItemService = new MenuItemService();
             _employeeService = new EmployeeService();
             previousForm = previous;
+            _IdToDelete = Id;
         }
         public ManagerConformation(Employee manager, string operation, MenuItem menuItem, Form previous)
         {
@@ -74,8 +76,8 @@ namespace ChapeauUI
                     case "AddEmployee": AddEmployee(); break ;
                     case "DeleteEmployee": DeleteEmployee(); break; 
                     case "EditEmployee": EditEmployee(); break;
-                    case "AddMenuItem": break;
-                    case "EditMenuItem": break;
+                    case "AddMenuItem": AddMenuItem();  break;
+                    case "EditMenuItem": EditMenuItem(); break;
                     case "DeleteMenuItem":DeleteMenuItem(); break;
                 }
             }
@@ -104,11 +106,23 @@ namespace ChapeauUI
             OpenEmployeeForm();
             previousForm.Hide();
         }
+        private void AddMenuItem()
+        {
+            _menuItemService.AddMenuItem(_item);
+            previousForm.Hide();
+            OpenMenuItemForm();
+        }
         private void EditEmployee()
         {
             _employeeService.EditEmployee(_employee);
             previousForm.Hide();
             OpenEmployeeForm();
+        }
+        private void EditMenuItem()
+        {
+            _menuItemService.UpdateMenuItem(_item);
+            previousForm.Hide();
+            OpenMenuItemForm();
         }
         private void OpenMenuItemForm()
         {
@@ -116,7 +130,6 @@ namespace ChapeauUI
             viewMenu.Show();
             this.Hide();
         }
-
         private void OpenEmployeeForm()
         {
             ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);

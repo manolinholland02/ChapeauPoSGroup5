@@ -102,6 +102,7 @@ namespace ChapeauUI
             this.button_Cancel.TabIndex = 29;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // button_Edit_MenuItem
             // 
@@ -188,6 +189,7 @@ namespace ChapeauUI
             this.radioButton_Menu_Item_Drink.TabStop = true;
             this.radioButton_Menu_Item_Drink.Text = "Drink";
             this.radioButton_Menu_Item_Drink.UseVisualStyleBackColor = true;
+            this.radioButton_Menu_Item_Drink.CheckedChanged += new System.EventHandler(this.radioButton_Menu_Item_Drink_CheckedChanged);
             // 
             // radioButton_Menu_Item_Food
             // 
@@ -199,6 +201,7 @@ namespace ChapeauUI
             this.radioButton_Menu_Item_Food.TabStop = true;
             this.radioButton_Menu_Item_Food.Text = "Food";
             this.radioButton_Menu_Item_Food.UseVisualStyleBackColor = true;
+            this.radioButton_Menu_Item_Food.CheckedChanged += new System.EventHandler(this.radioButton_Menu_Item_Food_CheckedChanged);
             // 
             // label_Menu_Item_Stock
             // 

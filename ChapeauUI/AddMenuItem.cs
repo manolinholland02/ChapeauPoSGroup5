@@ -74,7 +74,7 @@ namespace ChapeauUI
         {
             comboBox_Menu_Item_Type.Items.Clear();
             List<string> type = _menuItemService.GetFoodType();
-            //add drink types
+            //add food types
             foreach (string t in type)
             {
 
@@ -83,6 +83,8 @@ namespace ChapeauUI
         }
         private void radioButton_Menu_Item_Food_CheckedChanged(object sender, EventArgs e)
         {
+            comboBox_Menu_Item_Category.Text = "Category";
+            comboBox_Menu_Item_Type.Text = "Type";
             comboBox_Menu_Item_Category.Visible = true;
             comboBox_Menu_Item_Type.Visible = true;
             PrintFoodCategory();
@@ -90,6 +92,9 @@ namespace ChapeauUI
         }
         private void radioButton_Menu_Item_Drink_CheckedChanged(object sender, EventArgs e)
         {
+
+            comboBox_Menu_Item_Category.Text = "Category";
+            comboBox_Menu_Item_Type.Text = "Type";
             comboBox_Menu_Item_Category.Visible = true;
             comboBox_Menu_Item_Type.Visible = true;
             PrintDrinkCategory();
@@ -117,16 +122,12 @@ namespace ChapeauUI
             try
             {
                 string Name = textBox_Menu_Name.Text;
-                int price = int.Parse(textBox_Menu_Price.Text);
+                decimal price = decimal.Parse(textBox_Menu_Price.Text);
                 int hours = int.Parse(textBox_Menu_Time_Hours.Text);
                 int minutes = int.Parse(textBox_Menu_Time_Minutes.Text);
                 int seconds = int.Parse(textBox_Menu_Time_Seconds.Text);
                 string AverageTime = $"{hours:00}:{minutes:00}:{seconds:00}";
                 int stock = int.Parse(textBox_Menu_Stock.Text);
-                while (comboBox_Menu_Item_Category.Text == "Category")
-                {
-                    MessageBox.Show("znaeh si");
-                }
                 if(comboBox_Menu_Item_Category.Text== "Category")
                 {
                     MessageBox.Show("Please select Category!");
@@ -135,32 +136,35 @@ namespace ChapeauUI
                 {
                     MessageBox.Show("Please select Type!");
                 }
-
-                MenuItemCategory menuItemCategory = (MenuItemCategory)Enum.Parse(typeof(MenuItemCategory), comboBox_Menu_Item_Category.SelectedItem.ToString());
-                MenuType menuType = (MenuType)Enum.Parse(typeof(MenuType), comboBox_Menu_Item_Type.SelectedItem.ToString());
-                bool isFood = false;
-                if (radioButton_Menu_Item_Drink.Checked== true)
+                else
                 {
-                    isFood = false;
+                    MenuItemCategory menuItemCategory = (MenuItemCategory)Enum.Parse(typeof(MenuItemCategory), comboBox_Menu_Item_Category.SelectedItem.ToString());
+                    MenuType menuType = (MenuType)Enum.Parse(typeof(MenuType), comboBox_Menu_Item_Type.SelectedItem.ToString());
+                    bool isFood = false;
+                    if (radioButton_Menu_Item_Drink.Checked == true)
+                    {
+                        isFood = false;
+                    }
+                    if (radioButton_Menu_Item_Food.Checked == true)
+                    {
+                        isFood = true;
+                    }
+
+                    MenuItem item = new MenuItem()
+                    {
+                        MenuItemName = Name,
+                        MenuItemPrice = price,
+                        isFood = isFood,
+                        MenuItemStock = stock,
+                        MenuItemType = menuType,
+                        MenuItemCategory = menuItemCategory,
+                        AveragePreparationTime = AverageTime
+                    };
+
+                    ManagerConformation conformation = new ManagerConformation(_manager, _operation, item, this);
+                    conformation.Show();
                 }
-                if (radioButton_Menu_Item_Food.Checked == true)
-                {
-                    isFood = true;
-                }
-
-                MenuItem item = new MenuItem()
-                {
-                    MenuItemName = Name,
-                    MenuItemPrice = price,
-                    isFood = isFood,
-                    MenuItemStock = stock,
-                    MenuItemType = menuType,
-                    MenuItemCategory = menuItemCategory,
-                    AveragePreparationTime = AverageTime
-                };
-
-                ManagerConformation conformation = new ManagerConformation(_manager, _operation, item);
-                conformation.Show();
+                
             }
             catch (Exception _exception)
             {
