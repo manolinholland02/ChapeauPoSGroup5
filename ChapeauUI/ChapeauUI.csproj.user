@@ -32,6 +32,9 @@
     <Compile Update="LunchMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ManagerConformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ManagerViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>

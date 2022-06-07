@@ -60,6 +60,10 @@ namespace ChapeauUI
             }
         }
 
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

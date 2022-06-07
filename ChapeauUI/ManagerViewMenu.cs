@@ -17,6 +17,9 @@ namespace ChapeauUI
     {
         private Employee _manager;
 
+        private MessageBoxButtons messageBoxButtons;
+        private DialogResult result;
+
         public ManagerViewMenu(Employee manager)
         {
             InitializeComponent();
@@ -25,6 +28,10 @@ namespace ChapeauUI
             button_Menu_Form.ForeColor = Color.Black;
             DisplayMenu();
             _manager = manager;
+
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            messageBoxButtons = MessageBoxButtons.YesNo;
+
         }
 
         private void DisplayMenu()
@@ -83,6 +90,19 @@ namespace ChapeauUI
             ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);
             viewEmployee.Show();
             this.Hide();
+        }
+
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 

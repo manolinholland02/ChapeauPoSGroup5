@@ -20,8 +20,6 @@ namespace ChapeauUI
         public EditEmployee(Employee employee, Employee manager)
         {
             InitializeComponent();
-            label_Password_Error.Text = "Password should contain 4 digits!";
-            label_Password_Error.Visible = false;
             _EmployeeToEdit = employee;
             _manager = manager;
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
@@ -81,7 +79,7 @@ namespace ChapeauUI
             }
             else
             {
-                label_Password_Error.Visible = true;
+                MessageBox.Show("Password must contaion 4 digits!");
             }
             
         }

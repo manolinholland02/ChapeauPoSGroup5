@@ -103,7 +103,7 @@ namespace ChapeauUI
             // 
             // radioButton_AddEmployee_Bartender
             // 
-            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(236, 41);
+            this.radioButton_AddEmployee_Bartender.Location = new System.Drawing.Point(236, 42);
             this.radioButton_AddEmployee_Bartender.Name = "radioButton_AddEmployee_Bartender";
             this.radioButton_AddEmployee_Bartender.Size = new System.Drawing.Size(144, 42);
             this.radioButton_AddEmployee_Bartender.TabIndex = 8;
@@ -186,9 +186,9 @@ namespace ChapeauUI
             // button_Cancel
             // 
             this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Cancel.Location = new System.Drawing.Point(989, 607);
+            this.button_Cancel.Location = new System.Drawing.Point(971, 607);
             this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(187, 80);
+            this.button_Cancel.Size = new System.Drawing.Size(219, 80);
             this.button_Cancel.TabIndex = 11;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;
