@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,11 @@ namespace ChapeauUI
         public ManagerViewMenu()
         {
             InitializeComponent();
-
+            button_Menu_Form.Enabled = false;
+            button_Menu_Form.BackColor = Color.DarkGray;
+            button_Menu_Form.ForeColor = Color.Black;
             DisplayMenu();
-            
+
         }
 
         private void DisplayMenu()
@@ -48,6 +51,10 @@ namespace ChapeauUI
                                         foorOrDrink, item.MenuItemPrice.ToString("€0.00"), item.MenuItemStock.ToString(), item.AveragePreparationTime.ToString() };
                     ListViewItem list = new ListViewItem(output);
                     listView_Menu_Management.Items.Add(list);
+                    for (int i = 0; i <= listView_Menu_Management.Items.Count - 1; i = (i + 2))
+                    {
+                        listView_Menu_Management.Items[i].BackColor = Color.AliceBlue;
+                    }
 
                 }
             }
@@ -66,6 +73,13 @@ namespace ChapeauUI
         {
             AddMenuItem addItem = new AddMenuItem();
             addItem.Show();
+            this.Hide();
+        }
+
+        private void button_Employees_Form_Click(object sender, EventArgs e)
+        {
+            ManagerViewEmployee viewEmployee = new ManagerViewEmployee();
+            viewEmployee.Show();
             this.Hide();
         }
     }

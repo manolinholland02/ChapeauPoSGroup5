@@ -39,6 +39,8 @@ namespace ChapeauUI
             this.menuItemStock = new System.Windows.Forms.ColumnHeader();
             this.menuItemPrepatation = new System.Windows.Forms.ColumnHeader();
             this.button_Add_Menu_Item = new System.Windows.Forms.Button();
+            this.button_Menu_Form = new System.Windows.Forms.Button();
+            this.button_Employees_Form = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView_Menu_Management
@@ -114,11 +116,35 @@ namespace ChapeauUI
             this.button_Add_Menu_Item.UseVisualStyleBackColor = true;
             this.button_Add_Menu_Item.Click += new System.EventHandler(this.button_Add_Menu_Item_Click);
             // 
+            // button_Menu_Form
+            // 
+            this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Menu_Form.Location = new System.Drawing.Point(162, 123);
+            this.button_Menu_Form.Name = "button_Menu_Form";
+            this.button_Menu_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Menu_Form.TabIndex = 7;
+            this.button_Menu_Form.Text = "Menu Items";
+            this.button_Menu_Form.UseVisualStyleBackColor = true;
+            // 
+            // button_Employees_Form
+            // 
+            this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_Employees_Form.Location = new System.Drawing.Point(29, 123);
+            this.button_Employees_Form.Name = "button_Employees_Form";
+            this.button_Employees_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Employees_Form.TabIndex = 6;
+            this.button_Employees_Form.Text = "Employees";
+            this.button_Employees_Form.UseVisualStyleBackColor = true;
+            this.button_Employees_Form.Click += new System.EventHandler(this.button_Employees_Form_Click);
+            // 
             // ManagerViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.button_Menu_Form);
+            this.Controls.Add(this.button_Employees_Form);
             this.Controls.Add(this.button_Add_Menu_Item);
             this.Controls.Add(this.listView_Menu_Management);
             this.Name = "ManagerViewMenu";
@@ -133,10 +159,6 @@ namespace ChapeauUI
         private System.Windows.Forms.ListView listView_Menu_Management;
         private System.Windows.Forms.ColumnHeader menuItemId;
         private System.Windows.Forms.ColumnHeader MenuItemName;
-        private System.Windows.Forms.ColumnHeader EmployeeLastName;
-        private System.Windows.Forms.ColumnHeader EmployeeUsername;
-        private System.Windows.Forms.ColumnHeader EmployeePassword;
-        private System.Windows.Forms.ColumnHeader EmployeeType;
         private System.Windows.Forms.ColumnHeader menuItemType;
         private System.Windows.Forms.ColumnHeader menuItemCategory;
         private System.Windows.Forms.ColumnHeader FoodOrDrink;
@@ -144,5 +166,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader menuItemStock;
         private System.Windows.Forms.ColumnHeader menuItemPrepatation;
         private System.Windows.Forms.Button button_Add_Menu_Item;
+        private System.Windows.Forms.Button button_Menu_Form;
+        private System.Windows.Forms.Button button_Employees_Form;
     }
 }

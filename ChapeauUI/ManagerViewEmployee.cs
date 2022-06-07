@@ -21,6 +21,9 @@ namespace ChapeauUI
             button_Edit_Employee.Enabled = false;
             button_Delete_Employee.Enabled = false;
             PrintEmployees();
+            button_Employees_Form.Enabled = false;
+            button_Employees_Form.BackColor = Color.DarkGray;
+            button_Employees_Form.ForeColor = Color.Black;
         }
 
         private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,6 +65,10 @@ namespace ChapeauUI
                                         employee.EmployeeUsername, employee.EmployeeUserPassword.ToString(), employee.EmployeeType.ToString() };
                     ListViewItem list = new ListViewItem(output);
                     listView_Employees_Management.Items.Add(list);
+                    for (int i = 0; i <= listView_Employees_Management.Items.Count - 1; i = (i + 2))
+                    {
+                        listView_Employees_Management.Items[i].BackColor = Color.AliceBlue;
+                    }
 
                 }
             }
@@ -97,6 +104,13 @@ namespace ChapeauUI
                     this.Hide();
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManagerViewMenu viewMenu = new ManagerViewMenu();
+            viewMenu.Show();
+            this.Hide();
         }
 
     }

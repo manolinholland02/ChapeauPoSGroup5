@@ -39,10 +39,8 @@ namespace ChapeauUI
             this.button_Add_Employee = new System.Windows.Forms.Button();
             this.button_Delete_Employee = new System.Windows.Forms.Button();
             this.button_Edit_Employee = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem_Employees = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.button_Employees_Form = new System.Windows.Forms.Button();
+            this.button_Menu_Form = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView_Employees_Management
@@ -89,7 +87,7 @@ namespace ChapeauUI
             // EmployeePassword
             // 
             this.EmployeePassword.Text = "Password";
-            this.EmployeePassword.Width = 300;
+            this.EmployeePassword.Width = 260;
             // 
             // EmployeeType
             // 
@@ -126,48 +124,44 @@ namespace ChapeauUI
             this.button_Edit_Employee.UseVisualStyleBackColor = true;
             this.button_Edit_Employee.Click += new System.EventHandler(this.button_Edit_Employee_Click);
             // 
-            // menuStrip1
+            // button_Employees_Form
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem_Employees,
-            this.toolStripMenuItem_Menu});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1422, 28);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
+            this.button_Employees_Form.Enabled = false;
+            this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_Employees_Form.Location = new System.Drawing.Point(29, 123);
+            this.button_Employees_Form.Name = "button_Employees_Form";
+            this.button_Employees_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Employees_Form.TabIndex = 4;
+            this.button_Employees_Form.Text = "Employees";
+            this.button_Employees_Form.UseVisualStyleBackColor = true;
             // 
-            // toolStripMenuItem_Employees
+            // button_Menu_Form
             // 
-            this.toolStripMenuItem_Employees.Name = "toolStripMenuItem_Employees";
-            this.toolStripMenuItem_Employees.Size = new System.Drawing.Size(95, 24);
-            this.toolStripMenuItem_Employees.Text = "Employees";
-            // 
-            // toolStripMenuItem_Menu
-            // 
-            this.toolStripMenuItem_Menu.Name = "toolStripMenuItem_Menu";
-            this.toolStripMenuItem_Menu.Size = new System.Drawing.Size(60, 24);
-            this.toolStripMenuItem_Menu.Text = "Menu";
+            this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Menu_Form.Location = new System.Drawing.Point(162, 123);
+            this.button_Menu_Form.Name = "button_Menu_Form";
+            this.button_Menu_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Menu_Form.TabIndex = 5;
+            this.button_Menu_Form.Text = "Menu Items";
+            this.button_Menu_Form.UseVisualStyleBackColor = true;
+            this.button_Menu_Form.Click += new System.EventHandler(this.button2_Click);
             // 
             // ManagerViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.button_Menu_Form);
+            this.Controls.Add(this.button_Employees_Form);
             this.Controls.Add(this.button_Edit_Employee);
             this.Controls.Add(this.button_Delete_Employee);
             this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.listView_Employees_Management);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "ManagerViewEmployee";
             this.Text = "ManagerView";
             this.Load += new System.EventHandler(this.ManagerView_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -183,8 +177,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button_Add_Employee;
         private System.Windows.Forms.Button button_Delete_Employee;
         private System.Windows.Forms.Button button_Edit_Employee;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Employees;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Menu;
+        private System.Windows.Forms.Button button_Employees_Form;
+        private System.Windows.Forms.Button button_Menu_Form;
     }
 }

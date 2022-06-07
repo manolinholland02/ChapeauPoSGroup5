@@ -72,7 +72,6 @@ namespace ChapeauUI
             this.LunchStartersListView.TabIndex = 1;
             this.LunchStartersListView.UseCompatibleStateImageBehavior = false;
             this.LunchStartersListView.View = System.Windows.Forms.View.Details;
-            this.LunchStartersListView.SelectedIndexChanged += new System.EventHandler(this.LunchStartersListView_SelectedIndexChanged);
             // 
             // lunchStarterId
             // 

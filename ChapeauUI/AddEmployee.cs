@@ -25,9 +25,7 @@ namespace ChapeauUI
 
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            ManagerViewEmployee managerView = new ManagerViewEmployee();
-            managerView.Show();
-            this.Hide();
+            OpenManagerViewEmoloyees();
         }
 
         private void button_AddEmployee_Click(object sender, EventArgs e)
@@ -53,22 +51,27 @@ namespace ChapeauUI
             {
                 employeeType = EmployeeType.waiter;
             }
-            Employee employee = new Employee();
-            employee.EmployeeFirstName = firstName;
-            employee.EmployeeLastName = lastName;
-            employee.EmployeeUsername = username;
-            employee.EmployeeUserPassword = password;
-            employee.EmployeeType = employeeType;
+            Employee employee = new Employee()
+            {
+                EmployeeFirstName = firstName,
+                EmployeeLastName = lastName,
+                EmployeeUsername = username,
+                EmployeeUserPassword = password,
+                EmployeeType = employeeType
+            };
+            
             EmployeeService employeeService = new EmployeeService();
             employeeService.AddEmployee(employee);
-            ManagerViewEmployee mv = new ManagerViewEmployee();
-            mv.Show();
+            OpenManagerViewEmoloyees();
+            
+        }
+
+        private void OpenManagerViewEmoloyees()
+        {
+            ManagerViewEmployee viewEmployee = new ManagerViewEmployee();
+            viewEmployee.Show();
             this.Hide();
         }
 
-        private void AddEmployee_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
