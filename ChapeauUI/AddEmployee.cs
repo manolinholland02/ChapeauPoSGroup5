@@ -15,6 +15,7 @@ namespace ChapeauUI
     public partial class AddEmployee : Form
     {
         private Employee _manager;
+        private string operation = "AddEmployee";
         public AddEmployee(Employee manager)
         {
             InitializeComponent();
@@ -93,8 +94,10 @@ namespace ChapeauUI
                         EmployeeType = employeeType
                     };
 
-                    employeeService.AddEmployee(employee);
-                    OpenManagerViewEmoloyees();
+                    ManagerConformation conformation = new ManagerConformation(_manager, operation,employee);
+                    this.Hide();
+                    //employeeService.AddEmployee(employee);
+                    //OpenManagerViewEmoloyees();
                 }
             }
             catch (Exception _e)

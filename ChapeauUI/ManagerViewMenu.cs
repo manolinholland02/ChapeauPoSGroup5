@@ -26,6 +26,9 @@ namespace ChapeauUI
             button_Menu_Form.Enabled = false;
             button_Menu_Form.BackColor = Color.DarkGray;
             button_Menu_Form.ForeColor = Color.Black;
+            button_Add_Menu_Item.BackColor = ColorTranslator.FromHtml("#66CCFF");
+            button_Delete_Employee.Enabled = false;
+            button_Edit_Employee.Enabled = false;
             DisplayMenu();
             _manager = manager;
 
@@ -55,14 +58,26 @@ namespace ChapeauUI
                     {
                         foorOrDrink = "Drink";
                     }
-
+                   
                     string[] output = { item.MenuItemID.ToString(), item.MenuItemName, item.MenuItemType.ToString(), item.MenuItemCategory.ToString(),
                                         foorOrDrink, item.MenuItemPrice.ToString("€0.00"), item.MenuItemStock.ToString(), item.AveragePreparationTime.ToString() };
                     ListViewItem list = new ListViewItem(output);
                     listView_Menu_Management.Items.Add(list);
-                    for (int i = 0; i <= listView_Menu_Management.Items.Count - 1; i = (i + 2))
+
+                    
+                    for (int i = 0; i <= listView_Menu_Management.Items.Count - 1; i ++)
                     {
+                        if(i%2==0)
                         listView_Menu_Management.Items[i].BackColor = Color.AliceBlue;
+                        if (int.Parse(listView_Menu_Management.Items[i].SubItems[6].Text) < 10)
+                        {
+                            listView_Menu_Management.Items[i].UseItemStyleForSubItems = false;
+                            listView_Menu_Management.Items[i].SubItems[6].ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            listView_Menu_Management.Items[i].SubItems[6].ForeColor = Color.Black;
+                        }
                     }
 
                 }
@@ -102,6 +117,23 @@ namespace ChapeauUI
                 LogIn login = new LogIn();
                 login.Show();
                 this.Hide();
+            }
+        }
+
+
+        private void listView_Menu_Management_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_Menu_Management.SelectedItems.Count > 0)
+            {
+                button_Delete_Employee.Enabled = true;
+                button_Edit_Employee.Enabled = true;
+                button_Edit_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+                button_Delete_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+            }
+            else
+            {
+                button_Edit_Employee.Enabled = false;
+                button_Delete_Employee.Enabled = false;
             }
         }
     }

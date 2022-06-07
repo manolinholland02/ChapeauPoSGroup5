@@ -17,6 +17,7 @@ namespace ChapeauUI
     {
         private Employee _EmployeeToEdit;
         private Employee _manager;
+        private string _operation = "EditEmployee";
         public EditEmployee(Employee employee, Employee manager)
         {
             InitializeComponent();
@@ -71,10 +72,11 @@ namespace ChapeauUI
             {
 
                 _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
-                EmployeeService employeeService = new EmployeeService();
-                employeeService.EditEmployee(_EmployeeToEdit);
-                ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
-                managerView.Show();
+                ManagerConformation conformation = new ManagerConformation(_manager, _operation, _EmployeeToEdit);
+                //EmployeeService employeeService = new EmployeeService();
+                //employeeService.EditEmployee(_EmployeeToEdit);
+                //ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
+                //managerView.Show();
                 this.Hide();
             }
             else

@@ -183,9 +183,10 @@ namespace ChapeauUI
             // 
             // button_Add_MenuItem
             // 
+            this.button_Add_MenuItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Add_MenuItem.Location = new System.Drawing.Point(290, 803);
             this.button_Add_MenuItem.Name = "button_Add_MenuItem";
-            this.button_Add_MenuItem.Size = new System.Drawing.Size(182, 71);
+            this.button_Add_MenuItem.Size = new System.Drawing.Size(200, 85);
             this.button_Add_MenuItem.TabIndex = 11;
             this.button_Add_MenuItem.Text = "Add";
             this.button_Add_MenuItem.UseVisualStyleBackColor = true;
@@ -193,9 +194,10 @@ namespace ChapeauUI
             // 
             // button_Cancel
             // 
+            this.button_Cancel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Location = new System.Drawing.Point(900, 803);
             this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(182, 71);
+            this.button_Cancel.Size = new System.Drawing.Size(200, 85);
             this.button_Cancel.TabIndex = 12;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;

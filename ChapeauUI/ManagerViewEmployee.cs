@@ -19,6 +19,7 @@ namespace ChapeauUI
         private Employee _manager;
         private MessageBoxButtons messageBoxButtons;
         private DialogResult result;
+        private string operation = "DeleteEmployee";
         public ManagerViewEmployee(Employee manager)
         {
             InitializeComponent();
@@ -50,9 +51,9 @@ namespace ChapeauUI
         private void button_Delete_Employee_Click(object sender, EventArgs e)
         {
             var itemToDelete = int.Parse(listView_Employees_Management.SelectedItems[0].SubItems[0].Text);
-            EmployeeService employee = new EmployeeService();
-            employee.DeleteEmployee(itemToDelete);
-            PrintEmployees();
+            ManagerConformation managerConformation = new ManagerConformation(_manager, operation, itemToDelete);
+            this.Hide();
+            //PrintEmployees();
 
         }
 
@@ -113,12 +114,7 @@ namespace ChapeauUI
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
-            viewMenu.Show();
-            this.Hide();
-        }
+        
 
         private void label_managerName_Click(object sender, EventArgs e)
         {

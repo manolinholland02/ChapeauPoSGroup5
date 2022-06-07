@@ -103,9 +103,10 @@ namespace ChapeauUI
             // 
             // button_Add_Employee
             // 
+            this.button_Add_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Add_Employee.Location = new System.Drawing.Point(69, 764);
             this.button_Add_Employee.Name = "button_Add_Employee";
-            this.button_Add_Employee.Size = new System.Drawing.Size(150, 80);
+            this.button_Add_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Add_Employee.TabIndex = 1;
             this.button_Add_Employee.Text = "Add Employee";
             this.button_Add_Employee.UseVisualStyleBackColor = true;
@@ -113,10 +114,11 @@ namespace ChapeauUI
             // 
             // button_Delete_Employee
             // 
+            this.button_Delete_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Delete_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Delete_Employee.Location = new System.Drawing.Point(625, 764);
+            this.button_Delete_Employee.Location = new System.Drawing.Point(1131, 764);
             this.button_Delete_Employee.Name = "button_Delete_Employee";
-            this.button_Delete_Employee.Size = new System.Drawing.Size(150, 80);
+            this.button_Delete_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Delete_Employee.TabIndex = 2;
             this.button_Delete_Employee.Text = "Delete";
             this.button_Delete_Employee.UseVisualStyleBackColor = true;
@@ -124,10 +126,11 @@ namespace ChapeauUI
             // 
             // button_Edit_Employee
             // 
+            this.button_Edit_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Edit_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Edit_Employee.Location = new System.Drawing.Point(1131, 764);
+            this.button_Edit_Employee.Location = new System.Drawing.Point(625, 764);
             this.button_Edit_Employee.Name = "button_Edit_Employee";
-            this.button_Edit_Employee.Size = new System.Drawing.Size(150, 80);
+            this.button_Edit_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Edit_Employee.TabIndex = 3;
             this.button_Edit_Employee.Text = "Edit";
             this.button_Edit_Employee.UseVisualStyleBackColor = true;
@@ -154,7 +157,6 @@ namespace ChapeauUI
             this.button_Menu_Form.TabIndex = 5;
             this.button_Menu_Form.Text = "Menu Items";
             this.button_Menu_Form.UseVisualStyleBackColor = true;
-            this.button_Menu_Form.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 

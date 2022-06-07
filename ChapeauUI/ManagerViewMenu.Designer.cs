@@ -45,6 +45,8 @@ namespace ChapeauUI
             this.label_managerName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Edit_Employee = new System.Windows.Forms.Button();
+            this.button_Delete_Employee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +73,7 @@ namespace ChapeauUI
             this.listView_Menu_Management.TabIndex = 1;
             this.listView_Menu_Management.UseCompatibleStateImageBehavior = false;
             this.listView_Menu_Management.View = System.Windows.Forms.View.Details;
+            this.listView_Menu_Management.SelectedIndexChanged += new System.EventHandler(this.listView_Menu_Management_SelectedIndexChanged);
             // 
             // menuItemId
             // 
@@ -114,12 +117,14 @@ namespace ChapeauUI
             // 
             // button_Add_Menu_Item
             // 
-            this.button_Add_Menu_Item.Location = new System.Drawing.Point(12, 794);
+            this.button_Add_Menu_Item.BackColor = System.Drawing.Color.White;
+            this.button_Add_Menu_Item.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Add_Menu_Item.Location = new System.Drawing.Point(69, 764);
             this.button_Add_Menu_Item.Name = "button_Add_Menu_Item";
-            this.button_Add_Menu_Item.Size = new System.Drawing.Size(150, 80);
+            this.button_Add_Menu_Item.Size = new System.Drawing.Size(200, 85);
             this.button_Add_Menu_Item.TabIndex = 2;
-            this.button_Add_Menu_Item.Text = "Add Item To Menu";
-            this.button_Add_Menu_Item.UseVisualStyleBackColor = true;
+            this.button_Add_Menu_Item.Text = "Add To Menu";
+            this.button_Add_Menu_Item.UseVisualStyleBackColor = false;
             this.button_Add_Menu_Item.Click += new System.EventHandler(this.button_Add_Menu_Item_Click);
             // 
             // button_Menu_Form
@@ -178,17 +183,44 @@ namespace ChapeauUI
             this.panel1.Size = new System.Drawing.Size(1422, 99);
             this.panel1.TabIndex = 8;
             // 
+            // button_Edit_Employee
+            // 
+            this.button_Edit_Employee.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Edit_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Edit_Employee.ForeColor = System.Drawing.Color.Black;
+            this.button_Edit_Employee.Location = new System.Drawing.Point(625, 764);
+            this.button_Edit_Employee.Name = "button_Edit_Employee";
+            this.button_Edit_Employee.Size = new System.Drawing.Size(200, 85);
+            this.button_Edit_Employee.TabIndex = 10;
+            this.button_Edit_Employee.Text = "Edit";
+            this.button_Edit_Employee.UseVisualStyleBackColor = false;
+            // 
+            // button_Delete_Employee
+            // 
+            this.button_Delete_Employee.BackColor = System.Drawing.Color.Gainsboro;
+            this.button_Delete_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Delete_Employee.ForeColor = System.Drawing.Color.Black;
+            this.button_Delete_Employee.Location = new System.Drawing.Point(1131, 764);
+            this.button_Delete_Employee.Name = "button_Delete_Employee";
+            this.button_Delete_Employee.Size = new System.Drawing.Size(200, 85);
+            this.button_Delete_Employee.TabIndex = 9;
+            this.button_Delete_Employee.Text = "Delete";
+            this.button_Delete_Employee.UseVisualStyleBackColor = false;
+            // 
             // ManagerViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.button_Edit_Employee);
+            this.Controls.Add(this.button_Delete_Employee);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Menu_Form);
             this.Controls.Add(this.button_Employees_Form);
             this.Controls.Add(this.button_Add_Menu_Item);
             this.Controls.Add(this.listView_Menu_Management);
+            this.Location = new System.Drawing.Point(625, 764);
             this.Name = "ManagerViewMenu";
             this.Text = "ManagerViewMenu";
             this.Load += new System.EventHandler(this.ManagerViewMenu_Load);
@@ -215,5 +247,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_managerName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button_Edit_Employee;
+        private System.Windows.Forms.Button button_Delete_Employee;
     }
 }
