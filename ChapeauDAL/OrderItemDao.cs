@@ -126,5 +126,15 @@ namespace ChapeauDAL
 
             return result;
         }
+
+        public void UpdateOrderItemStatus(int orderItemId, Status status)
+        {
+            string query = @"
+            UPDATE [dbo].[OrderItems]
+            SET [orderItemStatus] = @Status
+            WHERE [orderItemId] = @OrderItemId;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@Status", status.ToString()), new SqlParameter("@OrderItemId", orderItemId) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

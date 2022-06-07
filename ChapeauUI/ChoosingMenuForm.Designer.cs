@@ -64,13 +64,14 @@ namespace ChapeauUI
             // 
             // DrinksMenubtn
             // 
+            this.DrinksMenubtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DrinksMenubtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DrinksMenubtn.Location = new System.Drawing.Point(86, 493);
             this.DrinksMenubtn.Name = "DrinksMenubtn";
             this.DrinksMenubtn.Size = new System.Drawing.Size(360, 77);
             this.DrinksMenubtn.TabIndex = 2;
             this.DrinksMenubtn.Text = "Drinks Menu";
-            this.DrinksMenubtn.UseVisualStyleBackColor = true;
+            this.DrinksMenubtn.UseVisualStyleBackColor = false;
             this.DrinksMenubtn.Click += new System.EventHandler(this.DrinksMenubtn_Click);
             // 
             // Paybtn

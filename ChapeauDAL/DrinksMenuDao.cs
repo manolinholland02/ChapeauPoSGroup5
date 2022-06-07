@@ -24,7 +24,7 @@ namespace ChapeauDAL
         public List<DrinkMenu> GetSpecificDrinksMenu(MenuItemCategory menuItemCategory)
         {
             string query = @$"
-            SELECT drinkItemId, menuItemName
+            SELECT drinkItemId, DrinkMenu.menuItemId, menuItemName
             FROM [dbo].DrinkMenu
             JOIN [dbo].MenuItems ON DrinkMenu.menuItemId = MenuItems.menuItemId
 			WHERE MenuItems.menuItemCategory = @Category;";
@@ -41,6 +41,7 @@ namespace ChapeauDAL
                 DrinkMenu drinkMenu = new DrinkMenu()
                 {
                     DrinkMenuId = (int)dr["drinkItemId"],
+                    MenuItemId = (int)dr["menuItemId"],
                     MenuItemName = dr["menuItemName"].ToString()
                 };
                 drinkMenus.Add(drinkMenu);

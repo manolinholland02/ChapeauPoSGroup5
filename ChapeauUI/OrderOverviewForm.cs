@@ -17,20 +17,22 @@ namespace ChapeauUI
         private Order currentOrder;
         private Employee waiter;
         private int tableId;
-        private ChoosingMenuForm choosingMenu;
+        private ChoosingMenuForm choosingMenuForm;
+        private RestaurantOverview restaurantOverview;
         private OrderService orderService;
         private OrderItem selectedOrderItem;
         private OrderItemService orderItemService;
         private List<OrderItem> allOrderItems;
 
-        public OrderOverviewForm(OrderService orderService, Employee waiter, int tableId, ChoosingMenuForm choosingMenu)
+        public OrderOverviewForm(OrderService orderService, Employee waiter, int tableId, ChoosingMenuForm choosingMenu,RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
             this.orderService = orderService;
             this.currentOrder = this.orderService.GetLastOrder(tableId);
             this.waiter = waiter;
             this.tableId = tableId;
-            this.choosingMenu = choosingMenu;
+            choosingMenuForm = choosingMenu;
+            this.restaurantOverview = restaurantOverview;
             orderItemService = new OrderItemService();
             allOrderItems = new List<OrderItem>();
         }
@@ -58,7 +60,9 @@ namespace ChapeauUI
                     {
                         if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
                         {
+                            //replace item in list
                             OrderlistView.Items[i] = (ListViewItem)item.Clone();
+                            // keep order selected
                             OrderlistView.Items[i].Selected = true;
                         }
                     }
@@ -79,7 +83,8 @@ namespace ChapeauUI
                 selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
                 if (selectedOrderItem.Quantity == 1)
                 {
-                    MessageBox.Show("Quantity must be at least 1!");
+                    allOrderItems.Remove(selectedOrderItem);
+                    FillListViewWithOrderItems();
                 }
                 else
                 {
@@ -94,10 +99,10 @@ namespace ChapeauUI
                             OrderlistView.Items[i] = (ListViewItem)item.Clone();
                             OrderlistView.Items[i].Selected = true;
                         }
+                        UpdateAllOrderItemsList(selectedOrderItem);
                     }
-
-                    UpdateAllOrderItemsList(selectedOrderItem);
                 }
+                
             }
         }
 
@@ -158,28 +163,47 @@ namespace ChapeauUI
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("Are you sure you want to delete the whole order?", "deleting order", buttons);
             //check if order list is empty
-            /*if (result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
-                foreach (OrderItem order in currentOrder.OrderItems)
-                {
-                    currentOrder.OrderItems.Remove(order);
-                }
-
-
-            }  */
-            OrderlistView.Update();
+                allOrderItems.Clear();
+            }
+            FillListViewWithOrderItems();
         }
 
-        private void oderOverviewbackbtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            choosingMenu.UpdateTotalTotalOrderCount();
-            choosingMenu.Show();
-        }
 
         private void PlaceOrderbtn_Click(object sender, EventArgs e)
         {
             orderItemService.InsertOrderItems(allOrderItems);
+            // delete items from current order
+            // delete stock
+        }
+
+        private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void oderOverviewbackbtn_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            choosingMenuForm.UpdateTotalTotalOrderCount();
+            choosingMenuForm.Show();
+        }
+
+        private void TableOverviewbtn_Click(object sender, EventArgs e)
+        {
+
+            if (allOrderItems.Count != 0)
+            {
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show("Leaving the order will delete it, are you sure you want to leave?", "Table View", buttons);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+                this.Close();
+                restaurantOverview.Show();
         }
     }
 }

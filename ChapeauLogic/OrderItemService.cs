@@ -41,5 +41,10 @@ namespace ChapeauLogic
         {
             return _orderItemDao.SelectCountOfOrderItems(orderId);
         }
+
+        public void UpdateOrderItemStatus(int orderItemId, Status status)
+        {
+            _orderItemDao.UpdateOrderItemStatus(orderItemId, status);
+        }
     }
 }

@@ -86,7 +86,7 @@ namespace ChapeauUI
             // 
             // starterName
             // 
-            this.starterName.Text = "Name";
+            this.starterName.Text = "Starters";
             this.starterName.Width = 250;
             // 
             // LunchMainListView
@@ -117,7 +117,7 @@ namespace ChapeauUI
             // 
             // mainName
             // 
-            this.mainName.Text = "Name";
+            this.mainName.Text = "Mains";
             this.mainName.Width = 250;
             // 
             // LunchDessertListView
@@ -148,7 +148,7 @@ namespace ChapeauUI
             // 
             // desertName
             // 
-            this.desertName.Text = "Name";
+            this.desertName.Text = "Desserts";
             this.desertName.Width = 250;
             // 
             // backbtnLunch

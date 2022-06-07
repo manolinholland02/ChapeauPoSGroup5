@@ -29,85 +29,120 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView_Employees_Management = new System.Windows.Forms.ListView();
-            this.MenuItemId = new System.Windows.Forms.ColumnHeader();
-            this.EmployeeFirstName = new System.Windows.Forms.ColumnHeader();
-            this.EmployeeLastName = new System.Windows.Forms.ColumnHeader();
-            this.EmployeeUsername = new System.Windows.Forms.ColumnHeader();
-            this.EmployeePassword = new System.Windows.Forms.ColumnHeader();
-            this.EmployeeType = new System.Windows.Forms.ColumnHeader();
+            this.listView_Menu_Management = new System.Windows.Forms.ListView();
+            this.menuItemId = new System.Windows.Forms.ColumnHeader();
+            this.MenuItemName = new System.Windows.Forms.ColumnHeader();
+            this.menuItemType = new System.Windows.Forms.ColumnHeader();
+            this.menuItemCategory = new System.Windows.Forms.ColumnHeader();
+            this.FoodOrDrink = new System.Windows.Forms.ColumnHeader();
+            this.menuItemPrice = new System.Windows.Forms.ColumnHeader();
+            this.menuItemStock = new System.Windows.Forms.ColumnHeader();
+            this.menuItemPrepatation = new System.Windows.Forms.ColumnHeader();
+            this.button_Add_Menu_Item = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView_Employees_Management
+            // listView_Menu_Management
             // 
-            this.listView_Employees_Management.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MenuItemId,
-            this.EmployeeFirstName,
-            this.EmployeeLastName,
-            this.EmployeeUsername,
-            this.EmployeePassword,
-            this.EmployeeType});
-            this.listView_Employees_Management.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listView_Employees_Management.FullRowSelect = true;
-            this.listView_Employees_Management.HideSelection = false;
-            this.listView_Employees_Management.Location = new System.Drawing.Point(111, 278);
-            this.listView_Employees_Management.MultiSelect = false;
-            this.listView_Employees_Management.Name = "listView_Employees_Management";
-            this.listView_Employees_Management.Size = new System.Drawing.Size(1200, 420);
-            this.listView_Employees_Management.TabIndex = 1;
-            this.listView_Employees_Management.UseCompatibleStateImageBehavior = false;
-            this.listView_Employees_Management.View = System.Windows.Forms.View.Details;
+            this.listView_Menu_Management.AllowDrop = true;
+            this.listView_Menu_Management.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.menuItemId,
+            this.MenuItemName,
+            this.menuItemType,
+            this.menuItemCategory,
+            this.FoodOrDrink,
+            this.menuItemPrice,
+            this.menuItemStock,
+            this.menuItemPrepatation});
+            this.listView_Menu_Management.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView_Menu_Management.FullRowSelect = true;
+            this.listView_Menu_Management.HideSelection = false;
+            this.listView_Menu_Management.Location = new System.Drawing.Point(12, 205);
+            this.listView_Menu_Management.MultiSelect = false;
+            this.listView_Menu_Management.Name = "listView_Menu_Management";
+            this.listView_Menu_Management.Size = new System.Drawing.Size(1398, 420);
+            this.listView_Menu_Management.TabIndex = 1;
+            this.listView_Menu_Management.UseCompatibleStateImageBehavior = false;
+            this.listView_Menu_Management.View = System.Windows.Forms.View.Details;
             // 
-            // MenuItemId
+            // menuItemId
             // 
-            this.MenuItemId.Text = "Id";
-            this.MenuItemId.Width = 0;
+            this.menuItemId.Text = "Id";
+            this.menuItemId.Width = 0;
             // 
-            // EmployeeFirstName
+            // MenuItemName
             // 
-            this.EmployeeFirstName.Text = "First Name";
-            this.EmployeeFirstName.Width = 240;
+            this.MenuItemName.Text = "Name";
+            this.MenuItemName.Width = 650;
             // 
-            // EmployeeLastName
+            // menuItemType
             // 
-            this.EmployeeLastName.Text = "Last Name";
-            this.EmployeeLastName.Width = 240;
+            this.menuItemType.Text = "Type";
+            this.menuItemType.Width = 130;
             // 
-            // EmployeeUsername
+            // menuItemCategory
             // 
-            this.EmployeeUsername.Text = "Username";
-            this.EmployeeUsername.Width = 240;
+            this.menuItemCategory.Text = "Category";
+            this.menuItemCategory.Width = 130;
             // 
-            // EmployeePassword
+            // FoodOrDrink
             // 
-            this.EmployeePassword.Text = "Password";
-            this.EmployeePassword.Width = 240;
+            this.FoodOrDrink.Text = "Food/Drink";
+            this.FoodOrDrink.Width = 130;
             // 
-            // EmployeeType
+            // menuItemPrice
             // 
-            this.EmployeeType.Text = "Occupation";
-            this.EmployeeType.Width = 230;
+            this.menuItemPrice.Text = "Price";
+            this.menuItemPrice.Width = 90;
+            // 
+            // menuItemStock
+            // 
+            this.menuItemStock.Text = "Stock";
+            this.menuItemStock.Width = 90;
+            // 
+            // menuItemPrepatation
+            // 
+            this.menuItemPrepatation.Text = "Prep. Time";
+            this.menuItemPrepatation.Width = 150;
+            // 
+            // button_Add_Menu_Item
+            // 
+            this.button_Add_Menu_Item.Location = new System.Drawing.Point(12, 794);
+            this.button_Add_Menu_Item.Name = "button_Add_Menu_Item";
+            this.button_Add_Menu_Item.Size = new System.Drawing.Size(150, 80);
+            this.button_Add_Menu_Item.TabIndex = 2;
+            this.button_Add_Menu_Item.Text = "Add Item To Menu";
+            this.button_Add_Menu_Item.UseVisualStyleBackColor = true;
+            this.button_Add_Menu_Item.Click += new System.EventHandler(this.button_Add_Menu_Item_Click);
             // 
             // ManagerViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.Controls.Add(this.listView_Employees_Management);
+            this.Controls.Add(this.button_Add_Menu_Item);
+            this.Controls.Add(this.listView_Menu_Management);
             this.Name = "ManagerViewMenu";
             this.Text = "ManagerViewMenu";
+            this.Load += new System.EventHandler(this.ManagerViewMenu_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView_Employees_Management;
-        private System.Windows.Forms.ColumnHeader MenuItemId;
-        private System.Windows.Forms.ColumnHeader EmployeeFirstName;
+        private System.Windows.Forms.ListView listView_Menu_Management;
+        private System.Windows.Forms.ColumnHeader menuItemId;
+        private System.Windows.Forms.ColumnHeader MenuItemName;
         private System.Windows.Forms.ColumnHeader EmployeeLastName;
         private System.Windows.Forms.ColumnHeader EmployeeUsername;
         private System.Windows.Forms.ColumnHeader EmployeePassword;
         private System.Windows.Forms.ColumnHeader EmployeeType;
+        private System.Windows.Forms.ColumnHeader menuItemType;
+        private System.Windows.Forms.ColumnHeader menuItemCategory;
+        private System.Windows.Forms.ColumnHeader FoodOrDrink;
+        private System.Windows.Forms.ColumnHeader menuItemPrice;
+        private System.Windows.Forms.ColumnHeader menuItemStock;
+        private System.Windows.Forms.ColumnHeader menuItemPrepatation;
+        private System.Windows.Forms.Button button_Add_Menu_Item;
     }
 }
