@@ -15,14 +15,16 @@ namespace ChapeauUI
 {
     public partial class ManagerViewMenu : Form
     {
-        public ManagerViewMenu()
+        private Employee _manager;
+
+        public ManagerViewMenu(Employee manager)
         {
             InitializeComponent();
             button_Menu_Form.Enabled = false;
             button_Menu_Form.BackColor = Color.DarkGray;
             button_Menu_Form.ForeColor = Color.Black;
             DisplayMenu();
-
+            _manager = manager;
         }
 
         private void DisplayMenu()
@@ -71,14 +73,14 @@ namespace ChapeauUI
 
         private void button_Add_Menu_Item_Click(object sender, EventArgs e)
         {
-            AddMenuItem addItem = new AddMenuItem();
+            AddMenuItem addItem = new AddMenuItem(_manager);
             addItem.Show();
             this.Hide();
         }
 
         private void button_Employees_Form_Click(object sender, EventArgs e)
         {
-            ManagerViewEmployee viewEmployee = new ManagerViewEmployee();
+            ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);
             viewEmployee.Show();
             this.Hide();
         }

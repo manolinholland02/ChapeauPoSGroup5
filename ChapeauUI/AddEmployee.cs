@@ -14,13 +14,15 @@ namespace ChapeauUI
 {
     public partial class AddEmployee : Form
     {
-        public AddEmployee()
+        private Employee _manager;
+        public AddEmployee(Employee manager)
         {
             InitializeComponent();
             radioButton_AddEmployee_Bartender.Checked = false;
             radioButton_AddEmployee_Chef.Checked = false;
             radioButton_AddEmployee_Manager.Checked = false;
             radioButton_AddEmployee_Waiter.Checked = false;
+            _manager = manager;
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -68,7 +70,7 @@ namespace ChapeauUI
 
         private void OpenManagerViewEmoloyees()
         {
-            ManagerViewEmployee viewEmployee = new ManagerViewEmployee();
+            ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);
             viewEmployee.Show();
             this.Hide();
         }

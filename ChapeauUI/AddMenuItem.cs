@@ -15,7 +15,8 @@ namespace ChapeauUI
     public partial class AddMenuItem : Form
     {
         private MenuItemService _menuItemService;
-        public AddMenuItem()
+        private Employee _manager;
+        public AddMenuItem(Employee manager)
         {
             InitializeComponent();
             comboBox_Menu_Item_Category.Visible = false;
@@ -28,6 +29,7 @@ namespace ChapeauUI
             textBox_Menu_Time_Minutes.Text = "00";
             textBox_Menu_Time_Seconds.Text = "00";
             _menuItemService = new MenuItemService();
+            _manager = manager;
 
         }
 
@@ -169,7 +171,7 @@ namespace ChapeauUI
         }
         private void OpenManagerViewMenu()
         {
-            ManagerViewMenu viewMenu = new ManagerViewMenu();
+            ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
             viewMenu.Show();
             this.Hide();
         }

@@ -35,8 +35,8 @@ namespace ChapeauUI
                 // 1) employee type = manager -> Open ManagerViewForm
                 if (employee.EmployeeType == EmployeeType.manager)
                 {
-                    this.Close();
-                    ManagerViewMenu managerView = new ManagerViewMenu();
+                    this.Hide();
+                    ManagerViewEmployee managerView = new ManagerViewEmployee(employee);
                     managerView.Show();
                 }
                 else if (employee.EmployeeType == EmployeeType.waiter)

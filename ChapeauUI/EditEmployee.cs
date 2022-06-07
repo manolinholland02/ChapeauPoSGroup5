@@ -15,13 +15,15 @@ namespace ChapeauUI
 {
     public partial class EditEmployee : Form
     {
-        private Employee _EmployeeToEdit { get; set; }
-        public EditEmployee(Employee employee)
+        private Employee _EmployeeToEdit;
+        private Employee _manager;
+        public EditEmployee(Employee employee, Employee manager)
         {
             InitializeComponent();
             label_Password_Error.Text = "Password should contain 4 digits!";
             label_Password_Error.Visible = false;
             _EmployeeToEdit = employee;
+            _manager = manager;
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
             textBox_EditEmployee_FirstName.Text = _EmployeeToEdit.EmployeeFirstName.ToString();
             textBox_EditEmployee_LastName.Text = _EmployeeToEdit.EmployeeLastName.ToString();
@@ -73,7 +75,7 @@ namespace ChapeauUI
                 _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
                 EmployeeService employeeService = new EmployeeService();
                 employeeService.EditEmployee(_EmployeeToEdit);
-                ManagerViewEmployee managerView = new ManagerViewEmployee();
+                ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
                 managerView.Show();
                 this.Hide();
             }
@@ -86,7 +88,7 @@ namespace ChapeauUI
 
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            ManagerViewEmployee managerView = new ManagerViewEmployee();
+            ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
             managerView.Show();
             this.Hide();
         }

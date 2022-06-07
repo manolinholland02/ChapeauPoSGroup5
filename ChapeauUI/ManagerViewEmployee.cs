@@ -15,7 +15,9 @@ namespace ChapeauUI
 {
     public partial class ManagerViewEmployee : Form
     {
-        public ManagerViewEmployee()
+
+        private Employee _manager;
+        public ManagerViewEmployee(Employee manager)
         {
             InitializeComponent();
             button_Edit_Employee.Enabled = false;
@@ -24,6 +26,9 @@ namespace ChapeauUI
             button_Employees_Form.Enabled = false;
             button_Employees_Form.BackColor = Color.DarkGray;
             button_Employees_Form.ForeColor = Color.Black;
+            _manager = manager;
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            
         }
 
         private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,7 +90,7 @@ namespace ChapeauUI
 
         private void button_Add_Employee_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmployee = new AddEmployee();
+            AddEmployee addEmployee = new AddEmployee(_manager);
             addEmployee.Show();
             this.Hide();
         }
@@ -99,7 +104,7 @@ namespace ChapeauUI
             {
                 if(employee.EmployeeID == employeeToEditID)
                 {
-                    EditEmployee edit = new EditEmployee(employee);
+                    EditEmployee edit = new EditEmployee(employee, _manager);
                     edit.Show();
                     this.Hide();
                 }
@@ -108,10 +113,14 @@ namespace ChapeauUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ManagerViewMenu viewMenu = new ManagerViewMenu();
+            ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
             viewMenu.Show();
             this.Hide();
         }
 
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ok");
+        }
     }
 }
