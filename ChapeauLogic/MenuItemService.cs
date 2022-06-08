@@ -37,5 +37,21 @@ namespace ChapeauLogic
         {
             _menuItemDb.UpdateMenuItem(menuItem);
         }
+        public List<string> GetFoodCategory()
+        {
+            return _menuItemDb.GetFoodCategory();
+        }
+        public List<string> GetDrinkCategory()
+        {
+            return _menuItemDb.GetDrinkCategory();
+        }
+        public List<string> GetFoodType()
+        {
+            return _menuItemDb.GetFoodType();
+        }
+        public List<string> GetDrinkType()
+        {
+            return _menuItemDb.GetDrinkType();
+        }
     }
 }
