@@ -14,9 +14,8 @@ namespace ChapeauUI
 {
     public partial class ChoosingMenuForm : Form
     {
-        private Order _currentOrder;
-        private int tableID;
-        private Employee waiter;
+        private int TableID { get; }
+        private Employee Waiter { get; }
         private RestaurantOverview restaurantOverview;
         private OrderOverviewForm orderOverview;
         private OrderService orderService;
@@ -24,64 +23,108 @@ namespace ChapeauUI
         public ChoosingMenuForm(int TableID, Employee employee, OrderService orderService, RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
-            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
-            CheckMenuTime();
-            this.tableID = TableID;
-            this.waiter = employee;
+            this.TableID = TableID;
+            this.Waiter = employee;
             this.orderService = orderService;
-            _currentOrder = this.orderService.GetLastOrder(tableID);
-            EmployeeNamelbl.Text = $"{this.waiter.EmployeeFirstName} {this.waiter.EmployeeLastName}";
-            tableNumberlbl.Text = $"Table {tableID}";
             this.restaurantOverview = restaurantOverview;
-            this.orderOverview = new OrderOverviewForm(this.orderService, waiter, tableID, this, restaurantOverview);
+            // new order overview for table
+            this.orderOverview = new OrderOverviewForm(Waiter, this.TableID, this, restaurantOverview);
+            GetvariablesandFormat();
+        }
+        public void GetvariablesandFormat()
+        {
+            //lunch or dinner menu
+            CheckMenuTime();
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
+            //count of items in current order
             totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
+            //set background colour
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
         }
 
-        public void UpdateTotalTotalOrderCount()
+        public void UpdateTotalTotalOrderCount() //changes count to the number of items in current order
         {
             totalOrderCountlbl.Text = $"Total items in the order: {orderOverview.GetCountOfAllOrderItems()}";
         }
 
         private void LunchMenubtn_Click(object sender, EventArgs e)
         {
-            LunchMenuForm lunch = new LunchMenuForm(orderService, tableID, this, waiter, orderOverview);
-            this.Hide();
-            lunch.Show(); // or close
+            try
+            {
+                LunchMenuForm lunch = new LunchMenuForm(orderService, TableID, this, Waiter, orderOverview);
+                this.Hide();
+                lunch.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
         }
 
         private void DinnerMenubtn_Click(object sender, EventArgs e)
         {
-            DinnerMenuForm dinner = new DinnerMenuForm(orderService, tableID, this, waiter, orderOverview);
-            this.Hide(); // or close
-            dinner.Show();
+            try
+            {
+                DinnerMenuForm dinner = new DinnerMenuForm(orderService, TableID, this, Waiter, orderOverview);
+                this.Hide();
+                dinner.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
         }
 
         private void DrinksMenubtn_Click(object sender, EventArgs e)
         {
-            DrinksMenuForm drink = new DrinksMenuForm(orderService, tableID, this, waiter, orderOverview);
-            this.Hide();
-            drink.Show();
+            try
+            {
+                DrinksMenuForm drink = new DrinksMenuForm(orderService, TableID, this, Waiter, orderOverview);
+                this.Hide();
+                drink.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
         }
 
-        private void MenuPageTableViewbtn_Click(object sender, EventArgs e)
+        private void MenuPageTableViewbtn_Click(object sender, EventArgs e) //checks if user wants to leave (if there are orders)
         {
-            this.Hide();
-            restaurantOverview.Show();
-
+            try
+            {
+                if (orderOverview.GetCountOfAllOrderItems() != 0)
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show("Leaving the order will delete all added items, are you sure you want to leave?", "Table View", buttons);
+                    if (result == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+                this.Close();
+                restaurantOverview.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
         }
 
         private void OrderOverviewbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            orderOverview.FillListViewWithOrderItems();
-            orderOverview.Show();
-
-        }
-
-        private void Paybtn_Click(object sender, EventArgs e)
-        {
-            // open new paying form
-            //hide this form
+            try
+            {
+                this.Hide();
+                orderOverview.FillListViewWithOrderItems();
+                orderOverview.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
         }
 
         private void CheckMenuTime() //changes the colour of the buttons according to the time - lunch or dinner time

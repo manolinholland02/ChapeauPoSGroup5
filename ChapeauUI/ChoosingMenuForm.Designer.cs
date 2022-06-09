@@ -32,7 +32,6 @@ namespace ChapeauUI
             this.LunchMenubtn = new System.Windows.Forms.Button();
             this.DinnerMenubtn = new System.Windows.Forms.Button();
             this.DrinksMenubtn = new System.Windows.Forms.Button();
-            this.Paybtn = new System.Windows.Forms.Button();
             this.MenuPageTableViewbtn = new System.Windows.Forms.Button();
             this.OrderOverviewbtn = new System.Windows.Forms.Button();
             this.totalOrderCountlbl = new System.Windows.Forms.Label();
@@ -73,17 +72,6 @@ namespace ChapeauUI
             this.DrinksMenubtn.Text = "Drinks Menu";
             this.DrinksMenubtn.UseVisualStyleBackColor = false;
             this.DrinksMenubtn.Click += new System.EventHandler(this.DrinksMenubtn_Click);
-            // 
-            // Paybtn
-            // 
-            this.Paybtn.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Paybtn.Location = new System.Drawing.Point(325, 661);
-            this.Paybtn.Name = "Paybtn";
-            this.Paybtn.Size = new System.Drawing.Size(200, 77);
-            this.Paybtn.TabIndex = 3;
-            this.Paybtn.Text = "Pay";
-            this.Paybtn.UseVisualStyleBackColor = true;
-            this.Paybtn.Click += new System.EventHandler(this.Paybtn_Click);
             // 
             // MenuPageTableViewbtn
             // 
@@ -144,7 +132,6 @@ namespace ChapeauUI
             this.Controls.Add(this.totalOrderCountlbl);
             this.Controls.Add(this.OrderOverviewbtn);
             this.Controls.Add(this.MenuPageTableViewbtn);
-            this.Controls.Add(this.Paybtn);
             this.Controls.Add(this.DrinksMenubtn);
             this.Controls.Add(this.DinnerMenubtn);
             this.Controls.Add(this.LunchMenubtn);
@@ -161,7 +148,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button LunchMenubtn;
         private System.Windows.Forms.Button DinnerMenubtn;
         private System.Windows.Forms.Button DrinksMenubtn;
-        private System.Windows.Forms.Button Paybtn;
         private System.Windows.Forms.Button MenuPageTableViewbtn;
         private System.Windows.Forms.Button OrderOverviewbtn;
         private System.Windows.Forms.Label totalOrderCountlbl;
