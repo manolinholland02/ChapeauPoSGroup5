@@ -151,6 +151,7 @@ namespace ChapeauUI
         {
             this.Hide();
             _orderOverview.FillListViewWithOrderItems();
+            _orderOverview.LoadFormButtonColours();
             _orderOverview.Show();
         }
         private void SoftDrinksListView_SelectedIndexChanged_1(object sender, EventArgs e)

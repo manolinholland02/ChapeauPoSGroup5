@@ -151,6 +151,7 @@ namespace ChapeauUI
         {
             this.Hide();
             _orderOverview.FillListViewWithOrderItems();
+            _orderOverview.LoadFormButtonColours();
             _orderOverview.Show();
         }
 

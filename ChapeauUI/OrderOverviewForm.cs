@@ -35,6 +35,27 @@ namespace ChapeauUI
             this.restaurantOverview = restaurantOverview;
             orderItemService = new OrderItemService();
             allOrderItems = new List<OrderItem>();
+            LoadFormButtonColours();
+        }
+
+        public void LoadFormButtonColours()
+        {
+            if (allOrderItems.Count == 0)
+            {
+                TableOverviewbtn.BackColor = Color.SkyBlue;
+                DeleteOrderbtn.BackColor = default(Color);
+                PlusOrderbtn.BackColor = default(Color);
+                MinusOrderbtn.BackColor = default(Color);
+                PlaceOrderbtn.BackColor = default(Color);
+            }
+            else
+            {
+                TableOverviewbtn.BackColor = default(Color);
+                DeleteOrderbtn.BackColor = Color.Tomato;
+                PlusOrderbtn.BackColor = Color.SkyBlue;
+                MinusOrderbtn.BackColor = Color.SkyBlue;
+                PlaceOrderbtn.BackColor = Color.Lime;
+            }
         }
 
         private void PlusOrderbtn_Click(object sender, EventArgs e)
@@ -145,6 +166,7 @@ namespace ChapeauUI
         {
             int index = allOrderItems.IndexOf(GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text));
             allOrderItems[index] = orderItem;
+            LoadFormButtonColours();
         }
 
         public int GetCountOfAllOrderItems()
@@ -179,12 +201,14 @@ namespace ChapeauUI
             }
             else
             {
-                orderItemService.InsertOrderItems(allOrderItems);
                 //update the stock of ordered items
                 UpdateStockOfItems();
+                orderItemService.InsertOrderItems(allOrderItems);
                 // delete items from current order
                 allOrderItems.Clear();
                 FillListViewWithOrderItems();
+                //turn buttons colours
+                LoadFormButtonColours();
             }
 
         }
