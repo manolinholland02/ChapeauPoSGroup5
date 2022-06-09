@@ -17,7 +17,7 @@ namespace ChapeauModel
         public Status Status { get; set; }
         public Stopwatch TimeForPreparation { get; set; }
 
-        //calculates meni item stock - quantity
+        //calculates menu item stock - quantity
         public int Availability { get { return MenuItem.MenuItemStock - Quantity; } }
 
         //this calculated property is purely for design purposes when an order is passed to the Kitchen/Bar view

@@ -39,13 +39,17 @@ namespace ChapeauUI
 
         private void PlusOrderbtn_Click(object sender, EventArgs e)
         {
+            selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
             if (OrderlistView.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Please select an item first.");
             }
+            else if (selectedOrderItem.Availability < 1)// check the availability
+            {
+                MessageBox.Show($"{selectedOrderItem.MenuItem.MenuItemName} is out of stock");
+            }
             else
             {
-                selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
                 if (selectedOrderItem.Availability == 0)
                 {
                     MessageBox.Show("Stock limit has been reached!");
@@ -147,11 +151,6 @@ namespace ChapeauUI
         {
             return allOrderItems.Count;
         }
-
-        private void OrderOverviewPaybtn_Click(object sender, EventArgs e)
-        {
-
-        }
          
         private void OrderOverviewForm_Load(object sender, EventArgs e)
         {
@@ -173,13 +172,20 @@ namespace ChapeauUI
 
         private void PlaceOrderbtn_Click(object sender, EventArgs e)
         {
-            orderItemService.InsertOrderItems(allOrderItems);
-            // delete items from current order
-            // delete stock
-        }
-
-        private void OrderOverviewPaybtn_Click_1(object sender, EventArgs e)
-        {
+            //check if list is empty
+            if (allOrderItems.Count == 0)
+            {
+                MessageBox.Show("No items to send to kitchen/bar");
+            }
+            else
+            {
+                orderItemService.InsertOrderItems(allOrderItems);
+                //update the stock of ordered items
+                UpdateStockOfItems();
+                // delete items from current order
+                allOrderItems.Clear();
+                FillListViewWithOrderItems();
+            }
 
         }
 
@@ -204,6 +210,14 @@ namespace ChapeauUI
             }
                 this.Close();
                 restaurantOverview.Show();
+        }
+
+        private void UpdateStockOfItems()
+        {
+            foreach (OrderItem item in allOrderItems)
+            {
+                item.MenuItem.MenuItemStock = item.Availability;
+            }
         }
     }
 }

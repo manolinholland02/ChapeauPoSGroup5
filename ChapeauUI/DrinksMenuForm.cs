@@ -153,8 +153,7 @@ namespace ChapeauUI
             _orderOverview.FillListViewWithOrderItems();
             _orderOverview.Show();
         }
-
-        private void SoftDrinksListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void SoftDrinksListView_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (SoftDrinksListView.SelectedItems.Count == 1)
             {
@@ -162,8 +161,7 @@ namespace ChapeauUI
                 UnselectOtherListViews(SoftDrinksListView);
             }
         }
-
-        private void CoffeeTeaListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void CoffeeTeaListView_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (CoffeeTeaListView.SelectedItems.Count == 1)
             {
@@ -181,7 +179,7 @@ namespace ChapeauUI
             }
         }
 
-        private void WineListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void WineListView_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (WineListView.SelectedItems.Count == 1)
             {
@@ -257,5 +255,6 @@ namespace ChapeauUI
 
             }
         }
+
     }
 }

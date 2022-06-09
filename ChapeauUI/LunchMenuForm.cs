@@ -56,6 +56,7 @@ namespace ChapeauUI
 
         private void AddbtnLunch_Click(object sender, EventArgs e)
         {
+
             if (_selectedItem == null)
             {
                 MessageBox.Show("Please select an item first.");
@@ -84,9 +85,11 @@ namespace ChapeauUI
                     _allLunchOrderItems.Add(orderItem);
                     _orderOverview.AddOrderItemsToOrderOverview(orderItem);
                     orderCounterlbl.Text = $"count : {_allLunchOrderItems.Count}";
+                    _selectedItem = null;
                 }
 
                 LunchCommentSection.Clear();
+                _selectedItem = null;
 
                 foreach (ListView listView in _listViews)
                 {
@@ -151,34 +154,6 @@ namespace ChapeauUI
             _orderOverview.Show();
         }
 
-        private void LunchStartersListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (LunchStartersListView.SelectedItems.Count == 1)
-            {
-                _selectedItem = LunchStartersListView.SelectedItems[0];
-                UnselectOtherListViews(LunchStartersListView);
-            }
-        }
-
-        private void LunchMainListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (LunchMainListView.SelectedItems.Count == 1)
-            {
-                _selectedItem = LunchMainListView.SelectedItems[0];
-                UnselectOtherListViews(LunchMainListView);
-            }
-        }
-
-
-        private void LunchDessertListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (LunchDessertListView.SelectedItems.Count == 1)
-            {
-                _selectedItem = LunchDessertListView.SelectedItems[0];
-                UnselectOtherListViews(LunchDessertListView);
-            }
-        }
-
         private void UnselectOtherListViews(ListView SelectedListView) // ensures only one item from all list views is selected at a time
         {
             foreach (ListView listView in _listViews)
@@ -187,6 +162,32 @@ namespace ChapeauUI
                 {
                     listView.SelectedItems.Clear();
                 }
+            }
+        }
+
+        private void LunchMainListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (LunchMainListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = LunchMainListView.SelectedItems[0];
+                UnselectOtherListViews(LunchMainListView);
+            }
+        }
+
+        private void LunchStartersListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (LunchStartersListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = LunchStartersListView.SelectedItems[0];
+                UnselectOtherListViews(LunchStartersListView);
+            }
+        }
+        private void LunchDessertListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LunchDessertListView.SelectedItems.Count == 1)
+            {
+                _selectedItem = LunchDessertListView.SelectedItems[0];
+                UnselectOtherListViews(LunchDessertListView);
             }
         }
     }

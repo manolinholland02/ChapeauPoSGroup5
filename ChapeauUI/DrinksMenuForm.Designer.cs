@@ -69,6 +69,7 @@ namespace ChapeauUI
             this.SoftDrinksListView.TabIndex = 0;
             this.SoftDrinksListView.UseCompatibleStateImageBehavior = false;
             this.SoftDrinksListView.View = System.Windows.Forms.View.Details;
+            this.SoftDrinksListView.SelectedIndexChanged += new System.EventHandler(this.SoftDrinksListView_SelectedIndexChanged_1);
             // 
             // DrinkSoftDrinkID
             // 
@@ -126,6 +127,7 @@ namespace ChapeauUI
             this.WineListView.TabIndex = 2;
             this.WineListView.UseCompatibleStateImageBehavior = false;
             this.WineListView.View = System.Windows.Forms.View.Details;
+            this.WineListView.SelectedIndexChanged += new System.EventHandler(this.WineListView_SelectedIndexChanged_1);
             // 
             // DrinksWineID
             // 
@@ -184,6 +186,7 @@ namespace ChapeauUI
             this.CoffeeTeaListView.TabIndex = 4;
             this.CoffeeTeaListView.UseCompatibleStateImageBehavior = false;
             this.CoffeeTeaListView.View = System.Windows.Forms.View.Details;
+            this.CoffeeTeaListView.SelectedIndexChanged += new System.EventHandler(this.CoffeeTeaListView_SelectedIndexChanged_1);
             // 
             // DrinksCoffeeTeaID
             // 
