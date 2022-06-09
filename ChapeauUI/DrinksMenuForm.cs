@@ -35,6 +35,9 @@ namespace ChapeauUI
             allDrinkOrderItems = new List<OrderItem>();
             //background colour
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
         }
         public List<ListView> GetListOfListViews()// fills list of listviews
         {
@@ -77,7 +80,7 @@ namespace ChapeauUI
                 {
                     allDrinkOrderItems.Add(orderItem);
                     orderOverview.AddOrderItemsToOrderOverview(orderItem);
-                    orderCountlbl.Text = $"count : {allDrinkOrderItems.Count}";
+                    orderCountlbl.Text = $"Drink Items : {allDrinkOrderItems.Count}";
                 }
 
                 DrinksCommentSection.Clear();
@@ -293,7 +296,7 @@ namespace ChapeauUI
                 {
                     allDrinkOrderItems.Add(orderItem);
                     orderOverview.AddOrderItemsToOrderOverview(orderItem);
-                    orderCountlbl.Text = $"Count : {allDrinkOrderItems.Count}";
+                    orderCountlbl.Text = $"Drink Items: {allDrinkOrderItems.Count}";
                 }
                 DrinksCommentSection.Clear();
                 List<ListView> listViews = GetListOfListViews();

@@ -98,27 +98,30 @@ namespace ChapeauUI
             // totalOrderCountlbl
             // 
             this.totalOrderCountlbl.AutoSize = true;
-            this.totalOrderCountlbl.Location = new System.Drawing.Point(12, 49);
+            this.totalOrderCountlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.totalOrderCountlbl.Location = new System.Drawing.Point(12, 86);
             this.totalOrderCountlbl.Name = "totalOrderCountlbl";
-            this.totalOrderCountlbl.Size = new System.Drawing.Size(170, 20);
+            this.totalOrderCountlbl.Size = new System.Drawing.Size(220, 25);
             this.totalOrderCountlbl.TabIndex = 6;
             this.totalOrderCountlbl.Text = "Total items in the order: ";
             // 
             // tableNumberlbl
             // 
             this.tableNumberlbl.AutoSize = true;
+            this.tableNumberlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableNumberlbl.Location = new System.Drawing.Point(12, 9);
             this.tableNumberlbl.Name = "tableNumberlbl";
-            this.tableNumberlbl.Size = new System.Drawing.Size(109, 20);
+            this.tableNumberlbl.Size = new System.Drawing.Size(147, 25);
             this.tableNumberlbl.TabIndex = 7;
             this.tableNumberlbl.Text = "Table Number: ";
             // 
             // EmployeeNamelbl
             // 
             this.EmployeeNamelbl.AutoSize = true;
-            this.EmployeeNamelbl.Location = new System.Drawing.Point(12, 29);
+            this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 1);
             this.EmployeeNamelbl.Name = "EmployeeNamelbl";
-            this.EmployeeNamelbl.Size = new System.Drawing.Size(119, 20);
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
             this.EmployeeNamelbl.TabIndex = 8;
             this.EmployeeNamelbl.Text = "Employee Name";
             // 

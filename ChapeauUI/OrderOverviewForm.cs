@@ -33,6 +33,9 @@ namespace ChapeauUI
             orderItemService = new OrderItemService();
             allOrderItems = new List<OrderItem>();
             LoadFormButtonColours();
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
         }
 
         public void LoadFormButtonColours()// loads the colours of the buttons depending on what the clal to action should be

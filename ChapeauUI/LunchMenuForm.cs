@@ -34,6 +34,9 @@ namespace ChapeauUI
             selectedItem = new ListViewItem();
             this.orderOverview = orderOverview;
             allLunchOrderItems = new List<OrderItem>();
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
         }
         public List<ListView> GetListOfListViews()// fills list of listviews
         {
@@ -66,7 +69,7 @@ namespace ChapeauUI
                 {
                     allLunchOrderItems.Add(orderItem);
                     orderOverview.AddOrderItemsToOrderOverview(orderItem);
-                    orderCounterlbl.Text = $"count : {allLunchOrderItems.Count}";
+                    orderCounterlbl.Text = $"Lunch Items: {allLunchOrderItems.Count}";
                     selectedItem = null;
                 }
                 LunchCommentSection.Clear();

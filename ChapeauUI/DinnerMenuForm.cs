@@ -34,6 +34,10 @@ namespace ChapeauUI
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             selectedItem = new ListViewItem();
             allDinnerOrderItems = new List<OrderItem>();
+
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
         }
 
 
@@ -66,7 +70,7 @@ namespace ChapeauUI
                 {
                     allDinnerOrderItems.Add(orderItem);
                     orderOverview.AddOrderItemsToOrderOverview(orderItem);
-                    orderCounterlbl.Text = $"count : {allDinnerOrderItems.Count}";
+                    orderCounterlbl.Text = $"Dinner Items: {allDinnerOrderItems.Count}";
                 }
                 DinnerCommentSection.Clear();
                 List<ListView> listViews = GetListOfListViews();

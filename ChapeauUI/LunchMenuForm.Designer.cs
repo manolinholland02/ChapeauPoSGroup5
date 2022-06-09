@@ -46,6 +46,8 @@ namespace ChapeauUI
             this.AddbtnLunch = new System.Windows.Forms.Button();
             this.LunchCommentSection = new System.Windows.Forms.TextBox();
             this.orderCounterlbl = new System.Windows.Forms.Label();
+            this.EmployeeNamelbl = new System.Windows.Forms.Label();
+            this.tableNumberlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OrderOverviewLunchbtn
@@ -65,7 +67,7 @@ namespace ChapeauUI
             this.starterId,
             this.starterName});
             this.LunchStartersListView.HideSelection = false;
-            this.LunchStartersListView.Location = new System.Drawing.Point(12, 112);
+            this.LunchStartersListView.Location = new System.Drawing.Point(76, 112);
             this.LunchStartersListView.MultiSelect = false;
             this.LunchStartersListView.Name = "LunchStartersListView";
             this.LunchStartersListView.Size = new System.Drawing.Size(376, 145);
@@ -77,7 +79,7 @@ namespace ChapeauUI
             // lunchStarterId
             // 
             this.lunchStarterId.Text = "ID";
-            this.lunchStarterId.Width = 50;
+            this.lunchStarterId.Width = 0;
             // 
             // starterId
             // 
@@ -87,7 +89,7 @@ namespace ChapeauUI
             // starterName
             // 
             this.starterName.Text = "Starters";
-            this.starterName.Width = 250;
+            this.starterName.Width = 376;
             // 
             // LunchMainListView
             // 
@@ -96,7 +98,7 @@ namespace ChapeauUI
             this.mainId,
             this.mainName});
             this.LunchMainListView.HideSelection = false;
-            this.LunchMainListView.Location = new System.Drawing.Point(12, 263);
+            this.LunchMainListView.Location = new System.Drawing.Point(76, 263);
             this.LunchMainListView.MultiSelect = false;
             this.LunchMainListView.Name = "LunchMainListView";
             this.LunchMainListView.Size = new System.Drawing.Size(376, 145);
@@ -118,7 +120,7 @@ namespace ChapeauUI
             // mainName
             // 
             this.mainName.Text = "Mains";
-            this.mainName.Width = 250;
+            this.mainName.Width = 376;
             // 
             // LunchDessertListView
             // 
@@ -127,7 +129,7 @@ namespace ChapeauUI
             this.desertId,
             this.desertName});
             this.LunchDessertListView.HideSelection = false;
-            this.LunchDessertListView.Location = new System.Drawing.Point(12, 414);
+            this.LunchDessertListView.Location = new System.Drawing.Point(76, 414);
             this.LunchDessertListView.MultiSelect = false;
             this.LunchDessertListView.Name = "LunchDessertListView";
             this.LunchDessertListView.Size = new System.Drawing.Size(376, 145);
@@ -149,7 +151,7 @@ namespace ChapeauUI
             // desertName
             // 
             this.desertName.Text = "Desserts";
-            this.desertName.Width = 250;
+            this.desertName.Width = 376;
             // 
             // backbtnLunch
             // 
@@ -181,11 +183,32 @@ namespace ChapeauUI
             // orderCounterlbl
             // 
             this.orderCounterlbl.AutoSize = true;
-            this.orderCounterlbl.Location = new System.Drawing.Point(401, 122);
+            this.orderCounterlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.orderCounterlbl.Location = new System.Drawing.Point(3, 29);
             this.orderCounterlbl.Name = "orderCounterlbl";
-            this.orderCounterlbl.Size = new System.Drawing.Size(49, 20);
+            this.orderCounterlbl.Size = new System.Drawing.Size(124, 25);
             this.orderCounterlbl.TabIndex = 7;
-            this.orderCounterlbl.Text = "count:";
+            this.orderCounterlbl.Text = "Lunch Items:";
+            // 
+            // EmployeeNamelbl
+            // 
+            this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 1);
+            this.EmployeeNamelbl.Name = "EmployeeNamelbl";
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
+            this.EmployeeNamelbl.TabIndex = 8;
+            this.EmployeeNamelbl.Text = "Employee Name";
+            // 
+            // tableNumberlbl
+            // 
+            this.tableNumberlbl.AutoSize = true;
+            this.tableNumberlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableNumberlbl.Location = new System.Drawing.Point(3, 4);
+            this.tableNumberlbl.Name = "tableNumberlbl";
+            this.tableNumberlbl.Size = new System.Drawing.Size(136, 25);
+            this.tableNumberlbl.TabIndex = 9;
+            this.tableNumberlbl.Text = "Table Number";
             // 
             // LunchMenuForm
             // 
@@ -193,6 +216,8 @@ namespace ChapeauUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.tableNumberlbl);
+            this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.orderCounterlbl);
             this.Controls.Add(this.LunchCommentSection);
             this.Controls.Add(this.AddbtnLunch);
@@ -227,5 +252,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader starterId;
         private System.Windows.Forms.ColumnHeader lunchMainId;
         private System.Windows.Forms.ColumnHeader lunchDesertId;
+        private System.Windows.Forms.Label EmployeeNamelbl;
+        private System.Windows.Forms.Label tableNumberlbl;
     }
 }

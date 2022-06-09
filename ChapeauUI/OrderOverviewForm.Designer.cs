@@ -41,6 +41,8 @@ namespace ChapeauUI
             this.PlaceOrderbtn = new System.Windows.Forms.Button();
             this.oderOverviewbackbtn = new System.Windows.Forms.Button();
             this.TableOverviewbtn = new System.Windows.Forms.Button();
+            this.EmployeeNamelbl = new System.Windows.Forms.Label();
+            this.tableNumberlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OrderlistView
@@ -144,11 +146,33 @@ namespace ChapeauUI
             this.TableOverviewbtn.UseVisualStyleBackColor = true;
             this.TableOverviewbtn.Click += new System.EventHandler(this.TableOverviewbtn_Click);
             // 
+            // EmployeeNamelbl
+            // 
+            this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(372, 9);
+            this.EmployeeNamelbl.Name = "EmployeeNamelbl";
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
+            this.EmployeeNamelbl.TabIndex = 7;
+            this.EmployeeNamelbl.Text = "Employee Name";
+            // 
+            // tableNumberlbl
+            // 
+            this.tableNumberlbl.AutoSize = true;
+            this.tableNumberlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableNumberlbl.Location = new System.Drawing.Point(12, 9);
+            this.tableNumberlbl.Name = "tableNumberlbl";
+            this.tableNumberlbl.Size = new System.Drawing.Size(136, 25);
+            this.tableNumberlbl.TabIndex = 8;
+            this.tableNumberlbl.Text = "Table Number";
+            // 
             // OrderOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.tableNumberlbl);
+            this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.TableOverviewbtn);
             this.Controls.Add(this.oderOverviewbackbtn);
             this.Controls.Add(this.PlaceOrderbtn);
@@ -159,6 +183,7 @@ namespace ChapeauUI
             this.Name = "OrderOverviewForm";
             this.Text = "OrderOverviewForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +201,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader orderItemId;
         private System.Windows.Forms.ColumnHeader menuItemStock;
         private System.Windows.Forms.Button TableOverviewbtn;
+        private System.Windows.Forms.Label EmployeeNamelbl;
+        private System.Windows.Forms.Label tableNumberlbl;
     }
 }
