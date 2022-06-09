@@ -29,6 +29,7 @@ namespace ChapeauUI
         public DrinksMenuForm(OrderService orderService, int tableID, ChoosingMenuForm choosingMenuForm, Employee waiter, OrderOverviewForm orderOverview)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             _category = MenuItemCategory.softdrink;
             _listViews = new List<ListView>();
             this._orderService = orderService;

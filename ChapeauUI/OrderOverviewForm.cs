@@ -27,6 +27,7 @@ namespace ChapeauUI
         public OrderOverviewForm(OrderService orderService, Employee waiter, int tableId, ChoosingMenuForm choosingMenu,RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             this.orderService = orderService;
             this.currentOrder = this.orderService.GetLastOrder(tableId);
             this.waiter = waiter;
@@ -43,14 +44,14 @@ namespace ChapeauUI
             if (allOrderItems.Count == 0)
             {
                 TableOverviewbtn.BackColor = Color.SkyBlue;
-                DeleteOrderbtn.BackColor = default(Color);
-                PlusOrderbtn.BackColor = default(Color);
-                MinusOrderbtn.BackColor = default(Color);
-                PlaceOrderbtn.BackColor = default(Color);
+                DeleteOrderbtn.BackColor = Color.AliceBlue;
+                PlusOrderbtn.BackColor = Color.AliceBlue;
+                MinusOrderbtn.BackColor = Color.AliceBlue;
+                PlaceOrderbtn.BackColor = Color.AliceBlue;
             }
             else
             {
-                TableOverviewbtn.BackColor = default(Color);
+                TableOverviewbtn.BackColor = Color.AliceBlue;
                 DeleteOrderbtn.BackColor = Color.Tomato;
                 PlusOrderbtn.BackColor = Color.SkyBlue;
                 MinusOrderbtn.BackColor = Color.SkyBlue;
@@ -60,17 +61,18 @@ namespace ChapeauUI
 
         private void PlusOrderbtn_Click(object sender, EventArgs e)
         {
-            selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
             if (OrderlistView.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Please select an item first.");
             }
             else if (selectedOrderItem.Availability < 1)// check the availability
             {
+                selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
                 MessageBox.Show($"{selectedOrderItem.MenuItem.MenuItemName} is out of stock");
             }
             else
             {
+                selectedOrderItem = GetOrderItemFromListView(OrderlistView.SelectedItems[0].SubItems[1].Text);
                 if (selectedOrderItem.Availability == 0)
                 {
                     MessageBox.Show("Stock limit has been reached!");
@@ -110,6 +112,10 @@ namespace ChapeauUI
                 {
                     allOrderItems.Remove(selectedOrderItem);
                     FillListViewWithOrderItems();
+                    if (allOrderItems.Count == 0)
+                    {
+                        LoadFormButtonColours();
+                    }
                 }
                 else
                 {
@@ -126,6 +132,7 @@ namespace ChapeauUI
                         }
                         UpdateAllOrderItemsList(selectedOrderItem);
                     }
+
                 }
                 
             }
@@ -189,6 +196,7 @@ namespace ChapeauUI
                 allOrderItems.Clear();
             }
             FillListViewWithOrderItems();
+            LoadFormButtonColours();
         }
 
 

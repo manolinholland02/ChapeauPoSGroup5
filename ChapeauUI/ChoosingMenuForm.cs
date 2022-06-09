@@ -24,6 +24,7 @@ namespace ChapeauUI
         public ChoosingMenuForm(int TableID, Employee employee, OrderService orderService, RestaurantOverview restaurantOverview)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             CheckMenuTime();
             this.tableID = TableID;
             this.waiter = employee;
