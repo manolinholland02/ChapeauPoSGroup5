@@ -34,14 +34,15 @@ namespace ChapeauUI
                 {
                     Employee employee = employeeService.GetEmployee(username);
 
-                // 1) employee type = manager -> Open ManagerViewForm
-                if (employee.EmployeeType == EmployeeType.manager)
+                    // 1) employee type = manager -> Open ManagerViewForm
+                    if (employee.EmployeeType == EmployeeType.manager)
                     {
                         this.Hide();
                         ManagerViewEmployee managerView = new ManagerViewEmployee(employee);
                         managerView.Show();
                     }
-                // 2) employee type = waiter -> Open RestaurantOverview
+                    // 2) employee type = waiter -> Open RestaurantOverview
+                    else if (employee.EmployeeType == EmployeeType.waiter)
                     {
                         this.Hide();
                         RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
@@ -53,9 +54,11 @@ namespace ChapeauUI
                         this.Close();
                         KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
                         kitchenBarView.Show();
-                else
-                {
-                    MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
             catch(Exception ex)
