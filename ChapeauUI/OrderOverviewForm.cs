@@ -129,6 +129,7 @@ namespace ChapeauUI
         {
             string[] output = { selectedOrderItem.OrderItemID.ToString(), selectedOrderItem.MenuItem.MenuItemName, selectedOrderItem.Quantity.ToString(), selectedOrderItem.Comment, selectedOrderItem.Availability.ToString() };
             ListViewItem item = new ListViewItem(output);
+            item.Font = new System.Drawing.Font("Microsoft Sans Serif", 11);
             for (int i = 0; i < OrderlistView.Items.Count; i++)
             {
                 if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
