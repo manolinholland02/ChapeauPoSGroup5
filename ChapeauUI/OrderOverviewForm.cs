@@ -278,7 +278,7 @@ namespace ChapeauUI
             {
                 LogIn login = new LogIn();
                 login.Show();
-                this.Hide();
+                this.Close();
             }
         }
     }
