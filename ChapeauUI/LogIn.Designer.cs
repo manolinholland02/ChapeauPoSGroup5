@@ -45,7 +45,8 @@ namespace ChapeauUI
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(174, 596);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.Location = new System.Drawing.Point(174, 602);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(148, 51);
             this.btnLogin.TabIndex = 0;
@@ -87,9 +88,9 @@ namespace ChapeauUI
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(220)))), ((int)(((byte)(202)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(232, 533);
+            this.txtPassword.Location = new System.Drawing.Point(226, 537);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(125, 20);
             this.txtPassword.TabIndex = 7;
@@ -107,7 +108,7 @@ namespace ChapeauUI
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(220)))), ((int)(((byte)(202)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Location = new System.Drawing.Point(226, 492);
             this.txtUsername.Name = "txtUsername";
@@ -150,6 +151,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(220)))), ((int)(((byte)(202)))));
             this.ClientSize = new System.Drawing.Size(532, 753);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtUsername);
