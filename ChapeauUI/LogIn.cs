@@ -23,7 +23,7 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 // get password & username from user
                 string username = txtUsername.Text;
@@ -61,7 +61,7 @@ namespace ChapeauUI
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.ToString()}");
             }
