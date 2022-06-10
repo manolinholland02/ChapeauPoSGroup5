@@ -8,6 +8,7 @@ namespace ChapeauModel
 {
     public class Table
     {
+       
         public int TableId { get; set; }
         public TableStatus TableStatus { get; set; }
 

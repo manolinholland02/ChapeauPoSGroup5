@@ -37,33 +37,35 @@ namespace ChapeauUI
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessage.Location = new System.Drawing.Point(3, 21);
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMessage.Location = new System.Drawing.Point(43, 20);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(283, 25);
+            this.lblMessage.Size = new System.Drawing.Size(198, 62);
             this.lblMessage.TabIndex = 0;
-            this.lblMessage.Text = "Do you want to occupy this table?";
+            this.lblMessage.Text = "Do you want to \r\noccupy this table?";
             // 
             // btnYes
             // 
+            this.btnYes.BackColor = System.Drawing.Color.Lime;
             this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnYes.Location = new System.Drawing.Point(12, 139);
+            this.btnYes.Location = new System.Drawing.Point(22, 126);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(94, 29);
+            this.btnYes.Size = new System.Drawing.Size(106, 42);
             this.btnYes.TabIndex = 1;
             this.btnYes.Text = "Yes";
-            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.UseVisualStyleBackColor = false;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(182, 139);
+            this.btnCancel.Location = new System.Drawing.Point(166, 126);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.Size = new System.Drawing.Size(110, 42);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // OccupyDialogBox
