@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {}
+    "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
+        "projectPath": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\manol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -34,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -74,28 +72,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
+        "projectPath": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\manol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\manol\\source\\repos\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -144,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

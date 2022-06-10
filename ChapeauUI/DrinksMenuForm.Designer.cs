@@ -54,6 +54,8 @@ namespace ChapeauUI
             this.DrinksCommentSection = new System.Windows.Forms.TextBox();
             this.DrinksTableOverview = new System.Windows.Forms.Button();
             this.orderCountlbl = new System.Windows.Forms.Label();
+            this.EmployeeNamelbl = new System.Windows.Forms.Label();
+            this.tableNumberlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SoftDrinksListView
@@ -62,13 +64,15 @@ namespace ChapeauUI
             this.DrinkSoftDrinkID,
             this.softdrinkId,
             this.softdrinkName});
+            this.SoftDrinksListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SoftDrinksListView.HideSelection = false;
             this.SoftDrinksListView.Location = new System.Drawing.Point(1, 117);
             this.SoftDrinksListView.Name = "SoftDrinksListView";
-            this.SoftDrinksListView.Size = new System.Drawing.Size(265, 301);
+            this.SoftDrinksListView.Size = new System.Drawing.Size(265, 269);
             this.SoftDrinksListView.TabIndex = 0;
             this.SoftDrinksListView.UseCompatibleStateImageBehavior = false;
             this.SoftDrinksListView.View = System.Windows.Forms.View.Details;
+            this.SoftDrinksListView.SelectedIndexChanged += new System.EventHandler(this.SoftDrinksListView_SelectedIndexChanged_1);
             // 
             // DrinkSoftDrinkID
             // 
@@ -90,6 +94,7 @@ namespace ChapeauUI
             this.DrinksBeerID,
             this.beerId,
             this.beerName});
+            this.BeersListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BeersListView.HideSelection = false;
             this.BeersListView.Location = new System.Drawing.Point(272, 117);
             this.BeersListView.Name = "BeersListView";
@@ -110,7 +115,7 @@ namespace ChapeauUI
             // 
             // beerName
             // 
-            this.beerName.Text = "Beers";
+            this.beerName.Text = "Spirits";
             this.beerName.Width = 250;
             // 
             // WineListView
@@ -119,13 +124,15 @@ namespace ChapeauUI
             this.DrinksWineID,
             this.wineId,
             this.wineName});
+            this.WineListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WineListView.HideSelection = false;
-            this.WineListView.Location = new System.Drawing.Point(272, 459);
+            this.WineListView.Location = new System.Drawing.Point(1, 392);
             this.WineListView.Name = "WineListView";
-            this.WineListView.Size = new System.Drawing.Size(265, 146);
+            this.WineListView.Size = new System.Drawing.Size(265, 213);
             this.WineListView.TabIndex = 2;
             this.WineListView.UseCompatibleStateImageBehavior = false;
             this.WineListView.View = System.Windows.Forms.View.Details;
+            this.WineListView.SelectedIndexChanged += new System.EventHandler(this.WineListView_SelectedIndexChanged_1);
             // 
             // DrinksWineID
             // 
@@ -148,6 +155,7 @@ namespace ChapeauUI
             this.DrinksSpiritID,
             this.spiritId,
             this.spiritName});
+            this.SpiritsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SpiritsListView.HideSelection = false;
             this.SpiritsListView.Location = new System.Drawing.Point(272, 303);
             this.SpiritsListView.Name = "SpiritsListView";
@@ -168,7 +176,7 @@ namespace ChapeauUI
             // 
             // spiritName
             // 
-            this.spiritName.Text = "Spirits";
+            this.spiritName.Text = "Coffee and Tea";
             this.spiritName.Width = 250;
             // 
             // CoffeeTeaListView
@@ -177,13 +185,15 @@ namespace ChapeauUI
             this.DrinksCoffeeTeaID,
             this.caffeinatedId,
             this.caffeinatedName});
+            this.CoffeeTeaListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CoffeeTeaListView.HideSelection = false;
-            this.CoffeeTeaListView.Location = new System.Drawing.Point(1, 424);
+            this.CoffeeTeaListView.Location = new System.Drawing.Point(272, 459);
             this.CoffeeTeaListView.Name = "CoffeeTeaListView";
-            this.CoffeeTeaListView.Size = new System.Drawing.Size(265, 181);
+            this.CoffeeTeaListView.Size = new System.Drawing.Size(265, 146);
             this.CoffeeTeaListView.TabIndex = 4;
             this.CoffeeTeaListView.UseCompatibleStateImageBehavior = false;
             this.CoffeeTeaListView.View = System.Windows.Forms.View.Details;
+            this.CoffeeTeaListView.SelectedIndexChanged += new System.EventHandler(this.CoffeeTeaListView_SelectedIndexChanged_1);
             // 
             // DrinksCoffeeTeaID
             // 
@@ -196,11 +206,12 @@ namespace ChapeauUI
             // 
             // caffeinatedName
             // 
-            this.caffeinatedName.Text = "Coffee and Tea";
+            this.caffeinatedName.Text = "Beers";
             this.caffeinatedName.Width = 250;
             // 
             // BackDrinksbtn
             // 
+            this.BackDrinksbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BackDrinksbtn.Location = new System.Drawing.Point(12, 666);
             this.BackDrinksbtn.Name = "BackDrinksbtn";
             this.BackDrinksbtn.Size = new System.Drawing.Size(200, 77);
@@ -211,12 +222,14 @@ namespace ChapeauUI
             // 
             // AddDrinksbtn
             // 
+            this.AddDrinksbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddDrinksbtn.Location = new System.Drawing.Point(325, 666);
             this.AddDrinksbtn.Name = "AddDrinksbtn";
             this.AddDrinksbtn.Size = new System.Drawing.Size(200, 77);
             this.AddDrinksbtn.TabIndex = 6;
             this.AddDrinksbtn.Text = "Add";
             this.AddDrinksbtn.UseVisualStyleBackColor = true;
+            this.AddDrinksbtn.Click += new System.EventHandler(this.AddDrinksbtn_Click);
             // 
             // DrinksCommentSection
             // 
@@ -227,7 +240,8 @@ namespace ChapeauUI
             // 
             // DrinksTableOverview
             // 
-            this.DrinksTableOverview.Location = new System.Drawing.Point(410, 29);
+            this.DrinksTableOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DrinksTableOverview.Location = new System.Drawing.Point(410, 35);
             this.DrinksTableOverview.Name = "DrinksTableOverview";
             this.DrinksTableOverview.Size = new System.Drawing.Size(115, 82);
             this.DrinksTableOverview.TabIndex = 8;
@@ -238,17 +252,42 @@ namespace ChapeauUI
             // orderCountlbl
             // 
             this.orderCountlbl.AutoSize = true;
-            this.orderCountlbl.Location = new System.Drawing.Point(252, 55);
+            this.orderCountlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.orderCountlbl.Location = new System.Drawing.Point(1, 29);
             this.orderCountlbl.Name = "orderCountlbl";
-            this.orderCountlbl.Size = new System.Drawing.Size(51, 20);
+            this.orderCountlbl.Size = new System.Drawing.Size(115, 25);
             this.orderCountlbl.TabIndex = 9;
-            this.orderCountlbl.Text = "Count:";
+            this.orderCountlbl.Text = "Drink Items:";
+            // 
+            // EmployeeNamelbl
+            // 
+            this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 5);
+            this.EmployeeNamelbl.Name = "EmployeeNamelbl";
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(158, 27);
+            this.EmployeeNamelbl.TabIndex = 10;
+            this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
+            // 
+            // tableNumberlbl
+            // 
+            this.tableNumberlbl.AutoSize = true;
+            this.tableNumberlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableNumberlbl.Location = new System.Drawing.Point(1, 4);
+            this.tableNumberlbl.Name = "tableNumberlbl";
+            this.tableNumberlbl.Size = new System.Drawing.Size(136, 25);
+            this.tableNumberlbl.TabIndex = 11;
+            this.tableNumberlbl.Text = "Table Number";
             // 
             // DrinksMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.tableNumberlbl);
+            this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.orderCountlbl);
             this.Controls.Add(this.DrinksTableOverview);
             this.Controls.Add(this.DrinksCommentSection);
@@ -260,6 +299,7 @@ namespace ChapeauUI
             this.Controls.Add(this.BeersListView);
             this.Controls.Add(this.SoftDrinksListView);
             this.Name = "DrinksMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DrinksMenuForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,5 +333,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader DrinksWineID;
         private System.Windows.Forms.ColumnHeader DrinksSpiritID;
         private System.Windows.Forms.ColumnHeader DrinksCoffeeTeaID;
+        private System.Windows.Forms.Label EmployeeNamelbl;
+        private System.Windows.Forms.Label tableNumberlbl;
     }
 }

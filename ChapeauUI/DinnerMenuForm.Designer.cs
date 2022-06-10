@@ -50,6 +50,8 @@ namespace ChapeauUI
             this.DinnerCommentSection = new System.Windows.Forms.TextBox();
             this.OrderOverviewDinnerbtn = new System.Windows.Forms.Button();
             this.orderCounterlbl = new System.Windows.Forms.Label();
+            this.EmployeeNamelbl = new System.Windows.Forms.Label();
+            this.tableNumberlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DinnerDessertsListView
@@ -58,10 +60,11 @@ namespace ChapeauUI
             this.dinnerDeserId,
             this.deserId,
             this.desertName});
+            this.DinnerDessertsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DinnerDessertsListView.HideSelection = false;
             this.DinnerDessertsListView.Location = new System.Drawing.Point(274, 338);
             this.DinnerDessertsListView.Name = "DinnerDessertsListView";
-            this.DinnerDessertsListView.Size = new System.Drawing.Size(265, 145);
+            this.DinnerDessertsListView.Size = new System.Drawing.Size(265, 212);
             this.DinnerDessertsListView.TabIndex = 0;
             this.DinnerDessertsListView.UseCompatibleStateImageBehavior = false;
             this.DinnerDessertsListView.View = System.Windows.Forms.View.Details;
@@ -88,10 +91,11 @@ namespace ChapeauUI
             this.dinnerStarterId,
             this.starterId,
             this.starterName});
+            this.DinnerStartersListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DinnerStartersListView.HideSelection = false;
-            this.DinnerStartersListView.Location = new System.Drawing.Point(3, 187);
+            this.DinnerStartersListView.Location = new System.Drawing.Point(3, 120);
             this.DinnerStartersListView.Name = "DinnerStartersListView";
-            this.DinnerStartersListView.Size = new System.Drawing.Size(265, 145);
+            this.DinnerStartersListView.Size = new System.Drawing.Size(265, 212);
             this.DinnerStartersListView.TabIndex = 1;
             this.DinnerStartersListView.UseCompatibleStateImageBehavior = false;
             this.DinnerStartersListView.View = System.Windows.Forms.View.Details;
@@ -105,7 +109,7 @@ namespace ChapeauUI
             // starterId
             // 
             this.starterId.Text = "ID";
-            this.starterId.Width = 35;
+            this.starterId.Width = 0;
             // 
             // starterName
             // 
@@ -118,10 +122,11 @@ namespace ChapeauUI
             this.dinnerMainId,
             this.mainId,
             this.mainName});
+            this.DinnerMainListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DinnerMainListView.HideSelection = false;
             this.DinnerMainListView.Location = new System.Drawing.Point(3, 338);
             this.DinnerMainListView.Name = "DinnerMainListView";
-            this.DinnerMainListView.Size = new System.Drawing.Size(265, 145);
+            this.DinnerMainListView.Size = new System.Drawing.Size(265, 212);
             this.DinnerMainListView.TabIndex = 2;
             this.DinnerMainListView.UseCompatibleStateImageBehavior = false;
             this.DinnerMainListView.View = System.Windows.Forms.View.Details;
@@ -148,10 +153,11 @@ namespace ChapeauUI
             this.dinnerEntrementId,
             this.entremetId,
             this.entremetName});
+            this.DinnerEntremetsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DinnerEntremetsListView.HideSelection = false;
-            this.DinnerEntremetsListView.Location = new System.Drawing.Point(274, 187);
+            this.DinnerEntremetsListView.Location = new System.Drawing.Point(274, 120);
             this.DinnerEntremetsListView.Name = "DinnerEntremetsListView";
-            this.DinnerEntremetsListView.Size = new System.Drawing.Size(265, 145);
+            this.DinnerEntremetsListView.Size = new System.Drawing.Size(265, 212);
             this.DinnerEntremetsListView.TabIndex = 3;
             this.DinnerEntremetsListView.UseCompatibleStateImageBehavior = false;
             this.DinnerEntremetsListView.View = System.Windows.Forms.View.Details;
@@ -174,6 +180,7 @@ namespace ChapeauUI
             // 
             // BackbtnDinner
             // 
+            this.BackbtnDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BackbtnDinner.Location = new System.Drawing.Point(12, 663);
             this.BackbtnDinner.Name = "BackbtnDinner";
             this.BackbtnDinner.Size = new System.Drawing.Size(200, 77);
@@ -184,6 +191,7 @@ namespace ChapeauUI
             // 
             // AddbtnDinner
             // 
+            this.AddbtnDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddbtnDinner.Location = new System.Drawing.Point(325, 663);
             this.AddbtnDinner.Name = "AddbtnDinner";
             this.AddbtnDinner.Size = new System.Drawing.Size(200, 77);
@@ -201,7 +209,8 @@ namespace ChapeauUI
             // 
             // OrderOverviewDinnerbtn
             // 
-            this.OrderOverviewDinnerbtn.Location = new System.Drawing.Point(410, 29);
+            this.OrderOverviewDinnerbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OrderOverviewDinnerbtn.Location = new System.Drawing.Point(410, 35);
             this.OrderOverviewDinnerbtn.Name = "OrderOverviewDinnerbtn";
             this.OrderOverviewDinnerbtn.Size = new System.Drawing.Size(115, 82);
             this.OrderOverviewDinnerbtn.TabIndex = 7;
@@ -212,17 +221,42 @@ namespace ChapeauUI
             // orderCounterlbl
             // 
             this.orderCounterlbl.AutoSize = true;
-            this.orderCounterlbl.Location = new System.Drawing.Point(12, 43);
+            this.orderCounterlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.orderCounterlbl.Location = new System.Drawing.Point(3, 29);
             this.orderCounterlbl.Name = "orderCounterlbl";
-            this.orderCounterlbl.Size = new System.Drawing.Size(46, 20);
+            this.orderCounterlbl.Size = new System.Drawing.Size(127, 25);
             this.orderCounterlbl.TabIndex = 8;
-            this.orderCounterlbl.Text = "count";
+            this.orderCounterlbl.Text = "Dinner Items:";
+            // 
+            // EmployeeNamelbl
+            // 
+            this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 5);
+            this.EmployeeNamelbl.Name = "EmployeeNamelbl";
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(158, 27);
+            this.EmployeeNamelbl.TabIndex = 9;
+            this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
+            // 
+            // tableNumberlbl
+            // 
+            this.tableNumberlbl.AutoSize = true;
+            this.tableNumberlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableNumberlbl.Location = new System.Drawing.Point(3, 4);
+            this.tableNumberlbl.Name = "tableNumberlbl";
+            this.tableNumberlbl.Size = new System.Drawing.Size(136, 25);
+            this.tableNumberlbl.TabIndex = 10;
+            this.tableNumberlbl.Text = "Table Number";
             // 
             // DinnerMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.tableNumberlbl);
+            this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.orderCounterlbl);
             this.Controls.Add(this.OrderOverviewDinnerbtn);
             this.Controls.Add(this.DinnerCommentSection);
@@ -233,6 +267,7 @@ namespace ChapeauUI
             this.Controls.Add(this.DinnerStartersListView);
             this.Controls.Add(this.DinnerDessertsListView);
             this.Name = "DinnerMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DinnerMenuForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,5 +297,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader dinnerEntrementId;
         private System.Windows.Forms.ColumnHeader dinnerDeserId;
         private System.Windows.Forms.ColumnHeader dinnerMainId;
+        private System.Windows.Forms.Label EmployeeNamelbl;
+        private System.Windows.Forms.Label tableNumberlbl;
     }
 }

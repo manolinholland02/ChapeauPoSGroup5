@@ -14,142 +14,253 @@ namespace ChapeauUI
 {
     public partial class LunchMenuForm : Form
     {
-        private MenuItemCategory _category;
-        private List<ListView> _listViews;
-        private List<Orders> _currentOrders;
-        private int TableID;
-        private Employee Waiter;
-        
-        public LunchMenuForm(List<Orders> currentorders, int TableID, Employee waiter)
+        private ChoosingMenuForm choosingMenuForm;
+        private ListViewItem selectedItem;
+        private OrderOverviewForm orderOverview;
+        private OrderService orderService;
+        private List<OrderItem> allLunchOrderItems;
+        private int TableID { get; }
+        private Employee Waiter { get; }
+
+        public LunchMenuForm(OrderService orderService, int tableID, ChoosingMenuForm choosingMenuForm, Employee waiter, OrderOverviewForm orderOverview)
         {
             InitializeComponent();
-            _category = MenuItemCategory.starter;
-            _listViews = new List<ListView>();
-            _currentOrders = currentorders;
-            _listViews.Add(LunchStartersListView);
-            _listViews.Add(LunchMainListView);
-            _listViews.Add(LunchDessertListView);
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
+            this.orderService = orderService;
             PopulateLunchMenus();
-            this.TableID = TableID;
+            this.TableID = tableID;
+            this.choosingMenuForm = choosingMenuForm;
             this.Waiter = waiter;
+            selectedItem = new ListViewItem();
+            this.orderOverview = orderOverview;
+            allLunchOrderItems = new List<OrderItem>();
+            // fill in labels on form
+            EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
+            tableNumberlbl.Text = $"Table {TableID}";
+        }
+        public List<ListView> GetListOfListViews()// fills list of listviews
+        {
+            List<ListView> listViews = new List<ListView>();
+            listViews.Add(LunchStartersListView);
+            listViews.Add(LunchMainListView);
+            listViews.Add(LunchDessertListView);
+            return listViews;
         }
 
-        private void backbtnLunch_Click(object sender, EventArgs e)
+        private void AddbtnLunch_Click(object sender, EventArgs e)//gets the selected item in listview as menu item from DB and adds it to list of current orders
         {
-            //show the choosing order form
-            ChoosingMenuForm choosingMenuForm = new ChoosingMenuForm(TableID, Waiter);
-            choosingMenuForm.Show();
-            this.Hide(); // or close
-        }
-
-        private void AddbtnLunch_Click(object sender, EventArgs e)
-        {
-            //check if only one is selected
-            Orders order = CheckSelectedItems();
-            if (order != null)
+            if (selectedItem == null)
             {
-                MenuItemService menuservice = new MenuItemService();
-                List<MenuItem> menuItems = menuservice.GetMenuItems();
-                order.OrderComment = LunchCommentSection.Text;
-                foreach (MenuItem item in menuItems)
-                {
-                    if (item.MenuItemID == order.MenuItem.MenuItemID)
-                    {
-                        
-                        order.MenuItem.MenuItemName= item.MenuItemName;
-                       // order.OrderStatus = Status.processing;
-                    }
-                }
-                //order.table
-                //order waiter
-                //order preparer
-                //order payment
-                
-                _currentOrders.Add(order);
-                orderCounterlbl.Text = $"count : {_currentOrders.Count}";
-                //order counter +1
-            }
-
-            LunchCommentSection.Clear();
-            foreach (ListView listView in _listViews)
-            {
-                listView.SelectedItems.Clear();
-            }
-        }
-
-        private Orders CheckSelectedItems()
-        {
-            int count = 0;
-            Orders item = new Orders();
-            Orders emptyitem = new Orders();
-            foreach (ListView listViews in _listViews)
-            {
-
-                if (listViews.SelectedItems.Count == 1)
-                {
-                    count++;
-                    item.MenuItem.MenuItemID = int.Parse(listViews.SelectedItems[0].Text); 
-                }
-
-            }
-            if (count == 1)
-            {
-                return item;
+                MessageBox.Show("Please select an item first.");
             }
             else
             {
-                MessageBox.Show("Select only one item");
-                return emptyitem;
+                OrderItem orderItem = GetOrderItem();
+
+                if (IsItemAlreadyAdded(orderItem.MenuItem.MenuItemID))
+                {
+                    DialogResult result = MessageBox.Show($"{orderItem.MenuItem.MenuItemName} has already been added to the order once. Do you want to add it again?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        IncreaseQuantityOfItem(orderItem);
+                    }
+                }
+                else
+                {
+                    allLunchOrderItems.Add(orderItem);
+                    orderOverview.AddOrderItemsToOrderOverview(orderItem);
+                    orderCounterlbl.Text = $"Lunch Items: {allLunchOrderItems.Count}";
+                    selectedItem = null;
+                }
+                LunchCommentSection.Clear();
+                selectedItem = null;
+                List<ListView> listViews = GetListOfListViews();
+                foreach (ListView listView in listViews)
+                {
+                    listView.SelectedItems.Clear();
+                }
             }
-            
+        }
+        private OrderItem GetOrderItem()//gets menu item from db and turns it into order item
+        {
+            Order currentOrder = this.orderService.GetLastOrder(TableID);
+            OrderItemService orderItemService = new OrderItemService();
+            OrderItem orderItem = null;
+            try
+            {
+                orderItem = new OrderItem()
+                {
+                    MenuItem = orderItemService.GetCorrespondingMenuItem(int.Parse(selectedItem.SubItems[1].Text)),
+                    Comment = LunchCommentSection.Text,
+                    Quantity = 1,
+                    Order = currentOrder.OrderId,
+                    Status = Status.preparing,
+                    StartTime = DateTime.Now
+                };
+                return orderItem;
+            }
+            catch
+            {
+                MessageBox.Show("could not get menu item from database");
+                return orderItem;
+            }
+        }
+
+        private void IncreaseQuantityOfItem(OrderItem selectedOrderItem)// adds 1 to the quantity of that item that will be ordered
+        {
+            foreach (OrderItem orderItem in allLunchOrderItems)
+            {
+                if (orderItem.MenuItem.MenuItemID == selectedOrderItem.MenuItem.MenuItemID) orderItem.Quantity++;
+            }
+        }
+
+        private bool IsItemAlreadyAdded(int menuItemId)//checks if item is already in the list
+        {
+            foreach (OrderItem orderItem in allLunchOrderItems)
+            {
+                if (orderItem.MenuItem.MenuItemID == menuItemId) return true;
+            }
+
+            return false;
         }
 
         private void PopulateLunchMenus()
         {
-            LunchMenuService lunchMenuService = new LunchMenuService();
-            List<LunchMenu> lunchMenuItems = new List<LunchMenu>();
-
-            int i = 0;
-            while (_category <= MenuItemCategory.desert)
+            try
             {
-                _listViews[i].Items.Clear();
-                lunchMenuItems = lunchMenuService.GetSpecificLunchMenu(_category);
-                FillMenu(lunchMenuItems, _listViews[i]);
-                _category++;
-                i++;
+                MenuItemCategory category = MenuItemCategory.starter;
+                LunchMenuService lunchMenuService = new LunchMenuService();
+                List<LunchMenu> lunchMenuItems;
+                List<ListView> listViews = GetListOfListViews();
+                int i = 0;
+                while (category <= MenuItemCategory.desert)
+                {
+                    listViews[i].Items.Clear();
+                    lunchMenuItems = lunchMenuService.GetSpecificLunchMenu(category);
+                    FillMenu(lunchMenuItems, listViews[i]);
+                    category++;
+                    i++;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong filling the menus");
             }
         }
 
-        private void FillMenu(List<LunchMenu> lunchMenuItems, ListView listView)
+        private void FillMenu(List<LunchMenu> lunchMenuItems, ListView listView)// fills menu with items, alternates their colours for visibility and greys out any item that has no stock
         {
-            foreach (LunchMenu lunchMenu in lunchMenuItems)
+            OrderItemService orderItemService = new OrderItemService();
+            MenuItem menuItem;
+            int index = 0;
+            try
             {
-                string[] output = { lunchMenu.LunchMenuId.ToString(), lunchMenu.MenuItemName };
-                ListViewItem item = new ListViewItem(output);
-                listView.Items.Add(item);
-                listView.FullRowSelect = true;
+                foreach (LunchMenu Item in lunchMenuItems)
+                {
+                    string[] output = { Item.LunchMenuId.ToString(), Item.MenuItemId.ToString(), Item.MenuItemName };
+                    ListViewItem item = new ListViewItem(output);
+                    listView.Items.Add(item);
+                    listView.FullRowSelect = true;
+                    menuItem = orderItemService.GetCorrespondingMenuItem(Item.MenuItemId);
+                    if (menuItem.MenuItemStock < 1)
+                    {
+                        listView.Items[index].BackColor = Color.LightGray;
+                    }
+                    index++;
+                }
+                for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+                {
+                    if (listView.Items[i].BackColor != Color.LightGray)
+                    {
+                        listView.Items[i].BackColor = Color.AliceBlue;
+                    }
+                }
             }
-            for (int i = 0; i <= listView.Items.Count - 1; i = (i + 2))
+            catch
             {
-                listView.Items[i].BackColor = Color.AliceBlue;
+                MessageBox.Show("Something went wrong trying to get the menu items from the database");
             }
-        }
-
-        private void LunchCommentSection_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LunchDessertListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void OrderOverviewLunchbtn_Click(object sender, EventArgs e)
         {
-            OrderOverviewForm orderOverview = new OrderOverviewForm(_currentOrders, Waiter);
-            orderOverview.Show();
-            this.Hide();
+            try
+            {
+                this.Hide();
+                orderOverview.FillListViewWithOrderItems();
+                orderOverview.LoadFormButtonColours();
+                orderOverview.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
+        }
+        private void backbtnLunch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+                choosingMenuForm.UpdateTotalTotalOrderCount();
+                choosingMenuForm.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Issue loading form");
+            }
+        }
+        private void LunchMainListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (LunchMainListView.SelectedItems.Count == 1)
+            {
+                selectedItem = LunchMainListView.SelectedItems[0];
+                UnselectOtherListViews(LunchMainListView);
+            }
+        }
+
+        private void LunchStartersListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (LunchStartersListView.SelectedItems.Count == 1)
+            {
+                selectedItem = LunchStartersListView.SelectedItems[0];
+                UnselectOtherListViews(LunchStartersListView);
+            }
+        }
+        private void LunchDessertListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LunchDessertListView.SelectedItems.Count == 1)
+            {
+                selectedItem = LunchDessertListView.SelectedItems[0];
+                UnselectOtherListViews(LunchDessertListView);
+            }
+        }
+
+        private void UnselectOtherListViews(ListView SelectedListView) // ensures only one item from all list views is selected at a time
+        {
+            List<ListView> listViews = GetListOfListViews();
+            foreach (ListView listView in listViews)
+            {
+                if (listView != SelectedListView)
+                {
+                    listView.SelectedItems.Clear();
+                }
+            }
+        }
+
+        private void EmployeeNamelbl_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons messageBoxButtons;
+            DialogResult result;
+            messageBoxButtons = MessageBoxButtons.YesNo;
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }
