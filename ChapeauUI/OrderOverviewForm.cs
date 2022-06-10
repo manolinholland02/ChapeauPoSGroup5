@@ -129,7 +129,7 @@ namespace ChapeauUI
         {
             string[] output = { selectedOrderItem.OrderItemID.ToString(), selectedOrderItem.MenuItem.MenuItemName, selectedOrderItem.Quantity.ToString(), selectedOrderItem.Comment, selectedOrderItem.Availability.ToString() };
             ListViewItem item = new ListViewItem(output);
-            item.Font = new System.Drawing.Font("Microsoft Sans Serif", 11);
+            item.Font = new System.Drawing.Font("Microsoft Sans Serif", 12);
             for (int i = 0; i < OrderlistView.Items.Count; i++)
             {
                 if (OrderlistView.Items[i].SubItems[1].ToString() == item.SubItems[1].ToString())
@@ -153,6 +153,10 @@ namespace ChapeauUI
                 ListViewItem item = new ListViewItem(output);
                 OrderlistView.Items.Add(item);
                 OrderlistView.FullRowSelect = true;
+            }
+            for (int i = 0; i <= OrderlistView.Items.Count - 1; i = (i + 2))
+            {
+                OrderlistView.Items[i].BackColor = Color.AliceBlue;
             }
         }
 
@@ -235,7 +239,7 @@ namespace ChapeauUI
             choosingMenuForm.Show();
         }
 
-        private void TableOverviewbtn_Click(object sender, EventArgs e)//goes to table overview
+        private void TableOverviewbtn_Click(object sender, EventArgs e)//goes to table overview if no items in order, otherwise asks
         {
 
             if (allOrderItems.Count != 0)

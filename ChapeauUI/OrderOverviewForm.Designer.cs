@@ -53,7 +53,7 @@ namespace ChapeauUI
             this.OrderItemQuantity,
             this.OrderComment,
             this.menuItemStock});
-            this.OrderlistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OrderlistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OrderlistView.HideSelection = false;
             this.OrderlistView.Location = new System.Drawing.Point(0, 119);
             this.OrderlistView.MultiSelect = false;
