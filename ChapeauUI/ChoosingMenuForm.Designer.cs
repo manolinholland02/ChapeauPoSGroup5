@@ -41,7 +41,7 @@ namespace ChapeauUI
             // 
             // LunchMenubtn
             // 
-            this.LunchMenubtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchMenubtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LunchMenubtn.Location = new System.Drawing.Point(86, 209);
             this.LunchMenubtn.Name = "LunchMenubtn";
             this.LunchMenubtn.Size = new System.Drawing.Size(360, 77);
@@ -52,7 +52,7 @@ namespace ChapeauUI
             // 
             // DinnerMenubtn
             // 
-            this.DinnerMenubtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DinnerMenubtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DinnerMenubtn.Location = new System.Drawing.Point(86, 351);
             this.DinnerMenubtn.Name = "DinnerMenubtn";
             this.DinnerMenubtn.Size = new System.Drawing.Size(360, 77);
@@ -64,7 +64,7 @@ namespace ChapeauUI
             // DrinksMenubtn
             // 
             this.DrinksMenubtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DrinksMenubtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DrinksMenubtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DrinksMenubtn.Location = new System.Drawing.Point(86, 493);
             this.DrinksMenubtn.Name = "DrinksMenubtn";
             this.DrinksMenubtn.Size = new System.Drawing.Size(360, 77);
@@ -75,7 +75,7 @@ namespace ChapeauUI
             // 
             // MenuPageTableViewbtn
             // 
-            this.MenuPageTableViewbtn.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MenuPageTableViewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MenuPageTableViewbtn.Location = new System.Drawing.Point(12, 661);
             this.MenuPageTableViewbtn.Name = "MenuPageTableViewbtn";
             this.MenuPageTableViewbtn.Size = new System.Drawing.Size(200, 77);
@@ -86,7 +86,7 @@ namespace ChapeauUI
             // 
             // OrderOverviewbtn
             // 
-            this.OrderOverviewbtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OrderOverviewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OrderOverviewbtn.Location = new System.Drawing.Point(410, 29);
             this.OrderOverviewbtn.Name = "OrderOverviewbtn";
             this.OrderOverviewbtn.Size = new System.Drawing.Size(115, 82);
@@ -124,6 +124,7 @@ namespace ChapeauUI
             this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
             this.EmployeeNamelbl.TabIndex = 8;
             this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
             // 
             // ChoosingMenuForm
             // 

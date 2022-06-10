@@ -64,6 +64,7 @@ namespace ChapeauUI
             this.DrinkSoftDrinkID,
             this.softdrinkId,
             this.softdrinkName});
+            this.SoftDrinksListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SoftDrinksListView.HideSelection = false;
             this.SoftDrinksListView.Location = new System.Drawing.Point(1, 117);
             this.SoftDrinksListView.Name = "SoftDrinksListView";
@@ -93,6 +94,7 @@ namespace ChapeauUI
             this.DrinksBeerID,
             this.beerId,
             this.beerName});
+            this.BeersListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BeersListView.HideSelection = false;
             this.BeersListView.Location = new System.Drawing.Point(272, 117);
             this.BeersListView.Name = "BeersListView";
@@ -122,6 +124,7 @@ namespace ChapeauUI
             this.DrinksWineID,
             this.wineId,
             this.wineName});
+            this.WineListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WineListView.HideSelection = false;
             this.WineListView.Location = new System.Drawing.Point(1, 424);
             this.WineListView.Name = "WineListView";
@@ -152,6 +155,7 @@ namespace ChapeauUI
             this.DrinksSpiritID,
             this.spiritId,
             this.spiritName});
+            this.SpiritsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SpiritsListView.HideSelection = false;
             this.SpiritsListView.Location = new System.Drawing.Point(272, 303);
             this.SpiritsListView.Name = "SpiritsListView";
@@ -181,6 +185,7 @@ namespace ChapeauUI
             this.DrinksCoffeeTeaID,
             this.caffeinatedId,
             this.caffeinatedName});
+            this.CoffeeTeaListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CoffeeTeaListView.HideSelection = false;
             this.CoffeeTeaListView.Location = new System.Drawing.Point(272, 459);
             this.CoffeeTeaListView.Name = "CoffeeTeaListView";
@@ -206,6 +211,7 @@ namespace ChapeauUI
             // 
             // BackDrinksbtn
             // 
+            this.BackDrinksbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BackDrinksbtn.Location = new System.Drawing.Point(12, 666);
             this.BackDrinksbtn.Name = "BackDrinksbtn";
             this.BackDrinksbtn.Size = new System.Drawing.Size(200, 77);
@@ -216,6 +222,7 @@ namespace ChapeauUI
             // 
             // AddDrinksbtn
             // 
+            this.AddDrinksbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddDrinksbtn.Location = new System.Drawing.Point(325, 666);
             this.AddDrinksbtn.Name = "AddDrinksbtn";
             this.AddDrinksbtn.Size = new System.Drawing.Size(200, 77);
@@ -233,6 +240,7 @@ namespace ChapeauUI
             // 
             // DrinksTableOverview
             // 
+            this.DrinksTableOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DrinksTableOverview.Location = new System.Drawing.Point(410, 29);
             this.DrinksTableOverview.Name = "DrinksTableOverview";
             this.DrinksTableOverview.Size = new System.Drawing.Size(115, 82);
@@ -260,6 +268,7 @@ namespace ChapeauUI
             this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
             this.EmployeeNamelbl.TabIndex = 10;
             this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
             // 
             // tableNumberlbl
             // 
@@ -289,6 +298,7 @@ namespace ChapeauUI
             this.Controls.Add(this.BeersListView);
             this.Controls.Add(this.SoftDrinksListView);
             this.Name = "DrinksMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DrinksMenuForm";
             this.ResumeLayout(false);
             this.PerformLayout();

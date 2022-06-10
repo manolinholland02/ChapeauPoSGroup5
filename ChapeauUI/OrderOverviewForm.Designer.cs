@@ -53,6 +53,7 @@ namespace ChapeauUI
             this.OrderItemQuantity,
             this.OrderComment,
             this.menuItemStock});
+            this.OrderlistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OrderlistView.HideSelection = false;
             this.OrderlistView.Location = new System.Drawing.Point(0, 119);
             this.OrderlistView.MultiSelect = false;
@@ -74,7 +75,7 @@ namespace ChapeauUI
             // 
             // OrderItemQuantity
             // 
-            this.OrderItemQuantity.Text = "Quantity";
+            this.OrderItemQuantity.Text = "Q";
             this.OrderItemQuantity.Width = 75;
             // 
             // OrderComment
@@ -88,6 +89,7 @@ namespace ChapeauUI
             // 
             // PlusOrderbtn
             // 
+            this.PlusOrderbtn.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PlusOrderbtn.Location = new System.Drawing.Point(400, 119);
             this.PlusOrderbtn.Name = "PlusOrderbtn";
             this.PlusOrderbtn.Size = new System.Drawing.Size(128, 114);
@@ -98,6 +100,7 @@ namespace ChapeauUI
             // 
             // MinusOrderbtn
             // 
+            this.MinusOrderbtn.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinusOrderbtn.Location = new System.Drawing.Point(400, 247);
             this.MinusOrderbtn.Name = "MinusOrderbtn";
             this.MinusOrderbtn.Size = new System.Drawing.Size(128, 114);
@@ -108,6 +111,7 @@ namespace ChapeauUI
             // 
             // DeleteOrderbtn
             // 
+            this.DeleteOrderbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DeleteOrderbtn.Location = new System.Drawing.Point(0, 494);
             this.DeleteOrderbtn.Name = "DeleteOrderbtn";
             this.DeleteOrderbtn.Size = new System.Drawing.Size(113, 81);
@@ -118,6 +122,7 @@ namespace ChapeauUI
             // 
             // PlaceOrderbtn
             // 
+            this.PlaceOrderbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PlaceOrderbtn.Location = new System.Drawing.Point(173, 571);
             this.PlaceOrderbtn.Name = "PlaceOrderbtn";
             this.PlaceOrderbtn.Size = new System.Drawing.Size(200, 77);
@@ -128,6 +133,7 @@ namespace ChapeauUI
             // 
             // oderOverviewbackbtn
             // 
+            this.oderOverviewbackbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oderOverviewbackbtn.Location = new System.Drawing.Point(12, 663);
             this.oderOverviewbackbtn.Name = "oderOverviewbackbtn";
             this.oderOverviewbackbtn.Size = new System.Drawing.Size(200, 77);
@@ -138,6 +144,7 @@ namespace ChapeauUI
             // 
             // TableOverviewbtn
             // 
+            this.TableOverviewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TableOverviewbtn.Location = new System.Drawing.Point(330, 663);
             this.TableOverviewbtn.Name = "TableOverviewbtn";
             this.TableOverviewbtn.Size = new System.Drawing.Size(197, 78);
@@ -155,6 +162,7 @@ namespace ChapeauUI
             this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
             this.EmployeeNamelbl.TabIndex = 7;
             this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
             // 
             // tableNumberlbl
             // 
@@ -181,6 +189,7 @@ namespace ChapeauUI
             this.Controls.Add(this.PlusOrderbtn);
             this.Controls.Add(this.OrderlistView);
             this.Name = "OrderOverviewForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderOverviewForm";
             this.ResumeLayout(false);
             this.PerformLayout();

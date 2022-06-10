@@ -35,7 +35,7 @@ namespace ChapeauUI
             LoadFormButtonColours();
             // fill in labels on form
             EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
-            tableNumberlbl.Text = $"Table {TableID}";
+            tableNumberlbl.Text = $"Table {TableId}";
         }
 
         public void LoadFormButtonColours()// loads the colours of the buttons depending on what the clal to action should be
@@ -255,6 +255,22 @@ namespace ChapeauUI
             foreach (OrderItem item in allOrderItems)
             {
                 item.MenuItem.MenuItemStock = item.Availability;
+            }
+        }
+
+        private void EmployeeNamelbl_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons messageBoxButtons;
+            DialogResult result;
+            messageBoxButtons = MessageBoxButtons.YesNo;
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
             }
         }
     }

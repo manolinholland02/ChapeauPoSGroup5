@@ -52,6 +52,7 @@ namespace ChapeauUI
             // 
             // OrderOverviewLunchbtn
             // 
+            this.OrderOverviewLunchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OrderOverviewLunchbtn.Location = new System.Drawing.Point(410, 29);
             this.OrderOverviewLunchbtn.Name = "OrderOverviewLunchbtn";
             this.OrderOverviewLunchbtn.Size = new System.Drawing.Size(115, 82);
@@ -66,6 +67,7 @@ namespace ChapeauUI
             this.lunchStarterId,
             this.starterId,
             this.starterName});
+            this.LunchStartersListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LunchStartersListView.HideSelection = false;
             this.LunchStartersListView.Location = new System.Drawing.Point(76, 112);
             this.LunchStartersListView.MultiSelect = false;
@@ -89,7 +91,7 @@ namespace ChapeauUI
             // starterName
             // 
             this.starterName.Text = "Starters";
-            this.starterName.Width = 376;
+            this.starterName.Width = 370;
             // 
             // LunchMainListView
             // 
@@ -97,6 +99,7 @@ namespace ChapeauUI
             this.lunchMainId,
             this.mainId,
             this.mainName});
+            this.LunchMainListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LunchMainListView.HideSelection = false;
             this.LunchMainListView.Location = new System.Drawing.Point(76, 263);
             this.LunchMainListView.MultiSelect = false;
@@ -120,7 +123,7 @@ namespace ChapeauUI
             // mainName
             // 
             this.mainName.Text = "Mains";
-            this.mainName.Width = 376;
+            this.mainName.Width = 370;
             // 
             // LunchDessertListView
             // 
@@ -128,6 +131,7 @@ namespace ChapeauUI
             this.lunchDesertId,
             this.desertId,
             this.desertName});
+            this.LunchDessertListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LunchDessertListView.HideSelection = false;
             this.LunchDessertListView.Location = new System.Drawing.Point(76, 414);
             this.LunchDessertListView.MultiSelect = false;
@@ -151,10 +155,11 @@ namespace ChapeauUI
             // desertName
             // 
             this.desertName.Text = "Desserts";
-            this.desertName.Width = 376;
+            this.desertName.Width = 370;
             // 
             // backbtnLunch
             // 
+            this.backbtnLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.backbtnLunch.Location = new System.Drawing.Point(12, 663);
             this.backbtnLunch.Name = "backbtnLunch";
             this.backbtnLunch.Size = new System.Drawing.Size(200, 77);
@@ -165,6 +170,7 @@ namespace ChapeauUI
             // 
             // AddbtnLunch
             // 
+            this.AddbtnLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddbtnLunch.Location = new System.Drawing.Point(325, 663);
             this.AddbtnLunch.Name = "AddbtnLunch";
             this.AddbtnLunch.Size = new System.Drawing.Size(200, 77);
@@ -199,6 +205,7 @@ namespace ChapeauUI
             this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
             this.EmployeeNamelbl.TabIndex = 8;
             this.EmployeeNamelbl.Text = "Employee Name";
+            this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
             // 
             // tableNumberlbl
             // 
@@ -227,6 +234,7 @@ namespace ChapeauUI
             this.Controls.Add(this.LunchStartersListView);
             this.Controls.Add(this.OrderOverviewLunchbtn);
             this.Name = "LunchMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lunch Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
