@@ -66,8 +66,11 @@ namespace ChapeauUI
             // set colors for buttons depending on the table status
             for (int i = 0; i < buttons.Length; i++)
             {
+                // set table color to green if it is free
                 if (tables[i].TableStatus == TableStatus.free) buttons[i].BackColor = ColorTranslator.FromHtml("#47D147");
+                // set table color to red if it is occupied
                 else if (tables[i].TableStatus == TableStatus.occupied) buttons[i].BackColor = ColorTranslator.FromHtml("#EC5C5C");
+                // set table color to yellow if it has an order
                 else if (tables[i].TableStatus == TableStatus.haveOrder) buttons[i].BackColor = ColorTranslator.FromHtml("#ECEF58");
             }
         }
@@ -76,7 +79,9 @@ namespace ChapeauUI
         {
             if (table.TableStatus == TableStatus.free)
             {
-                if (pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = false;
+                // hide items panel
+                if (pnlDisplayOrderItems.Visible) 
+                    pnlDisplayOrderItems.Visible = false;
 
                 OccupyDialogBox occupyDialogBox = OccupyDialogBox.GetInstance();
                 if (occupyDialogBox.ShowDialog() == DialogResult.Yes)
@@ -88,11 +93,14 @@ namespace ChapeauUI
             }
             else if (table.TableStatus == TableStatus.occupied)
             {
-                if (pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = false;
+                // hide items panel
+                if (pnlDisplayOrderItems.Visible) 
+                    pnlDisplayOrderItems.Visible = false;
 
                 StartOrderDialogBox orderDialogBox = StartOrderDialogBox.GetInstance();
                 if (orderDialogBox.ShowDialog() == DialogResult.Yes)
                 {
+                    // change table status 
                     table.TableStatus = TableStatus.haveOrder;
                     tableService.UpdateTableStatus(table);
 
@@ -121,6 +129,7 @@ namespace ChapeauUI
                     choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
                     choosingMenuForm.Show();
                 }
+                //
                 else if (orderDialogBox.ShowDialog() == DialogResult.OK)
                 {
                     table.TableStatus = TableStatus.free;
@@ -130,8 +139,8 @@ namespace ChapeauUI
             }
             else if (table.TableStatus == TableStatus.haveOrder)
             {
-                if (!pnlDisplayOrderItems.Visible) pnlDisplayOrderItems.Visible = true;
-                //else pnlDisplayOrderItems.Visible = false;
+                if (!pnlDisplayOrderItems.Visible) 
+                    pnlDisplayOrderItems.Visible = true;
 
                 orderItemsListView.Items.Clear();
                 lblTable.Text = "Orders of Table " + table.TableId.ToString();
@@ -225,6 +234,7 @@ namespace ChapeauUI
 
         private void lblName_Click(object sender, EventArgs e)
         {
+
             string message = "Are you sure you want to Logout?";
             string title = "Logout";
             result = MessageBox.Show(message, title, msgBoxButtons, MessageBoxIcon.Warning);
@@ -243,7 +253,6 @@ namespace ChapeauUI
             {
                 selectedOrderItems.Add(orderItemService.GetSpecificOrder(int.Parse(item.SubItems[0].Text)));
             }
-
             return selectedOrderItems;
         }
 
@@ -254,20 +263,27 @@ namespace ChapeauUI
 
         private void btnDeleteOrder_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show($"Do you want to free table {table.TableId}?", "Conformation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show($"Do you want to free table {table.TableId}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
+                // delete the order
                 orderService.DeleteOrder(order.OrderId);
+                // set the table status
                 table.TableStatus = TableStatus.free;
+                // update the table status
                 tableService.UpdateTableStatus(table);
+                // close the panel displaying the order items
                 pnlDisplayOrderItems.Visible = false;
+                // load buttons again
                 LoadButtons(tables, buttons);
             }
         }
 
         private void btnSetItemAsServed_Click(object sender, EventArgs e)
         {
-            if(orderItemsListView.SelectedItems.Count == 0) MessageBox.Show($"No items have been selected.", "Please select an item first", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // the waiter hasn't selected any items
+            if(orderItemsListView.SelectedItems.Count == 0) 
+                MessageBox.Show($"No items have been selected.", "Please select an item first", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 DialogResult result = MessageBox.Show($"Do you want to set {orderItemsListView.SelectedItems.Count} items of table {table.TableId} as served?", "Conformation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -294,6 +310,7 @@ namespace ChapeauUI
 
         private void btnAddOrderItems_Click(object sender, EventArgs e)
         {
+            // open the menu form to add order items to the table
             this.Hide();
             choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
             choosingMenuForm.Show();
