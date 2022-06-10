@@ -142,10 +142,8 @@ namespace ChapeauDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-
                 menuItemType = dr["menuItemType"].ToString();
                 types.Add(menuItemType);
-
             }
             return types;
         }

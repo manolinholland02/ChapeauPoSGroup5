@@ -131,9 +131,9 @@ namespace ChapeauUI
             // 
             this.button_Menu_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Menu_Form.Location = new System.Drawing.Point(162, 123);
+            this.button_Menu_Form.Location = new System.Drawing.Point(190, 127);
             this.button_Menu_Form.Name = "button_Menu_Form";
-            this.button_Menu_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Menu_Form.Size = new System.Drawing.Size(164, 63);
             this.button_Menu_Form.TabIndex = 7;
             this.button_Menu_Form.Text = "Menu Items";
             this.button_Menu_Form.UseVisualStyleBackColor = false;
@@ -143,9 +143,9 @@ namespace ChapeauUI
             this.button_Employees_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_Employees_Form.Location = new System.Drawing.Point(29, 123);
+            this.button_Employees_Form.Location = new System.Drawing.Point(30, 127);
             this.button_Employees_Form.Name = "button_Employees_Form";
-            this.button_Employees_Form.Size = new System.Drawing.Size(135, 50);
+            this.button_Employees_Form.Size = new System.Drawing.Size(164, 63);
             this.button_Employees_Form.TabIndex = 6;
             this.button_Employees_Form.Text = "Employees";
             this.button_Employees_Form.UseVisualStyleBackColor = false;
@@ -226,8 +226,8 @@ namespace ChapeauUI
             this.Controls.Add(this.listView_Menu_Management);
             this.Location = new System.Drawing.Point(625, 764);
             this.Name = "ManagerViewMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerViewMenu";
-            this.Load += new System.EventHandler(this.ManagerViewMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

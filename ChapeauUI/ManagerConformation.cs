@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChapeauDAL;
 using ChapeauLogic;
 using ChapeauModel;
 
@@ -17,8 +10,6 @@ namespace ChapeauUI
     {
         private Employee _manager;
         private string _operation;
-        private EmployeeService _employeeService;
-        private MenuItemService _menuItemService;
         private int _IdToDelete;
         private Employee _employee;
         private MenuItem _item;
@@ -29,9 +20,8 @@ namespace ChapeauUI
             label_Error.Visible = false;
             textBox_Password.PasswordChar = '●';
             _manager = manager;
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             _operation = operation;
-            _menuItemService = new MenuItemService();
-            _employeeService = new EmployeeService();
             _employee = employee;
             previousForm = previous;
             
@@ -43,20 +33,18 @@ namespace ChapeauUI
             textBox_Password.PasswordChar = '●';
             _manager = manager;
             _operation = operation;
-            _menuItemService = new MenuItemService();
-            _employeeService = new EmployeeService();
             previousForm = previous;
             _IdToDelete = Id;
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
         }
         public ManagerConformation(Employee manager, string operation, MenuItem menuItem, Form previous)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             label_Error.Visible = false;
             textBox_Password.PasswordChar = '●';
             _manager = manager;
             _operation = operation;
-            _menuItemService = new MenuItemService();
-            _employeeService = new EmployeeService();
             _item = menuItem;
             previousForm = previous;
         }
@@ -65,12 +53,11 @@ namespace ChapeauUI
             this.Hide();
             previousForm.Show();
         }
-
         private void button_Proceed_Click(object sender, EventArgs e)
         {
-
+            EmployeeService employeeService = new EmployeeService();
             int password = int.Parse(textBox_Password.Text);
-            if (_employeeService.AccountExists(_manager.EmployeeUsername, password))
+            if (employeeService.AccountExists(_manager.EmployeeUsername, password))
             {
                 switch (_operation)
                 {
@@ -87,41 +74,45 @@ namespace ChapeauUI
                 label_Error.Visible = true;
             }
         }
-
         private void DeleteEmployee()
         {
-            _employeeService.DeleteEmployee(_IdToDelete);
+            EmployeeService employeeService = new EmployeeService();
+            employeeService.DeleteEmployee(_IdToDelete);
             OpenEmployeeForm();
             previousForm.Hide();
         }
         private void DeleteMenuItem()
         {
-            _menuItemService.DeleteMenuItem(_IdToDelete);
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.DeleteMenuItem(_IdToDelete);
             OpenMenuItemForm();
             previousForm.Hide();
         }
-        
         private void AddEmployee()
         {
-            _employeeService.AddEmployee(_employee);
+            EmployeeService employeeService = new EmployeeService();
+            employeeService.AddEmployee(_employee);
             OpenEmployeeForm();
             previousForm.Hide();
         }
         private void AddMenuItem()
         {
-            _menuItemService.AddMenuItem(_item);
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.AddMenuItem(_item);
             previousForm.Hide();
             OpenMenuItemForm();
         }
         private void EditEmployee()
         {
-            _employeeService.EditEmployee(_employee);
+            EmployeeService employeeService = new EmployeeService();
+            employeeService.EditEmployee(_employee);
             previousForm.Hide();
             OpenEmployeeForm();
         }
         private void EditMenuItem()
         {
-            _menuItemService.UpdateMenuItem(_item);
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.UpdateMenuItem(_item);
             previousForm.Hide();
             OpenMenuItemForm();
         }

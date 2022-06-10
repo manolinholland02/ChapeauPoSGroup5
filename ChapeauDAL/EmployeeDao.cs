@@ -12,9 +12,16 @@ namespace ChapeauDAL
         //Creates a list with all of the employees in the Database
         public List<Employee> GetAllEmployees()
         {
-            string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            try
+            {
+                string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees]";
+                SqlParameter[] sqlParameters = new SqlParameter[0];
+                return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Something went wrong while loading the employees: " + e.Message);
+            }
         }
         public List<Employee> ReadTables(DataTable dataTable)
         {
@@ -102,51 +109,86 @@ namespace ChapeauDAL
         // check if account exists in the database
         public bool AccountExists(string username, int password)
         {
-            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND [userPassword] = @password";
-            SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
-            DataTable table = ExecuteSelectQuery(query, sqlParameters);
-            DataRow[] dr = table.Select();
-            string count = dr[0]["Count"].ToString();
-            if (Convert.ToInt32(count) == 0) return false;
-            else return true;
+            try
+            {
+
+                string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND [userPassword] = @password";
+                SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
+                DataTable table = ExecuteSelectQuery(query, sqlParameters);
+                DataRow[] dr = table.Select();
+                string count = dr[0]["Count"].ToString();
+                if (Convert.ToInt32(count) == 0) return false;
+                else return true;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Something went wrong while checking if the account exists: " + e.Message);
+            }
         }
 
         //checks if username is taken
         public bool AccountExists(string username)
         {
-            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username";
-            SqlParameter[] sqlParameters = { new SqlParameter("@username", username)};
-            DataTable table = ExecuteSelectQuery(query, sqlParameters);
-            DataRow[] dr = table.Select();
-            string count = dr[0]["Count"].ToString();
-            if (Convert.ToInt32(count) == 0) return false;
-            else return true;
+            try
+            {
+                string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username";
+                SqlParameter[] sqlParameters = { new SqlParameter("@username", username) };
+                DataTable table = ExecuteSelectQuery(query, sqlParameters);
+                DataRow[] dr = table.Select();
+                string count = dr[0]["Count"].ToString();
+                if (Convert.ToInt32(count) == 0) return false;
+                else return true;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Something went wrong while checking if the username is taken: " + e.Message);
+            }
         }
         //checks if username is taken
         public bool AccountExists(int password)
         {
-            string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [userPassword] = @password";
-            SqlParameter[] sqlParameters = { new SqlParameter("@password", password) };
-            DataTable table = ExecuteSelectQuery(query, sqlParameters);
-            DataRow[] dr = table.Select();
-            string count = dr[0]["Count"].ToString();
-            if (Convert.ToInt32(count) == 0) return false;
-            else return true;
+            try
+            {
+                string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [userPassword] = @password";
+                SqlParameter[] sqlParameters = { new SqlParameter("@password", password) };
+                DataTable table = ExecuteSelectQuery(query, sqlParameters);
+                DataRow[] dr = table.Select();
+                string count = dr[0]["Count"].ToString();
+                if (Convert.ToInt32(count) == 0) return false;
+                else return true;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Something went wrong while checking if the password is taken: " + e.Message);
+            }
+            
         }
 
         // return the employee type of the employee 
         public string GetEmployeeType(string username)
         {
-            string type = "";
-            string query = "SELECT employeeType FROM [dbo].[Employees] WHERE [username] = @username";
-            SqlParameter[] parameters = { new SqlParameter("@username", username) };
-            DataTable table = ExecuteSelectQuery(query, parameters);
-            foreach (DataRow dr in table.Rows)
+            try
             {
-                type = dr["employeeType"].ToString();
+                string type = "";
+                string query = "SELECT employeeType FROM [dbo].[Employees] WHERE [username] = @username";
+                SqlParameter[] parameters = { new SqlParameter("@username", username) };
+                DataTable table = ExecuteSelectQuery(query, parameters);
+                foreach (DataRow dr in table.Rows)
+                {
+                    type = dr["employeeType"].ToString();
+                }
+                return type;
             }
-            return type;
+            catch (Exception e)
+            {
+                throw new Exception("Something went wrong while retrieving the employee type: " + e.Message);
+            }
+
         }
+
+        //returns the EmployeeType
         public Employee GetEmployee(string username)
         {
             string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees] WHERE [username] = @username";

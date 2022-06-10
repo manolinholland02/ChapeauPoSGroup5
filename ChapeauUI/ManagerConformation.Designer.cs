@@ -100,6 +100,7 @@ namespace ChapeauUI
             this.Controls.Add(this.textBox_Password);
             this.Controls.Add(this.label1);
             this.Name = "ManagerConformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerConformation";
             this.ResumeLayout(false);
             this.PerformLayout();

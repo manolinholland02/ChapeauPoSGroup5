@@ -1,13 +1,8 @@
 ﻿using ChapeauLogic;
 using ChapeauModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChapeauUI
@@ -15,20 +10,17 @@ namespace ChapeauUI
     public partial class AddEmployee : Form
     {
         private Employee _manager;
-        private string operation = "AddEmployee";
-
-        private MessageBoxButtons messageBoxButtons;
-        private DialogResult result;
         public AddEmployee(Employee manager)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             radioButton_AddEmployee_Bartender.Checked = false;
             radioButton_AddEmployee_Chef.Checked = false;
             radioButton_AddEmployee_Manager.Checked = false;
             radioButton_AddEmployee_Waiter.Checked = false;
             _manager = manager;
             label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
-            messageBoxButtons = MessageBoxButtons.YesNo;
+
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -39,36 +31,34 @@ namespace ChapeauUI
         private void button_AddEmployee_Click(object sender, EventArgs e)
         {
             try
-                
             {
                 EmployeeService employeeService = new EmployeeService();
-                if(textBox_AddEmployee_FirstName.Text == "")
+                if (textBox_AddEmployee_FirstName.Text == "")
                 {
                     MessageBox.Show("Please fill in first name!");
                 }
-                else if(textBox_AddEmployee_LastName.Text == null)
+                else if (textBox_AddEmployee_LastName.Text == null)
                 {
                     MessageBox.Show("Please fill in last name!");
                 }
-                else if(employeeService.AccountExists(textBox_AddEmployee_Username.Text))
+                else if (employeeService.AccountExists(textBox_AddEmployee_Username.Text))
                 {
                     MessageBox.Show("Username is taken! Please select a new one!");
                 }
-                else if(!PasswordChecker(textBox_AddEmployee_Password.Text))
+                else if (!PasswordChecker(textBox_AddEmployee_Password.Text))
                 {
                     MessageBox.Show("Password should contain 4 digits!");
                 }
-                else if(employeeService.AccountExists(int.Parse(textBox_AddEmployee_Password.Text)))
+                else if (employeeService.AccountExists(int.Parse(textBox_AddEmployee_Password.Text)))
                 {
                     MessageBox.Show("Password is taken! Please select a new one!");
                 }
-                else if(radioButton_AddEmployee_Bartender.Checked == false && radioButton_AddEmployee_Chef.Checked == false && radioButton_AddEmployee_Manager.Checked == false && radioButton_AddEmployee_Waiter.Checked == false)
+                else if (radioButton_AddEmployee_Bartender.Checked == false && radioButton_AddEmployee_Chef.Checked == false && radioButton_AddEmployee_Manager.Checked == false && radioButton_AddEmployee_Waiter.Checked == false)
                 {
                     MessageBox.Show("Please select an occupation!");
                 }
                 else
                 {
-                    
                     string firstName = textBox_AddEmployee_FirstName.Text;
                     string lastName = textBox_AddEmployee_LastName.Text;
                     string username = textBox_AddEmployee_Username.Text;
@@ -99,7 +89,8 @@ namespace ChapeauUI
                         EmployeeType = employeeType
                     };
 
-                    ManagerConformation conformation = new ManagerConformation(_manager, operation,employee,this);
+                    string operation = "AddEmployee";
+                    ManagerConformation conformation = new ManagerConformation(_manager, operation, employee, this);
                     conformation.Show();
                 }
             }
@@ -109,17 +100,21 @@ namespace ChapeauUI
                 MessageBox.Show("Something went wrong while adding the employee: " + _e.Message);
                 throw;
             }
-            
-            
         }
-
         private void OpenManagerViewEmoloyees()
         {
-            ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);
-            viewEmployee.Show();
-            this.Hide();
+            try
+            {
+                ManagerViewEmployee viewEmployee = new ManagerViewEmployee(_manager);
+                viewEmployee.Show();
+                this.Hide();
+            }
+            catch (Exception _e)
+            {
+                MessageBox.Show("Something went wrong while loading the form: " + _e.Message);
+                throw;
+            }
         }
-
         private bool PasswordChecker(string password)
         {
             string specialCharacter = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
@@ -144,7 +139,10 @@ namespace ChapeauUI
 
         private void label_managerName_Click(object sender, EventArgs e)
         {
+            MessageBoxButtons messageBoxButtons;
+            DialogResult result;
             string message = "Are you sure you want to Logout?";
+            messageBoxButtons = MessageBoxButtons.YesNo;
             string title = "Logout";
             result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)

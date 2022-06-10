@@ -49,12 +49,12 @@ namespace ChapeauUI
             this.label_Menu_Item_Time = new System.Windows.Forms.Label();
             this.label_Menu_Item_Price = new System.Windows.Forms.Label();
             this.label_menu_Item_Name = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Manager = new System.Windows.Forms.PictureBox();
             this.label_managerName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Manager = new System.Windows.Forms.Panel();
             this.groupBox_Food_Or_Drink.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).BeginInit();
+            this.panel_Manager.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_points
@@ -245,17 +245,17 @@ namespace ChapeauUI
             this.label_menu_Item_Name.TabIndex = 17;
             this.label_menu_Item_Name.Text = "Name";
             // 
-            // pictureBox1
+            // pictureBox_Manager
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(616, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Manager.BackColor = System.Drawing.Color.White;
+            this.pictureBox_Manager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox_Manager.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Manager.Image")));
+            this.pictureBox_Manager.Location = new System.Drawing.Point(616, 0);
+            this.pictureBox_Manager.Name = "pictureBox_Manager";
+            this.pictureBox_Manager.Size = new System.Drawing.Size(188, 99);
+            this.pictureBox_Manager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Manager.TabIndex = 13;
+            this.pictureBox_Manager.TabStop = false;
             // 
             // label_managerName
             // 
@@ -265,19 +265,19 @@ namespace ChapeauUI
             this.label_managerName.Name = "label_managerName";
             this.label_managerName.Size = new System.Drawing.Size(223, 88);
             this.label_managerName.TabIndex = 14;
-            this.label_managerName.Text = "label1";
+            this.label_managerName.Text = "label_Manager";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
             // 
-            // panel1
+            // panel_Manager
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.label_managerName);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1422, 99);
-            this.panel1.TabIndex = 35;
+            this.panel_Manager.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel_Manager.Controls.Add(this.label_managerName);
+            this.panel_Manager.Controls.Add(this.pictureBox_Manager);
+            this.panel_Manager.Location = new System.Drawing.Point(0, 0);
+            this.panel_Manager.Name = "panel_Manager";
+            this.panel_Manager.Size = new System.Drawing.Size(1422, 99);
+            this.panel_Manager.TabIndex = 35;
             // 
             // EditMenuItem
             // 
@@ -285,7 +285,7 @@ namespace ChapeauUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Manager);
             this.Controls.Add(this.label_points);
             this.Controls.Add(this.label_points2);
             this.Controls.Add(this.textBox_Menu_Time_Seconds);
@@ -304,19 +304,19 @@ namespace ChapeauUI
             this.Controls.Add(this.label_Menu_Item_Price);
             this.Controls.Add(this.label_menu_Item_Name);
             this.Name = "EditMenuItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditMenuItem";
-            this.Load += new System.EventHandler(this.EditMenuItem_Load);
             this.groupBox_Food_Or_Drink.ResumeLayout(false);
             this.groupBox_Food_Or_Drink.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).EndInit();
+            this.panel_Manager.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        
         private System.Windows.Forms.Label label_points;
         private System.Windows.Forms.Label label_points2;
         private System.Windows.Forms.TextBox textBox_Menu_Time_Seconds;
@@ -336,8 +336,8 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_Menu_Item_Time;
         private System.Windows.Forms.Label label_Menu_Item_Price;
         private System.Windows.Forms.Label label_menu_Item_Name;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Manager;
         private System.Windows.Forms.Label label_managerName;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Manager;
     }
 }
