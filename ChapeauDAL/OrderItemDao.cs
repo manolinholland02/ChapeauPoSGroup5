@@ -92,8 +92,8 @@ namespace ChapeauDAL
 
         public void InsertOrderItem(List<OrderItem> orderItems)
         {
-            string query = @"INSERT INTO [dbo].[OrderItems] (menuItem, orderItemStatus, orderItemComment, orderItemQuantity, orderId)
-            VALUES (@MenuItem, @Status, @Comment, @Quantity, @OrderId)";
+            string query = @"INSERT INTO [dbo].[OrderItems] (menuItem, orderItemStatus, orderItemComment, orderItemQuantity, orderId, orderItemStartTime)
+            VALUES (@MenuItem, @Status, @Comment, @Quantity, @OrderId, @StartTime)";
 
             foreach(OrderItem orderItem in orderItems)
             {
@@ -103,7 +103,8 @@ namespace ChapeauDAL
                 new SqlParameter("@Status", orderItem.Status.ToString()),
                 new SqlParameter("@Comment", orderItem.Comment),
                 new SqlParameter("@Quantity", orderItem.Quantity),
-                new SqlParameter("@OrderId", orderItem.Order)
+                new SqlParameter("@OrderId", orderItem.Order),
+                new SqlParameter("@StartTime", orderItem.StartTime)
                 };
 
                 ExecuteEditQuery(query, sqlParameters);

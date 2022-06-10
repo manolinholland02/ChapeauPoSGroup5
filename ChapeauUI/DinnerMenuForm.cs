@@ -69,7 +69,8 @@ namespace ChapeauUI
                     Comment = DinnerCommentSection.Text,
                     Quantity = 1,
                     Order = _currentOrder.OrderId,
-                    Status = Status.preparing
+                    Status = Status.preparing,
+                    StartTime = DateTime.Now
                 };
 
                 if (IsItemAlreadyAdded(orderItem.MenuItem.MenuItemID))

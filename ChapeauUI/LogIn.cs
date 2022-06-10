@@ -49,8 +49,9 @@ namespace ChapeauUI
                 // 3) employee type = chef/barman -> Open KitchenBarView
                 else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                 {
-                    this.Close();
-                    KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
+                    this.Hide();
+                    KitchenBarView kitchenBarView = new KitchenBarView(employee);
+                    kitchenBarView.Closed += (ss, ee) => this.Close();
                     kitchenBarView.Show();
                 }
             }

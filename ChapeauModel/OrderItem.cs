@@ -15,7 +15,7 @@ namespace ChapeauModel
         public int Quantity { get; set; }
         public int Order { get; set; }
         public Status Status { get; set; }
-        public Stopwatch TimeForPreparation { get; set; }
+        public DateTime StartTime { get; set; }
 
         //calculates meni item stock - quantity
         public int Availability { get { return MenuItem.MenuItemStock - Quantity; } }
