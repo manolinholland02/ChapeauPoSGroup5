@@ -39,6 +39,7 @@ namespace ChapeauUI
                     {
                         this.Hide();
                         ManagerViewEmployee managerView = new ManagerViewEmployee(employee);
+                        managerView.Closed += (ss, ee) => this.Close();
                         managerView.Show();
                     }
                     // 2) employee type = waiter -> Open RestaurantOverview
@@ -51,8 +52,9 @@ namespace ChapeauUI
                     // 3) employee type = chef/barman -> Open KitchenBarView
                     else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                     {
-                        this.Close();
-                        KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
+                        this.Hide();
+                        KitchenBarView kitchenBarView = new KitchenBarView(employee);
+                        kitchenBarView.Closed += (ss, ee) => this.Close();
                         kitchenBarView.Show();
                     }
                     else

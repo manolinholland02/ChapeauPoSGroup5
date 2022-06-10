@@ -93,7 +93,8 @@ namespace ChapeauUI
                     Comment = DinnerCommentSection.Text,
                     Quantity = 1,
                     Order = currentOrder.OrderId,
-                    Status = Status.preparing
+                    Status = Status.preparing,
+                    StartTime = DateTime.Now
                 };
                 return orderItem;
             }

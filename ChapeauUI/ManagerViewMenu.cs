@@ -94,9 +94,10 @@ namespace ChapeauUI
             result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                LogIn login = new LogIn();
-                login.Show();
                 this.Hide();
+                LogIn logIn = new LogIn();
+                logIn.Closed += (ss, ee) => this.Close();
+                logIn.Show();
             }
         }
         private void listView_Menu_Management_SelectedIndexChanged(object sender, EventArgs e)
