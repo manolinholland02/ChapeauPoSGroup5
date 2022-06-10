@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\miede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\miede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -68,22 +74,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
+    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
         "projectName": "ChapeauLogic",
-        "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
-        "packagesPath": "C:\\Users\\miede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\miede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -96,11 +108,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -139,22 +151,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\miede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\miede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -203,22 +221,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {
+    "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
         "projectName": "ChapeauUI",
-        "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
-        "packagesPath": "C:\\Users\\miede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauUI\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauUI\\ChapeauUI.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\miede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -231,14 +255,14 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauLogic\\ChapeauLogic.csproj"
               },
-              "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\miede\\OneDrive\\Desktop\\Chapeau\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\ChapeauPoSGroup5\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -280,7 +304,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
