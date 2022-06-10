@@ -88,15 +88,15 @@ namespace ChapeauDAL
                 new SqlParameter("@Price", menuItem.MenuItemPrice),
                 new SqlParameter("@FoodOrDrink", MenuTypeToString(menuItem.isFood)),
                 new SqlParameter("@Stock", menuItem.MenuItemStock),
-                new SqlParameter("@Type", menuItem.MenuItemType),
-                new SqlParameter("@Category", menuItem.MenuItemCategory),
+                new SqlParameter("@Type", (string)menuItem.MenuItemType.ToString()),
+                new SqlParameter("@Category", (string)menuItem.MenuItemCategory.ToString()),
                 new SqlParameter("@AverageTime", menuItem.AveragePreparationTime) };
             return sqlParameters;
         }
 
         public void InsertMenuItem(MenuItem menuItem)
         {
-            string query = "INSERT INTO [dbo].[MenuItems] (menuItemId, menuItemName, menuItemPrice, isFoodOrDrink, menuItemStock, menuItemType, menuItemCategory, averagePreparationTime) VALUES (@Id, @Name, @Price, @FoodOrDrink, @Stock, @Type, @Category, @AverageTime)";
+            string query = "INSERT INTO [dbo].[MenuItems] (menuItemName, menuItemPrice, isFoodOrDrink, menuItemStock, menuItemType, menuItemCategory, averagePreparationTime) VALUES (@Name, @Price, @FoodOrDrink, @Stock, @Type, @Category, @AverageTime)";
             ExecuteEditQuery(query, GetParametersForMenuItem(menuItem));
         }
 
@@ -157,10 +157,8 @@ namespace ChapeauDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-
                 menuItemType = dr["menuItemType"].ToString();
                 types.Add(menuItemType);
-
             }
             return types;
         }
