@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChapeauModel.Employee">
+    <Position X="9" Y="1.25" Width="2" />
+    <AssociationLine Name="EmployeeType" Type="ChapeauModel.EmployeeType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.077" Y="0.085" Height="0.182" Width="1.091" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAEAABBAgAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EmployeeType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.MenuItem">
+    <Position X="0.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQgEAAAIAAABAAAAAAQBAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>MenuItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MenuItemCategory" />
+      <Property Name="MenuItemType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="ChapeauModel.EmployeeType">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAEIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>EmployeeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChapeauModel.MenuItemCategory">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAACIAAAAAABCAAAAAAAACYQ=</HashCode>
+      <FileName>MenuItemCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChapeauModel.MenuType">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAIAAQAAAAAA=</HashCode>
+      <FileName>MenuType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
