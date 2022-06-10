@@ -63,7 +63,7 @@ namespace ChapeauUI
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show($"Error: {ex.ToString()}");
             }
             
         }

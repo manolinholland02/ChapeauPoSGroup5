@@ -40,6 +40,7 @@ namespace ChapeauUI
             pnlDisplayOrderItems.Visible = false;
             orderService = new OrderService();
             orderItemsListView.FullRowSelect = true;
+
         }
 
         private Table[] LoadTables()
@@ -62,6 +63,7 @@ namespace ChapeauUI
 
         private void LoadButtons(Table[] tables, Button[] buttons)
         {
+            // set colors for buttons depending on the table status
             for (int i = 0; i < buttons.Length; i++)
             {
                 if (tables[i].TableStatus == TableStatus.free) buttons[i].BackColor = ColorTranslator.FromHtml("#47D147");
@@ -160,7 +162,7 @@ namespace ChapeauUI
             }
 
         }
-
+        // set status for all the tables
         private void btnTable1_Click(object sender, EventArgs e)
         {
             table = tables[0];
