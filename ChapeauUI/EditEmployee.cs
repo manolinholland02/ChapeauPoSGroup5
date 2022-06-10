@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChapeauDAL;
 using ChapeauLogic;
 using ChapeauModel;
 
@@ -15,19 +9,21 @@ namespace ChapeauUI
 {
     public partial class EditEmployee : Form
     {
-        private Employee _EmployeeToEdit { get; set; }
-        public EditEmployee(Employee employee)
+        private Employee _EmployeeToEdit;
+        private Employee _manager;
+        public EditEmployee(Employee employee, Employee manager)
         {
             InitializeComponent();
-            label_Password_Error.Text = "Password should contain 4 digits!";
-            label_Password_Error.Visible = false;
             _EmployeeToEdit = employee;
+            _manager = manager;
+            this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
+            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
             textBox_EditEmployee_FirstName.Text = _EmployeeToEdit.EmployeeFirstName.ToString();
             textBox_EditEmployee_LastName.Text = _EmployeeToEdit.EmployeeLastName.ToString();
             textBox_EditEmployee_Username.Text = _EmployeeToEdit.EmployeeUsername.ToString();
             textBox_EditEmployee_Password.Text = _EmployeeToEdit.EmployeeUserPassword.ToString();
-            if(_EmployeeToEdit.EmployeeType == EmployeeType.barman)
+            if (_EmployeeToEdit.EmployeeType == EmployeeType.barman)
             {
                 radioButton_EditEmployee_Bartender.Checked = true;
             }
@@ -44,10 +40,9 @@ namespace ChapeauUI
                 radioButton_EditEmployee_Chef.Checked = true;
             }
         }
-
         private void button_EditEmployee_Click(object sender, EventArgs e)
         {
-            
+            EmployeeService employeeService = new EmployeeService();
             _EmployeeToEdit.EmployeeFirstName = textBox_EditEmployee_FirstName.Text;
             _EmployeeToEdit.EmployeeLastName = textBox_EditEmployee_LastName.Text;
             _EmployeeToEdit.EmployeeUsername = textBox_EditEmployee_Username.Text;
@@ -67,26 +62,22 @@ namespace ChapeauUI
             {
                 _EmployeeToEdit.EmployeeType = EmployeeType.waiter;
             }
-            if(PasswordChecker(textBox_EditEmployee_Password.Text))
+            if (PasswordChecker(textBox_EditEmployee_Password.Text))
             {
 
+                string operation = "EditEmployee";
                 _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
-                EmployeeService employeeService = new EmployeeService();
-                employeeService.EditEmployee(_EmployeeToEdit);
-                ManagerViewEmployee managerView = new ManagerViewEmployee();
-                managerView.Show();
-                this.Hide();
+                ManagerConformation conformation = new ManagerConformation(_manager, operation, _EmployeeToEdit, this);
+                conformation.Show();
             }
             else
             {
-                label_Password_Error.Visible = true;
+                MessageBox.Show("Password must contaion 4 digits!");
             }
-            
         }
-
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            ManagerViewEmployee managerView = new ManagerViewEmployee();
+            ManagerViewEmployee managerView = new ManagerViewEmployee(_manager);
             managerView.Show();
             this.Hide();
         }
@@ -104,12 +95,27 @@ namespace ChapeauUI
                 //checks if password is more or less than 4 symbols
                 return false;
             }
-            else if ( password.Any(char.IsUpper) || password.Any(char.IsLower))
+            else if (password.Any(char.IsUpper) || password.Any(char.IsLower))
             {
                 //checks if password contains characters
                 return false;
             }
             return true;
+        }
+        private void label_managerName_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons messageBoxButtons;
+            DialogResult result;
+            messageBoxButtons = MessageBoxButtons.YesNo;
+            string message = "Are you sure you want to Logout?";
+            string title = "Logout";
+            result = MessageBox.Show(message, title, messageBoxButtons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                LogIn login = new LogIn();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }
