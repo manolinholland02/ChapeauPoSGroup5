@@ -389,6 +389,7 @@ namespace ChapeauUI
 
             UpdateIncommingOrders();
 
+            ordersDataGridView.Columns[4].DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#1D7E1D");
             ordersDataGridView.Columns[5].Visible = true;
         }
 

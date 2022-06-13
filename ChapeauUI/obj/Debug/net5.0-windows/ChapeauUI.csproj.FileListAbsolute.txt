@@ -28,11 +28,31 @@ C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.dll
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.dll
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.dll
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.pdb
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.pdb
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.pdb
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.pdb
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddMenuItem.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditMenuItem.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerConformation.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OccupyDialogBox.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.StartOrderDialogBox.resources
+C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
@@ -43,223 +63,3 @@ C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
 C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.exe
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll.config
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.deps.json
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.json
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.dev.json
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.pdb
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Configuration.ConfigurationManager.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Drawing.Common.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.AccessControl.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Cryptography.ProtectedData.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Permissions.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Windows.Extensions.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.pdb
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.pdb
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.pdb
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csprojAssemblyReference.cache
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfo.cs
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CoreCompileInputs.cache
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CopyComplete
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerView.resources
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfo.cs
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CoreCompileInputs.cache
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.exe
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll.config
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.deps.json
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.json
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.dev.json
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ref\ChapeauUI.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Configuration.ConfigurationManager.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Drawing.Common.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.AccessControl.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Cryptography.ProtectedData.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Permissions.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Windows.Extensions.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.dll
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CopyComplete
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.exe
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll.config
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.deps.json
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.json
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.runtimeconfig.dev.json
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauUI.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Configuration.ConfigurationManager.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Drawing.Common.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.AccessControl.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Cryptography.ProtectedData.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Security.Permissions.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\System.Windows.Extensions.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauDAL.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauLogic.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\bin\Debug\net5.0-windows\ChapeauModel.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfo.cs
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CoreCompileInputs.cache
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CopyComplete
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.genruntimeconfig.cache
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.AssemblyReference.cache
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ChoosingMenuForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DinnerMenuForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.DrinksMenuForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LogIn.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.LunchMenuForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OrderOverviewForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.RestaurantOverview.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.TESTFORM.resources
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.GenerateResource.cache
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfoInputs.cache
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AssemblyInfo.cs
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.csproj.CoreCompileInputs.cache
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.dll
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ref\ChapeauUI.dll
-C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.pdb
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.PaymentForm.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditEmployee.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.FeedbackForm.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.KitchenBarView.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewEmployee.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerViewMenu.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OccupyDialogBox.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.StartOrderDialogBox.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddMenuItem.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddMenuItem.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OccupyDialogBox.resources
-C:\Users\miede\OneDrive\Desktop\Chapeau\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.StartOrderDialogBox.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.AddMenuItem.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.OccupyDialogBox.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.Properties.Resources.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.StartOrderDialogBox.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditMenuItem.resources
-C:\Users\alexa\Desktop\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerConformation.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.EditMenuItem.resources
-C:\Users\manol\source\repos\ChapeauPoSGroup5\ChapeauUI\obj\Debug\net5.0-windows\ChapeauUI.ManagerConformation.resources
