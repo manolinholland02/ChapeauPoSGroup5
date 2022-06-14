@@ -24,7 +24,6 @@ namespace ChapeauUI
         private OrderItemService _orderItemService;
         private OrderOverviewForm _orderOverview;
         private OrderService _orderService;
-        private List<OrderItem> _allDinnerOrderItems;
 
         public DinnerMenuForm(OrderService orderService, int tableID, ChoosingMenuForm choosingMenuForm, Employee waiter, OrderOverviewForm orderOverview)
         {
@@ -44,7 +43,7 @@ namespace ChapeauUI
             _selectedItem = new ListViewItem();
             _orderItemService = new OrderItemService();
             this._orderOverview = orderOverview;
-            _allDinnerOrderItems = new List<OrderItem>();
+     //       _allDinnerOrderItems = new List<OrderItem>();
         }
 
         private void BackbtnDinner_Click(object sender, EventArgs e)
@@ -82,9 +81,9 @@ namespace ChapeauUI
                 }
                 else
                 {
-                    _allDinnerOrderItems.Add(orderItem);
+                //    _allDinnerOrderItems.Add(orderItem);
                     _orderOverview.AddOrderItemsToOrderOverview(orderItem);
-                    orderCounterlbl.Text = $"count : {_allDinnerOrderItems.Count}";
+                    orderCounterlbl.Text = $"count :";
                 }
 
                 DinnerCommentSection.Clear();
@@ -99,18 +98,18 @@ namespace ChapeauUI
 
         private void IncreaseQuantityOfItem(OrderItem selectedOrderItem)
         {
-            foreach (OrderItem orderItem in _allDinnerOrderItems)
-            {
-                if (orderItem.MenuItem.MenuItemID == selectedOrderItem.MenuItem.MenuItemID) orderItem.Quantity++;
-            }
+            //foreach (OrderItem orderItem in _allDinnerOrderItems)
+            //{
+            //    if (orderItem.MenuItem.MenuItemID == selectedOrderItem.MenuItem.MenuItemID) orderItem.Quantity++;
+            //}
         }
 
         private bool IsItemAlreadyAdded(int menuItemId)
         {
-            foreach (OrderItem orderItem in _allDinnerOrderItems)
-            {
-                if (orderItem.MenuItem.MenuItemID == menuItemId) return true;
-            }
+            //foreach (OrderItem orderItem in _allDinnerOrderItems)
+            //{
+            //    if (orderItem.MenuItem.MenuItemID == menuItemId) return true;
+            //}
 
             return false;
         }

@@ -20,9 +20,12 @@ namespace ChapeauUI
             button_Employees_Form.BackColor = Color.DarkGray;
             button_Employees_Form.ForeColor = Color.Black;
             _manager = manager;
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
             button_Add_Employee.BackColor = ColorTranslator.FromHtml("#66CCFF");
+            SetStyleOfSelectedButton(button_Employees_Form);
+            SetStyleOfUnselectedButton(button_Menu_Form);
         }
         private void listView_Employees_Management_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -148,6 +151,31 @@ namespace ChapeauUI
             ManagerViewMenu viewMenu = new ManagerViewMenu(_manager);
             viewMenu.Show();
             this.Hide();
+        }
+
+        private void panel_Manager_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SetStyleOfSelectedButton(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#D9D9D9");
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Black;
+            button.FlatAppearance.BorderSize = 2;
+            button.Font = new Font("Arial", 20, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        //Method to set the style of the unselected button in the panelFilterButtons
+        //(based on Interaction Design feedback)
+        private void SetStyleOfUnselectedButton(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#E7E7E7");
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Black;
+            button.FlatAppearance.BorderSize = 1;
+            button.Font = new Font("Arial", 20, FontStyle.Regular, GraphicsUnit.Pixel);
         }
     }
 }

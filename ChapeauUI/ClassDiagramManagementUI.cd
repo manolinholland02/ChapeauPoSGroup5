@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ChapeauUI.AddEmployee" Collapsed="true">
-    <Position X="1.25" Y="2.25" Width="2.25" />
+    <Position X="1" Y="1.5" Width="2.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -22,6 +22,11 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="_manager" Type="ChapeauModel.Employee">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.417" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>BgAkAACABSAAAAFAAsCOAwACQBgAhAAAAEAQAIADEAQ=</HashCode>
       <FileName>AddMenuItem.cs</FileName>
@@ -35,36 +40,9 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="_EmployeeToEdit" Type="ChapeauModel.Employee" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.375" Y="5.75" />
-        <Point X="7.375" Y="4.848" />
-        <Point X="6.875" Y="4.848" />
-        <Point X="6.875" Y="3.017" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.355" Y="0.078" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="_manager" Type="ChapeauModel.Employee" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6.188" Y="5.75" />
-        <Point X="6.188" Y="3.314" />
-        <Point X="5.5" Y="3.314" />
-        <Point X="5.5" Y="3.017" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.941" Y="0.038" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>KAAAAEAAACAgAAAAAASABQACAAgABlVAAAQEABALEAA=</HashCode>
-      <FileName>EditEmployee.cs</FileName>
+      <HashCode>KAAAAEAAACAgAAAAAACAAAACAAgAAlVAAAQAABAJEAA=</HashCode>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_EmployeeToEdit" />
-      <Field Name="_manager" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauUI.EditMenuItem" Collapsed="true">
     <Position X="8.5" Y="0.5" Width="2.5" />
@@ -88,16 +66,9 @@
     <Position X="11.25" Y="4" Width="2.25" />
     <AssociationLine Name="_employee" Type="ChapeauModel.Employee" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.141" Y="4" />
-        <Point X="12.141" Y="1.5" />
-        <Point X="7" Y="1.5" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="_manager" Type="ChapeauModel.Employee" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="11.648" Y="4" />
-        <Point X="11.648" Y="2.062" />
-        <Point X="7" Y="2.062" />
+        <Point X="11.516" Y="4" />
+        <Point X="11.516" Y="2.5" />
+        <Point X="7" Y="2.5" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -105,20 +76,13 @@
       <FileName>ManagerConformation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="_manager" />
       <Field Name="_employee" />
       <Field Name="_item" />
-      <Field Name="_manager" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauUI.ManagerViewEmployee" Collapsed="true">
     <Position X="8.75" Y="3.5" Width="2.25" />
-    <AssociationLine Name="_manager" Type="ChapeauModel.Employee" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="9.188" Y="3.5" />
-        <Point X="9.188" Y="2.75" />
-        <Point X="7" Y="2.75" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAgCABBAgAkgCAAQCCQEgAAAIAAIICCAAHEgA=</HashCode>
       <FileName>ManagerViewEmployee.cs</FileName>
@@ -136,6 +100,176 @@
     <ShowAsAssociation>
       <Field Name="_manager" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.ChoosingMenuForm" Collapsed="true">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAKAHAAIAAACAAAQCIAIAIAIIAAQABKAAwAA=</HashCode>
+      <FileName>ChoosingMenuForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.DinnerMenuForm" Collapsed="true">
+    <Position X="5" Y="9" Width="1.5" />
+    <AssociationLine Name="_currentOrder" Type="ChapeauModel.Order" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="9.691" />
+        <Point X="5.75" Y="10.687" />
+        <Point X="9" Y="10.687" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.161" Y="-0.297" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_choosingMenuForm" Type="ChapeauUI.ChoosingMenuForm">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.002" Y="0.695" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQSgAAAIAiAIBBJAAwCAiBCCQQxACsQAkGgABBBAAKA=</HashCode>
+      <FileName>DinnerMenuForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentOrder" />
+      <Field Name="_choosingMenuForm" />
+      <Field Name="_orderOverview" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.DrinksMenuForm" Collapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_currentOrders" Type="ChapeauModel.Order" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16" Y="6.191" />
+        <Point X="16" Y="10.688" />
+        <Point X="10.5" Y="10.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IIBIQAgoACAAJAIQAACQiQACgSIUACAAAFAAACUEAAI=</HashCode>
+      <FileName>DrinksMenuForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentOrders" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.FeedbackForm" Collapsed="true">
+    <Position X="9" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAABAAAACAAAACAAAAAAAAABAAAIAAAAA=</HashCode>
+      <FileName>FeedbackForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.KitchenBarView" Collapsed="true">
+    <Position X="13" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAYAAAAAACIAAACBAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KitchenBarView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="uniqueInstance" />
+      <Field Name="employee" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.LogIn" Collapsed="true">
+    <Position X="10.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAIAACAAABAAAACAAACCAEAACACAABAAgABAAAA=</HashCode>
+      <FileName>LogIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.LunchMenuForm" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="_waiter" Type="ChapeauModel.Employee" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.5" Y="2.75" />
+        <Point X="17.5" Y="1.25" />
+        <Point X="13.083" Y="1.25" Type="JumpStart" />
+        <Point X="12.917" Y="1.25" Type="JumpEnd" />
+        <Point X="7" Y="1.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAgAAoAICCAIBABIghCCCCASQQAAChQBkGAQBABABYg=</HashCode>
+      <FileName>LunchMenuForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentOrder" />
+      <Field Name="_choosingMenuForm" />
+      <Field Name="_waiter" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.OccupyDialogBox" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="uniqueInstance" Type="ChapeauUI.OccupyDialogBox">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.231" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIAAEAAACAAEASBMAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OccupyDialogBox.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="uniqueInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.OrderOverviewForm" Collapsed="true">
+    <Position X="18.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICQgAAAAoCAKAyEABgDBAAQjYGIEAIAEAgAAABEAIAA=</HashCode>
+      <FileName>OrderOverviewForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.PaymentForm" Collapsed="true">
+    <Position X="14.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAQBSEAIBBFAACQAAACgEAAAAAQAAAACAQIQHA=</HashCode>
+      <FileName>PaymentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.RestaurantOverview" Collapsed="true">
+    <Position X="7.25" Y="8.75" Width="1.5" />
+    <AssociationLine Name="order" Type="ChapeauModel.Order" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.406" Y="9.441" />
+        <Point X="8.406" Y="10.375" />
+        <Point X="9" Y="10.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="choosingMenuForm" Type="ChapeauUI.ChoosingMenuForm">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.046" Y="0.314" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AYAAwwBBYCAkEjDERADKAQACAAIAAAAEgQAAAQAAAAA=</HashCode>
+      <FileName>RestaurantOverview.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="employee" />
+      <Field Name="table" />
+      <Field Name="tables" />
+      <Field Name="order" />
+      <Field Name="choosingMenuForm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.StartOrderDialogBox" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAIAAEAAACAAEASBMAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>StartOrderDialogBox.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="uniqueInstance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.Table" Collapsed="true">
+    <Position X="11.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauModel.Order" Collapsed="true">
+    <Position X="9" Y="10.25" Width="1.5" />
+    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

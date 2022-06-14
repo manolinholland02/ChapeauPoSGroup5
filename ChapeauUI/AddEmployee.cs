@@ -19,7 +19,8 @@ namespace ChapeauUI
             radioButton_AddEmployee_Manager.Checked = false;
             radioButton_AddEmployee_Waiter.Checked = false;
             _manager = manager;
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
 
         }
 

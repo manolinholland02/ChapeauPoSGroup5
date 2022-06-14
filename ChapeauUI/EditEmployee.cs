@@ -17,7 +17,8 @@ namespace ChapeauUI
             _EmployeeToEdit = employee;
             _manager = manager;
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
             _EmployeeToEdit.EmployeeID = employee.EmployeeID;
             textBox_EditEmployee_FirstName.Text = _EmployeeToEdit.EmployeeFirstName.ToString();
             textBox_EditEmployee_LastName.Text = _EmployeeToEdit.EmployeeLastName.ToString();

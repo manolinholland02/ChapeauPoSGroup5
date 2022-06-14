@@ -46,11 +46,11 @@ namespace ChapeauUI
             this.button_AddEmployee = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.panel_Manager = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_managerName = new System.Windows.Forms.Label();
-            this.pictureBox_Manager = new System.Windows.Forms.PictureBox();
             this.groupBox_AddEmployee_Occupation.SuspendLayout();
             this.panel_Manager.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_AddEmployee_FirstName
@@ -205,36 +205,34 @@ namespace ChapeauUI
             // panel_Manager
             // 
             this.panel_Manager.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel_Manager.Controls.Add(this.pictureBox1);
             this.panel_Manager.Controls.Add(this.label_managerName);
-            this.panel_Manager.Controls.Add(this.pictureBox_Manager);
             this.panel_Manager.Location = new System.Drawing.Point(1, 0);
             this.panel_Manager.Name = "panel_Manager";
-            this.panel_Manager.Size = new System.Drawing.Size(1422, 99);
+            this.panel_Manager.Size = new System.Drawing.Size(1422, 68);
             this.panel_Manager.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(653, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // label_managerName
             // 
-            this.label_managerName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_managerName.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_managerName.ForeColor = System.Drawing.Color.Black;
-            this.label_managerName.Location = new System.Drawing.Point(1187, 9);
+            this.label_managerName.Location = new System.Drawing.Point(774, 9);
             this.label_managerName.Name = "label_managerName";
-            this.label_managerName.Size = new System.Drawing.Size(223, 88);
+            this.label_managerName.Size = new System.Drawing.Size(636, 59);
             this.label_managerName.TabIndex = 14;
             this.label_managerName.Text = "label1";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
-            // 
-            // pictureBox_Manager
-            // 
-            this.pictureBox_Manager.BackColor = System.Drawing.Color.White;
-            this.pictureBox_Manager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox_Manager.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Manager.Image")));
-            this.pictureBox_Manager.Location = new System.Drawing.Point(616, 0);
-            this.pictureBox_Manager.Name = "pictureBox_Manager";
-            this.pictureBox_Manager.Size = new System.Drawing.Size(188, 99);
-            this.pictureBox_Manager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Manager.TabIndex = 13;
-            this.pictureBox_Manager.TabStop = false;
             // 
             // AddEmployee
             // 
@@ -260,7 +258,7 @@ namespace ChapeauUI
             this.groupBox_AddEmployee_Occupation.ResumeLayout(false);
             this.groupBox_AddEmployee_Occupation.PerformLayout();
             this.panel_Manager.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +283,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button_Cancel;
         private System.Windows.Forms.Panel panel_Manager;
         private System.Windows.Forms.Label label_managerName;
-        private System.Windows.Forms.PictureBox pictureBox_Manager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
