@@ -17,7 +17,7 @@ namespace ChapeauUI
         private OccupyDialogBox()
         {
             InitializeComponent();
-            lblMessage.Text = "Do you want to occupy this table?";
+            lblMessage.Text = "Do you want to occupy \nthis table?";
         }
 
         public static OccupyDialogBox GetInstance()

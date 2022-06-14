@@ -29,10 +29,11 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitchenBarView));
             this.ordersDataGridView = new System.Windows.Forms.DataGridView();
             this.kitchenBarViewHeader = new System.Windows.Forms.Panel();
+            this.lbl_location = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.panelLegend = new System.Windows.Forms.Panel();
@@ -55,10 +56,10 @@ namespace ChapeauUI
             // 
             this.ordersDataGridView.AllowUserToAddRows = false;
             this.ordersDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.ordersDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.ordersDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.ordersDataGridView.ColumnHeadersHeight = 55;
             this.ordersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ordersDataGridView.EnableHeadersVisualStyles = false;
@@ -76,12 +77,26 @@ namespace ChapeauUI
             // 
             // kitchenBarViewHeader
             // 
+            this.kitchenBarViewHeader.Controls.Add(this.lbl_location);
             this.kitchenBarViewHeader.Controls.Add(this.pictureBoxLogo);
             this.kitchenBarViewHeader.Controls.Add(this.lblEmployeeName);
             this.kitchenBarViewHeader.Location = new System.Drawing.Point(0, 0);
             this.kitchenBarViewHeader.Name = "kitchenBarViewHeader";
             this.kitchenBarViewHeader.Size = new System.Drawing.Size(1422, 68);
             this.kitchenBarViewHeader.TabIndex = 1;
+            // 
+            // lbl_location
+            // 
+            this.lbl_location.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_location.AutoSize = true;
+            this.lbl_location.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_location.ForeColor = System.Drawing.Color.Black;
+            this.lbl_location.Location = new System.Drawing.Point(12, 12);
+            this.lbl_location.Name = "lbl_location";
+            this.lbl_location.Size = new System.Drawing.Size(137, 38);
+            this.lbl_location.TabIndex = 2;
+            this.lbl_location.Text = "Location";
+            this.lbl_location.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBoxLogo
             // 
@@ -222,7 +237,7 @@ namespace ChapeauUI
             this.MinimizeBox = false;
             this.Name = "KitchenBarView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KitchenBarView";
+            this.Text = "Chapeau PoS";
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataGridView)).EndInit();
             this.kitchenBarViewHeader.ResumeLayout(false);
             this.kitchenBarViewHeader.PerformLayout();
@@ -249,5 +264,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button btnPastOrders;
         private System.Windows.Forms.Button btnIncomingOrders;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lbl_location;
     }
 }

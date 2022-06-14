@@ -38,7 +38,7 @@ namespace ChapeauUI
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessage.Location = new System.Drawing.Point(43, 20);
+            this.lblMessage.Location = new System.Drawing.Point(28, 25);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(198, 62);
             this.lblMessage.TabIndex = 0;

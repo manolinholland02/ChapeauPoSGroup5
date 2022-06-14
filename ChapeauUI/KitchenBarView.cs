@@ -62,8 +62,16 @@ namespace ChapeauUI
         //Method that returns the corresponding menu type based on the employee's role
         public string ReturnMenuTypeBasedOnEmployee(Employee employee)
         {
-            if (employee.EmployeeType == EmployeeType.chef) return "food";
-            else if (employee.EmployeeType == EmployeeType.barman) return "drink";
+            if (employee.EmployeeType == EmployeeType.chef)
+            {
+                lbl_location.Text = "Kitchen";
+                return "food";
+            }
+            else if (employee.EmployeeType == EmployeeType.barman) 
+            {
+                lbl_location.Text = "Bar";
+                return "drink";
+            }
             else throw new Exception("Employee type doesn't corresponnd to chef or barman.");
         }
 
@@ -457,6 +465,11 @@ namespace ChapeauUI
                     _kitchenBarViewService.SetOrderItemAsPrepared(orderItemId, Status.ready, stopedAt);
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
