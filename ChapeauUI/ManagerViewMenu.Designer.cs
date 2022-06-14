@@ -47,6 +47,7 @@ namespace ChapeauUI
             this.label_managerName = new System.Windows.Forms.Label();
             this.panel_Manager = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_Manager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -209,12 +210,25 @@ namespace ChapeauUI
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(792, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(607, 45);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Select Item";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ManagerViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Edit_MenuItem);
             this.Controls.Add(this.button_Delete_MenuItem);
             this.Controls.Add(this.panel_Manager);
@@ -251,5 +265,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label_managerName;
         private System.Windows.Forms.Panel panel_Manager;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

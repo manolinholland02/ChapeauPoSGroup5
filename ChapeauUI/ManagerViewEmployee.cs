@@ -178,5 +178,10 @@ namespace ChapeauUI
             button.FlatAppearance.BorderSize = 1;
             button.Font = new Font("Arial", 20, FontStyle.Regular, GraphicsUnit.Pixel);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
