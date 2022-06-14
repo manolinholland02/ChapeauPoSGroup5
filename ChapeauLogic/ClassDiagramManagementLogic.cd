@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChapeauLogic.EmployeeService">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <AssociationLine Name="_employeedb" Type="ChapeauDAL.EmployeeDao" FixedFromPoint="true">
+      <Path>
+        <Point X="1.938" Y="1.75" />
+        <Point X="1.938" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.537" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAIAgABAAAQAAEBAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>EmployeeService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_employeedb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.EmployeeDao" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.MenuItemService">
+    <Position X="2.75" Y="1.75" Width="1.75" />
+    <AssociationLine Name="_menuItemDb" Type="ChapeauDAL.MenuItemDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.195" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAAAAAAAABAAAAAQQAISAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>MenuItemService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_menuItemDb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.MenuItemDao" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.DinnerMenuService">
+    <Position X="5.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>DinnerMenuService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauLogic.DrinksMenuService">
+    <Position X="7.25" Y="1.75" Width="2" />
+    <AssociationLine Name="_drinkMenuDb" Type="ChapeauDAL.DrinksMenuDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="1.137" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAIAAAAAAI=</HashCode>
+      <FileName>DrinksMenuService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_drinkMenuDb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.DrinksMenuDao" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.FeedbackService">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="_feedbackdb" Type="ChapeauDAL.FeedbackDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="1.045" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>RAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeedbackService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_feedbackdb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.FeedbackDao" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.LunchMenuService">
+    <Position X="11.25" Y="1.75" Width="2" />
+    <AssociationLine Name="_lunchMenuDb" Type="ChapeauDAL.LunchMenuDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="1.203" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>LunchMenuService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_lunchMenuDb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.LunchMenuDao" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.OrderItemService">
+    <Position X="4.75" Y="1.75" Width="2.25" />
+    <AssociationLine Name="_orderItemDao" Type="ChapeauDAL.OrderItemDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.225" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAoAAAAIAAAAAAAAAAAAAAAAAAwg=</HashCode>
+      <FileName>OrderItemService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_orderItemDao" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauLogic.OrderService">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="_orderDao" Type="ChapeauDAL.OrderDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="0.993" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAgEAAAAAAIAA=</HashCode>
+      <FileName>OrderService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_orderDao" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.OrderDao" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.PaymentService">
+    <Position X="10.25" Y="5.5" Width="2" />
+    <AssociationLine Name="_paymentdb" Type="ChapeauDAL.PaymentDao">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="1.004" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAACBAAIAAAAAABAAAAiAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PaymentService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_paymentdb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.PaymentDao" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.TableService">
+    <Position X="12.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>TableService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_tabledb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauDAL.TableDao" Collapsed="true">
+    <Position X="12.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.OrderItemDao" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

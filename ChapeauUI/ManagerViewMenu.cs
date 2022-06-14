@@ -22,7 +22,11 @@ namespace ChapeauUI
             DisplayMenu();
             _manager = manager;
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
+            SetStyleOfSelectedButton(button_Menu_Form);
+            SetStyleOfUnselectedButton(button_Employees_Form);
+
         }
         private void DisplayMenu()
         {
@@ -140,6 +144,26 @@ namespace ChapeauUI
             int itemToDelete = int.Parse(listView_Menu_Management.SelectedItems[0].SubItems[0].Text);
             ManagerConformation managerConformation = new ManagerConformation(_manager, operation, itemToDelete, this);
             managerConformation.Show();
+        }
+
+        private void SetStyleOfSelectedButton(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#D9D9D9");
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Black;
+            button.FlatAppearance.BorderSize = 2;
+            button.Font = new Font("Arial", 20, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        //Method to set the style of the unselected button in the panelFilterButtons
+        //(based on Interaction Design feedback)
+        private void SetStyleOfUnselectedButton(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#E7E7E7");
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Black;
+            button.FlatAppearance.BorderSize = 1;
+            button.Font = new Font("Arial", 20, FontStyle.Regular, GraphicsUnit.Pixel);
         }
     }
 }

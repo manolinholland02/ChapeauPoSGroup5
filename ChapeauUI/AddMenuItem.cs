@@ -23,8 +23,9 @@ namespace ChapeauUI
             textBox_Menu_Time_Minutes.Text = "00";
             textBox_Menu_Time_Seconds.Text = "00";
             _manager = manager;
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
         }
 
         private void PrintFoodCategory()
