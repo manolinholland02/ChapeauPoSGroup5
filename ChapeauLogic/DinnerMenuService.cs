@@ -10,11 +10,11 @@ namespace ChapeauLogic
 {
     public class DinnerMenuService
     {
-        private DinnerMenuDao _dinnerMenuDb;
+        private S _dinnerMenuDb;
 
         public DinnerMenuService()
         {
-            _dinnerMenuDb = new DinnerMenuDao();
+            _dinnerMenuDb = new S();
         }
 
         public List<DinnerMenu> GetDinnerMenuItems()

@@ -17,7 +17,6 @@ namespace ChapeauUI
         private Employee employee;
         private Table table;
         private Table[] tables;
-        private Button[] buttons;
         TableService tableService;
         private MessageBoxButtons msgBoxButtons;
         private DialogResult result;
@@ -35,7 +34,7 @@ namespace ChapeauUI
             tableService = new TableService();
             orderItemService = new OrderItemService();
             tables = LoadTables();
-            buttons = AddButtonsToList();
+            //buttons = AddButtonsToList();
             LoadButtons(tables, AddButtonsToList());
             pnlDisplayOrderItems.Visible = false;
             orderService = new OrderService();
@@ -83,7 +82,7 @@ namespace ChapeauUI
                 {
                     table.TableStatus = TableStatus.occupied;
                     tableService.UpdateTableStatus(table);
-                    LoadButtons(tables, buttons);
+                   // LoadButtons(tables, buttons);
                 }
             }
             else if (table.TableStatus == TableStatus.occupied)
@@ -116,7 +115,7 @@ namespace ChapeauUI
                     orderService.InsertNewOrder(order);
                     order = orderService.GetLastOrder(table.TableId);
 
-                    LoadButtons(tables, buttons);
+                 //   LoadButtons(tables, buttons);
                     this.Hide();
                     choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
                     choosingMenuForm.Show();
@@ -125,7 +124,7 @@ namespace ChapeauUI
                 {
                     table.TableStatus = TableStatus.free;
                     tableService.UpdateTableStatus(table);
-                    LoadButtons(tables, buttons);
+                   // LoadButtons(tables, buttons);
                 }
             }
             else if (table.TableStatus == TableStatus.haveOrder)
@@ -261,7 +260,7 @@ namespace ChapeauUI
                 table.TableStatus = TableStatus.free;
                 tableService.UpdateTableStatus(table);
                 pnlDisplayOrderItems.Visible = false;
-                LoadButtons(tables, buttons);
+            //    LoadButtons(tables, buttons);
             }
         }
 

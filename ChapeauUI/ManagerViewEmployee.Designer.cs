@@ -43,10 +43,11 @@ namespace ChapeauUI
             this.button_Employees_Form = new System.Windows.Forms.Button();
             this.button_Menu_Form = new System.Windows.Forms.Button();
             this.panel_Manager = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_managerName = new System.Windows.Forms.Label();
-            this.pictureBox_Manager = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_Manager.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listView_Employees_Management
@@ -62,10 +63,10 @@ namespace ChapeauUI
             this.listView_Employees_Management.ForeColor = System.Drawing.Color.Black;
             this.listView_Employees_Management.FullRowSelect = true;
             this.listView_Employees_Management.HideSelection = false;
-            this.listView_Employees_Management.Location = new System.Drawing.Point(12, 205);
+            this.listView_Employees_Management.Location = new System.Drawing.Point(23, 205);
             this.listView_Employees_Management.MultiSelect = false;
             this.listView_Employees_Management.Name = "listView_Employees_Management";
-            this.listView_Employees_Management.Size = new System.Drawing.Size(1398, 420);
+            this.listView_Employees_Management.Size = new System.Drawing.Size(1376, 540);
             this.listView_Employees_Management.TabIndex = 0;
             this.listView_Employees_Management.UseCompatibleStateImageBehavior = false;
             this.listView_Employees_Management.View = System.Windows.Forms.View.Details;
@@ -105,7 +106,7 @@ namespace ChapeauUI
             // 
             this.button_Add_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Add_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Add_Employee.Location = new System.Drawing.Point(69, 764);
+            this.button_Add_Employee.Location = new System.Drawing.Point(65, 805);
             this.button_Add_Employee.Name = "button_Add_Employee";
             this.button_Add_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Add_Employee.TabIndex = 1;
@@ -118,7 +119,7 @@ namespace ChapeauUI
             this.button_Delete_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Delete_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Delete_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Delete_Employee.Location = new System.Drawing.Point(1131, 764);
+            this.button_Delete_Employee.Location = new System.Drawing.Point(1125, 805);
             this.button_Delete_Employee.Name = "button_Delete_Employee";
             this.button_Delete_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Delete_Employee.TabIndex = 2;
@@ -131,7 +132,7 @@ namespace ChapeauUI
             this.button_Edit_Employee.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Edit_Employee.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Edit_Employee.ForeColor = System.Drawing.Color.Black;
-            this.button_Edit_Employee.Location = new System.Drawing.Point(625, 764);
+            this.button_Edit_Employee.Location = new System.Drawing.Point(620, 805);
             this.button_Edit_Employee.Name = "button_Edit_Employee";
             this.button_Edit_Employee.Size = new System.Drawing.Size(200, 85);
             this.button_Edit_Employee.TabIndex = 3;
@@ -145,9 +146,9 @@ namespace ChapeauUI
             this.button_Employees_Form.Enabled = false;
             this.button_Employees_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Employees_Form.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_Employees_Form.Location = new System.Drawing.Point(30, 127);
+            this.button_Employees_Form.Location = new System.Drawing.Point(40, 165);
             this.button_Employees_Form.Name = "button_Employees_Form";
-            this.button_Employees_Form.Size = new System.Drawing.Size(164, 63);
+            this.button_Employees_Form.Size = new System.Drawing.Size(206, 40);
             this.button_Employees_Form.TabIndex = 4;
             this.button_Employees_Form.Text = "Employees";
             this.button_Employees_Form.UseVisualStyleBackColor = false;
@@ -156,9 +157,9 @@ namespace ChapeauUI
             // 
             this.button_Menu_Form.BackColor = System.Drawing.Color.Gainsboro;
             this.button_Menu_Form.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Menu_Form.Location = new System.Drawing.Point(190, 127);
+            this.button_Menu_Form.Location = new System.Drawing.Point(244, 165);
             this.button_Menu_Form.Name = "button_Menu_Form";
-            this.button_Menu_Form.Size = new System.Drawing.Size(164, 63);
+            this.button_Menu_Form.Size = new System.Drawing.Size(206, 40);
             this.button_Menu_Form.TabIndex = 5;
             this.button_Menu_Form.Text = "Menu Items";
             this.button_Menu_Form.UseVisualStyleBackColor = false;
@@ -167,36 +168,47 @@ namespace ChapeauUI
             // panel_Manager
             // 
             this.panel_Manager.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel_Manager.Controls.Add(this.pictureBox1);
             this.panel_Manager.Controls.Add(this.label_managerName);
-            this.panel_Manager.Controls.Add(this.pictureBox_Manager);
             this.panel_Manager.Location = new System.Drawing.Point(0, 0);
             this.panel_Manager.Name = "panel_Manager";
-            this.panel_Manager.Size = new System.Drawing.Size(1422, 99);
+            this.panel_Manager.Size = new System.Drawing.Size(1422, 68);
             this.panel_Manager.TabIndex = 6;
+            this.panel_Manager.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Manager_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(653, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // label_managerName
             // 
-            this.label_managerName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_managerName.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_managerName.ForeColor = System.Drawing.Color.Black;
-            this.label_managerName.Location = new System.Drawing.Point(1187, 9);
+            this.label_managerName.Location = new System.Drawing.Point(803, 9);
             this.label_managerName.Name = "label_managerName";
-            this.label_managerName.Size = new System.Drawing.Size(223, 88);
+            this.label_managerName.Size = new System.Drawing.Size(607, 45);
             this.label_managerName.TabIndex = 14;
             this.label_managerName.Text = "label1";
             this.label_managerName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label_managerName.Click += new System.EventHandler(this.label_managerName_Click);
             // 
-            // pictureBox_Manager
+            // label1
             // 
-            this.pictureBox_Manager.BackColor = System.Drawing.Color.White;
-            this.pictureBox_Manager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox_Manager.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Manager.Image")));
-            this.pictureBox_Manager.Location = new System.Drawing.Point(616, 0);
-            this.pictureBox_Manager.Name = "pictureBox_Manager";
-            this.pictureBox_Manager.Size = new System.Drawing.Size(188, 99);
-            this.pictureBox_Manager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Manager.TabIndex = 13;
-            this.pictureBox_Manager.TabStop = false;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(792, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(607, 45);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Select Employee";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ManagerViewEmployee
             // 
@@ -204,6 +216,7 @@ namespace ChapeauUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1422, 977);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_Manager);
             this.Controls.Add(this.button_Menu_Form);
             this.Controls.Add(this.button_Employees_Form);
@@ -215,7 +228,7 @@ namespace ChapeauUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerView";
             this.panel_Manager.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Manager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,7 +248,8 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button_Employees_Form;
         private System.Windows.Forms.Button button_Menu_Form;
         private System.Windows.Forms.Panel panel_Manager;
-        private System.Windows.Forms.PictureBox pictureBox_Manager;
         private System.Windows.Forms.Label label_managerName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

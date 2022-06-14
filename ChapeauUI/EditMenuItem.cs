@@ -18,7 +18,9 @@ namespace ChapeauUI
             _ItemToEdit = item;
             _manager = manager;
             this.BackColor = ColorTranslator.FromHtml("#E8DCCA");
-            label_managerName.Text = $"{_manager.EmployeeFirstName}\n{_manager.EmployeeLastName}";
+
+            panel_Manager.BackColor = ColorTranslator.FromHtml("#D9D9D9");
+            label_managerName.Text = $"{_manager.EmployeeFirstName} {_manager.EmployeeLastName}";
             textBox_Menu_Name.Text = _ItemToEdit.MenuItemName;
             textBox_Menu_Price.Text = _ItemToEdit.MenuItemPrice.ToString("0.00");
             textBox_Menu_Stock.Text = _ItemToEdit.MenuItemStock.ToString();
