@@ -68,7 +68,7 @@ namespace ChapeauUI
             this.SoftDrinksListView.HideSelection = false;
             this.SoftDrinksListView.Location = new System.Drawing.Point(1, 117);
             this.SoftDrinksListView.Name = "SoftDrinksListView";
-            this.SoftDrinksListView.Size = new System.Drawing.Size(265, 301);
+            this.SoftDrinksListView.Size = new System.Drawing.Size(265, 269);
             this.SoftDrinksListView.TabIndex = 0;
             this.SoftDrinksListView.UseCompatibleStateImageBehavior = false;
             this.SoftDrinksListView.View = System.Windows.Forms.View.Details;
@@ -126,9 +126,9 @@ namespace ChapeauUI
             this.wineName});
             this.WineListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WineListView.HideSelection = false;
-            this.WineListView.Location = new System.Drawing.Point(1, 424);
+            this.WineListView.Location = new System.Drawing.Point(1, 392);
             this.WineListView.Name = "WineListView";
-            this.WineListView.Size = new System.Drawing.Size(265, 181);
+            this.WineListView.Size = new System.Drawing.Size(265, 213);
             this.WineListView.TabIndex = 2;
             this.WineListView.UseCompatibleStateImageBehavior = false;
             this.WineListView.View = System.Windows.Forms.View.Details;
@@ -241,7 +241,7 @@ namespace ChapeauUI
             // DrinksTableOverview
             // 
             this.DrinksTableOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DrinksTableOverview.Location = new System.Drawing.Point(410, 29);
+            this.DrinksTableOverview.Location = new System.Drawing.Point(410, 35);
             this.DrinksTableOverview.Name = "DrinksTableOverview";
             this.DrinksTableOverview.Size = new System.Drawing.Size(115, 82);
             this.DrinksTableOverview.TabIndex = 8;
@@ -262,10 +262,11 @@ namespace ChapeauUI
             // EmployeeNamelbl
             // 
             this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EmployeeNamelbl.Location = new System.Drawing.Point(384, 7);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 5);
             this.EmployeeNamelbl.Name = "EmployeeNamelbl";
-            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(158, 27);
             this.EmployeeNamelbl.TabIndex = 10;
             this.EmployeeNamelbl.Text = "Employee Name";
             this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);

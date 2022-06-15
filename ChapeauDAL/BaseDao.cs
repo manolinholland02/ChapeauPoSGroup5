@@ -107,6 +107,7 @@ namespace ChapeauDAL
             {
                 CloseConnection();
             }
+
             return dataTable;
         }
     }

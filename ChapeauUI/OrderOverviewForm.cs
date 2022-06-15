@@ -36,6 +36,7 @@ namespace ChapeauUI
             // fill in labels on form
             EmployeeNamelbl.Text = $"{this.Waiter.EmployeeFirstName} {this.Waiter.EmployeeLastName}";
             tableNumberlbl.Text = $"Table {TableId}";
+            OrderAddedlbl.Hide();
         }
 
         public void LoadFormButtonColours()// loads the colours of the buttons depending on what the clal to action should be
@@ -224,6 +225,7 @@ namespace ChapeauUI
                     FillListViewWithOrderItems();
                     //turn buttons colours
                     LoadFormButtonColours();
+                    OrderAddedlbl.Show();
                 }
             }
             catch
@@ -235,6 +237,7 @@ namespace ChapeauUI
         private void oderOverviewbackbtn_Click_1(object sender, EventArgs e)//goes back to choosing menu form
         {
             this.Hide();
+            OrderAddedlbl.Hide();
             choosingMenuForm.UpdateTotalTotalOrderCount();
             choosingMenuForm.Show();
         }
@@ -275,7 +278,7 @@ namespace ChapeauUI
             {
                 LogIn login = new LogIn();
                 login.Show();
-                this.Hide();
+                this.Close();
             }
         }
     }

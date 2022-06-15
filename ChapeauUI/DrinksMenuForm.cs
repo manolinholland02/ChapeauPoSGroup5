@@ -181,7 +181,8 @@ namespace ChapeauUI
                     Comment = DrinksCommentSection.Text,
                     Quantity = 1,
                     Order = currentOrder.OrderId,
-                    Status = Status.preparing
+                    Status = Status.preparing,
+                    StartTime = DateTime.Now
                 };
                 return orderItem;
             }
@@ -319,7 +320,7 @@ namespace ChapeauUI
             {
                 LogIn login = new LogIn();
                 login.Show();
-                this.Hide();
+                this.Close();
             }
         }
     }

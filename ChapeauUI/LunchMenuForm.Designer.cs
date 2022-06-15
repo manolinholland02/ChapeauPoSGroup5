@@ -53,7 +53,7 @@ namespace ChapeauUI
             // OrderOverviewLunchbtn
             // 
             this.OrderOverviewLunchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OrderOverviewLunchbtn.Location = new System.Drawing.Point(410, 29);
+            this.OrderOverviewLunchbtn.Location = new System.Drawing.Point(410, 35);
             this.OrderOverviewLunchbtn.Name = "OrderOverviewLunchbtn";
             this.OrderOverviewLunchbtn.Size = new System.Drawing.Size(115, 82);
             this.OrderOverviewLunchbtn.TabIndex = 0;
@@ -199,10 +199,11 @@ namespace ChapeauUI
             // EmployeeNamelbl
             // 
             this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 1);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 5);
             this.EmployeeNamelbl.Name = "EmployeeNamelbl";
-            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(158, 27);
             this.EmployeeNamelbl.TabIndex = 8;
             this.EmployeeNamelbl.Text = "Employee Name";
             this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);

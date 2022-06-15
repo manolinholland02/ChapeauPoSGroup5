@@ -23,7 +23,7 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 // get password & username from user
                 string username = txtUsername.Text;
@@ -37,12 +37,13 @@ namespace ChapeauUI
                     // 1) employee type = manager -> Open ManagerViewForm
                     if (employee.EmployeeType == EmployeeType.manager)
                     {
-                        this.Close();
-                        ManagerViewMenu managerView = new ManagerViewMenu();
+                        this.Hide();
+                        ManagerViewEmployee managerView = new ManagerViewEmployee(employee);
+                        managerView.Closed += (ss, ee) => this.Close();
                         managerView.Show();
                     }
-                    else if (employee.EmployeeType == EmployeeType.waiter)
                     // 2) employee type = waiter -> Open RestaurantOverview
+                    else if (employee.EmployeeType == EmployeeType.waiter)
                     {
                         this.Hide();
                         RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
@@ -51,23 +52,28 @@ namespace ChapeauUI
                     // 3) employee type = chef/barman -> Open KitchenBarView
                     else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                     {
-                        this.Close();
-                        KitchenBarView kitchenBarView = KitchenBarView.GetInstance(employee);
+                        this.Hide();
+                        KitchenBarView kitchenBarView = new KitchenBarView(employee);
+                        kitchenBarView.Closed += (ss, ee) => this.Close();
                         kitchenBarView.Show();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                    {
+                        MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.ToString()}");
             }
             
         }
 
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

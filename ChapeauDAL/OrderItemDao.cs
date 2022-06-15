@@ -104,7 +104,7 @@ namespace ChapeauDAL
                 new SqlParameter("@Comment", orderItem.Comment),
                 new SqlParameter("@Quantity", orderItem.Quantity),
                 new SqlParameter("@OrderId", orderItem.Order),
-                new SqlParameter("@orderItemStartTime", DateTime.Now)
+                new SqlParameter("@orderItemStartTime", orderItem.StartTime)
                 };
 
                 ExecuteEditQuery(query, sqlParameters);

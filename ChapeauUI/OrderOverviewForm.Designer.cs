@@ -43,6 +43,7 @@ namespace ChapeauUI
             this.TableOverviewbtn = new System.Windows.Forms.Button();
             this.EmployeeNamelbl = new System.Windows.Forms.Label();
             this.tableNumberlbl = new System.Windows.Forms.Label();
+            this.OrderAddedlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OrderlistView
@@ -156,10 +157,11 @@ namespace ChapeauUI
             // EmployeeNamelbl
             // 
             this.EmployeeNamelbl.AutoSize = true;
+            this.EmployeeNamelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EmployeeNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EmployeeNamelbl.Location = new System.Drawing.Point(372, 9);
+            this.EmployeeNamelbl.Location = new System.Drawing.Point(369, 5);
             this.EmployeeNamelbl.Name = "EmployeeNamelbl";
-            this.EmployeeNamelbl.Size = new System.Drawing.Size(156, 25);
+            this.EmployeeNamelbl.Size = new System.Drawing.Size(158, 27);
             this.EmployeeNamelbl.TabIndex = 7;
             this.EmployeeNamelbl.Text = "Employee Name";
             this.EmployeeNamelbl.Click += new System.EventHandler(this.EmployeeNamelbl_Click);
@@ -174,11 +176,23 @@ namespace ChapeauUI
             this.tableNumberlbl.TabIndex = 8;
             this.tableNumberlbl.Text = "Table Number";
             // 
+            // OrderAddedlbl
+            // 
+            this.OrderAddedlbl.AutoSize = true;
+            this.OrderAddedlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OrderAddedlbl.ForeColor = System.Drawing.Color.Green;
+            this.OrderAddedlbl.Location = new System.Drawing.Point(161, 87);
+            this.OrderAddedlbl.Name = "OrderAddedlbl";
+            this.OrderAddedlbl.Size = new System.Drawing.Size(171, 29);
+            this.OrderAddedlbl.TabIndex = 9;
+            this.OrderAddedlbl.Text = "Order Added!";
+            // 
             // OrderOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 752);
+            this.Controls.Add(this.OrderAddedlbl);
             this.Controls.Add(this.tableNumberlbl);
             this.Controls.Add(this.EmployeeNamelbl);
             this.Controls.Add(this.TableOverviewbtn);
@@ -212,5 +226,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button TableOverviewbtn;
         private System.Windows.Forms.Label EmployeeNamelbl;
         private System.Windows.Forms.Label tableNumberlbl;
+        private System.Windows.Forms.Label OrderAddedlbl;
     }
 }

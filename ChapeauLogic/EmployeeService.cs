@@ -36,6 +36,14 @@ namespace ChapeauLogic
         {
             return _employeedb.AccountExists(username, password);
         }
+        public bool AccountExists(string username)
+        {
+            return _employeedb.AccountExists(username);
+        }
+        public bool AccountExists(int password)
+        {
+            return _employeedb.AccountExists(password);
+        }
         public EmployeeType GetEmployeeType(string username)
         {
             // convert string to EmployeeType
