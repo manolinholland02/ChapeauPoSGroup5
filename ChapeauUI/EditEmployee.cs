@@ -66,7 +66,7 @@ namespace ChapeauUI
             {
 
                 string operation = "EditEmployee";
-                _EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
+                //_EmployeeToEdit.EmployeeUserPassword = int.Parse(textBox_EditEmployee_Password.Text);
                 ManagerConformation conformation = new ManagerConformation(_manager, operation, _EmployeeToEdit, this);
                 conformation.Show();
             }

@@ -67,11 +67,14 @@ namespace ChapeauUI
             for (int i = 0; i < buttons.Length; i++)
             {
                 // set table color to green if it is free
-                if (tables[i].TableStatus == TableStatus.free) buttons[i].BackColor = ColorTranslator.FromHtml("#47D147");
+                if (tables[i].TableStatus == TableStatus.free) 
+                    buttons[i].BackColor = ColorTranslator.FromHtml("#47D147");
                 // set table color to red if it is occupied
-                else if (tables[i].TableStatus == TableStatus.occupied) buttons[i].BackColor = ColorTranslator.FromHtml("#EC5C5C");
+                else if (tables[i].TableStatus == TableStatus.occupied) 
+                    buttons[i].BackColor = ColorTranslator.FromHtml("#EC5C5C");
                 // set table color to yellow if it has an order
-                else if (tables[i].TableStatus == TableStatus.haveOrder) buttons[i].BackColor = ColorTranslator.FromHtml("#ECEF58");
+                else if (tables[i].TableStatus == TableStatus.haveOrder) 
+                    buttons[i].BackColor = ColorTranslator.FromHtml("#ECEF58");
             }
         }
 
@@ -129,7 +132,7 @@ namespace ChapeauUI
                     choosingMenuForm = new ChoosingMenuForm(table.TableId, employee, orderService, this);
                     choosingMenuForm.Show();
                 }
-                //
+                // make table free
                 else if (orderDialogBox.ShowDialog() == DialogResult.OK)
                 {
                     table.TableStatus = TableStatus.free;
@@ -258,7 +261,7 @@ namespace ChapeauUI
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-
+            // not implemented yet
         }
 
         private void btnDeleteOrder_Click(object sender, EventArgs e)

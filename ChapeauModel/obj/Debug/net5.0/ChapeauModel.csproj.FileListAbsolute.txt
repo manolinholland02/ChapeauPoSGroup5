@@ -26,7 +26,6 @@ D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.de
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.dll
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ref\ChapeauModel.dll
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\bin\Debug\net5.0\ChapeauModel.pdb
-D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.AssemblyReference.cache
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.GeneratedMSBuildEditorConfig.editorconfig
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfoInputs.cache
 D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.AssemblyInfo.cs
@@ -58,3 +57,4 @@ C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauMode
 C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.dll
 C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ref\ChapeauModel.dll
 C:\Users\sally\Desktop\School\IT1.4 chapeau project\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.pdb
+D:\Term 4\Chapeau\ChapeauPoSGroup5\ChapeauModel\obj\Debug\net5.0\ChapeauModel.csproj.AssemblyReference.cache

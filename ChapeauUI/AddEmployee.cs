@@ -85,7 +85,7 @@ namespace ChapeauUI
                         EmployeeFirstName = firstName,
                         EmployeeLastName = lastName,
                         EmployeeUsername = username,
-                        EmployeeUserPassword = password,
+                        //EmployeeUserPassword = password,
                         EmployeeType = employeeType
                     };
 

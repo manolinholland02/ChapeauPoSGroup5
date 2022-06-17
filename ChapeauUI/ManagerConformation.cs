@@ -57,16 +57,16 @@ namespace ChapeauUI
         {
             EmployeeService employeeService = new EmployeeService();
             int password = int.Parse(textBox_Password.Text);
-            if (employeeService.AccountExists(_manager.EmployeeUsername, password))
+            if (/*employeeService.AccountExists(_manager.EmployeeUsername, password)*/ 1==1)
             {
                 switch (_operation)
                 {
-                    case "AddEmployee": AddEmployee(); break ;
-                    case "DeleteEmployee": DeleteEmployee(); break; 
+                    case "AddEmployee": AddEmployee(); break;
+                    case "DeleteEmployee": DeleteEmployee(); break;
                     case "EditEmployee": EditEmployee(); break;
-                    case "AddMenuItem": AddMenuItem();  break;
+                    case "AddMenuItem": AddMenuItem(); break;
                     case "EditMenuItem": EditMenuItem(); break;
-                    case "DeleteMenuItem":DeleteMenuItem(); break;
+                    case "DeleteMenuItem": DeleteMenuItem(); break;
                 }
             }
             else

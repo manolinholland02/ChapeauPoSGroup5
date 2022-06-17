@@ -27,11 +27,14 @@ namespace ChapeauUI
             {
                 // get password & username from user
                 string username = txtUsername.Text;
-                int password = int.Parse(txtPassword.Text);
-                // open the corresponding screens depending on the type of employee
+                string password = txtPassword.Text;
+                
                 EmployeeService employeeService = new EmployeeService();
-                if (employeeService.AccountExists(username, password))
+                // convert password from user to SHA256
+                // open the corresponding screens depending on the type of employee
+                if (employeeService.EmployeeExists(username, employeeService.PasswordToSHA256(password)))
                 {
+                    // create employee object to pass 
                     Employee employee = employeeService.GetEmployee(username);
 
                     // 1) employee type = manager -> Open ManagerViewForm
@@ -42,6 +45,7 @@ namespace ChapeauUI
                         managerView.Closed += (ss, ee) => this.Close();
                         managerView.Show();
                     }
+
                     // 2) employee type = waiter -> Open RestaurantOverview
                     else if (employee.EmployeeType == EmployeeType.waiter)
                     {
@@ -49,6 +53,7 @@ namespace ChapeauUI
                         RestaurantOverview restaurantOverview = new RestaurantOverview(employee);
                         restaurantOverview.Show();
                     }
+
                     // 3) employee type = chef/barman -> Open KitchenBarView
                     else if (employee.EmployeeType == EmployeeType.chef || employee.EmployeeType == EmployeeType.barman)
                     {
@@ -72,7 +77,7 @@ namespace ChapeauUI
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-
+            //
         }
     }
 }

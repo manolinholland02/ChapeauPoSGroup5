@@ -9,7 +9,15 @@ namespace ChapeauDAL
 {
     public class EmployeeDao : BaseDao
     {
-        //Creates a list with all of the employees in the Database
+        // get employee password from the database
+        public string GetPassword(string username)
+        {
+            string query = "SELECT userPassword from [dbo].[Employees] WHERE [username] = @username;";
+            SqlParameter[] sqlParameters = { new SqlParameter("@username", username) };
+            DataTable output = ExecuteSelectQuery(query, sqlParameters);
+            return (string)output.Rows[0]["userPassword"];
+        }
+        // Creates a list with all of the employees in the Database
         public List<Employee> GetAllEmployees()
         {
             try
@@ -34,7 +42,7 @@ namespace ChapeauDAL
                     EmployeeFirstName = dr["firstName"].ToString(),
                     EmployeeLastName = dr["lastName"].ToString(),
                     EmployeeUsername = dr["username"].ToString(),
-                    EmployeeUserPassword = (int)dr["userPassword"],
+                    EmployeeUserPassword = dr["userPassword"].ToString(),
                     EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower()),
                 };
                 employees.Add(employee);
@@ -42,7 +50,7 @@ namespace ChapeauDAL
             return employees;
         }
 
-        //Add employee to the DataBase
+        // Add employee to the DataBase
         public void AddEmployee(Employee employee)
         {
             try
@@ -65,7 +73,7 @@ namespace ChapeauDAL
                 throw new Exception(e.Message);
             }
         }
-        //Deletes employee from the Database
+        // Delete employee from the Database
         public void DeleteEmployee(int EmployeeId)
         {
             try
@@ -80,7 +88,7 @@ namespace ChapeauDAL
             }
         }
 
-        //Edits employee in the Database
+        // Edit employee in the Database
         public void EditEmployee(Employee employee)
         {
             try
@@ -107,7 +115,7 @@ namespace ChapeauDAL
         }
 
         // check if account exists in the database
-        public bool AccountExists(string username, int password)
+        public bool EmployeeExists(string username, string password)
         {
             try
             {
@@ -122,7 +130,6 @@ namespace ChapeauDAL
             }
             catch (Exception e)
             {
-
                 throw new Exception("Something went wrong while checking if the account exists: " + e.Message);
             }
         }
@@ -188,7 +195,7 @@ namespace ChapeauDAL
 
         }
 
-        //returns the EmployeeType
+        
         public Employee GetEmployee(string username)
         {
             string query = "SELECT employeeId, firstName, lastName, username, userPassword, employeeType FROM [dbo].[Employees] WHERE [username] = @username";
@@ -204,7 +211,7 @@ namespace ChapeauDAL
                 employee.EmployeeFirstName = dr["firstName"].ToString();
                 employee.EmployeeLastName = dr["lastName"].ToString();
                 employee.EmployeeUsername = dr["username"].ToString();
-                employee.EmployeeUserPassword = (int)dr["userPassword"];
+                employee.EmployeeUserPassword = dr["userPassword"].ToString();
                 employee.EmployeeType = (EmployeeType)Enum.Parse(typeof(EmployeeType), dr["employeeType"].ToString().ToLower());
             }
             return employee;
