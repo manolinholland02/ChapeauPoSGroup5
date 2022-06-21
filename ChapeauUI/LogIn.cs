@@ -62,10 +62,11 @@ namespace ChapeauUI
                         kitchenBarView.Closed += (ss, ee) => this.Close();
                         kitchenBarView.Show();
                     }
-                    else
-                    {
-                        MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("No employee found.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
