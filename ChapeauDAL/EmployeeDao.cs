@@ -119,14 +119,13 @@ namespace ChapeauDAL
         {
             try
             {
-
                 string query = "SELECT COUNT(employeeId) AS Count from [dbo].[Employees] WHERE [username] = @username AND [userPassword] = @password";
                 SqlParameter[] sqlParameters = { new SqlParameter("@username", username), new SqlParameter("@password", password) };
                 DataTable table = ExecuteSelectQuery(query, sqlParameters);
                 DataRow[] dr = table.Select();
                 string count = dr[0]["Count"].ToString();
-                if (Convert.ToInt32(count) == 0) return false;
-                else return true;
+                // return true if there is one employee with the username and password
+                return Convert.ToInt32(count) == 1;
             }
             catch (Exception e)
             {

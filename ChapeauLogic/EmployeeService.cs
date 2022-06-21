@@ -55,17 +55,8 @@ namespace ChapeauLogic
         {
             return _employeedb.GetEmployee(username);
         }
-        //public int GetPassword(string username) => _employeedb.GetPassword(password);
-        //public bool CredentialValidator(Employee employee)
-        //{
-        //    //Run password through hasher
-        //    //Find hashed password and username in database
-        //    //If it's in, return true
-        //    int hashedPassword = GetPassword(employee.EmployeeUsername);
-        //    int storedPassword = PasswordTosha256(employee.EmployeeUserPassword);
-        //    if (hashedPassword == storedPassword) return true;
-        //    else return false;
-        //}
+        
+        
         // convert the password to sha256
         public string PasswordToSHA256(string password)
         {

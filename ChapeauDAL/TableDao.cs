@@ -11,6 +11,7 @@ namespace ChapeauDAL
 {
     public class TableDao : BaseDao
     {
+        // get the specific table by id from the database
         public Table GetTable(int id)
         {
             string query = "SELECT [tableId], [tableStatus] FROM [dbo].[RestaurantTables] WHERE [tableId] = @Id";
@@ -35,7 +36,13 @@ namespace ChapeauDAL
             SqlParameter[] parameters = { new SqlParameter("@Id", table.TableId), new SqlParameter("@Status", table.TableStatus.ToString()) };
             ExecuteEditQuery(query, parameters);
         }
-
+        // get the total number of tables from the database in order to dinamically generate the list of buttons
+        //public void GetNumberOfTables()
+        //{
+        //    string query = "SELECT tableId FROM RestaurantTables WHERE tableId = (SELECT MAX(tableId)FROM RestaurantTables)";
+        //    SqlParameter[] parameters = new SqlParameter[0];
+        //    ExecuteSelectQuery(query, parameters);
+        //}
 
     }
 }

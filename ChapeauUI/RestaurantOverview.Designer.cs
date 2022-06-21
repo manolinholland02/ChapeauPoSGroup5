@@ -42,25 +42,25 @@ namespace ChapeauUI
             this.btnTable4 = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlDisplayOrderItems = new System.Windows.Forms.Panel();
+            this.orderItemsListView = new System.Windows.Forms.ListView();
+            this.orderItemId = new System.Windows.Forms.ColumnHeader();
+            this.orderItemName = new System.Windows.Forms.ColumnHeader();
+            this.orderItemStatus = new System.Windows.Forms.ColumnHeader();
             this.btnAddOrderItems = new System.Windows.Forms.Button();
             this.btnSetItemAsServed = new System.Windows.Forms.Button();
             this.btnDeleteOrder = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.lblTable = new System.Windows.Forms.Label();
-            this.orderItemsListView = new System.Windows.Forms.ListView();
-            this.orderItemId = new System.Windows.Forms.ColumnHeader();
-            this.orderItemName = new System.Windows.Forms.ColumnHeader();
-            this.orderItemStatus = new System.Windows.Forms.ColumnHeader();
             this.pnlDisplayOrderItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(149, 68);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(149, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 31);
+            this.label1.Size = new System.Drawing.Size(235, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Restaurant Overview";
             // 
@@ -177,9 +177,10 @@ namespace ChapeauUI
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(404, 19);
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(322, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 20);
+            this.lblName.Size = new System.Drawing.Size(62, 25);
             this.lblName.TabIndex = 14;
             this.lblName.Text = "Name";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -196,6 +197,35 @@ namespace ChapeauUI
             this.pnlDisplayOrderItems.Name = "pnlDisplayOrderItems";
             this.pnlDisplayOrderItems.Size = new System.Drawing.Size(333, 444);
             this.pnlDisplayOrderItems.TabIndex = 15;
+            // 
+            // orderItemsListView
+            // 
+            this.orderItemsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderItemId,
+            this.orderItemName,
+            this.orderItemStatus});
+            this.orderItemsListView.HideSelection = false;
+            this.orderItemsListView.Location = new System.Drawing.Point(10, 35);
+            this.orderItemsListView.Name = "orderItemsListView";
+            this.orderItemsListView.Size = new System.Drawing.Size(311, 330);
+            this.orderItemsListView.TabIndex = 0;
+            this.orderItemsListView.UseCompatibleStateImageBehavior = false;
+            this.orderItemsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // orderItemId
+            // 
+            this.orderItemId.Text = "ID";
+            this.orderItemId.Width = 0;
+            // 
+            // orderItemName
+            // 
+            this.orderItemName.Text = "Item";
+            this.orderItemName.Width = 200;
+            // 
+            // orderItemStatus
+            // 
+            this.orderItemStatus.Text = "Status";
+            this.orderItemStatus.Width = 105;
             // 
             // btnAddOrderItems
             // 
@@ -245,35 +275,6 @@ namespace ChapeauUI
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(0, 31);
             this.lblTable.TabIndex = 2;
-            // 
-            // orderItemsListView
-            // 
-            this.orderItemsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.orderItemId,
-            this.orderItemName,
-            this.orderItemStatus});
-            this.orderItemsListView.HideSelection = false;
-            this.orderItemsListView.Location = new System.Drawing.Point(10, 35);
-            this.orderItemsListView.Name = "orderItemsListView";
-            this.orderItemsListView.Size = new System.Drawing.Size(311, 330);
-            this.orderItemsListView.TabIndex = 0;
-            this.orderItemsListView.UseCompatibleStateImageBehavior = false;
-            this.orderItemsListView.View = System.Windows.Forms.View.Details;
-            // 
-            // orderItemId
-            // 
-            this.orderItemId.Text = "ID";
-            this.orderItemId.Width = 0;
-            // 
-            // orderItemName
-            // 
-            this.orderItemName.Text = "Item";
-            this.orderItemName.Width = 200;
-            // 
-            // orderItemStatus
-            // 
-            this.orderItemStatus.Text = "Status";
-            this.orderItemStatus.Width = 105;
             // 
             // RestaurantOverview
             // 

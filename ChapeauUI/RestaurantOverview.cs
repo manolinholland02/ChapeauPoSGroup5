@@ -18,46 +18,45 @@ namespace ChapeauUI
         private Table table;
         private Table[] tables;
         private Button[] buttons;
-        TableService tableService;
         private MessageBoxButtons msgBoxButtons;
         private DialogResult result;
-        private OrderItemService orderItemService;
         private Order order;
-        private OrderService orderService;
         private ChoosingMenuForm choosingMenuForm;
+        // services
+        private TableService tableService = new TableService();
+        private OrderService orderService = new OrderService();
+        private OrderItemService orderItemService = new OrderItemService();
+        // constant number of tables supported on this version
+        private const int NumberOfTables = 10;
 
         public RestaurantOverview(Employee employee)
         {
-            this.employee = employee;
             InitializeComponent();
+            this.employee = employee;
+            // text for logout
             lblName.Text = $"{this.employee.EmployeeFirstName} {this.employee.EmployeeLastName}";
-            msgBoxButtons = MessageBoxButtons.YesNo;
-            tableService = new TableService();
-            orderItemService = new OrderItemService();
             tables = LoadTables();
             buttons = AddButtonsToList();
+            // set buttons color
             LoadButtons(tables, AddButtonsToList());
+            // hide panel
             pnlDisplayOrderItems.Visible = false;
-            orderService = new OrderService();
             orderItemsListView.FullRowSelect = true;
-
+            msgBoxButtons = MessageBoxButtons.YesNo;
         }
-
         private Table[] LoadTables()
         {
-            Table[] tableArray = new Table[10];
+            Table[] tableArray = new Table[NumberOfTables];
             for (int i = 1; i <= tableArray.Length; i++)
             {
                 tableArray[i - 1] = tableService.GetTable(i);
             }
-
             return tableArray;
         }
 
         private Button[] AddButtonsToList()
         {
-            Button[] buttonArray = new Button[10] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10 };
-
+            Button[] buttonArray = new Button[NumberOfTables] { btnTable1, btnTable2, btnTable3, btnTable4, btnTable5, btnTable6, btnTable7, btnTable8, btnTable9, btnTable10 };
             return buttonArray;
         }
 
@@ -67,17 +66,16 @@ namespace ChapeauUI
             for (int i = 0; i < buttons.Length; i++)
             {
                 // set table color to green if it is free
-                if (tables[i].TableStatus == TableStatus.free) 
+                if (tables[i].TableStatus == TableStatus.free)
                     buttons[i].BackColor = ColorTranslator.FromHtml("#47D147");
                 // set table color to red if it is occupied
-                else if (tables[i].TableStatus == TableStatus.occupied) 
+                else if (tables[i].TableStatus == TableStatus.occupied)
                     buttons[i].BackColor = ColorTranslator.FromHtml("#EC5C5C");
                 // set table color to yellow if it has an order
-                else if (tables[i].TableStatus == TableStatus.haveOrder) 
+                else if (tables[i].TableStatus == TableStatus.haveOrder)
                     buttons[i].BackColor = ColorTranslator.FromHtml("#ECEF58");
             }
         }
-
         private void CheckTableStatus(Table table)
         {
             if (table.TableStatus == TableStatus.free)
@@ -234,10 +232,9 @@ namespace ChapeauUI
             table = tables[9];
             CheckTableStatus(table);
         }
-
+        // logout
         private void lblName_Click(object sender, EventArgs e)
         {
-
             string message = "Are you sure you want to Logout?";
             string title = "Logout";
             result = MessageBox.Show(message, title, msgBoxButtons, MessageBoxIcon.Warning);
